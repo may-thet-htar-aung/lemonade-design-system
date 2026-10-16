@@ -1,0 +1,27 @@
+/* Figma node 16:1062 (Icon (Lemonade)). Every value is a semantic token. */
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* GAP: the design shows 40 and 48 sizes for icon/user, but no --size-icon-*
+   token exists for them, so Size has no value for them.
+   GAP: the artwork has one unbound fixed fill, so the icon inherits its colour
+   from the parent and sets none of its own. */
+.icon--sm {
+  width: var(--size-icon-sm);
+  height: var(--size-icon-sm);
+}
+.icon--md {
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+}
+.icon--lg {
+  width: var(--size-icon-lg);
+  height: var(--size-icon-lg);
+}
+.icon--xl {
+  width: var(--size-icon-xl);
+  height: var(--size-icon-xl);
+}
