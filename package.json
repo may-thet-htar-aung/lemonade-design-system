@@ -4,13 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:tokens": "node build-tokens.js"
+    "build:tokens": "node build-tokens.js",
+    "storybook": "storybook dev -p 6006 --no-open",
+    "build-storybook": "storybook build",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "style-dictionary": "^5.6.1"
+    "@storybook/react-vite": "^10.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "storybook": "^10.6.2",
+    "style-dictionary": "^5.6.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
   }
 }
