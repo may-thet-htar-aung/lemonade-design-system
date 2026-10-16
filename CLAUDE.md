@@ -15,16 +15,20 @@ Design tokens and, soon, components for the Lemonade design system. Built by an 
 | `.claude/skills/` | Procedures the agents follow | Humans |
 | `.claude/registry.local.json` | Airtable base, table and field IDs. Gitignored. Copy from `registry.example.json` | Humans |
 | `docs/lime-crew-spec.md` | The pipeline spec read from the FigJam board | Humans |
+| `docs/tools.md` | The tools the crew uses (Figma, Airtable, Git, Storybook, Vercel, browser) and their pitfalls | Humans |
 
 ## Commands
 
 ```bash
 npm run build:tokens              # regenerate build/ from tokens/
+npm run typecheck                 # tsc --noEmit; must exit 0
+npm run storybook                 # local Storybook on port 6006
+npm run build-storybook           # static Storybook, what Vercel deploys
 node scripts/verify-tokens.mjs    # prove the rebuild is right; must end RESULT: PASS
 node scripts/security-check.mjs   # build output, deps, clean tree; --live <url> --expect public|protected
 ```
 
-Not set up yet: TypeScript, Storybook and a lint config. The build and test skills assume `npx tsc --noEmit` and a Storybook. Add them before the first component is built.
+React, TypeScript and Storybook are set up. There is no lint config and no CI yet. How each tool is reached, and what goes wrong with it, is in `docs/tools.md`.
 
 ## Hard rules
 
