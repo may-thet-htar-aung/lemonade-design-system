@@ -1,0 +1,16 @@
+{
+  "name": "lemonade-design-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:tokens": "node build-tokens.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "style-dictionary": "^5.6.1"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "density-touchtarget": {
+    "$type": "dimension",
+    "$value": {
+      "value": 48,
+      "unit": "px"
+    }
+  },
+  "density-rowheight": {
+    "$type": "dimension",
+    "$value": {
+      "value": 56,
+      "unit": "px"
+    }
+  },
+  "density-controlpaddingx": {
+    "$type": "dimension",
+    "$value": "{spacing-lg}"
+  },
+  "density-controlpaddingy": {
+    "$type": "dimension",
+    "$value": "{spacing-md}"
+  },
+  "size-control-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 36,
+      "unit": "px"
+    }
+  },
+  "size-control-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 48,
+      "unit": "px"
+    }
+  },
+  "size-control-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 56,
+      "unit": "px"
+    }
+  },
+  "size-icon-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    }
+  },
+  "size-icon-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 18,
+      "unit": "px"
+    }
+  },
+  "size-icon-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    }
+  },
+  "size-icon-xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    }
+  },
+  "size-icon-2xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 40,
+      "unit": "px"
+    }
+  },
+  "size-icon-3xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 48,
+      "unit": "px"
+    }
+  },
+  "size-width-minmobile": {
+    "$type": "dimension",
+    "$value": {
+      "value": 288,
+      "unit": "px"
+    },
+    "$description": "Smallest width for full-width content on a 320 px phone (320 minus margin/page on each side). Used by Callout."
+  },
+  "size-field-width": {
+    "$type": "dimension",
+    "$value": {
+      "value": 320,
+      "unit": "px"
+    },
+    "$description": "Default width of Input and Search Field. Set instances to Fill in forms and layouts."
+  },
+  "size-field-minheightmulti": {
+    "$type": "dimension",
+    "$value": {
+      "value": 96,
+      "unit": "px"
+    },
+    "$description": "Minimum field height for the Multi Input type. The field grows with the text."
+  },
+  "size-chip-minwidth": {
+    "$type": "dimension",
+    "$value": {
+      "value": 80,
+      "unit": "px"
+    },
+    "$description": "Minimum width of Filter Chip."
+  },
+  "size-chip-maxwidth": {
+    "$type": "dimension",
+    "$value": {
+      "value": 200,
+      "unit": "px"
+    },
+    "$description": "Maximum width of Filter Chip. Longer labels wrap to a second line."
+  },
+  "size-button-minwidth": {
+    "$type": "dimension",
+    "$value": {
+      "value": 172,
+      "unit": "px"
+    },
+    "$description": "Minimum width of Button. The button hugs longer labels."
+  },
+  "size-badge-height": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    },
+    "$description": "Height of Status Badge."
+  },
+  "size-table-headerheight": {
+    "$type": "dimension",
+    "$value": {
+      "value": 48,
+      "unit": "px"
+    },
+    "$description": "Height of the Table Row Header. Body rows use density/rowHeight."
+  }
+}

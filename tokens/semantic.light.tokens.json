@@ -1,0 +1,583 @@
+{
+  "color-bg-base": {
+    "$type": "color",
+    "$value": "{color-neutral-0}"
+  },
+  "color-bg-inverse": {
+    "$type": "color",
+    "$value": "{color-neutral-900}"
+  },
+  "color-bg-surfaceprimary": {
+    "$type": "color",
+    "$value": "{color-neutral-50}"
+  },
+  "color-bg-surfacesecondary": {
+    "$type": "color",
+    "$value": "{color-neutral-100}"
+  },
+  "color-bg-overlay": {
+    "$type": "color",
+    "$value": "{color-neutral-500a}"
+  },
+  "color-bg-disabled": {
+    "$type": "color",
+    "$value": "{color-neutral-100}"
+  },
+  "color-bg-brandgreen-light": {
+    "$type": "color",
+    "$value": "{color-forest-green-100}"
+  },
+  "color-bg-brandgreen-lighthover": {
+    "$type": "color",
+    "$value": "{color-forest-green-300}"
+  },
+  "color-bg-brandgreen-idle": {
+    "$type": "color",
+    "$value": "{color-forest-green-600}"
+  },
+  "color-bg-brandgreen-hover": {
+    "$type": "color",
+    "$value": "{color-forest-green-500}"
+  },
+  "color-bg-brandyellow-light": {
+    "$type": "color",
+    "$value": "{color-lemon-yellow-100}"
+  },
+  "color-bg-brandyellow-lighthover": {
+    "$type": "color",
+    "$value": "{color-lemon-yellow-300}"
+  },
+  "color-bg-brandyellow-idle": {
+    "$type": "color",
+    "$value": "{color-lemon-yellow-600}"
+  },
+  "color-bg-brandyellow-hover": {
+    "$type": "color",
+    "$value": "{color-lemon-yellow-500}"
+  },
+  "color-bg-negative-light": {
+    "$type": "color",
+    "$value": "{color-red-100}"
+  },
+  "color-bg-negative-lighthover": {
+    "$type": "color",
+    "$value": "{color-red-300}"
+  },
+  "color-bg-negative-idle": {
+    "$type": "color",
+    "$value": "{color-red-600}"
+  },
+  "color-bg-negative-hover": {
+    "$type": "color",
+    "$value": "{color-red-500}"
+  },
+  "color-bg-positive-light": {
+    "$type": "color",
+    "$value": "{color-green-100}"
+  },
+  "color-bg-positive-lighthover": {
+    "$type": "color",
+    "$value": "{color-green-300}"
+  },
+  "color-bg-positive-idle": {
+    "$type": "color",
+    "$value": "{color-green-600}"
+  },
+  "color-bg-positive-hover": {
+    "$type": "color",
+    "$value": "{color-green-500}"
+  },
+  "color-bg-warning-light": {
+    "$type": "color",
+    "$value": "{color-amber-100}"
+  },
+  "color-bg-warning-lighthover": {
+    "$type": "color",
+    "$value": "{color-amber-300}"
+  },
+  "color-bg-warning-idle": {
+    "$type": "color",
+    "$value": "{color-amber-600}"
+  },
+  "color-bg-warning-hover": {
+    "$type": "color",
+    "$value": "{color-amber-500}"
+  },
+  "color-bg-information-light": {
+    "$type": "color",
+    "$value": "{color-blue-100}"
+  },
+  "color-bg-information-lighthover": {
+    "$type": "color",
+    "$value": "{color-blue-300}"
+  },
+  "color-bg-information-idle": {
+    "$type": "color",
+    "$value": "{color-blue-600}"
+  },
+  "color-bg-information-hover": {
+    "$type": "color",
+    "$value": "{color-blue-500}"
+  },
+  "color-bg-update-light": {
+    "$type": "color",
+    "$value": "{color-purple-100}"
+  },
+  "color-bg-update-lighthover": {
+    "$type": "color",
+    "$value": "{color-purple-300}"
+  },
+  "color-bg-update-idle": {
+    "$type": "color",
+    "$value": "{color-purple-600}"
+  },
+  "color-bg-update-hover": {
+    "$type": "color",
+    "$value": "{color-purple-500}"
+  },
+  "color-bg-accent-light": {
+    "$type": "color",
+    "$value": "{color-golden-orange-100}"
+  },
+  "color-bg-accent-lighthover": {
+    "$type": "color",
+    "$value": "{color-golden-orange-300}"
+  },
+  "color-bg-accent-idle": {
+    "$type": "color",
+    "$value": "{color-golden-orange-600}"
+  },
+  "color-bg-accent-hover": {
+    "$type": "color",
+    "$value": "{color-golden-orange-500}"
+  },
+  "color-text-primary": {
+    "$type": "color",
+    "$value": "{color-neutral-900}"
+  },
+  "color-text-secondary": {
+    "$type": "color",
+    "$value": "{color-neutral-800}"
+  },
+  "color-text-tertiary": {
+    "$type": "color",
+    "$value": "{color-neutral-600}"
+  },
+  "color-text-disabled": {
+    "$type": "color",
+    "$value": "{color-neutral-400}"
+  },
+  "color-text-inverse-primary": {
+    "$type": "color",
+    "$value": "{color-neutral-0}"
+  },
+  "color-text-inverse-secondary": {
+    "$type": "color",
+    "$value": "{color-neutral-50}"
+  },
+  "color-text-inverse-tertiary": {
+    "$type": "color",
+    "$value": "{color-neutral-200}"
+  },
+  "color-text-brandgreen": {
+    "$type": "color",
+    "$value": "{color-forest-green-800}"
+  },
+  "color-text-brandyellow": {
+    "$type": "color",
+    "$value": "{color-lemon-yellow-800}"
+  },
+  "color-text-negative": {
+    "$type": "color",
+    "$value": "{color-red-800}"
+  },
+  "color-text-positive": {
+    "$type": "color",
+    "$value": "{color-green-800}"
+  },
+  "color-text-warning": {
+    "$type": "color",
+    "$value": "{color-amber-800}"
+  },
+  "color-text-information": {
+    "$type": "color",
+    "$value": "{color-blue-800}"
+  },
+  "color-text-update": {
+    "$type": "color",
+    "$value": "{color-purple-800}"
+  },
+  "color-text-accent": {
+    "$type": "color",
+    "$value": "{color-golden-orange-800}"
+  },
+  "color-border-primary-subtle": {
+    "$type": "color",
+    "$value": "{color-neutral-300}"
+  },
+  "color-border-primary-default": {
+    "$type": "color",
+    "$value": "{color-neutral-400}"
+  },
+  "color-border-primary-strong": {
+    "$type": "color",
+    "$value": "{color-neutral-900}"
+  },
+  "color-border-brandgreen-subtle": {
+    "$type": "color",
+    "$value": "{color-forest-green-300}"
+  },
+  "color-border-brandgreen-default": {
+    "$type": "color",
+    "$value": "{color-forest-green-400}"
+  },
+  "color-border-brandgreen-strong": {
+    "$type": "color",
+    "$value": "{color-forest-green-500}"
+  },
+  "color-border-brandyellow-subtle": {
+    "$type": "color",
+    "$value": "{color-lemon-yellow-300}"
+  },
+  "color-border-brandyellow-default": {
+    "$type": "color",
+    "$value": "{color-lemon-yellow-400}"
+  },
+  "color-border-brandyellow-strong": {
+    "$type": "color",
+    "$value": "{color-lemon-yellow-500}"
+  },
+  "color-border-negative-subtle": {
+    "$type": "color",
+    "$value": "{color-red-300}"
+  },
+  "color-border-negative-default": {
+    "$type": "color",
+    "$value": "{color-red-400}"
+  },
+  "color-border-negative-strong": {
+    "$type": "color",
+    "$value": "{color-red-500}"
+  },
+  "color-border-positive-subtle": {
+    "$type": "color",
+    "$value": "{color-green-300}"
+  },
+  "color-border-positive-default": {
+    "$type": "color",
+    "$value": "{color-green-400}"
+  },
+  "color-border-positive-strong": {
+    "$type": "color",
+    "$value": "{color-green-500}"
+  },
+  "color-border-warning-subtle": {
+    "$type": "color",
+    "$value": "{color-amber-300}"
+  },
+  "color-border-warning-default": {
+    "$type": "color",
+    "$value": "{color-amber-400}"
+  },
+  "color-border-warning-strong": {
+    "$type": "color",
+    "$value": "{color-amber-500}"
+  },
+  "color-border-information-subtle": {
+    "$type": "color",
+    "$value": "{color-blue-300}"
+  },
+  "color-border-information-default": {
+    "$type": "color",
+    "$value": "{color-blue-400}"
+  },
+  "color-border-information-strong": {
+    "$type": "color",
+    "$value": "{color-blue-500}"
+  },
+  "color-border-update-subtle": {
+    "$type": "color",
+    "$value": "{color-purple-300}"
+  },
+  "color-border-update-default": {
+    "$type": "color",
+    "$value": "{color-purple-400}"
+  },
+  "color-border-update-strong": {
+    "$type": "color",
+    "$value": "{color-purple-500}"
+  },
+  "color-border-accent-subtle": {
+    "$type": "color",
+    "$value": "{color-golden-orange-300}"
+  },
+  "color-border-accent-default": {
+    "$type": "color",
+    "$value": "{color-golden-orange-400}"
+  },
+  "color-border-accent-strong": {
+    "$type": "color",
+    "$value": "{color-golden-orange-500}"
+  },
+  "color-icon-primary": {
+    "$type": "color",
+    "$value": "{color-neutral-800}"
+  },
+  "color-icon-secondary": {
+    "$type": "color",
+    "$value": "{color-neutral-600}"
+  },
+  "color-icon-bold": {
+    "$type": "color",
+    "$value": "{color-neutral-900}"
+  },
+  "color-icon-disabled": {
+    "$type": "color",
+    "$value": "{color-neutral-400}"
+  },
+  "color-icon-input": {
+    "$type": "color",
+    "$value": "{color-neutral-200}"
+  },
+  "color-icon-inverse": {
+    "$type": "color",
+    "$value": "{color-neutral-0}"
+  },
+  "color-icon-inversesecondary": {
+    "$type": "color",
+    "$value": "{color-neutral-50}"
+  },
+  "color-icon-disabledondark": {
+    "$type": "color",
+    "$value": "{color-neutral-200}"
+  },
+  "color-icon-brand": {
+    "$type": "color",
+    "$value": "{color-forest-green-600}"
+  },
+  "color-icon-negative": {
+    "$type": "color",
+    "$value": "{color-red-600}"
+  },
+  "color-icon-positive": {
+    "$type": "color",
+    "$value": "{color-green-700}"
+  },
+  "color-icon-warning": {
+    "$type": "color",
+    "$value": "{color-amber-800}"
+  },
+  "color-icon-info": {
+    "$type": "color",
+    "$value": "{color-blue-700}"
+  },
+  "color-icon-update": {
+    "$type": "color",
+    "$value": "{color-purple-600}"
+  },
+  "elevation-shadow-level1-color": {
+    "$type": "color",
+    "$value": "{color-neutral-300a}"
+  },
+  "elevation-shadow-level1-offsety": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1,
+      "unit": "px"
+    }
+  },
+  "elevation-shadow-level1-blur": {
+    "$type": "dimension",
+    "$value": {
+      "value": 3,
+      "unit": "px"
+    }
+  },
+  "elevation-shadow-level2-color": {
+    "$type": "color",
+    "$value": "{color-neutral-300a}"
+  },
+  "elevation-shadow-level2-offsety": {
+    "$type": "dimension",
+    "$value": {
+      "value": 2,
+      "unit": "px"
+    }
+  },
+  "elevation-shadow-level2-blur": {
+    "$type": "dimension",
+    "$value": {
+      "value": 6,
+      "unit": "px"
+    }
+  },
+  "elevation-shadow-level3-color": {
+    "$type": "color",
+    "$value": "{color-neutral-300a}"
+  },
+  "elevation-shadow-level3-offsety": {
+    "$type": "dimension",
+    "$value": {
+      "value": 4,
+      "unit": "px"
+    }
+  },
+  "elevation-shadow-level3-blur": {
+    "$type": "dimension",
+    "$value": {
+      "value": 8,
+      "unit": "px"
+    }
+  },
+  "elevation-shadow-level4-color": {
+    "$type": "color",
+    "$value": "{color-neutral-300a}"
+  },
+  "elevation-shadow-level4-offsety": {
+    "$type": "dimension",
+    "$value": {
+      "value": 6,
+      "unit": "px"
+    }
+  },
+  "elevation-shadow-level4-blur": {
+    "$type": "dimension",
+    "$value": {
+      "value": 10,
+      "unit": "px"
+    }
+  },
+  "elevation-shadow-level5-color": {
+    "$type": "color",
+    "$value": "{color-neutral-300a}"
+  },
+  "elevation-shadow-level5-offsety": {
+    "$type": "dimension",
+    "$value": {
+      "value": 8,
+      "unit": "px"
+    }
+  },
+  "elevation-shadow-level5-blur": {
+    "$type": "dimension",
+    "$value": {
+      "value": 12,
+      "unit": "px"
+    }
+  },
+  "color-status-reported-bg": {
+    "$type": "color",
+    "$value": "{color-blue-100}"
+  },
+  "color-status-reported-text": {
+    "$type": "color",
+    "$value": "{color-blue-800}"
+  },
+  "color-status-reported-border": {
+    "$type": "color",
+    "$value": "{color-blue-300}"
+  },
+  "color-status-matched-bg": {
+    "$type": "color",
+    "$value": "{color-purple-100}"
+  },
+  "color-status-matched-text": {
+    "$type": "color",
+    "$value": "{color-purple-800}"
+  },
+  "color-status-matched-border": {
+    "$type": "color",
+    "$value": "{color-purple-300}"
+  },
+  "color-status-verifying-bg": {
+    "$type": "color",
+    "$value": "{color-amber-100}"
+  },
+  "color-status-verifying-text": {
+    "$type": "color",
+    "$value": "{color-amber-800}"
+  },
+  "color-status-verifying-border": {
+    "$type": "color",
+    "$value": "{color-amber-300}"
+  },
+  "color-status-ready-bg": {
+    "$type": "color",
+    "$value": "{color-green-100}"
+  },
+  "color-status-ready-text": {
+    "$type": "color",
+    "$value": "{color-green-800}"
+  },
+  "color-status-ready-border": {
+    "$type": "color",
+    "$value": "{color-green-300}"
+  },
+  "color-status-returned-bg": {
+    "$type": "color",
+    "$value": "{color-forest-green-100}"
+  },
+  "color-status-returned-text": {
+    "$type": "color",
+    "$value": "{color-forest-green-800}"
+  },
+  "color-status-returned-border": {
+    "$type": "color",
+    "$value": "{color-forest-green-300}"
+  },
+  "color-status-rejected-bg": {
+    "$type": "color",
+    "$value": "{color-red-100}"
+  },
+  "color-status-rejected-text": {
+    "$type": "color",
+    "$value": "{color-red-800}"
+  },
+  "color-status-rejected-border": {
+    "$type": "color",
+    "$value": "{color-red-300}"
+  },
+  "color-bg-scrim": {
+    "$type": "color",
+    "$value": "{color-neutral-300a}"
+  },
+  "color-border-disabled": {
+    "$type": "color",
+    "$value": "{color-neutral-200}"
+  },
+  "color-text-static-dark": {
+    "$type": "color",
+    "$value": "{color-neutral-900}",
+    "$description": "Dark text that stays dark in Light and Dark mode. Use only on backgrounds that do not change between modes, such as brand yellow, status fills or photos."
+  },
+  "color-text-static-light": {
+    "$type": "color",
+    "$value": "{color-neutral-0}",
+    "$description": "Light text that stays light in Light and Dark mode. Use only on backgrounds that do not change between modes, such as brand green or photos."
+  },
+  "color-icon-static-dark": {
+    "$type": "color",
+    "$value": "{color-neutral-900}",
+    "$description": "Dark icon colour that stays dark in both modes. Pair with color/text/static/dark."
+  },
+  "color-icon-static-light": {
+    "$type": "color",
+    "$value": "{color-neutral-0}",
+    "$description": "Light icon colour that stays light in both modes. Pair with color/text/static/light."
+  },
+  "color-icon-brandbold": {
+    "$type": "color",
+    "$value": "{color-forest-green-600}",
+    "$description": "Brand green icon in Light mode, white in Dark mode. Use for icons that sit next to color/text/primary titles on tinted backgrounds, such as Callout."
+  },
+  "color-bg-static-brandgreen": {
+    "$type": "color",
+    "$value": "{color-forest-green-600}",
+    "$description": "Brand green background that stays the same in Light and Dark mode. Pair with color/icon/static/light or color/text/static/light, such as the Done dot in Timeline Step."
+  },
+  "color-text-brandbold": {
+    "$type": "color",
+    "$value": "{color-forest-green-800}",
+    "$description": "Brand green text in Light mode, white in Dark mode. Text partner of color/icon/brandBold. Used for Outline and Ghost button labels."
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "h1": {
+    "$type": "typography",
+    "$description": "H1 — Bold 700 · Page and hero titles",
+    "$value": {
+      "fontFamily": "{fontfamily-heading}",
+      "fontWeight": "{fontweight-bold}",
+      "fontSize": "{fontsize-7xl}",
+      "lineHeight": "{lineheight-80}",
+      "letterSpacing": "{letterspacing-tighter}"
+    }
+  },
+  "h2": {
+    "$type": "typography",
+    "$description": "H2 — Bold 700 · Section titles",
+    "$value": {
+      "fontFamily": "{fontfamily-heading}",
+      "fontWeight": "{fontweight-bold}",
+      "fontSize": "{fontsize-3xl}",
+      "lineHeight": "{lineheight-3xl}",
+      "letterSpacing": "{letterspacing-tight}"
+    }
+  },
+  "h3": {
+    "$type": "typography",
+    "$description": "H3 — Bold 700 · Sub-section titles, large card titles",
+    "$value": {
+      "fontFamily": "{fontfamily-heading}",
+      "fontWeight": "{fontweight-bold}",
+      "fontSize": "{fontsize-xl}",
+      "lineHeight": "{lineheight-xl}",
+      "letterSpacing": "{letterspacing-normal}"
+    }
+  },
+  "h4": {
+    "$type": "typography",
+    "$description": "H4 — SemiBold 600 · Card and dialog titles",
+    "$value": {
+      "fontFamily": "{fontfamily-heading}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-20}",
+      "lineHeight": "{lineheight-20}",
+      "letterSpacing": "{letterspacing-normal}"
+    }
+  },
+  "h5": {
+    "$type": "typography",
+    "$description": "H5 — SemiBold 600 · List and group headings",
+    "$value": {
+      "fontFamily": "{fontfamily-heading}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-md}",
+      "lineHeight": "{lineheight-md}",
+      "letterSpacing": "{letterspacing-normal}"
+    }
+  },
+  "h6": {
+    "$type": "typography",
+    "$description": "H6 — SemiBold 600 · Small headings, overlines",
+    "$value": {
+      "fontFamily": "{fontfamily-heading}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-sm}",
+      "lineHeight": "{lineheight-sm}",
+      "letterSpacing": "{letterspacing-normal}"
+    }
+  },
+  "body1": {
+    "$type": "typography",
+    "$description": "Body1 — Regular 400 · Primary reading text",
+    "$value": {
+      "fontFamily": "{fontfamily-body}",
+      "fontWeight": "{fontweight-regular}",
+      "fontSize": "{fontsize-md}",
+      "lineHeight": "{lineheight-md}",
+      "letterSpacing": "{letterspacing-normal}"
+    }
+  },
+  "body2": {
+    "$type": "typography",
+    "$description": "Body2 — Regular 400 · Default UI and paragraph text",
+    "$value": {
+      "fontFamily": "{fontfamily-body}",
+      "fontWeight": "{fontweight-regular}",
+      "fontSize": "{fontsize-sm}",
+      "lineHeight": "{lineheight-sm}",
+      "letterSpacing": "{letterspacing-normal}"
+    }
+  },
+  "body3": {
+    "$type": "typography",
+    "$description": "Body3 — Regular 400 · Secondary text, helper text",
+    "$value": {
+      "fontFamily": "{fontfamily-body}",
+      "fontWeight": "{fontweight-regular}",
+      "fontSize": "{fontsize-xs}",
+      "lineHeight": "{lineheight-xs}",
+      "letterSpacing": "{letterspacing-normal}"
+    }
+  },
+  "body4": {
+    "$type": "typography",
+    "$description": "Body4 — Regular 400 · Dense UI text, table notes",
+    "$value": {
+      "fontFamily": "{fontfamily-body}",
+      "fontWeight": "{fontweight-regular}",
+      "fontSize": "{fontsize-2xs}",
+      "lineHeight": "{lineheight-2xs}",
+      "letterSpacing": "{letterspacing-normal}"
+    }
+  },
+  "body5": {
+    "$type": "typography",
+    "$description": "Body5 — Regular 400 · Smallest supporting text",
+    "$value": {
+      "fontFamily": "{fontfamily-body}",
+      "fontWeight": "{fontweight-regular}",
+      "fontSize": "{fontsize-3xs}",
+      "lineHeight": "{lineheight-3xs}",
+      "letterSpacing": "{letterspacing-normal}"
+    }
+  },
+  "caption1": {
+    "$type": "typography",
+    "$description": "Caption1 — Medium 500 · Large captions, image and figure captions",
+    "$value": {
+      "fontFamily": "{fontfamily-caption}",
+      "fontWeight": "{fontweight-medium}",
+      "fontSize": "{fontsize-md}",
+      "lineHeight": "{lineheight-md}",
+      "letterSpacing": "{letterspacing-wider}"
+    }
+  },
+  "caption2": {
+    "$type": "typography",
+    "$description": "Caption2 — Medium 500 · Captions, timestamps, metadata",
+    "$value": {
+      "fontFamily": "{fontfamily-caption}",
+      "fontWeight": "{fontweight-medium}",
+      "fontSize": "{fontsize-sm}",
+      "lineHeight": "{lineheight-sm}",
+      "letterSpacing": "{letterspacing-wider}"
+    }
+  },
+  "button-small": {
+    "$type": "typography",
+    "$description": "Button/Small — SemiBold 600 · Small buttons, chips",
+    "$value": {
+      "fontFamily": "{fontfamily-label}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-xs}",
+      "lineHeight": "{lineheight-xs}",
+      "letterSpacing": "{letterspacing-wide-xs}"
+    }
+  },
+  "button-medium": {
+    "$type": "typography",
+    "$description": "Button/Medium — SemiBold 600 · Default buttons, tabs",
+    "$value": {
+      "fontFamily": "{fontfamily-label}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-sm}",
+      "lineHeight": "{lineheight-sm}",
+      "letterSpacing": "{letterspacing-wide-xs}"
+    }
+  },
+  "button-large": {
+    "$type": "typography",
+    "$description": "Button/Large — SemiBold 600 · Large and primary buttons",
+    "$value": {
+      "fontFamily": "{fontfamily-label}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-md}",
+      "lineHeight": "{lineheight-md}",
+      "letterSpacing": "{letterspacing-wide-xs}"
+    }
+  },
+  "tagline-8": {
+    "$type": "typography",
+    "$description": "Tagline/8 — SemiBold 600 · Micro tags and badges",
+    "$value": {
+      "fontFamily": "{fontfamily-label}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-8}",
+      "lineHeight": "{lineheight-8}",
+      "letterSpacing": "{letterspacing-widest}"
+    }
+  },
+  "tagline-10": {
+    "$type": "typography",
+    "$description": "Tagline/10 — SemiBold 600 · Small tags, status labels",
+    "$value": {
+      "fontFamily": "{fontfamily-label}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-3xs}",
+      "lineHeight": "{lineheight-3xs}",
+      "letterSpacing": "{letterspacing-widest}"
+    }
+  },
+  "tagline-12": {
+    "$type": "typography",
+    "$description": "Tagline/12 — SemiBold 600 · Tags, eyebrow text",
+    "$value": {
+      "fontFamily": "{fontfamily-label}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-xs}",
+      "lineHeight": "{lineheight-xs}",
+      "letterSpacing": "{letterspacing-widest}"
+    }
+  },
+  "tagline-14": {
+    "$type": "typography",
+    "$description": "Tagline/14 — SemiBold 600 · Large tags, section eyebrows",
+    "$value": {
+      "fontFamily": "{fontfamily-label}",
+      "fontWeight": "{fontweight-semibold}",
+      "fontSize": "{fontsize-sm}",
+      "lineHeight": "{lineheight-sm}",
+      "letterSpacing": "{letterspacing-widest}"
+    }
+  }
+}

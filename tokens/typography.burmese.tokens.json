@@ -1,0 +1,307 @@
+{
+  "fontfamily-body": {
+    "$type": "fontFamily",
+    "$value": "Noto Sans Myanmar"
+  },
+  "fontfamily-heading": {
+    "$type": "fontFamily",
+    "$value": "Noto Sans Myanmar"
+  },
+  "fontfamily-caption": {
+    "$type": "fontFamily",
+    "$value": "Noto Sans Myanmar"
+  },
+  "fontfamily-label": {
+    "$type": "fontFamily",
+    "$value": "Noto Sans Myanmar"
+  },
+  "fontsize-2xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 11,
+      "unit": "px"
+    }
+  },
+  "fontsize-xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 12,
+      "unit": "px"
+    }
+  },
+  "fontsize-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 14,
+      "unit": "px"
+    }
+  },
+  "fontsize-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    }
+  },
+  "fontsize-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 22,
+      "unit": "px"
+    }
+  },
+  "fontsize-xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    }
+  },
+  "fontsize-2xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 28,
+      "unit": "px"
+    }
+  },
+  "fontsize-3xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    }
+  },
+  "fontsize-4xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 36,
+      "unit": "px"
+    }
+  },
+  "fontsize-5xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 45,
+      "unit": "px"
+    }
+  },
+  "fontsize-6xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 57,
+      "unit": "px"
+    }
+  },
+  "lineheight-2xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 20,
+      "unit": "px"
+    }
+  },
+  "lineheight-xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 20,
+      "unit": "px"
+    }
+  },
+  "lineheight-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    }
+  },
+  "lineheight-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 28,
+      "unit": "px"
+    }
+  },
+  "lineheight-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 36,
+      "unit": "px"
+    }
+  },
+  "lineheight-xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 40,
+      "unit": "px"
+    }
+  },
+  "lineheight-2xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 48,
+      "unit": "px"
+    }
+  },
+  "lineheight-3xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 52,
+      "unit": "px"
+    }
+  },
+  "lineheight-4xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 60,
+      "unit": "px"
+    }
+  },
+  "lineheight-5xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 72,
+      "unit": "px"
+    }
+  },
+  "lineheight-6xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 92,
+      "unit": "px"
+    }
+  },
+  "fontweight-regular": {
+    "$type": "fontWeight",
+    "$value": 400
+  },
+  "fontweight-medium": {
+    "$type": "fontWeight",
+    "$value": 500
+  },
+  "fontweight-semibold": {
+    "$type": "fontWeight",
+    "$value": 600
+  },
+  "fontweight-bold": {
+    "$type": "fontWeight",
+    "$value": 700
+  },
+  "fontsize-7xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 64,
+      "unit": "px"
+    }
+  },
+  "lineheight-7xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 104,
+      "unit": "px"
+    }
+  },
+  "fontsize-3xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 10,
+      "unit": "px"
+    }
+  },
+  "lineheight-3xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    }
+  },
+  "letterspacing-normal": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "letterspacing-tighter": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "letterspacing-tight": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "letterspacing-wide-xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "letterspacing-wide-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "letterspacing-wide": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "letterspacing-wider": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "letterspacing-widest": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "fontsize-8": {
+    "$type": "dimension",
+    "$value": {
+      "value": 8,
+      "unit": "px"
+    }
+  },
+  "fontsize-20": {
+    "$type": "dimension",
+    "$value": {
+      "value": 20,
+      "unit": "px"
+    }
+  },
+  "lineheight-8": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    }
+  },
+  "lineheight-20": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    }
+  },
+  "lineheight-80": {
+    "$type": "dimension",
+    "$value": {
+      "value": 104,
+      "unit": "px"
+    }
+  }
+}

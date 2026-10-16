@@ -1,0 +1,92 @@
+{
+  "elevation-level1": {
+    "$type": "shadow",
+    "$value": [
+      {
+        "color": "{elevation-shadow-level1-color}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{elevation-shadow-level1-offsety}",
+        "blur": "{elevation-shadow-level1-blur}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  },
+  "elevation-level2": {
+    "$type": "shadow",
+    "$value": [
+      {
+        "color": "{elevation-shadow-level2-color}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{elevation-shadow-level2-offsety}",
+        "blur": "{elevation-shadow-level2-blur}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  },
+  "elevation-level3": {
+    "$type": "shadow",
+    "$value": [
+      {
+        "color": "{elevation-shadow-level3-color}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{elevation-shadow-level3-offsety}",
+        "blur": "{elevation-shadow-level3-blur}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  },
+  "elevation-level4": {
+    "$type": "shadow",
+    "$value": [
+      {
+        "color": "{elevation-shadow-level4-color}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{elevation-shadow-level4-offsety}",
+        "blur": "{elevation-shadow-level4-blur}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  },
+  "elevation-level5": {
+    "$type": "shadow",
+    "$value": [
+      {
+        "color": "{elevation-shadow-level5-color}",
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": "{elevation-shadow-level5-offsety}",
+        "blur": "{elevation-shadow-level5-blur}",
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
+      }
+    ]
+  }
+}

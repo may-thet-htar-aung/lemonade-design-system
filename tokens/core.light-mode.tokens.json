@@ -1,0 +1,1350 @@
+{
+  "color-forest-green-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9137254953384399,
+        0.929411768913269,
+        0.9215686321258545
+      ]
+    }
+  },
+  "color-forest-green-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7333333492279053,
+        0.7843137383460999,
+        0.7490196228027344
+      ]
+    }
+  },
+  "color-forest-green-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6078431606292725,
+        0.6784313917160034,
+        0.6313725709915161
+      ]
+    }
+  },
+  "color-forest-green-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.4274509847164154,
+        0.5333333611488342,
+        0.4627451002597809
+      ]
+    }
+  },
+  "color-forest-green-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3176470696926117,
+        0.4431372582912445,
+        0.35686275362968445
+      ]
+    }
+  },
+  "color-forest-green-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.14509804546833038,
+        0.3019607961177826,
+        0.19607843458652496
+      ]
+    }
+  },
+  "color-forest-green-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.13333334028720856,
+        0.27450981736183167,
+        0.18039216101169586
+      ]
+    }
+  },
+  "color-forest-green-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.10196078568696976,
+        0.21568627655506134,
+        0.1411764770746231
+      ]
+    }
+  },
+  "color-forest-green-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.0784313753247261,
+        0.16470588743686676,
+        0.10980392247438431
+      ]
+    }
+  },
+  "color-forest-green-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.062745101749897,
+        0.125490203499794,
+        0.08235294371843338
+      ]
+    }
+  },
+  "color-lemon-yellow-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9960784316062927,
+        0.9843137264251709,
+        0.929411768913269
+      ]
+    }
+  },
+  "color-lemon-yellow-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9882352948188782,
+        0.9529411792755127,
+        0.7843137383460999
+      ]
+    }
+  },
+  "color-lemon-yellow-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9843137264251709,
+        0.929411768913269,
+        0.6784313917160034
+      ]
+    }
+  },
+  "color-lemon-yellow-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9764705896377563,
+        0.8980392217636108,
+        0.529411792755127
+      ]
+    }
+  },
+  "color-lemon-yellow-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9725490212440491,
+        0.8784313797950745,
+        0.43921568989753723
+      ]
+    }
+  },
+  "color-lemon-yellow-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9647058844566345,
+        0.8470588326454163,
+        0.2980392277240753
+      ]
+    }
+  },
+  "color-lemon-yellow-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8784313797950745,
+        0.772549033164978,
+        0.2705882489681244
+      ]
+    }
+  },
+  "color-lemon-yellow-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.686274528503418,
+        0.6000000238418579,
+        0.21176470816135406
+      ]
+    }
+  },
+  "color-lemon-yellow-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.529411792755127,
+        0.46666666865348816,
+        0.16470588743686676
+      ]
+    }
+  },
+  "color-lemon-yellow-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.40392157435417175,
+        0.35686275362968445,
+        0.125490203499794
+      ]
+    }
+  },
+  "color-golden-orange-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9921568632125854,
+        0.9647058844566345,
+        0.9215686321258545
+      ]
+    }
+  },
+  "color-golden-orange-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9725490212440491,
+        0.886274516582489,
+        0.7607843279838562
+      ]
+    }
+  },
+  "color-golden-orange-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9607843160629272,
+        0.8313725590705872,
+        0.6470588445663452
+      ]
+    }
+  },
+  "color-golden-orange-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9411764740943909,
+        0.7568627595901489,
+        0.48627451062202454
+      ]
+    }
+  },
+  "color-golden-orange-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.929411768913269,
+        0.7098039388656616,
+        0.3843137323856354
+      ]
+    }
+  },
+  "color-golden-orange-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9137254953384399,
+        0.6352941393852234,
+        0.23137255012989044
+      ]
+    }
+  },
+  "color-golden-orange-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8313725590705872,
+        0.5764706134796143,
+        0.21176470816135406
+      ]
+    }
+  },
+  "color-golden-orange-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6470588445663452,
+        0.45098039507865906,
+        0.16470588743686676
+      ]
+    }
+  },
+  "color-golden-orange-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.501960813999176,
+        0.3490196168422699,
+        0.125490203499794
+      ]
+    }
+  },
+  "color-golden-orange-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3843137323856354,
+        0.2666666805744171,
+        0.09803921729326248
+      ]
+    }
+  },
+  "color-green-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9176470637321472,
+        0.9490196108818054,
+        0.929411768913269
+      ]
+    }
+  },
+  "color-green-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7490196228027344,
+        0.843137264251709,
+        0.7803921699523926
+      ]
+    }
+  },
+  "color-green-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6235294342041016,
+        0.7647058963775635,
+        0.6745098233222961
+      ]
+    }
+  },
+  "color-green-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.45490196347236633,
+        0.658823549747467,
+        0.5254902243614197
+      ]
+    }
+  },
+  "color-green-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3490196168422699,
+        0.5921568870544434,
+        0.4313725531101227
+      ]
+    }
+  },
+  "color-green-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.18431372940540314,
+        0.4901960790157318,
+        0.29019609093666077
+      ]
+    }
+  },
+  "color-green-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.16862745583057404,
+        0.4470588266849518,
+        0.26274511218070984
+      ]
+    }
+  },
+  "color-green-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.12941177189350128,
+        0.3490196168422699,
+        0.2078431397676468
+      ]
+    }
+  },
+  "color-green-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.10196078568696976,
+        0.2705882489681244,
+        0.16078431904315948
+      ]
+    }
+  },
+  "color-green-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.0784313753247261,
+        0.2078431397676468,
+        0.12156862765550613
+      ]
+    }
+  },
+  "color-amber-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9725490212440491,
+        0.9490196108818054,
+        0.9137254953384399
+      ]
+    }
+  },
+  "color-amber-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9137254953384399,
+        0.8352941274642944,
+        0.729411780834198
+      ]
+    }
+  },
+  "color-amber-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8705882430076599,
+        0.7568627595901489,
+        0.5960784554481506
+      ]
+    }
+  },
+  "color-amber-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8117647171020508,
+        0.6470588445663452,
+        0.4117647111415863
+      ]
+    }
+  },
+  "color-amber-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.772549033164978,
+        0.5803921818733215,
+        0.2980392277240753
+      ]
+    }
+  },
+  "color-amber-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7176470756530762,
+        0.4745098054409027,
+        0.12156862765550613
+      ]
+    }
+  },
+  "color-amber-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6549019813537598,
+        0.4313725531101227,
+        0.10980392247438431
+      ]
+    }
+  },
+  "color-amber-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.5098039507865906,
+        0.33725491166114807,
+        0.08627451211214066
+      ]
+    }
+  },
+  "color-amber-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3960784375667572,
+        0.26274511218070984,
+        0.06666667014360428
+      ]
+    }
+  },
+  "color-amber-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3019607961177826,
+        0.20000000298023224,
+        0.05098039284348488
+      ]
+    }
+  },
+  "color-red-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9803921580314636,
+        0.9254902005195618,
+        0.9254902005195618
+      ]
+    }
+  },
+  "color-red-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9333333373069763,
+        0.7647058963775635,
+        0.7647058963775635
+      ]
+    }
+  },
+  "color-red-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9019607901573181,
+        0.6509804129600525,
+        0.6509804129600525
+      ]
+    }
+  },
+  "color-red-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8549019694328308,
+        0.4901960790157318,
+        0.4901960790157318
+      ]
+    }
+  },
+  "color-red-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8274509906768799,
+        0.3921568691730499,
+        0.3921568691730499
+      ]
+    }
+  },
+  "color-red-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7843137383460999,
+        0.239215686917305,
+        0.239215686917305
+      ]
+    }
+  },
+  "color-red-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7137255072593689,
+        0.21960784494876862,
+        0.21960784494876862
+      ]
+    }
+  },
+  "color-red-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.5568627715110779,
+        0.16862745583057404,
+        0.16862745583057404
+      ]
+    }
+  },
+  "color-red-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.4313725531101227,
+        0.13333334028720856,
+        0.13333334028720856
+      ]
+    }
+  },
+  "color-red-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3294117748737335,
+        0.10196078568696976,
+        0.10196078568696976
+      ]
+    }
+  },
+  "color-blue-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9176470637321472,
+        0.9490196108818054,
+        0.9725490212440491
+      ]
+    }
+  },
+  "color-blue-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7372549176216125,
+        0.8352941274642944,
+        0.9098039269447327
+      ]
+    }
+  },
+  "color-blue-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6117647290229797,
+        0.7568627595901489,
+        0.8666666746139526
+      ]
+    }
+  },
+  "color-blue-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.43529412150382996,
+        0.6470588445663452,
+        0.8039215803146362
+      ]
+    }
+  },
+  "color-blue-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.32549020648002625,
+        0.5764706134796143,
+        0.7686274647712708
+      ]
+    }
+  },
+  "color-blue-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.1568627506494522,
+        0.47058823704719543,
+        0.7098039388656616
+      ]
+    }
+  },
+  "color-blue-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.1411764770746231,
+        0.4274509847164154,
+        0.6470588445663452
+      ]
+    }
+  },
+  "color-blue-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.10980392247438431,
+        0.3333333432674408,
+        0.5058823823928833
+      ]
+    }
+  },
+  "color-blue-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.08627451211214066,
+        0.25882354378700256,
+        0.3921568691730499
+      ]
+    }
+  },
+  "color-blue-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.06666667014360428,
+        0.19607843458652496,
+        0.2980392277240753
+      ]
+    }
+  },
+  "color-purple-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9450980424880981,
+        0.9333333373069763,
+        0.9647058844566345
+      ]
+    }
+  },
+  "color-purple-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8352941274642944,
+        0.7921568751335144,
+        0.8901960849761963
+      ]
+    }
+  },
+  "color-purple-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7529411911964417,
+        0.6941176652908325,
+        0.8392156958580017
+      ]
+    }
+  },
+  "color-purple-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.6392157077789307,
+        0.5529412031173706,
+        0.7647058963775635
+      ]
+    }
+  },
+  "color-purple-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.5686274766921997,
+        0.46666666865348816,
+        0.7215686440467834
+      ]
+    }
+  },
+  "color-purple-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.4627451002597809,
+        0.3333333432674408,
+        0.6509804129600525
+      ]
+    }
+  },
+  "color-purple-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.41960784792900085,
+        0.3019607961177826,
+        0.5921568870544434
+      ]
+    }
+  },
+  "color-purple-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3294117748737335,
+        0.23529411852359772,
+        0.4627451002597809
+      ]
+    }
+  },
+  "color-purple-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.2549019753932953,
+        0.18431372940540314,
+        0.35686275362968445
+      ]
+    }
+  },
+  "color-purple-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.19607843458652496,
+        0.1411764770746231,
+        0.27450981736183167
+      ]
+    }
+  },
+  "color-neutral-0": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "color-neutral-50": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.9411764740943909,
+        0.9450980424880981,
+        0.9529411792755127
+      ]
+    }
+  },
+  "color-neutral-100": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.8117647171020508,
+        0.8313725590705872,
+        0.8588235378265381
+      ]
+    }
+  },
+  "color-neutral-200": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.7215686440467834,
+        0.7490196228027344,
+        0.7921568751335144
+      ]
+    }
+  },
+  "color-neutral-300": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.5921568870544434,
+        0.6352941393852234,
+        0.6941176652908325
+      ]
+    }
+  },
+  "color-neutral-400": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.5137255191802979,
+        0.5647059082984924,
+        0.6352941393852234
+      ]
+    }
+  },
+  "color-neutral-500": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3921568691730499,
+        0.45490196347236633,
+        0.545098066329956
+      ]
+    }
+  },
+  "color-neutral-600": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.35686275362968445,
+        0.4156862795352936,
+        0.4941176474094391
+      ]
+    }
+  },
+  "color-neutral-700": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.27843138575553894,
+        0.32156863808631897,
+        0.38823530077934265
+      ]
+    }
+  },
+  "color-neutral-800": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.21568627655506134,
+        0.250980406999588,
+        0.2980392277240753
+      ]
+    }
+  },
+  "color-neutral-900": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.16470588743686676,
+        0.1921568661928177,
+        0.22745098173618317
+      ]
+    }
+  },
+  "color-neutral-50a": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3921568691730499,
+        0.45490196347236633,
+        0.545098066329956
+      ],
+      "alpha": 0.03921568766236305
+    }
+  },
+  "color-neutral-100a": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3921568691730499,
+        0.45490196347236633,
+        0.545098066329956
+      ],
+      "alpha": 0.0784313753247261
+    }
+  },
+  "color-neutral-200a": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3921568691730499,
+        0.45490196347236633,
+        0.545098066329956
+      ],
+      "alpha": 0.16078431904315948
+    }
+  },
+  "color-neutral-300a": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3921568691730499,
+        0.45490196347236633,
+        0.545098066329956
+      ],
+      "alpha": 0.239215686917305
+    }
+  },
+  "color-neutral-400a": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3921568691730499,
+        0.45490196347236633,
+        0.545098066329956
+      ],
+      "alpha": 0.32156863808631897
+    }
+  },
+  "color-neutral-500a": {
+    "$type": "color",
+    "$value": {
+      "colorSpace": "srgb",
+      "components": [
+        0.3921568691730499,
+        0.45490196347236633,
+        0.545098066329956
+      ],
+      "alpha": 0.4000000059604645
+    }
+  },
+  "spacing-none": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "spacing-2xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 2,
+      "unit": "px"
+    }
+  },
+  "spacing-xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 4,
+      "unit": "px"
+    }
+  },
+  "spacing-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 8,
+      "unit": "px"
+    }
+  },
+  "spacing-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 12,
+      "unit": "px"
+    }
+  },
+  "spacing-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    }
+  },
+  "spacing-xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    }
+  },
+  "spacing-2xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    }
+  },
+  "spacing-3xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 48,
+      "unit": "px"
+    }
+  },
+  "spacing-4xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 64,
+      "unit": "px"
+    }
+  },
+  "spacing-5xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 80,
+      "unit": "px"
+    }
+  },
+  "spacing-6xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 96,
+      "unit": "px"
+    }
+  },
+  "spacing-negative-4": {
+    "$type": "dimension",
+    "$value": {
+      "value": -4,
+      "unit": "px"
+    }
+  },
+  "spacing-negative-8": {
+    "$type": "dimension",
+    "$value": {
+      "value": -8,
+      "unit": "px"
+    }
+  },
+  "border-radius-none": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "border-radius-xs": {
+    "$type": "dimension",
+    "$value": {
+      "value": 4,
+      "unit": "px"
+    }
+  },
+  "border-radius-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 8,
+      "unit": "px"
+    }
+  },
+  "border-radius-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 12,
+      "unit": "px"
+    }
+  },
+  "border-radius-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 16,
+      "unit": "px"
+    }
+  },
+  "border-radius-xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 28,
+      "unit": "px"
+    }
+  },
+  "border-radius-2xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    }
+  },
+  "border-radius-3xl": {
+    "$type": "dimension",
+    "$value": {
+      "value": 48,
+      "unit": "px"
+    }
+  },
+  "border-radius-circle": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1000,
+      "unit": "px"
+    }
+  },
+  "border-width-05": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0.5,
+      "unit": "px"
+    }
+  },
+  "border-width-1": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1,
+      "unit": "px"
+    }
+  },
+  "border-width-2": {
+    "$type": "dimension",
+    "$value": {
+      "value": 2,
+      "unit": "px"
+    }
+  },
+  "border-width-4": {
+    "$type": "dimension",
+    "$value": {
+      "value": 4,
+      "unit": "px"
+    }
+  },
+  "spacing-40": {
+    "$type": "dimension",
+    "$value": {
+      "value": 40,
+      "unit": "px"
+    }
+  },
+  "opacity-8": {
+    "$type": "number",
+    "$value": 8
+  },
+  "opacity-16": {
+    "$type": "number",
+    "$value": 16
+  },
+  "opacity-40": {
+    "$type": "number",
+    "$value": 40
+  },
+  "opacity-60": {
+    "$type": "number",
+    "$value": 60
+  },
+  "motion-duration-fast": {
+    "$type": "dimension",
+    "$value": {
+      "value": 100,
+      "unit": "px"
+    }
+  },
+  "motion-duration-normal": {
+    "$type": "dimension",
+    "$value": {
+      "value": 200,
+      "unit": "px"
+    }
+  },
+  "motion-duration-slow": {
+    "$type": "dimension",
+    "$value": {
+      "value": 300,
+      "unit": "px"
+    }
+  },
+  "z-index-base": {
+    "$type": "dimension",
+    "$value": {
+      "value": 0,
+      "unit": "px"
+    }
+  },
+  "z-index-dropdown": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1000,
+      "unit": "px"
+    }
+  },
+  "z-index-sticky": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1100,
+      "unit": "px"
+    }
+  },
+  "z-index-overlay": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1200,
+      "unit": "px"
+    }
+  },
+  "z-index-modal": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1300,
+      "unit": "px"
+    }
+  },
+  "z-index-toast": {
+    "$type": "dimension",
+    "$value": {
+      "value": 1400,
+      "unit": "px"
+    }
+  }
+}
