@@ -1,0 +1,83 @@
+/* Figma node 165:1639. Every value is a semantic token. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: var(--gap-component);
+  height: var(--size-control-md);
+  min-width: var(--size-button-minwidth);
+  padding-block: 0;
+  padding-inline: var(--padding-button-inline);
+  border: 0;
+  border-radius: var(--border-radius-md);
+  background: transparent;
+  font: var(--button-medium-font-weight) var(--button-medium-font-size) / var(--button-medium-line-height) var(--button-medium-font-family);
+  letter-spacing: var(--button-medium-letter-spacing);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* GAP: the design has no focus style. The browser default focus outline is
+   left in place. The Designer must bind a focus ring. */
+
+/* GAP: the icon size is unbound in the node, so the icon slot is left unsized. */
+.button__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* Primary */
+.button--primary {
+  background: var(--color-bg-static-brandgreen);
+  color: var(--color-text-static-light);
+}
+.button--primary .button__icon {
+  color: var(--color-icon-static-light);
+}
+.button--primary:hover:not(:disabled),
+.button--primary[data-state='Hover'] {
+  background: var(--color-bg-brandgreen-hover);
+}
+
+/* Outline: an inset ring, so the stroke does not grow the frame */
+.button--outline {
+  color: var(--color-text-brandbold);
+  box-shadow: inset 0 0 0 var(--border-width-1) var(--color-border-brandgreen-default);
+}
+.button--outline .button__icon {
+  color: var(--color-icon-brandbold);
+}
+.button--outline:hover:not(:disabled),
+.button--outline[data-state='Hover'] {
+  background: var(--color-bg-surfaceprimary);
+  box-shadow: inset 0 0 0 var(--border-width-1) var(--color-border-brandgreen-strong);
+}
+
+/* Ghost */
+.button--ghost {
+  color: var(--color-text-brandbold);
+}
+.button--ghost .button__icon {
+  color: var(--color-icon-brandbold);
+}
+.button--ghost:hover:not(:disabled),
+.button--ghost[data-state='Hover'] {
+  background: var(--color-bg-brandgreen-light);
+}
+
+/* Disabled */
+.button:disabled {
+  cursor: not-allowed;
+  color: var(--color-text-disabled);
+}
+.button:disabled .button__icon {
+  color: var(--color-icon-disabled);
+}
+.button--primary:disabled {
+  background: var(--color-bg-disabled);
+}
+.button--outline:disabled {
+  box-shadow: inset 0 0 0 var(--border-width-1) var(--color-border-disabled);
+}
