@@ -34,13 +34,15 @@ Read the rows, not only the percentage. `Synchronization %` divides a count of a
 - Every other component whose `src/components/<Name>/` folder is touched by a commit in `main..staging` reads `To be deployed`, `Completed` or `Released`.
 - No commit in `main..staging` touches `tokens/` or `build/`.
 
-- On a clean checkout of `staging` with the build output in place, `node scripts/security-check.mjs` ends `RESULT: PASS`. A `FAIL` or `INCOMPLETE` result stops the merge (`.claude/skills/security-check/SKILL.md`).
+- On a clean, up-to-date checkout of `staging` (`git checkout staging && git pull --ff-only`), `npm run typecheck` exits 0. Then `npm run build-storybook` produces `storybook-static/`, the same build Vercel will run, and `node scripts/security-check.mjs` ends `RESULT: PASS` against it. A `FAIL` or `INCOMPLETE` stops the merge (`.claude/skills/security-check/SKILL.md`). You run these commands to check the work, never to change it.
+
+Then open the PR with `gh pr create --base main --head staging`, and merge it with a merge commit (`gh pr merge --merge`). Never squash or rebase it, because the commits QA tested must reach `main` unchanged.
 
 If any check fails, or the merge conflicts, stop and report. Do not resolve, rebase or cherry-pick.
 
-**3 · Deploy.** Let Vercel build production from the merged `main` commit, and confirm the deployment succeeded for that exact commit.
+**3 · Deploy.** Vercel builds production from `main` on every push, using `vercel.json` (`npm run build-storybook` → `storybook-static`). You trigger nothing else. Confirm that the deployment is for the exact merge commit and that it succeeded, through the deployment Vercel reports to GitHub: `gh api repos/may-thet-htar-aung/lemonade-design-system/deployments?sha=<merge sha>`, then that deployment's `statuses`. The newest status must read `success`. The Vercel MCP connection currently answers 403, so never treat its silence as a pass (`docs/tools.md`).
 
-**4 · Open the production URL** and watch every story for this component render, with a clean console.
+**4 · Open the production URL** (`https://lemonade-design-system.vercel.app`). Its `/index.json` must list every story for this component. Then open each story and watch it render, with a clean console. Storybook answers 200 for a story that does not exist, so look at what rendered.
 
 **5 · Run the deploy gate** from `.claude/skills/deploy-gate/SKILL.md` against the live production URL, including `node scripts/security-check.mjs --live <url> --expect public`. If either fails or cannot run, do not write the link. Report it and stop. A human decides whether to roll back.
 
@@ -107,8 +109,10 @@ Run every box before writing `Production Storybook`. One unchecked box means you
 - [ ] Every linked row reads `Passed`, and there is at least one.
 - [ ] The commit in `Components.Commit` is on `staging`, and no later commit in `main..staging` touches `src/components/<Name>/`.
 - [ ] Every other component touched in `main..staging` reads `To be deployed`, `Completed` or `Released`, and nothing touches `tokens/` or `build/`.
-- [ ] I changed no file, and the merge had no conflict.
-- [ ] Vercel shows a successful production deployment for the exact `main` commit I merged.
+- [ ] On `staging`, `npm run typecheck` exited 0, and `node scripts/security-check.mjs` ended `RESULT: PASS` against a fresh `storybook-static/`.
+- [ ] I changed no file, the merge had no conflict, and it went in as a merge commit, not squashed or rebased.
+- [ ] GitHub's deployment record for the exact merge SHA has a newest status of `success`.
+- [ ] Production `/index.json` lists every story for this component.
 - [ ] I opened the production URL and watched every story for this component render, with a clean console.
 - [ ] The deploy gate from `.claude/skills/deploy-gate/SKILL.md` passed against the live URL.
 - [ ] The link I am writing is the production URL I opened, on the production domain, pointing at this component.
@@ -124,7 +128,16 @@ Each of these is a way to look finished without being finished.
 - **Never take the gate from a report, a card or a person.** Read the registry.
 - **Never fix anything on the way to production,** not even a one-line fix, a typo, a lint error or a failing build. Report it and stop. The Engineer fixes.
 - **Never resolve another agent's merge conflict.** A conflict means two pieces of work disagree. Stop and report it.
-- **Never rebase, cherry-pick, squash or rewrite history** to make a merge go through, and never force-push.
+- **Never rebase, cherry-pick, squash or rewrite history** to make a merge go through, and never force-push. A squashed merge puts code on `main` under a commit QA never saw.
+- **Never edit `vercel.json`, the Vercel project settings or Deployment Protection** to get a deploy through. Report it, and a human changes them.
+- **Never call a deploy done from the Vercel MCP's silence, a green push, or a URL that answers 200.** Confirm the deployment status for the exact SHA, then look at the rendered stories.
+- **Never run the build to repair it.** `npm run typecheck` and `npm run build-storybook` are checks. If either fails, the Engineer fixes it.
+- **Never skip `npm run typecheck` because Vercel would build anyway.** Vercel does not type-check. A green deploy can carry a type error.
+- **Never check an old or partial checkout.** If `git pull --ff-only` on `staging` fails, or the working tree is dirty, stop. A gate run on stale code says nothing about what ships.
+- **Never reuse a security-check result** from an earlier build, another branch or another machine, and never narrow its `--dir` to dodge a finding.
+- **Never accept a deployment status for a different SHA,** such as a later push to `main` or the previous production build, as this merge's deployment.
+- **Never write the link while the newest deployment status is `pending` or `queued`.** Wait for `success`, or report `failure` or `error` and stop.
+- **Never treat a story missing from production `/index.json` as a cache delay** and write the link anyway. If it isn't listed, it didn't ship.
 - **Never merge a `staging` that carries untested work**: a later commit on this component, a component still in build or test, or a change to `tokens/` or `build/`.
 - **Never write a production link before opening the page** and watching the stories render.
 - **Never write the link when the deploy gate failed or could not run.**
