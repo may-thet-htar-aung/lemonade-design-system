@@ -1,0 +1,85 @@
+{
+  "baseId": "appXXXXXXXXXXXXXX",
+  "tables": {
+    "Components": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Components": "fldXXXXXXXXXXXXXX",
+        "Category": "fldXXXXXXXXXXXXXX",
+        "Figma": "fldXXXXXXXXXXXXXX",
+        "Staging Storybook": "fldXXXXXXXXXXXXXX",
+        "Production Storybook": "fldXXXXXXXXXXXXXX",
+        "Astro Link": "fldXXXXXXXXXXXXXX",
+        "Design": "fldXXXXXXXXXXXXXX",
+        "Development": "fldXXXXXXXXXXXXXX",
+        "Synchronization %": "fldXXXXXXXXXXXXXX",
+        "Commit": "fldXXXXXXXXXXXXXX",
+        "Last Modified": "fldXXXXXXXXXXXXXX",
+        "[Staging] Test Records": "fldXXXXXXXXXXXXXX",
+        "Staging Testing Results Summary": "fldXXXXXXXXXXXXXX",
+        "Total Staging Tests": "fldXXXXXXXXXXXXXX",
+        "Staging Passed Count": "fldXXXXXXXXXXXXXX",
+        "Staging Passed Tests": "fldXXXXXXXXXXXXXX",
+        "GitHub Commits": "fldXXXXXXXXXXXXXX",
+        "Composes": "fldXXXXXXXXXXXXXX",
+        "Composed Into": "fldXXXXXXXXXXXXXX",
+        "Release Review": "fldXXXXXXXXXXXXXX",
+        "Release Verdict": "fldXXXXXXXXXXXXXX",
+        "Design and development alignment": "fldXXXXXXXXXXXXXX",
+        "Release readiness classification": "fldXXXXXXXXXXXXXX",
+        "Design summary": "fldXXXXXXXXXXXXXX"
+      }
+    },
+    "Staging Testing": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Component/Sub Component": "fldXXXXXXXXXXXXXX",
+        "Testing Results": "fldXXXXXXXXXXXXXX",
+        "Composed In": "fldXXXXXXXXXXXXXX",
+        "Variants": "fldXXXXXXXXXXXXXX",
+        "Size": "fldXXXXXXXXXXXXXX",
+        "State": "fldXXXXXXXXXXXXXX",
+        "Context": "fldXXXXXXXXXXXXXX",
+        "Attachment": "fldXXXXXXXXXXXXXX",
+        "Expected Results": "fldXXXXXXXXXXXXXX",
+        "Suggestion for Improvement": "fldXXXXXXXXXXXXXX"
+      }
+    },
+    "DS Feedback": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Feedback": "fldXXXXXXXXXXXXXX",
+        "Components": "fldXXXXXXXXXXXXXX",
+        "Submitted By": "fldXXXXXXXXXXXXXX",
+        "Step to Reproduce": "fldXXXXXXXXXXXXXX",
+        "Suggestion": "fldXXXXXXXXXXXXXX",
+        "Urgency": "fldXXXXXXXXXXXXXX",
+        "Attachment": "fldXXXXXXXXXXXXXX",
+        "Status": "fldXXXXXXXXXXXXXX"
+      }
+    },
+    "GitHub Commits": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Commit Hash": "fldXXXXXXXXXXXXXX",
+        "Message": "fldXXXXXXXXXXXXXX",
+        "Author": "fldXXXXXXXXXXXXXX",
+        "Date Committed": "fldXXXXXXXXXXXXXX",
+        "Link to Components": "fldXXXXXXXXXXXXXX",
+        "Files Changed": "fldXXXXXXXXXXXXXX",
+        "Commit URL": "fldXXXXXXXXXXXXXX",
+        "Commit Type": "fldXXXXXXXXXXXXXX"
+      }
+    },
+    "One-Off Components": {
+      "id": "tblXXXXXXXXXXXXXX",
+      "fields": {
+        "Components": "fldXXXXXXXXXXXXXX",
+        "Project": "fldXXXXXXXXXXXXXX",
+        "Usage quantity": "fldXXXXXXXXXXXXXX",
+        "Git Repo": "fldXXXXXXXXXXXXXX",
+        "Figma": "fldXXXXXXXXXXXXXX"
+      }
+    }
+  }
+}
