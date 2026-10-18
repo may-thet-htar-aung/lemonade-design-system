@@ -33,7 +33,7 @@ React, TypeScript and Storybook are set up. There is no lint config and no CI ye
 ## Hard rules
 
 - **Never hand-edit `tokens/` or `build/`.** Both are generated. A missing or wrong token is fixed in Figma and re-exported. See `.claude/skills/tokens/SKILL.md`.
-- **Never push or merge to `main`.** DevOps merges `staging` → `main`. Everything else lands by pull request: `component/<name>` → `staging`, `tokens/sync-<description>` from token-runner, `docs/<name>` and `release-review/<name>`.
+- **Never push or merge to `main`.** DevOps opens the `staging` → `main` PR and a human merges it. Everything else lands by pull request: `component/<name>` → `staging`, `tokens/sync-<description>` from token-runner, `docs/<name>` and `release-review/<name>`.
 - **Never hardcode an Airtable ID** in any committed file. Resolve it through `.claude/registry.local.json`.
 - **Never write `Development`** in the registry. It is a formula. Change the evidence underneath it.
 - **Never write a registry column you do not own.** Ownership is in `.claude/skills/registry/SKILL.md`. Read it before any registry write.

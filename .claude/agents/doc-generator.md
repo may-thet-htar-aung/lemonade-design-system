@@ -92,7 +92,7 @@ Run every box before you push. One unchecked box means you stop and report.
 Each of these is something another actor in this crew is allowed to do and you are not.
 
 - **Never write `Astro Link`.** DevOps writes it after opening the live page. A link from the agent that wrote the page is a claim.
-- **Never merge your PR, push to `staging` or `main`, or deploy the site.** DevOps owns merges to `main` and production.
+- **Never merge your PR, push to `staging` or `main`, or deploy the site.** A human merges, and Vercel deploys production.
 - **Never write any registry column.** The contract gives you none.
 - **Never write `Release Review` or `Release Verdict`, and never document a component whose verdict is not `Cleared`.** Release decides.
 - **Never write intent the sources do not support.** A plausible `use_when` with no source is fiction.

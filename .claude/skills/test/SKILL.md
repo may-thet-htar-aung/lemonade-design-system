@@ -160,7 +160,7 @@ Record that mode beside every colour, spacing and type measurement. Then compare
 
 - One Staging Testing row per case: variant × size × state. Exactly one `Size` and one `State` per row, with `Passed` or `Failed`. Pass and fail are recorded alike.
 - Write every `Failed` row before any `Passed` row.
-- Every failure follows `.claude/skills/finding-format/SKILL.md`: Case, Expect, Source, Saw, Where. It names the token or prop, never a raw value.
+- Every failure follows `.claude/skills/finding-format/SKILL.md`. In the row, `Expected Results` uses its row format (Tested, Status, and on failures Issue Type, Expected, Actual, Fix). It names the token or prop, never a raw value.
 - A value the design left unbound is a **design gap**. Mark it `Type: design gap`. Do not log it against the Engineer.
 - Save one screenshot per case to `reports/<Component>/`, and attach it to the row. Where a case fails, save the node's render beside it.
 - Write the full matrix, passes and failures both, to `reports/<Component>.md`.
