@@ -1,0 +1,54 @@
+/* Figma node 147:183. Every value is a semantic token. */
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-element);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-brandgreen);
+  font: var(--button-medium-font-weight) var(--button-medium-font-size) / var(--button-medium-line-height) var(--button-medium-font-family);
+  letter-spacing: var(--button-medium-letter-spacing);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* GAP: the design has no focus style. The browser default focus outline is
+   left in place. The Designer must bind a focus ring. */
+
+/* GAP: the 24 x 24 hit area in the Figma description has no size or padding
+   token bound in the node, so none is set. */
+
+.link-button__label {
+  position: relative;
+}
+
+.link-button__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--color-icon-brand);
+}
+
+/* Hover: a line under the label only. It is drawn out of flow so the frame
+   keeps the Default height. GAP: the node leaves the line's 1 px height
+   unbound; the stroke-width token is used because the description says
+   "1 px" and nothing else is available. Designer to confirm the binding. */
+.link-button:hover:not(:disabled) .link-button__label::after,
+.link-button[data-state='Hover'] .link-button__label::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: var(--border-width-1);
+  background: var(--color-text-brandgreen);
+}
+
+/* Disabled */
+.link-button:disabled {
+  cursor: not-allowed;
+  color: var(--color-text-disabled);
+}
+.link-button:disabled .link-button__icon {
+  color: var(--color-icon-disabled);
+}
