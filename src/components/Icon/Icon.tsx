@@ -50,7 +50,7 @@ const markup = Object.fromEntries(
   Object.entries(files).map(([path, raw]) => [
     path.replace('./svg/', '').replace('.svg', ''),
     raw
-      .replace(/ width="d+" height="d+"/, ' width="100%" height="100%"')
+      .replace(/ width="\d+" height="\d+"/, ' width="100%" height="100%"')
       .replace(/ style="[^"]*"/, '')
       .replace(/ preserveAspectRatio="[^"]*"/, '')
       .replace(/fill="#[0-9A-Fa-f]{3,8}"/g, 'fill="currentColor"'),
@@ -59,7 +59,8 @@ const markup = Object.fromEntries(
 
 export type IconProps = {
   Name: IconName;
-  Size?: 'sm' | 'md' | 'lg' | 'xl';
+  /** Maps to --size-icon-sm/md/lg/xl/2xl/3xl, the documented range on Figma 76:12. */
+  Size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
   /** Decorative by default. Set a Label when the icon is the only thing that names an action. */
   Label?: string;
   className?: string;
