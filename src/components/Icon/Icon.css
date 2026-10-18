@@ -1,12 +1,12 @@
-/* Figma node 16:1062 (Icon (Lemonade)). Every value is a semantic token. */
+/* Figma node 76:12 (Icon, Lemonade-Icons). Every value is a semantic token. */
 
 .icon {
   display: inline-flex;
   flex-shrink: 0;
 }
 
-/* GAP: the design shows 40 and 48 sizes for icon/user, but no --size-icon-*
-   token exists for them, so Size has no value for them.
+/* Size is the documented range on 76:12 (16, 18, 24, 32, 40 and 48), one
+   --size-icon-* token per step.
    GAP: the artwork has one unbound fixed fill, so the icon inherits its colour
    from the parent and sets none of its own. */
 .icon--sm {
@@ -24,4 +24,12 @@
 .icon--xl {
   width: var(--size-icon-xl);
   height: var(--size-icon-xl);
+}
+.icon--2xl {
+  width: var(--size-icon-2xl);
+  height: var(--size-icon-2xl);
+}
+.icon--3xl {
+  width: var(--size-icon-3xl);
+  height: var(--size-icon-3xl);
 }
