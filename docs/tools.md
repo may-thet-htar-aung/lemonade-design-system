@@ -45,7 +45,7 @@ The registry. Read `.claude/skills/registry/SKILL.md` before any write.
 ## Git and GitHub (`gh`)
 
 - Repo: `may-thet-htar-aung/lemonade-design-system`.
-- Branches: `main` (production, DevOps merges), `staging` (QA tests here), `component/<name>`, `docs/<name>`, `release-review/<name>`, `tokens/sync-<description>`.
+- Branches: `main` (production; DevOps opens the PR from `staging`, a human merges), `staging` (QA tests here), `component/<name>`, `docs/<name>`, `release-review/<name>`, `tokens/sync-<description>`.
 - Branch from an up-to-date `staging`: `git checkout staging && git pull --ff-only` first.
 - `gh pr create --base staging` for every branch except `tokens/sync-*`, which targets `main`.
 - Git warns that LF will be replaced by CRLF on every commit. That is expected on Windows.

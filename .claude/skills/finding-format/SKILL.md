@@ -7,10 +7,40 @@ description: The format of a QA finding, which is what QA hands the Engineer whe
 
 A finding is what QA hands the Engineer when a case fails. The Engineer will act on it alone, from the registry, with no chance to ask QA what it meant. If the Engineer would need to ask a question, it is not a finding yet.
 
-Write one finding per failed case, never one finding for several cases. Use it in two places:
+Write one finding per failed case, never one finding for several cases. It goes in two places:
 
-- In the case's Staging Testing row. **Expect** goes in `Expected Results`. The full finding goes in `Suggestion for Improvement`. The screenshot goes in `Attachment`.
-- In `reports/<Component>.md`, under the case.
+- **In the case's Staging Testing row**, in `Expected Results`, using the row format below. The screenshot goes in `Attachment`, or is named in `Context` when it cannot be attached.
+- **In `reports/<Component>.md`**, under the case, with all the parts below.
+
+## What goes in `Expected Results`
+
+Every row gets one of these two blocks, exactly as laid out, one line per field. Dates are `dd/mm/yyyy`, the day the case was tested.
+
+**Failed row:**
+
+```
+Tested : 18/10/2026
+Status : Failed (previously Passed)
+Issue Type : Visual
+Expected : svg fills the icon box: width and height use --size-icon-xl (Figma node 76:12, get_metadata)
+Actual : svg stays 24×24 inside a 32×32 box (computed style, staging)
+Fix : Icon.tsx line 53, the width/height regex needs \d+ instead of d+
+```
+
+- **Status** gives this row's verdict, and in brackets what it was before this test: `previously Passed`, `previously Failed`, `previously Fixed (To re-test)`, or `first test` when the row is new.
+- **Issue Type** is one of `Visual`, `Behaviour`, `Missing case` or `Design gap` (see Type below). A `Design gap` is for the Designer, not the Engineer.
+- **Expected** is the part called Expect below, ending with its Source in brackets.
+- **Actual** is the part called Saw below.
+- **Fix** is Where, plus the fix when it follows directly. It is never a patch.
+
+**Passed row:**
+
+```
+Tested : 18/10/2026
+Status : This Variant passed.
+```
+
+Nothing else goes in a passed row's `Expected Results`.
 
 ## The required parts
 

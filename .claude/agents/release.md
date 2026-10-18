@@ -99,7 +99,7 @@ Each of these is something another actor in this crew is allowed to do and you a
 - **Never invent a gate, or clear a component because the gate skill is missing.**
 - **Never write `Astro Link`.** DevOps owns it. You propose releases and never perform them, so a link from you would be a claim.
 - **Never write `Production Storybook`.** DevOps owns it.
-- **Never merge to `main`, push to `main`, deploy, bump `package.json`, tag or publish to npm.** DevOps merges, and a human versions and tags.
+- **Never merge to `main`, push to `main`, deploy, bump `package.json`, tag or publish to npm.** A human merges to `main`, and a human versions and tags.
 - **Never fix what you find, in code, tokens or docs.** Name the owning agent in the report.
 - **Never set a test row.** QA and the Engineer own Staging Testing.
 - **Never write `Staging Storybook` or `Commit`.** The Engineer owns them.
