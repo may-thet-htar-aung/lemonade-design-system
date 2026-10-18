@@ -15,21 +15,25 @@ Design tokens and, soon, components for the Lemonade design system. Built by an 
 | `.claude/skills/` | Procedures the agents follow | Humans |
 | `.claude/registry.local.json` | Airtable base, table and field IDs. Gitignored. Copy from `registry.example.json` | Humans |
 | `docs/lime-crew-spec.md` | The pipeline spec read from the FigJam board | Humans |
+| `docs/tools.md` | The tools the crew uses (Figma, Airtable, Git, Storybook, Vercel, browser) and their pitfalls | Humans |
 
 ## Commands
 
 ```bash
 npm run build:tokens              # regenerate build/ from tokens/
+npm run typecheck                 # tsc --noEmit; must exit 0
+npm run storybook                 # local Storybook on port 6006
+npm run build-storybook           # static Storybook, what Vercel deploys
 node scripts/verify-tokens.mjs    # prove the rebuild is right; must end RESULT: PASS
 node scripts/security-check.mjs   # build output, deps, clean tree; --live <url> --expect public|protected
 ```
 
-Not set up yet: TypeScript, Storybook and a lint config. The build and test skills assume `npx tsc --noEmit` and a Storybook. Add them before the first component is built.
+React, TypeScript and Storybook are set up. There is no lint config and no CI yet. How each tool is reached, and what goes wrong with it, is in `docs/tools.md`.
 
 ## Hard rules
 
 - **Never hand-edit `tokens/` or `build/`.** Both are generated. A missing or wrong token is fixed in Figma and re-exported. See `.claude/skills/tokens/SKILL.md`.
-- **Never push or merge to `main`.** DevOps merges `staging` → `main`. Everything else lands by pull request: `component/<name>` → `staging`, `tokens/sync-<description>` from token-runner, `docs/<name>` and `release-review/<name>`.
+- **Never push or merge to `main`.** DevOps opens the `staging` → `main` PR and a human merges it. Everything else lands by pull request: `component/<name>` → `staging`, `tokens/sync-<description>` from token-runner, `docs/<name>` and `release-review/<name>`.
 - **Never hardcode an Airtable ID** in any committed file. Resolve it through `.claude/registry.local.json`.
 - **Never write `Development`** in the registry. It is a formula. Change the evidence underneath it.
 - **Never write a registry column you do not own.** Ownership is in `.claude/skills/registry/SKILL.md`. Read it before any registry write.

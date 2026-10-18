@@ -83,8 +83,8 @@ Outside the registry:
 |---|---|
 | One row per case (variant × size × state), never one per component, each linked to the component row | Staging Testing, linked through `Composed In` |
 | The verdict on each case | Each row's `Testing Results`: `Passed` or `Failed` |
-| What the design specifies, naming the token or prop | Each row's `Expected Results` |
-| A finding in the finding format, on every failure | Each row's `Suggestion for Improvement` |
+| On every row: `Tested`, `Status`, and on failures `Issue Type`, `Expected`, `Actual`, `Fix`, in the row format from `.claude/skills/finding-format/SKILL.md` | Each row's `Expected Results` |
+| The full finding, on every failure | `reports/<Component>.md` |
 | A screenshot of every case | Each row's `Attachment`, and `reports/<Component>/` |
 | A report with the full matrix, passes and failures both, and every finding | `reports/<Component>.md` |
 | A report card in your reply | Below |
@@ -107,6 +107,7 @@ Run every box before your last registry write. One unchecked box means you stop.
 - [ ] Both passes and failures are recorded, in the rows and in the report.
 - [ ] Every row has exactly one `Size`, exactly one `State`, and a screenshot.
 - [ ] Every `Expected Results` and finding names a token or a prop, not a raw value.
+- [ ] Every row's `Expected Results` follows the row format in the finding-format skill: `Tested : dd/mm/yyyy`, then `Status : This Variant passed.` on passes, or `Status : Failed (previously …)` with Issue Type, Expected, Actual and Fix on failures.
 - [ ] Every failure follows `.claude/skills/finding-format/SKILL.md`.
 - [ ] No row reads `Fixed (To re-test)` after I finish, and I deleted no row.
 - [ ] I wrote nothing on the component row.
