@@ -61,10 +61,14 @@
   background: var(--color-bg-brandgreen-idle);
 }
 
-/* Event: a plain dot with no ring. Shares the circle radius; the node draws it as an image. */
-.timeline-step[data-state='Event'] .timeline-step__dot {
+/* Event: the Dot frame (132:7) keeps --size-timeline-dot with no fill or ring.
+   Inside it, a centred --size-timeline-dotevent circle (132:12) with no ring. */
+.timeline-step[data-state='Event'] .timeline-step__dot::before {
+  content: '';
+  flex-shrink: 0;
   width: var(--size-timeline-dotevent);
   height: var(--size-timeline-dotevent);
+  border-radius: var(--border-radius-circle);
   background: var(--color-icon-secondary);
 }
 
