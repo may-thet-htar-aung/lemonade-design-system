@@ -17,17 +17,13 @@
   letter-spacing: var(--tagline-14-letter-spacing);
 }
 
-/* GAP: field padding is bound to spacing/md (top and bottom) and spacing/lg
-   (sides) in the node. Both are base tokens (--density-controlpaddingx,
-   --padding-card and others point at them) and no semantic token is bound.
-   Left unset. Designer to bind semantic padding tokens. */
-
 .input__field {
   display: flex;
   align-self: stretch;
   align-items: center;
   box-sizing: border-box;
   gap: var(--gap-component);
+  padding: var(--density-controlpaddingy) var(--density-controlpaddingx);
   height: var(--size-control-md);
   overflow: clip;
   background: var(--color-bg-base);
