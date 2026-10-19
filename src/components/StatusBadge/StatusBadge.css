@@ -1,0 +1,66 @@
+/* Figma node 66:22. Every value is a semantic token. */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  gap: var(--gap-element);
+  height: var(--size-badge-height);
+  padding-block: var(--spacing-2xs);
+  border: var(--border-width-1) solid transparent;
+  border-radius: var(--border-radius-circle);
+  white-space: nowrap;
+}
+
+/* GAP: padding-inline is bound to spacing/sm in the node, but spacing/sm is
+   a base token (--gap-component points at it) and no semantic padding token
+   resolves to it. Left unset. Designer to bind a semantic token. */
+
+.status-badge__label {
+  font: var(--tagline-12-font-weight) var(--tagline-12-font-size) / var(--tagline-12-line-height) var(--tagline-12-font-family);
+  letter-spacing: var(--tagline-12-letter-spacing);
+}
+
+/* GAP: the dot is 6 x 6 in the node with no size token bound, so its size is
+   left unset. Only its shape and colour are built. */
+.status-badge__dot {
+  flex-shrink: 0;
+  border-radius: var(--border-radius-circle);
+  background: currentColor;
+}
+
+.status-badge[data-status='Lost'] {
+  background: var(--color-status-reported-bg);
+  border-color: var(--color-status-reported-border);
+  color: var(--color-status-reported-text);
+}
+.status-badge[data-status='Found'] {
+  background: var(--color-bg-brandyellow-light);
+  border-color: var(--color-status-verifying-border);
+  color: var(--color-text-accent);
+}
+.status-badge[data-status='Potential Match'] {
+  background: var(--color-status-matched-bg);
+  border-color: var(--color-status-matched-border);
+  color: var(--color-status-matched-text);
+}
+.status-badge[data-status='Claim Pending'] {
+  background: var(--color-status-verifying-bg);
+  border-color: var(--color-status-verifying-border);
+  color: var(--color-status-verifying-text);
+}
+.status-badge[data-status='Verified'] {
+  background: var(--color-status-ready-bg);
+  border-color: var(--color-status-ready-border);
+  color: var(--color-status-ready-text);
+}
+.status-badge[data-status='Returned'] {
+  background: var(--color-status-returned-bg);
+  border-color: var(--color-status-returned-border);
+  color: var(--color-status-returned-text);
+}
+.status-badge[data-status='Rejected'] {
+  background: var(--color-status-rejected-bg);
+  border-color: var(--color-status-rejected-border);
+  color: var(--color-status-rejected-text);
+}
