@@ -217,6 +217,9 @@
   --size-button-minwidth: 172px; /** Minimum width of Button. The button hugs longer labels. */
   --size-badge-height: 24px; /** Height of Status Badge. */
   --size-table-headerheight: 48px; /** Height of the Table Row Header. Body rows use density/rowHeight. */
+  --size-avatar-sm: 32px;
+  --size-avatar-md: 44px;
+  --size-avatar-lg: 64px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
