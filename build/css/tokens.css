@@ -220,6 +220,14 @@
   --size-avatar-sm: 32px;
   --size-avatar-md: 44px;
   --size-avatar-lg: 64px;
+  --size-timeline-dot: 24px;
+  --size-timeline-dotevent: 10px;
+  --size-timeline-stepminheight: 56px;
+  --size-table-col-reference: 120px;
+  --size-table-col-item: 240px;
+  --size-table-col-owner: 200px;
+  --size-table-col-location: 200px;
+  --size-table-col-status: 180px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
