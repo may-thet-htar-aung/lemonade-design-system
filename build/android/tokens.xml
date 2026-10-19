@@ -357,6 +357,14 @@
   <dimen name="size_avatar_sm">32dp</dimen>
   <dimen name="size_avatar_md">44dp</dimen>
   <dimen name="size_avatar_lg">64dp</dimen>
+  <dimen name="size_timeline_dot">24dp</dimen>
+  <dimen name="size_timeline_dotevent">10dp</dimen>
+  <dimen name="size_timeline_stepminheight">56dp</dimen>
+  <dimen name="size_table_col_reference">120dp</dimen>
+  <dimen name="size_table_col_item">240dp</dimen>
+  <dimen name="size_table_col_owner">200dp</dimen>
+  <dimen name="size_table_col_location">200dp</dimen>
+  <dimen name="size_table_col_status">180dp</dimen>
   <string name="h1_font_family">Manrope</string>
   <integer name="h1_font_weight">700</integer>
   <dimen name="h1_font_size">64sp</dimen>

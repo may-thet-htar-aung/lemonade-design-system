@@ -168,5 +168,61 @@
       "value": 64,
       "unit": "px"
     }
+  },
+  "size-timeline-dot": {
+    "$type": "dimension",
+    "$value": {
+      "value": 24,
+      "unit": "px"
+    }
+  },
+  "size-timeline-dotevent": {
+    "$type": "dimension",
+    "$value": {
+      "value": 10,
+      "unit": "px"
+    }
+  },
+  "size-timeline-stepminheight": {
+    "$type": "dimension",
+    "$value": {
+      "value": 56,
+      "unit": "px"
+    }
+  },
+  "size-table-col-reference": {
+    "$type": "dimension",
+    "$value": {
+      "value": 120,
+      "unit": "px"
+    }
+  },
+  "size-table-col-item": {
+    "$type": "dimension",
+    "$value": {
+      "value": 240,
+      "unit": "px"
+    }
+  },
+  "size-table-col-owner": {
+    "$type": "dimension",
+    "$value": {
+      "value": 200,
+      "unit": "px"
+    }
+  },
+  "size-table-col-location": {
+    "$type": "dimension",
+    "$value": {
+      "value": 200,
+      "unit": "px"
+    }
+  },
+  "size-table-col-status": {
+    "$type": "dimension",
+    "$value": {
+      "value": 180,
+      "unit": "px"
+    }
   }
 }
