@@ -426,6 +426,7 @@ public class Tokens {
     public static let paddingCard = CGFloat(16)
     public static let paddingContainer = CGFloat(16)
     public static let paddingListItem = CGFloat(16)
+    public static let paddingStatcard = CGFloat(24)
     public static let sizeAvatarLg = CGFloat(64)
     public static let sizeAvatarMd = CGFloat(44)
     public static let sizeAvatarSm = CGFloat(32)
