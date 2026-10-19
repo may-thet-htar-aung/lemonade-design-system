@@ -1,14 +1,22 @@
 /* Figma node 112:32. Every value is a semantic token.
-   GAPS (raw in the node, no variable bound, left unset):
-   - Column widths 120 / 240 / 200 / 200 / 180 (Action fills the rest).
-   - Cell right padding 16.
-   - Row width 1116 (spec says set it to Fill).
-   - Header bottom border width (colour is bound, width is a raw 1).
-   Until the Designer binds these, columns size to their content and the
-   Header bottom border has no width.
-   NOTE: row padding is spacing/lg and spacing/md. The semantic tokens that
-   resolve to them are --density-controlpaddingx / y, which vary with
-   data-density (back-office: md / sm). Row height varies too. */
+   Columns (node binds size/table/col/*): Reference, Item, Owner, Location,
+   Status at their size token; Action fills the rest. Each cell has
+   spacing/lg right padding and the row has spacing/lg sides. spacing/lg is a
+   base token; --padding-list-item is the semantic token that points at it in
+   every mode, so the cell and row side padding stay static as the node binds.
+   Row width is Fill: the table a row sits in takes its container's width,
+   with a fixed layout so the column widths hold against long text.
+   NOTE (still open, Designer): row top and bottom padding is bound to static
+   spacing/md. No static semantic token points at spacing/md for padding;
+   --density-controlpaddingy resolves to it at default and web and to
+   spacing/sm under back-office, where the 40 row height leaves no room for
+   spacing/md. Row height varies with density too. */
+
+table:has(> thead > tr.table-row, > tbody > tr.table-row) {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
 
 .table-row {
   box-sizing: border-box;
@@ -16,18 +24,39 @@
 
 .table-row__cell {
   box-sizing: border-box;
-  padding: var(--density-controlpaddingy) 0;
+  padding-block: var(--density-controlpaddingy);
+  padding-inline: 0 var(--padding-list-item);
   text-align: start;
   vertical-align: middle;
   overflow: clip;
 }
 
-.table-row__cell:first-child {
-  padding-inline-start: var(--density-controlpaddingx);
+/* Column widths. The first cell also carries the row's start padding. */
+.table-row__cell:nth-child(1) {
+  width: calc(var(--size-table-col-reference) + var(--padding-list-item));
+  padding-inline-start: var(--padding-list-item);
 }
 
-.table-row__cell:last-child {
-  padding-inline-end: var(--density-controlpaddingx);
+.table-row__cell:nth-child(2) {
+  width: var(--size-table-col-item);
+}
+
+.table-row__cell:nth-child(3) {
+  width: var(--size-table-col-owner);
+}
+
+.table-row__cell:nth-child(4) {
+  width: var(--size-table-col-location);
+}
+
+.table-row__cell:nth-child(5) {
+  width: var(--size-table-col-status);
+}
+
+/* Action fills the rest. It carries its own right padding plus the row's. */
+.table-row__cell:nth-child(6) {
+  width: auto;
+  padding-inline-end: calc(var(--padding-list-item) + var(--padding-list-item));
 }
 
 .table-row__text {
@@ -41,7 +70,7 @@
 .table-row[data-type='Header'] > .table-row__cell {
   height: var(--size-table-headerheight);
   background: var(--color-bg-brandgreen-light);
-  border-bottom-color: var(--color-border-brandgreen-strong);
+  border-bottom: var(--border-width-1) solid var(--color-border-brandgreen-strong);
   color: var(--color-text-secondary);
   font-family: var(--tagline-12-font-family);
   font-weight: var(--tagline-12-font-weight);
