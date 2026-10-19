@@ -1,18 +1,14 @@
 /* Figma node 110:34. Every value is a semantic token.
-   GAPS (raw in the node, no variable bound, left unset):
-   - Dot size 24 x 24 (Upcoming, Current, Done) and 10 x 10 (Event).
-   - Line width 2.
-   - Step width 358 (spec says set it to Fill) and minimum height 56.
-   - Text padding-bottom 16.
-   Until the Designer binds these, the dot and line collapse to their
-   border and the step hugs its text.
    NOTE: the marker-to-text gap is spacing/lg. The semantic token that
-   resolves to it is --gap-gutter, which varies with data-layout. */
+   resolves to it is --gap-gutter, which varies with data-layout.
+   NOTE: the text padding-bottom is spacing/lg. --padding-list-item is the
+   semantic token that resolves to it and does not vary by mode. */
 
 .timeline-step {
   display: flex;
   align-items: flex-start;
   gap: var(--gap-gutter);
+  min-height: var(--size-timeline-stepminheight);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -33,6 +29,8 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: var(--size-timeline-dot);
+  height: var(--size-timeline-dot);
   box-sizing: border-box;
   border-radius: var(--border-radius-circle);
   overflow: clip;
@@ -40,6 +38,7 @@
 
 .timeline-step__line {
   flex: 1 0 0;
+  width: var(--border-width-2);
   background: var(--color-border-primary-subtle);
 }
 
@@ -64,6 +63,8 @@
 
 /* Event: a plain dot with no ring. Shares the circle radius; the node draws it as an image. */
 .timeline-step[data-state='Event'] .timeline-step__dot {
+  width: var(--size-timeline-dotevent);
+  height: var(--size-timeline-dotevent);
   background: var(--color-icon-secondary);
 }
 
@@ -74,6 +75,7 @@
   align-items: flex-start;
   gap: var(--gap-element);
   min-width: 0;
+  padding-bottom: var(--padding-list-item);
   overflow: clip;
   word-break: break-word;
 }
