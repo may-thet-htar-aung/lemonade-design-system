@@ -1,0 +1,52 @@
+/* Figma node 192:54. Every value is a semantic token. */
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: var(--border-radius-circle);
+}
+
+/* GAP: the Small 32, Medium 44 and Large 64 sizes are not bound to a token in
+   the node (the description says "Large 64 (no token yet)"), so no width or
+   height is set. The Designer must bind a size for each. */
+
+/* GAP: the Hover state described in the node has no variant in the set, so it
+   is not built. */
+
+.avatar__initials {
+  font-weight: var(--fontweight-semibold);
+  white-space: nowrap;
+}
+
+/* Initials */
+.avatar--initials {
+  background: var(--color-bg-brandyellow-hover);
+  color: var(--color-text-static-dark);
+}
+.avatar--initials.avatar--small .avatar__initials {
+  font-family: var(--fontfamily-label);
+  font-size: var(--fontsize-xs);
+  line-height: var(--lineheight-xs);
+  letter-spacing: var(--letterspacing-widest);
+}
+.avatar--initials.avatar--medium .avatar__initials {
+  font-family: var(--fontfamily-label);
+  font-size: var(--fontsize-sm);
+  line-height: var(--lineheight-sm);
+  letter-spacing: var(--letterspacing-widest);
+}
+.avatar--initials.avatar--large .avatar__initials {
+  font-family: var(--fontfamily-heading);
+  font-size: var(--fontsize-md);
+  line-height: var(--lineheight-md);
+  letter-spacing: var(--letterspacing-normal);
+}
+
+/* Image: the user icon until a photo is added */
+.avatar--image {
+  background: var(--color-bg-brandgreen-light);
+  color: var(--color-icon-brandbold);
+}
