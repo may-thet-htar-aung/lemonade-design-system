@@ -5,7 +5,7 @@ import './Avatar.css';
 export type AvatarProps = Omit<HTMLAttributes<HTMLSpanElement>, 'style' | 'children'> & {
   Type?: 'Initials' | 'Image';
   Size?: 'Small' | 'Medium' | 'Large';
-  /** Hover pins the ring. In Default, a real pointer over the avatar shows the same ring. */
+  /** Hover pins the hover fill. In Default, a real pointer over the avatar shows the same fill change. */
   State?: 'Default' | 'Hover';
   /** Up to two letters, first and last name, such as AC. Used when Type is Initials. */
   Initials?: string;
