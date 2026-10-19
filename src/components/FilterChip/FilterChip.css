@@ -1,0 +1,57 @@
+/* Figma node 73:60. Every value is a semantic token. */
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: var(--size-control-sm);
+  min-width: var(--size-chip-minwidth);
+  max-width: var(--size-chip-maxwidth);
+  padding-inline: var(--density-controlpaddingx);
+  border: var(--border-width-1) solid var(--color-border-primary-default);
+  border-radius: var(--border-radius-circle);
+  background: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font: var(--button-medium-font-weight) var(--button-medium-font-size) / var(--button-medium-line-height) var(--button-medium-font-family);
+  letter-spacing: var(--button-medium-letter-spacing);
+  text-align: left;
+  cursor: pointer;
+}
+
+/* GAP: padding-top and padding-bottom are bound to spacing/sm in the node,
+   but spacing/sm is a base token (--gap-component points at it) and no
+   semantic padding token resolves to it. Left unset. Designer to bind a
+   semantic token. Until then a two-line label is shorter than the 56 the
+   design gives it. */
+
+/* GAP: the design has no focus style. The browser default focus outline is
+   left in place. The Designer must bind a focus ring. */
+
+/* GAP: the description asks for a 48 hit area on Mobile. No size token is
+   bound for it, so the hit area is not extended. */
+
+.filter-chip__label {
+  overflow-wrap: anywhere;
+}
+
+.filter-chip:hover:not(:disabled),
+.filter-chip[data-state='Hover'] {
+  background: var(--color-bg-surfaceprimary);
+  border-color: var(--color-border-primary-strong);
+}
+
+/* Active: no border in the design. The border stays, transparent, so the
+   chip keeps its size. */
+.filter-chip[data-state='Active'] {
+  background: var(--color-bg-brandyellow-idle);
+  border-color: transparent;
+  color: var(--color-text-static-dark);
+}
+
+.filter-chip:disabled {
+  background: var(--color-bg-base);
+  border-color: var(--color-border-disabled);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}

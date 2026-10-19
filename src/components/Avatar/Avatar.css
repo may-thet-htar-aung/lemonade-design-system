@@ -1,0 +1,77 @@
+/* Figma node 192:54. Every value is a semantic token. */
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: var(--border-radius-circle);
+}
+
+.avatar--small {
+  width: var(--size-avatar-sm);
+  height: var(--size-avatar-sm);
+}
+.avatar--medium {
+  width: var(--size-avatar-md);
+  height: var(--size-avatar-md);
+}
+.avatar--large {
+  width: var(--size-avatar-lg);
+  height: var(--size-avatar-lg);
+}
+
+.avatar__initials {
+  font-weight: var(--fontweight-semibold);
+  white-space: nowrap;
+}
+
+/* Initials */
+.avatar--initials {
+  background: var(--color-bg-brandyellow-hover);
+  color: var(--color-text-static-dark);
+}
+.avatar--initials.avatar--small .avatar__initials {
+  font-family: var(--fontfamily-label);
+  font-size: var(--fontsize-xs);
+  line-height: var(--lineheight-xs);
+  letter-spacing: var(--letterspacing-widest);
+}
+.avatar--initials.avatar--medium .avatar__initials {
+  font-family: var(--fontfamily-label);
+  font-size: var(--fontsize-sm);
+  line-height: var(--lineheight-sm);
+  letter-spacing: var(--letterspacing-widest);
+}
+.avatar--initials.avatar--large .avatar__initials {
+  font-family: var(--fontfamily-heading);
+  font-size: var(--fontsize-md);
+  line-height: var(--lineheight-md);
+  letter-spacing: var(--letterspacing-normal);
+}
+
+/* Image: the user icon until a photo is added */
+.avatar--image {
+  background: var(--color-bg-brandgreen-light);
+  color: var(--color-icon-brandbold);
+}
+
+/* Hover: the fill changes and the icon colour follows; size and text stay the same.
+   A real pointer (hover-capable devices only, so touch is not left stuck) or the pinned State=Hover story. */
+@media (hover: hover) {
+  .avatar--initials:hover {
+    background: var(--color-bg-brandyellow-idle);
+  }
+  .avatar--image:hover {
+    background: var(--color-bg-brandgreen-lighthover);
+    color: var(--color-icon-static-light);
+  }
+}
+.avatar--initials[data-state='Hover'] {
+  background: var(--color-bg-brandyellow-idle);
+}
+.avatar--image[data-state='Hover'] {
+  background: var(--color-bg-brandgreen-lighthover);
+  color: var(--color-icon-static-light);
+}
