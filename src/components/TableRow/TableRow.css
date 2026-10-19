@@ -1,0 +1,70 @@
+/* Figma node 112:32. Every value is a semantic token.
+   GAPS (raw in the node, no variable bound, left unset):
+   - Column widths 120 / 240 / 200 / 200 / 180 (Action fills the rest).
+   - Cell right padding 16.
+   - Row width 1116 (spec says set it to Fill).
+   - Header bottom border width (colour is bound, width is a raw 1).
+   Until the Designer binds these, columns size to their content and the
+   Header bottom border has no width.
+   NOTE: row padding is spacing/lg and spacing/md. The semantic tokens that
+   resolve to them are --density-controlpaddingx / y, which vary with
+   data-density (back-office: md / sm). Row height varies too. */
+
+.table-row {
+  box-sizing: border-box;
+}
+
+.table-row__cell {
+  box-sizing: border-box;
+  padding: var(--density-controlpaddingy) 0;
+  text-align: start;
+  vertical-align: middle;
+  overflow: clip;
+}
+
+.table-row__cell:first-child {
+  padding-inline-start: var(--density-controlpaddingx);
+}
+
+.table-row__cell:last-child {
+  padding-inline-end: var(--density-controlpaddingx);
+}
+
+.table-row__text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Header */
+.table-row[data-type='Header'] > .table-row__cell {
+  height: var(--size-table-headerheight);
+  background: var(--color-bg-brandgreen-light);
+  border-bottom-color: var(--color-border-brandgreen-strong);
+  color: var(--color-text-secondary);
+  font-family: var(--tagline-12-font-family);
+  font-weight: var(--tagline-12-font-weight);
+  font-size: var(--tagline-12-font-size);
+  line-height: var(--tagline-12-line-height);
+  letter-spacing: var(--tagline-12-letter-spacing);
+}
+
+/* Body and Body Hover */
+.table-row[data-type='Body'] > .table-row__cell,
+.table-row[data-type='Body Hover'] > .table-row__cell {
+  height: var(--density-rowheight);
+  background: var(--color-bg-base);
+  border-bottom: var(--border-width-1) solid var(--color-border-primary-subtle);
+  color: var(--color-text-primary);
+  font-family: var(--body1-font-family);
+  font-weight: var(--body1-font-weight);
+  font-size: var(--body1-font-size);
+  line-height: var(--body1-line-height);
+  letter-spacing: var(--body1-letter-spacing);
+}
+
+.table-row[data-type='Body']:hover > .table-row__cell,
+.table-row[data-type='Body Hover'] > .table-row__cell {
+  background: var(--color-bg-surfaceprimary);
+}
