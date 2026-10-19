@@ -1,0 +1,59 @@
+/* Figma node 111:16. Every value is a semantic token.
+   GAP: the card width is fixed at 267 in the node with no variable bound.
+   It is left unset, so the card fills its container (the spec says set it
+   to Fill in dashboard grids). Height hugs the text, as in the node.
+   NOTE: padding is bound to the base token spacing/xl. The semantic token
+   whose name fits is --padding-card. It varies with data-layout: spacing/lg
+   at the default layout, spacing/xl in the medium and expanded layouts.
+   --gap-pane and --padding-button-inline also resolve to spacing/xl, but
+   their names are for panes and buttons, not card padding.
+   NOTE: text styles Tagline/14, H2 and Body3 use their composite tokens.
+   Font family, line height and letter spacing vary with data-typography,
+   and every colour varies with data-semantic. */
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-element);
+  box-sizing: border-box;
+  padding: var(--padding-card);
+  overflow-wrap: break-word;
+  background: var(--color-bg-base);
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-lg);
+}
+
+.stat-card__label,
+.stat-card__value,
+.stat-card__delta {
+  align-self: stretch;
+  margin: 0;
+}
+
+.stat-card__label {
+  color: var(--color-text-secondary);
+  font-family: var(--tagline-14-font-family);
+  font-weight: var(--tagline-14-font-weight);
+  font-size: var(--tagline-14-font-size);
+  line-height: var(--tagline-14-line-height);
+  letter-spacing: var(--tagline-14-letter-spacing);
+}
+
+.stat-card__value {
+  color: var(--color-text-brandgreen);
+  font-family: var(--h2-font-family);
+  font-weight: var(--h2-font-weight);
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  letter-spacing: var(--h2-letter-spacing);
+}
+
+.stat-card__delta {
+  color: var(--color-text-secondary);
+  font-family: var(--body3-font-family);
+  font-weight: var(--body3-font-weight);
+  font-size: var(--body3-font-size);
+  line-height: var(--body3-line-height);
+  letter-spacing: var(--body3-letter-spacing);
+}
