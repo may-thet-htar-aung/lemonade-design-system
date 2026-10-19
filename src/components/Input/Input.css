@@ -1,0 +1,127 @@
+/* Figma node 88:62. Every value is a semantic token. */
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: var(--gap-element);
+  width: var(--size-field-width);
+  max-width: 100%;
+}
+
+.input__label {
+  align-self: stretch;
+  color: var(--color-text-primary);
+  font: var(--tagline-14-font-weight) var(--tagline-14-font-size) / var(--tagline-14-line-height) var(--tagline-14-font-family);
+  letter-spacing: var(--tagline-14-letter-spacing);
+}
+
+.input__field {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  box-sizing: border-box;
+  gap: var(--gap-component);
+  padding: var(--density-controlpaddingy) var(--density-controlpaddingx);
+  height: var(--size-control-md);
+  overflow: clip;
+  background: var(--color-bg-base);
+  border: var(--border-width-1) solid var(--color-border-primary-default);
+  border-radius: var(--border-radius-md);
+}
+
+.input[data-type='Multi'] .input__field {
+  align-items: flex-start;
+  height: auto;
+  min-height: var(--size-field-minheightmulti);
+}
+
+/* Focused: pinned by State, or a real keyboard or pointer focus inside the field. */
+.input[data-state='Focused'] .input__field,
+.input__field:focus-within {
+  border-color: var(--color-border-brandgreen-strong);
+}
+
+/* Error wins over focus, so a wrong answer keeps its red border while typing. */
+.input[data-state='Error'] .input__field {
+  border-color: var(--color-border-negative-strong);
+}
+
+.input[data-state='Disabled'] .input__field {
+  background: var(--color-bg-disabled);
+  border-color: var(--color-border-disabled);
+}
+
+.input__control {
+  flex: 1 0 0;
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  resize: none;
+  font: var(--body1-font-weight) var(--body1-font-size) / var(--body1-line-height) var(--body1-font-family);
+  letter-spacing: var(--body1-letter-spacing);
+  text-overflow: ellipsis;
+}
+
+textarea.input__control {
+  align-self: stretch;
+  field-sizing: content;
+}
+
+.input__control::placeholder {
+  color: var(--color-text-tertiary);
+  opacity: 1;
+}
+
+.input__control:disabled,
+.input__control:disabled::placeholder {
+  color: var(--color-text-disabled);
+}
+
+.input__icon,
+.input__toggle {
+  flex: none;
+  color: var(--color-icon-secondary);
+}
+
+.input__toggle {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.input__toggle:focus-visible {
+  outline: var(--border-width-1) solid var(--color-border-brandgreen-strong);
+}
+
+.input[data-state='Disabled'] .input__icon,
+.input[data-state='Disabled'] .input__toggle {
+  color: var(--color-icon-disabled);
+  cursor: default;
+}
+
+.input__helper {
+  align-self: stretch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font: var(--body3-font-weight) var(--body3-font-size) / var(--body3-line-height) var(--body3-font-family);
+  letter-spacing: var(--body3-letter-spacing);
+}
+
+.input[data-state='Error'] .input__helper {
+  color: var(--color-text-negative);
+}
+
+.input[data-state='Disabled'] .input__label,
+.input[data-state='Disabled'] .input__helper {
+  color: var(--color-text-disabled);
+}

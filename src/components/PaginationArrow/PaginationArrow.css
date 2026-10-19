@@ -1,0 +1,33 @@
+/* Figma node 155:30. Every value is a semantic token. */
+
+/* GAP: the design has no focus style. The browser default focus outline is
+   left in place. The Designer must bind a focus ring. */
+
+.pagination-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: var(--size-control-sm);
+  height: var(--size-control-sm);
+  padding: 0;
+  border: var(--border-width-1) solid var(--color-border-positive-default);
+  border-radius: var(--border-radius-sm);
+  background: var(--color-bg-base);
+  color: var(--color-icon-positive);
+  cursor: pointer;
+}
+
+.pagination-arrow:hover:not(:disabled),
+.pagination-arrow[data-state='Hover'] {
+  background: var(--color-bg-positive-light);
+  border-color: var(--color-border-positive-strong);
+}
+
+.pagination-arrow:disabled {
+  background: var(--color-bg-surfaceprimary);
+  border-color: var(--color-border-disabled);
+  color: var(--color-icon-disabled);
+  cursor: not-allowed;
+}

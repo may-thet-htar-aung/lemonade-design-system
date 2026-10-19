@@ -1,0 +1,96 @@
+/* Figma node 108:39. Every value is a semantic token.
+   GAP: widths (Grid 170, List 358, Grid Large 320) and photo sizes (112 high,
+   88 wide, 180 high) are raw in the node with no variable bound. All are left
+   unset, so the card fills its container and the photo hugs its icon.
+   GAP: the design has no focus style. The browser default focus outline is
+   left in place. The Designer must bind a focus ring.
+   NOTE: body padding is spacing/md in the node. The semantic token that
+   resolves to it is --gap-card, which varies with data-layout (spacing/lg in
+   the other layouts). Padding uses it as the only semantic match. */
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  overflow: clip;
+  color: inherit;
+  text-decoration: none;
+  background: var(--color-bg-base);
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-lg);
+}
+
+.item-card[data-layout='List'] {
+  flex-direction: row;
+}
+
+/* Hover: a real pointer (hover-capable devices only, so touch is not left
+   stuck) or the pinned State=Hover story. */
+.item-card[data-state='Hover'] {
+  border-color: var(--color-border-brandgreen-strong);
+  box-shadow: var(--elevation-level2);
+}
+@media (hover: hover) {
+  .item-card:hover {
+    border-color: var(--color-border-brandgreen-strong);
+    box-shadow: var(--elevation-level2);
+  }
+}
+
+.item-card__photo {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: clip;
+  align-self: stretch;
+  background: var(--color-bg-surfaceprimary);
+}
+
+.item-card[data-layout='List'] .item-card__photo {
+  align-self: stretch;
+}
+
+.item-card__placeholder {
+  color: var(--color-icon-secondary);
+}
+
+.item-card__image {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.item-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: var(--gap-element);
+  padding: var(--gap-card);
+  overflow: clip;
+  align-self: stretch;
+}
+
+.item-card[data-layout='List'] .item-card__body {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.item-card__title {
+  align-self: stretch;
+  color: var(--color-text-primary);
+  font: var(--tagline-14-font-weight) var(--tagline-14-font-size) / var(--tagline-14-line-height) var(--tagline-14-font-family);
+  letter-spacing: var(--tagline-14-letter-spacing);
+  overflow-wrap: anywhere;
+}
+
+.item-card__meta {
+  align-self: stretch;
+  color: var(--color-text-secondary);
+  font: var(--body3-font-weight) var(--body3-font-size) / var(--body3-line-height) var(--body3-font-family);
+  letter-spacing: var(--body3-letter-spacing);
+  overflow-wrap: anywhere;
+}

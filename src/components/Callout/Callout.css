@@ -1,0 +1,54 @@
+/* Figma node 109:69. Every value is a semantic token. */
+
+.callout {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: var(--gap-card);
+  padding: var(--padding-card);
+  min-width: var(--size-width-minmobile);
+  border-radius: var(--border-radius-lg);
+}
+
+/* GAP: the default width 358 is a raw value with no variable bound. Left
+   unset, so the callout fills its container (the "Fill" behaviour in the
+   node description). Designer to bind a width token. */
+
+.callout[data-type='Privacy'] {
+  background: var(--color-bg-positive-light);
+}
+.callout[data-type='AI Match'] {
+  background: var(--color-bg-brandyellow-light);
+}
+
+.callout__icon {
+  color: var(--color-icon-brandbold);
+}
+
+.callout__text {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-element);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.callout__title,
+.callout__body {
+  align-self: stretch;
+  margin: 0;
+}
+
+.callout__title {
+  color: var(--color-text-primary);
+  font: var(--tagline-14-font-weight) var(--tagline-14-font-size) / var(--tagline-14-line-height) var(--tagline-14-font-family);
+  letter-spacing: var(--tagline-14-letter-spacing);
+}
+
+.callout__body {
+  color: var(--color-text-secondary);
+  font: var(--body2-font-weight) var(--body2-font-size) / var(--body2-line-height) var(--body2-font-family);
+  letter-spacing: var(--body2-letter-spacing);
+}
