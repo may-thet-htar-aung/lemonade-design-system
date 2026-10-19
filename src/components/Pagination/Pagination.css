@@ -1,0 +1,46 @@
+/* Figma node 151:76. Every value is a semantic token.
+   GAP: the frame is 1116 wide and 40 high, both raw in the node with no
+   variable bound. Width is left to fill its container (the spec says set it
+   to Fill). Height is left unset, so the bar hugs its content.
+   NOTE: the Pager gap is spacing/lg and the Controls gap is spacing/xl
+   (First, Last) or spacing/2xl (Middle). The semantic tokens that resolve to
+   them are --gap-gutter, --gap-pane and --gap-section. --gap-gutter varies
+   with data-layout (spacing/xl in the medium and expanded layouts). The
+   Controls gap has no visible effect: Controls holds only the Pager. */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.pagination__summary {
+  margin: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+  font: var(--body1-font-weight) var(--body1-font-size) / var(--body1-line-height) var(--body1-font-family);
+  letter-spacing: var(--body1-letter-spacing);
+}
+
+.pagination__controls {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: var(--gap-pane);
+  /* Pushes Controls to the right when the summary is hidden. */
+  margin-inline-start: auto;
+}
+
+.pagination[data-position='Middle'] .pagination__controls {
+  gap: var(--gap-section);
+}
+
+.pagination__pager {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: var(--gap-gutter);
+}
