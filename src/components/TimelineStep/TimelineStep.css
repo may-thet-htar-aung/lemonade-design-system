@@ -1,0 +1,111 @@
+/* Figma node 110:34. Every value is a semantic token.
+   GAPS (raw in the node, no variable bound, left unset):
+   - Dot size 24 x 24 (Upcoming, Current, Done) and 10 x 10 (Event).
+   - Line width 2.
+   - Step width 358 (spec says set it to Fill) and minimum height 56.
+   - Text padding-bottom 16.
+   Until the Designer binds these, the dot and line collapse to their
+   border and the step hugs its text.
+   NOTE: the marker-to-text gap is spacing/lg. The semantic token that
+   resolves to it is --gap-gutter, which varies with data-layout. */
+
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap-gutter);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.timeline-step__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  overflow: clip;
+}
+
+.timeline-step__dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-radius: var(--border-radius-circle);
+  overflow: clip;
+}
+
+.timeline-step__line {
+  flex: 1 0 0;
+  background: var(--color-border-primary-subtle);
+}
+
+.timeline-step[data-state='Upcoming'] .timeline-step__dot {
+  background: var(--color-bg-base);
+  border: var(--border-width-2) solid var(--color-border-primary-default);
+}
+
+.timeline-step[data-state='Current'] .timeline-step__dot {
+  background: var(--color-bg-brandyellow-hover);
+  border: var(--border-width-2) solid var(--color-border-brandgreen-strong);
+}
+
+.timeline-step[data-state='Done'] .timeline-step__dot {
+  background: var(--color-bg-static-brandgreen);
+  color: var(--color-icon-static-light);
+}
+
+.timeline-step[data-state='Done'] .timeline-step__line {
+  background: var(--color-bg-brandgreen-idle);
+}
+
+/* Event: a plain dot with no ring. Shares the circle radius; the node draws it as an image. */
+.timeline-step[data-state='Event'] .timeline-step__dot {
+  background: var(--color-icon-secondary);
+}
+
+.timeline-step__text {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-element);
+  min-width: 0;
+  overflow: clip;
+  word-break: break-word;
+}
+
+.timeline-step__title,
+.timeline-step__subtitle {
+  margin: 0;
+  width: 100%;
+}
+
+.timeline-step__title {
+  color: var(--color-text-primary);
+  font: var(--tagline-14-font-weight) var(--tagline-14-font-size) / var(--tagline-14-line-height) var(--tagline-14-font-family);
+  letter-spacing: var(--tagline-14-letter-spacing);
+}
+
+.timeline-step[data-state='Upcoming'] .timeline-step__title {
+  color: var(--color-text-tertiary);
+}
+
+.timeline-step__subtitle {
+  color: var(--color-text-secondary);
+  font: var(--body3-font-weight) var(--body3-font-size) / var(--body3-line-height) var(--body3-font-family);
+  letter-spacing: var(--body3-letter-spacing);
+}
+
+/* Spoken state for screen readers. */
+.timeline-step__state-word {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
