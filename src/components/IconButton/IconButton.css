@@ -1,0 +1,87 @@
+/* Figma node 192:33. Every value is a semantic token. */
+
+.icon-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  border-radius: var(--border-radius-circle);
+  background: transparent;
+  cursor: pointer;
+}
+
+/* GAP: the 44 x 44 size has no token in the node ("no token yet"), so no
+   width or height is set. The Designer must bind a size. */
+
+/* GAP: the design has no focus style. The browser default focus outline is
+   left in place. The Designer must bind a focus ring. */
+
+.icon-button__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* Primary */
+.icon-button--primary {
+  background: var(--color-bg-static-brandgreen);
+}
+.icon-button--primary .icon-button__icon {
+  color: var(--color-icon-static-light);
+}
+.icon-button--primary:hover:not(:disabled),
+.icon-button--primary[data-state='Hover'] {
+  background: var(--color-bg-brandgreen-hover);
+}
+
+/* Outline: an inset ring, so the stroke does not grow the frame */
+.icon-button--outline {
+  box-shadow: inset 0 0 0 var(--border-width-1) var(--color-border-brandgreen-default);
+}
+.icon-button--outline .icon-button__icon {
+  color: var(--color-icon-brandbold);
+}
+.icon-button--outline:hover:not(:disabled),
+.icon-button--outline[data-state='Hover'] {
+  background: var(--color-bg-surfaceprimary);
+  box-shadow: inset 0 0 0 var(--border-width-1) var(--color-border-brandgreen-strong);
+}
+
+/* Ghost */
+.icon-button--ghost .icon-button__icon {
+  color: var(--color-icon-brandbold);
+}
+.icon-button--ghost:hover:not(:disabled),
+.icon-button--ghost[data-state='Hover'] {
+  background: var(--color-bg-brandgreen-light);
+}
+
+/* Disabled */
+.icon-button:disabled {
+  cursor: not-allowed;
+}
+.icon-button:disabled .icon-button__icon {
+  color: var(--color-icon-disabled);
+}
+.icon-button--primary:disabled {
+  background: var(--color-bg-disabled);
+}
+.icon-button--outline:disabled {
+  box-shadow: inset 0 0 0 var(--border-width-1) var(--color-border-disabled);
+}
+
+/* Badge dot, top right, with a ring in the base colour.
+   GAP: the node gives the dot "10 x 10" with no size token, and its offset
+   from the corner is not stated, so neither size nor position offsets are
+   set. The Designer must bind them. */
+.icon-button__badge {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  box-sizing: content-box;
+  border: var(--border-width-2) solid var(--color-bg-base);
+  border-radius: var(--border-radius-circle);
+  background: var(--color-bg-negative-idle);
+}
