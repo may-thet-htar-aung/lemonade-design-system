@@ -5,13 +5,10 @@
   align-items: flex-start;
   box-sizing: border-box;
   gap: var(--gap-card);
+  padding: var(--padding-card);
   min-width: var(--size-width-minmobile);
   border-radius: var(--border-radius-lg);
 }
-
-/* GAP: padding is bound to spacing/lg in the node, but spacing/lg is a base
-   token (--padding-container, --padding-card and others point at it) and no
-   semantic token is bound here. Left unset. Designer to bind a semantic token. */
 
 /* GAP: the default width 358 is a raw value with no variable bound. Left
    unset, so the callout fills its container (the "Fill" behaviour in the
