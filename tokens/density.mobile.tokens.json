@@ -147,5 +147,26 @@
       "unit": "px"
     },
     "$description": "Height of the Table Row Header. Body rows use density/rowHeight."
+  },
+  "size-avatar-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    }
+  },
+  "size-avatar-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 44,
+      "unit": "px"
+    }
+  },
+  "size-avatar-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 64,
+      "unit": "px"
+    }
   }
 }

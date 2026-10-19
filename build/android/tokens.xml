@@ -354,6 +354,9 @@
   <dimen name="size_button_minwidth">172dp</dimen>
   <dimen name="size_badge_height">24dp</dimen>
   <dimen name="size_table_headerheight">48dp</dimen>
+  <dimen name="size_avatar_sm">32dp</dimen>
+  <dimen name="size_avatar_md">44dp</dimen>
+  <dimen name="size_avatar_lg">64dp</dimen>
   <string name="h1_font_family">Manrope</string>
   <integer name="h1_font_weight">700</integer>
   <dimen name="h1_font_size">64sp</dimen>

@@ -426,6 +426,9 @@ public class Tokens {
     public static let paddingCard = CGFloat(16)
     public static let paddingContainer = CGFloat(16)
     public static let paddingListItem = CGFloat(16)
+    public static let sizeAvatarLg = CGFloat(64)
+    public static let sizeAvatarMd = CGFloat(44)
+    public static let sizeAvatarSm = CGFloat(32)
     public static let sizeBadgeHeight = CGFloat(24) /** Height of Status Badge. */
     public static let sizeButtonMinwidth = CGFloat(172) /** Minimum width of Button. The button hugs longer labels. */
     public static let sizeChipMaxwidth = CGFloat(200) /** Maximum width of Filter Chip. Longer labels wrap to a second line. */
