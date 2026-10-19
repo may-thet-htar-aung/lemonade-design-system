@@ -9,12 +9,20 @@
   border-radius: var(--border-radius-circle);
 }
 
-/* GAP: the Small 32, Medium 44 and Large 64 sizes are not bound to a token in
-   the node (the description says "Large 64 (no token yet)"), so no width or
-   height is set. The Designer must bind a size for each. */
+.avatar--small {
+  width: var(--size-avatar-sm);
+  height: var(--size-avatar-sm);
+}
+.avatar--medium {
+  width: var(--size-avatar-md);
+  height: var(--size-avatar-md);
+}
+.avatar--large {
+  width: var(--size-avatar-lg);
+  height: var(--size-avatar-lg);
+}
 
-/* GAP: the Hover state described in the node has no variant in the set, so it
-   is not built. */
+/* OPEN: the Hover state is not built in this repair round. */
 
 .avatar__initials {
   font-weight: var(--fontweight-semibold);
