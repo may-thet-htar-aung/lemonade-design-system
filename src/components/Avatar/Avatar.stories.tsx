@@ -17,3 +17,10 @@ export const InitialsLarge: Story = { args: { Type: 'Initials', Size: 'Large' } 
 export const ImageSmall: Story = { args: { Type: 'Image', Size: 'Small' } };
 export const ImageMedium: Story = { args: { Type: 'Image', Size: 'Medium' } };
 export const ImageLarge: Story = { args: { Type: 'Image', Size: 'Large' } };
+
+export const InitialsSmallHover: Story = { args: { Type: 'Initials', Size: 'Small', State: 'Hover' } };
+export const InitialsMediumHover: Story = { args: { Type: 'Initials', Size: 'Medium', State: 'Hover' } };
+export const InitialsLargeHover: Story = { args: { Type: 'Initials', Size: 'Large', State: 'Hover' } };
+export const ImageSmallHover: Story = { args: { Type: 'Image', Size: 'Small', State: 'Hover' } };
+export const ImageMediumHover: Story = { args: { Type: 'Image', Size: 'Medium', State: 'Hover' } };
+export const ImageLargeHover: Story = { args: { Type: 'Image', Size: 'Large', State: 'Hover' } };

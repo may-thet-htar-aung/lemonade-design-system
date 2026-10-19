@@ -22,7 +22,14 @@
   height: var(--size-avatar-lg);
 }
 
-/* OPEN: the Hover state is not built in this repair round. */
+/* Hover: a ring in color/border/brandGreen/strong at border/width/2. The avatar itself does not change.
+   GAP (nodes 245:46 to 245:61, Hover ring): the design draws a gap between the avatar and the ring,
+   but the ring's offset is a position with no variable bound. outline-offset is left unset, so the
+   ring touches the avatar until the Designer binds the gap. */
+.avatar:hover,
+.avatar[data-state='Hover'] {
+  outline: var(--border-width-2) solid var(--color-border-brandgreen-strong);
+}
 
 .avatar__initials {
   font-weight: var(--fontweight-semibold);

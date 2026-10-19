@@ -5,8 +5,8 @@ import './Avatar.css';
 export type AvatarProps = Omit<HTMLAttributes<HTMLSpanElement>, 'style' | 'children'> & {
   Type?: 'Initials' | 'Image';
   Size?: 'Small' | 'Medium' | 'Large';
-  /** The node has Default only. The Hover state in the description has no variant in the set, so it is not built. */
-  State?: 'Default';
+  /** Hover pins the ring. In Default, a real pointer over the avatar shows the same ring. */
+  State?: 'Default' | 'Hover';
   /** Up to two letters, first and last name, such as AC. Used when Type is Initials. */
   Initials?: string;
   /** Required: the person's full name, such as "Aye Chan". */
