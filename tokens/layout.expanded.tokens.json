@@ -42,5 +42,9 @@
   "padding-button-inline": {
     "$type": "dimension",
     "$value": "{spacing-xl}"
+  },
+  "padding-statcard": {
+    "$type": "dimension",
+    "$value": "{spacing-xl}"
   }
 }

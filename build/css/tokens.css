@@ -365,6 +365,7 @@
   --padding-card: var(--spacing-lg);
   --padding-list-item: var(--spacing-lg);
   --padding-button-inline: var(--spacing-xl);
+  --padding-statcard: var(--spacing-xl);
   --density-controlpaddingx: var(--spacing-lg);
   --density-controlpaddingy: var(--spacing-md);
   --h1-font-family: var(--fontfamily-heading); /** H1 — Bold 700 · Page and hero titles */

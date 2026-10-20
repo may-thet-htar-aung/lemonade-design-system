@@ -333,6 +333,7 @@
   <dimen name="padding_card">16dp</dimen>
   <dimen name="padding_list_item">16dp</dimen>
   <dimen name="padding_button_inline">24dp</dimen>
+  <dimen name="padding_statcard">24dp</dimen>
   <dimen name="density_touchtarget">48dp</dimen>
   <dimen name="density_rowheight">56dp</dimen>
   <dimen name="density_controlpaddingx">16dp</dimen>
