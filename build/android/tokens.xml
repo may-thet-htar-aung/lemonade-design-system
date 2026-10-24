@@ -335,6 +335,8 @@
   <dimen name="padding_button_inline">24dp</dimen>
   <dimen name="padding_statcard">24dp</dimen>
   <dimen name="padding_dialog">32dp</dimen>
+  <dimen name="padding_footer">48dp</dimen>
+  <dimen name="gap_footer_brand">12dp</dimen>
   <dimen name="density_touchtarget">48dp</dimen>
   <dimen name="density_rowheight">56dp</dimen>
   <dimen name="density_controlpaddingx">16dp</dimen>
@@ -369,6 +371,8 @@
   <dimen name="size_table_col_status">180dp</dimen>
   <dimen name="size_dialog_width">480dp</dimen>
   <dimen name="size_topnav_indicator">3dp</dimen>
+  <dimen name="size_footer_brand">380dp</dimen>
+  <dimen name="size_logo_mark">40dp</dimen>
   <string name="h1_font_family">Manrope</string>
   <integer name="h1_font_weight">700</integer>
   <dimen name="h1_font_size">64sp</dimen>
