@@ -425,6 +425,7 @@ public class Tokens {
     public static let paddingButtonInline = CGFloat(24)
     public static let paddingCard = CGFloat(16)
     public static let paddingContainer = CGFloat(16)
+    public static let paddingDialog = CGFloat(32)
     public static let paddingListItem = CGFloat(16)
     public static let paddingStatcard = CGFloat(24)
     public static let sizeAvatarLg = CGFloat(64)
@@ -437,6 +438,7 @@ public class Tokens {
     public static let sizeControlLg = CGFloat(56)
     public static let sizeControlMd = CGFloat(48)
     public static let sizeControlSm = CGFloat(36)
+    public static let sizeDialogWidth = CGFloat(480)
     public static let sizeFieldMinheightmulti = CGFloat(96) /** Minimum field height for the Multi Input type. The field grows with the text. */
     public static let sizeFieldWidth = CGFloat(320) /** Default width of Input and Search Field. Set instances to Fill in forms and layouts. */
     public static let sizeIcon2xl = CGFloat(40)
