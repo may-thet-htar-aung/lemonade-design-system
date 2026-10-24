@@ -231,5 +231,12 @@
       "value": 480,
       "unit": "px"
     }
+  },
+  "size-topnav-indicator": {
+    "$type": "dimension",
+    "$value": {
+      "value": 3,
+      "unit": "px"
+    }
   }
 }

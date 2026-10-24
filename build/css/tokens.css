@@ -229,6 +229,7 @@
   --size-table-col-location: 200px;
   --size-table-col-status: 180px;
   --size-dialog-width: 480px;
+  --size-topnav-indicator: 3px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
