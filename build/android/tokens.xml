@@ -368,6 +368,7 @@
   <dimen name="size_table_col_location">200dp</dimen>
   <dimen name="size_table_col_status">180dp</dimen>
   <dimen name="size_dialog_width">480dp</dimen>
+  <dimen name="size_topnav_indicator">3dp</dimen>
   <string name="h1_font_family">Manrope</string>
   <integer name="h1_font_weight">700</integer>
   <dimen name="h1_font_size">64sp</dimen>
