@@ -50,5 +50,13 @@
   "padding-dialog": {
     "$type": "dimension",
     "$value": "{spacing-2xl}"
+  },
+  "padding-footer": {
+    "$type": "dimension",
+    "$value": "{spacing-3xl}"
+  },
+  "gap-footer-brand": {
+    "$type": "dimension",
+    "$value": "{spacing-md}"
   }
 }
