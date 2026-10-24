@@ -322,6 +322,7 @@
   <dimen name="lineheight_8">12sp</dimen>
   <dimen name="lineheight_20">24sp</dimen>
   <dimen name="lineheight_80">80sp</dimen>
+  <integer name="fontweight_extrabold">800</integer>
   <dimen name="margin_page">16dp</dimen>
   <dimen name="gap_gutter">16dp</dimen>
   <dimen name="gap_pane">24dp</dimen>
@@ -337,6 +338,10 @@
   <dimen name="padding_dialog">32dp</dimen>
   <dimen name="padding_footer">48dp</dimen>
   <dimen name="gap_footer_brand">12dp</dimen>
+  <dimen name="gap_logo_lg">12dp</dimen>
+  <dimen name="padding_logo_sm">8dp</dimen>
+  <dimen name="padding_logo_md">12dp</dimen>
+  <dimen name="padding_logo_lg">16dp</dimen>
   <dimen name="density_touchtarget">48dp</dimen>
   <dimen name="density_rowheight">56dp</dimen>
   <dimen name="density_controlpaddingx">16dp</dimen>
@@ -373,6 +378,8 @@
   <dimen name="size_topnav_indicator">3dp</dimen>
   <dimen name="size_footer_brand">380dp</dimen>
   <dimen name="size_logo_mark">40dp</dimen>
+  <dimen name="size_logo_marksm">32dp</dimen>
+  <dimen name="size_logo_marklg">56dp</dimen>
   <string name="h1_font_family">Manrope</string>
   <integer name="h1_font_weight">700</integer>
   <dimen name="h1_font_size">64sp</dimen>
