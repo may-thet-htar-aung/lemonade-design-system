@@ -4,7 +4,8 @@
    corners follow the radius. A border-collapse table ignores border-radius,
    so the rounding sits on this wrapper, not on the table element.
    The inner table is sized by Table Row's own rule on its parent table
-   (width 100%, table-layout fixed, border-collapse collapse). This file sets
+   (width 100%, table-layout fixed, separate borders with no spacing, so each
+   row's bottom border sits inside the row height). This file sets
    no width, layout or collapse on the table, so the two never fight; the
    table fills the wrapper's content box and the column widths are Table
    Row's size/table/col/* tokens.
