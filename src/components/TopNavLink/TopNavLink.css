@@ -21,10 +21,10 @@
 }
 
 /* Indicator: the full width of the label, below it by gap/element.
-   GAP: the node leaves the indicator height (3 in Figma) unbound. No height
-   is set, so the indicator does not show until the Designer binds one. */
+   Transparent on Default, as the node shows, so the height never jumps. */
 .top-nav-link__indicator {
   align-self: stretch;
+  height: var(--size-topnav-indicator);
   border-radius: var(--border-radius-circle);
 }
 
