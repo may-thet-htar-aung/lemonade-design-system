@@ -351,6 +351,7 @@ public class Tokens {
     public static let fontsizeXl = CGFloat(24)
     public static let fontsizeXs = CGFloat(12)
     public static let fontweightBold = 700
+    public static let fontweightExtrabold = 800
     public static let fontweightMedium = 500
     public static let fontweightRegular = 400
     public static let fontweightSemibold = 600
@@ -359,6 +360,7 @@ public class Tokens {
     public static let gapElement = CGFloat(4)
     public static let gapFooterBrand = CGFloat(12)
     public static let gapGutter = CGFloat(16)
+    public static let gapLogoLg = CGFloat(12)
     public static let gapPane = CGFloat(24)
     public static let gapSection = CGFloat(32)
     public static let h1FontFamily = "Manrope" /** H1 — Bold 700 · Page and hero titles */
@@ -429,6 +431,9 @@ public class Tokens {
     public static let paddingDialog = CGFloat(32)
     public static let paddingFooter = CGFloat(48)
     public static let paddingListItem = CGFloat(16)
+    public static let paddingLogoLg = CGFloat(16)
+    public static let paddingLogoMd = CGFloat(12)
+    public static let paddingLogoSm = CGFloat(8)
     public static let paddingStatcard = CGFloat(24)
     public static let sizeAvatarLg = CGFloat(64)
     public static let sizeAvatarMd = CGFloat(44)
@@ -451,6 +456,8 @@ public class Tokens {
     public static let sizeIconSm = CGFloat(16)
     public static let sizeIconXl = CGFloat(32)
     public static let sizeLogoMark = CGFloat(40)
+    public static let sizeLogoMarklg = CGFloat(56)
+    public static let sizeLogoMarksm = CGFloat(32)
     public static let sizeTableColItem = CGFloat(240)
     public static let sizeTableColLocation = CGFloat(200)
     public static let sizeTableColOwner = CGFloat(200)

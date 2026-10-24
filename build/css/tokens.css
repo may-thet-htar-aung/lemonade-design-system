@@ -198,6 +198,7 @@
   --lineheight-8: 12px;
   --lineheight-20: 24px;
   --lineheight-80: 80px;
+  --fontweight-extrabold: 800;
   --density-touchtarget: 48px;
   --density-rowheight: 56px;
   --size-control-sm: 36px;
@@ -232,6 +233,8 @@
   --size-topnav-indicator: 3px;
   --size-footer-brand: 380px;
   --size-logo-mark: 40px;
+  --size-logo-marksm: 32px;
+  --size-logo-marklg: 56px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
@@ -373,6 +376,10 @@
   --padding-dialog: var(--spacing-2xl);
   --padding-footer: var(--spacing-3xl);
   --gap-footer-brand: var(--spacing-md);
+  --gap-logo-lg: var(--spacing-md);
+  --padding-logo-sm: var(--spacing-sm);
+  --padding-logo-md: var(--spacing-md);
+  --padding-logo-lg: var(--spacing-lg);
   --density-controlpaddingx: var(--spacing-lg);
   --density-controlpaddingy: var(--spacing-md);
   --h1-font-family: var(--fontfamily-heading); /** H1 — Bold 700 · Page and hero titles */
