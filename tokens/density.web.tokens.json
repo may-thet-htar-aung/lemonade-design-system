@@ -224,5 +224,12 @@
       "value": 180,
       "unit": "px"
     }
+  },
+  "size-dialog-width": {
+    "$type": "dimension",
+    "$value": {
+      "value": 480,
+      "unit": "px"
+    }
   }
 }

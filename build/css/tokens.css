@@ -228,6 +228,7 @@
   --size-table-col-owner: 200px;
   --size-table-col-location: 200px;
   --size-table-col-status: 180px;
+  --size-dialog-width: 480px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
@@ -366,6 +367,7 @@
   --padding-list-item: var(--spacing-lg);
   --padding-button-inline: var(--spacing-xl);
   --padding-statcard: var(--spacing-xl);
+  --padding-dialog: var(--spacing-2xl);
   --density-controlpaddingx: var(--spacing-lg);
   --density-controlpaddingy: var(--spacing-md);
   --h1-font-family: var(--fontfamily-heading); /** H1 — Bold 700 · Page and hero titles */
