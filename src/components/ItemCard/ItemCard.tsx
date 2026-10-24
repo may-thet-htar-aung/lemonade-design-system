@@ -55,7 +55,7 @@ export function ItemCard({
       {...rest}
       href={href}
       className={classes}
-      data-layout={Layout}
+      data-card-layout={Layout}
       data-state={State}
       aria-labelledby={titleId}
       aria-describedby={showStatus ? `${statusId} ${metaId}` : metaId}
