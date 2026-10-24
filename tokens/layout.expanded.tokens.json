@@ -46,5 +46,9 @@
   "padding-statcard": {
     "$type": "dimension",
     "$value": "{spacing-xl}"
+  },
+  "padding-dialog": {
+    "$type": "dimension",
+    "$value": "{spacing-2xl}"
   }
 }
