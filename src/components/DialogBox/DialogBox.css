@@ -1,0 +1,88 @@
+/* Figma node 160:307 (Type=Default 160:263, Type=Danger 160:285).
+   Every value is a semantic token.
+
+   GAP: the width, 480, is a raw value with no variable bound. Left unset, so
+   the panel sizes to its content inside the scrim. Designer to bind a width
+   token.
+   GAP: the padding is bound to spacing/2xl, a base token. The only token
+   that points at it is --gap-section, a gap token (not padding) that also
+   changes to spacing/40 and spacing/3xl with data-layout. No semantic padding
+   token resolves to 32 at the default layout. Left unset. Designer to bind a
+   semantic padding token.
+   NOTE: the gap between sections is spacing/lg (base). --gap-gutter is the
+   gap token that resolves to it at the default layout; it varies with
+   data-layout (spacing/xl in medium and expanded). Same choice as
+   Pagination and Timeline Step.
+   NOTE: the shadow is Elevation/Level5, used through its composite
+   --elevation-level5 (offsetY, blur and colour are its parts). Its colour
+   and every colour here vary with data-semantic. H4 and Body1 vary with
+   data-typography. The buttons' height is size/control/md, which varies with
+   data-density. */
+
+.dialog-box__scrim {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-scrim);
+}
+/* NOTE: centring the panel in the viewport, the space around it on small
+   screens, and its stacking order are not specified by the node. The panel
+   is centred and painted last in <body>; no z-index is set. */
+
+.dialog-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: var(--gap-gutter);
+  background: var(--color-bg-base);
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--elevation-level5);
+  overflow-wrap: break-word;
+}
+
+.dialog-box__title,
+.dialog-box__body,
+.dialog-box__callout,
+.dialog-box__actions {
+  align-self: stretch;
+  margin: 0;
+}
+
+.dialog-box__title {
+  color: var(--color-text-primary);
+  font: var(--h4-font-weight) var(--h4-font-size) / var(--h4-line-height) var(--h4-font-family);
+  letter-spacing: var(--h4-letter-spacing);
+}
+
+.dialog-box__body {
+  color: var(--color-text-secondary);
+  font: var(--body1-font-weight) var(--body1-font-size) / var(--body1-line-height) var(--body1-font-family);
+  letter-spacing: var(--body1-letter-spacing);
+}
+
+/* Actions: Cancel and Confirm at either end of the row (SPACE_BETWEEN).
+   GAP: each button is 199 wide in the node with no variable bound, and the
+   description's "24 between buttons" is not bound either (the node's own
+   space-between leaves 18). Widths are left to the Button's own hug and
+   size/button/minWidth. Designer to bind a width or a gap token. */
+.dialog-box__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Danger confirm: Button Primary with the negative fill and the inverse label. */
+.dialog-box[data-type='Danger'] .dialog-box__confirm {
+  background: var(--color-bg-negative-idle);
+  color: var(--color-text-inverse-primary);
+}
+/* GAP: the node gives no hover fill for the Danger confirm. The bound fill is
+   kept on hover so the Primary green hover does not show on a Danger
+   button. Designer to bind a Danger hover fill. */
+.dialog-box[data-type='Danger'] .dialog-box__confirm:hover:not(:disabled) {
+  background: var(--color-bg-negative-idle);
+}
