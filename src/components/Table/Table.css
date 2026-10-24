@@ -1,0 +1,24 @@
+/* Figma node 141:8. Every value is a semantic token.
+   The container (div.table) carries the node's Fill, Border and Radius and
+   clips its content, so the Header's top corners and the last row's bottom
+   corners follow the radius. A border-collapse table ignores border-radius,
+   so the rounding sits on this wrapper, not on the table element.
+   The inner table is sized by Table Row's own rule on its parent table
+   (width 100%, table-layout fixed, border-collapse collapse). This file sets
+   no width, layout or collapse on the table, so the two never fight; the
+   table fills the wrapper's content box and the column widths are Table
+   Row's size/table/col/* tokens.
+   Mode-varying: --color-bg-base and --color-border-primary-subtle remap under
+   [data-semantic="dark"]. Body row height (density/rowHeight) varies with
+   data-density inside Table Row.
+   GAP (Designer): the node's width, 1116, is a raw value with no variable
+   bound. The node description says to set it to Fill on a page. No width is
+   set here: the wrapper is a block and fills its container. */
+
+.table {
+  box-sizing: border-box;
+  background: var(--color-bg-base);
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-lg);
+  overflow: clip;
+}
