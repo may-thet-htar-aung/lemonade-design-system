@@ -9,7 +9,7 @@ const meta = {
     (Story, context) => {
       const Section = context.args.Type === 'Header' ? 'thead' : 'tbody';
       return (
-        <table style={{ borderCollapse: 'collapse' }}>
+        <table>
           <Section>
             <Story />
           </Section>

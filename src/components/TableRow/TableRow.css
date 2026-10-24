@@ -10,12 +10,16 @@
    spacing/md. No static semantic token points at spacing/md for padding;
    --density-controlpaddingy resolves to it at default and web and to
    spacing/sm under back-office, where the 40 row height leaves no room for
-   spacing/md. Row height varies with density too. */
+   spacing/md. Row height varies with density too.
+   Border model: separate with no spacing, so each cell's bottom border sits
+   inside its border-box height, as the node draws the stroke inside the row.
+   A collapsed border puts half of the last row's border outside the rows. */
 
 table:has(> thead > tr.table-row, > tbody > tr.table-row) {
   width: 100%;
   table-layout: fixed;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .table-row {
@@ -24,7 +28,10 @@ table:has(> thead > tr.table-row, > tbody > tr.table-row) {
 
 .table-row__cell {
   box-sizing: border-box;
-  padding-block: var(--density-controlpaddingy);
+  /* The bottom stroke is drawn inside the row (node: stroke inside), so it
+     takes its width out of the bottom padding rather than adding to the row. */
+  padding-block: var(--density-controlpaddingy)
+    calc(var(--density-controlpaddingy) - var(--border-width-1));
   padding-inline: 0 var(--padding-list-item);
   text-align: start;
   vertical-align: middle;
@@ -57,6 +64,15 @@ table:has(> thead > tr.table-row, > tbody > tr.table-row) {
 .table-row__cell:nth-child(6) {
   width: auto;
   padding-inline-end: calc(var(--padding-list-item) + var(--padding-list-item));
+}
+
+/* Nested Status Badge and Link Button are inline-flex. Inline, they sit on
+   the cell's Body1 baseline and grow its line box past the Body1 line
+   height. Laid out as a block-level flex box at their own width, they add
+   only their own height, and the cell's middle alignment centres them. */
+.table-row__cell > :not(.table-row__text) {
+  display: flex;
+  width: fit-content;
 }
 
 .table-row__text {
