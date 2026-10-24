@@ -1,14 +1,10 @@
 /* Figma node 160:307 (Type=Default 160:263, Type=Danger 160:285).
    Every value is a semantic token.
 
-   GAP: the width, 480, is a raw value with no variable bound. Left unset, so
-   the panel sizes to its content inside the scrim. Designer to bind a width
-   token.
-   GAP: the padding is bound to spacing/2xl, a base token. The only token
-   that points at it is --gap-section, a gap token (not padding) that also
-   changes to spacing/40 and spacing/3xl with data-layout. No semantic padding
-   token resolves to 32 at the default layout. Left unset. Designer to bind a
-   semantic padding token.
+   NOTE: width is size/dialog/width (--size-dialog-width) and padding is
+   padding/dialog (--padding-dialog), both bound in the node. Neither varies
+   with any mode: the width is the same in every data-density, and the
+   padding is the same in every data-layout.
    NOTE: the gap between sections is spacing/lg (base). --gap-gutter is the
    gap token that resolves to it at the default layout; it varies with
    data-layout (spacing/xl in medium and expanded). Same choice as
@@ -36,6 +32,8 @@
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
+  width: var(--size-dialog-width);
+  padding: var(--padding-dialog);
   gap: var(--gap-gutter);
   background: var(--color-bg-base);
   border: var(--border-width-1) solid var(--color-border-primary-subtle);
