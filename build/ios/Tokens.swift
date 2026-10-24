@@ -456,6 +456,7 @@ public class Tokens {
     public static let sizeTimelineDot = CGFloat(24)
     public static let sizeTimelineDotevent = CGFloat(10)
     public static let sizeTimelineStepminheight = CGFloat(56)
+    public static let sizeTopnavIndicator = CGFloat(3)
     public static let sizeWidthMinmobile = CGFloat(288) /** Smallest width for full-width content on a 320 px phone (320 minus margin/page on each side). Used by Callout. */
     public static let spacing2xl = CGFloat(32)
     public static let spacing2xs = CGFloat(2)
