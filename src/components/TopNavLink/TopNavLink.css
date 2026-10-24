@@ -1,0 +1,54 @@
+/* Figma node 173:59. Every value is a semantic token. */
+
+.top-nav-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-element);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* GAP: the design has no focus style bound. The browser default focus
+   outline is left in place for :focus-visible. The Designer must bind a
+   focus ring. */
+
+.top-nav-link__label {
+  font: var(--tagline-14-font-weight) var(--tagline-14-font-size) / var(--tagline-14-line-height) var(--tagline-14-font-family);
+  letter-spacing: var(--tagline-14-letter-spacing);
+  white-space: nowrap;
+}
+
+/* Indicator: the full width of the label, below it by gap/element.
+   GAP: the node leaves the indicator height (3 in Figma) unbound. No height
+   is set, so the indicator does not show until the Designer binds one. */
+.top-nav-link__indicator {
+  align-self: stretch;
+  border-radius: var(--border-radius-circle);
+}
+
+/* Hover: pinned by State=Hover, or a real pointer over a Default link.
+   Limited to pointers that hover, so touch does not leave it stuck. */
+.top-nav-link[data-state='Hover'] {
+  color: var(--color-text-brandgreen);
+}
+.top-nav-link[data-state='Hover'] .top-nav-link__indicator {
+  background: var(--color-bg-brandyellow-light);
+}
+@media (hover: hover) {
+  .top-nav-link[data-state='Default']:hover {
+    color: var(--color-text-brandgreen);
+  }
+  .top-nav-link[data-state='Default']:hover .top-nav-link__indicator {
+    background: var(--color-bg-brandyellow-light);
+  }
+}
+
+/* Active: the current page. */
+.top-nav-link[data-state='Active'] {
+  color: var(--color-text-brandgreen);
+}
+.top-nav-link[data-state='Active'] .top-nav-link__indicator {
+  background: var(--color-bg-brandyellow-hover);
+}
