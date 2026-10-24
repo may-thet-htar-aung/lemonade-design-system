@@ -1,0 +1,107 @@
+/* Figma node 162:69. Every value is a semantic token.
+   Background and text use the static tokens, which stay the same in Light
+   and Dark mode, as the node's description asks. */
+
+.footer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Width 1440 in the node, described as Fill: the footer fills its parent. */
+  width: 100%;
+  /* spacing/4xl. Nothing in tokens.css points at --spacing-4xl, so it is
+     used directly. */
+  padding-inline: var(--spacing-4xl);
+  /* GAP: padding top and bottom is bound to spacing/3xl, a base token. The
+     only token that points at it is --gap-section, and only under
+     [data-layout="expanded"]; at the default layout it is spacing/2xl, and
+     its name is a gap, not padding. Not set. Designer to bind a padding token. */
+  /* spacing/2xl between the top and bottom rows. --gap-section points at it
+     at the default layout. Mode-varying: spacing/40 under
+     [data-layout="medium"] and spacing/3xl under [data-layout="expanded"]. */
+  gap: var(--gap-section);
+  background: var(--color-bg-static-brandgreen);
+  color: var(--color-text-static-light);
+}
+
+.footer__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* GAP: the gap between the Logo and the tagline is bound to spacing/md, a
+     base token. The tokens that point at it are --gap-card (a card's inner
+     gap, and spacing/lg under [data-layout]) and --density-controlpaddingy
+     (control padding). Neither name fits. Not set. */
+  /* GAP: the Brand frame and tagline are 380 wide with no size variable
+     bound. Not set, so the tagline takes the width the row leaves it. */
+}
+
+.footer__tagline {
+  margin: 0;
+  font: var(--body2-font-weight) var(--body2-font-size) / var(--body2-line-height) var(--body2-font-family);
+  letter-spacing: var(--body2-letter-spacing);
+}
+
+.footer__columns {
+  display: flex;
+  align-items: flex-start;
+  /* spacing/4xl between columns, used directly as above. */
+  gap: var(--spacing-4xl);
+  white-space: nowrap;
+}
+
+/* Heading and links stack spacing/sm apart. --gap-component points at
+   spacing/sm and does not vary by mode. */
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-component);
+}
+
+.footer__heading {
+  margin: 0;
+  font: var(--tagline-14-font-weight) var(--tagline-14-font-size) / var(--tagline-14-line-height) var(--tagline-14-font-family);
+  letter-spacing: var(--tagline-14-letter-spacing);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-component);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* The node draws the links as plain Body2 text in color/text/static/light,
+   with no underline. GAP: the node has no hover, focus or pressed style for
+   these links. The browser default focus outline is left in place, and no
+   hover style is drawn. */
+.footer__link {
+  color: inherit;
+  text-decoration: none;
+  font: var(--body2-font-weight) var(--body2-font-size) / var(--body2-line-height) var(--body2-font-family);
+  letter-spacing: var(--body2-letter-spacing);
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.footer__copyright,
+.footer__note {
+  margin: 0;
+  font: var(--body3-font-weight) var(--body3-font-size) / var(--body3-line-height) var(--body3-font-family);
+  letter-spacing: var(--body3-letter-spacing);
+}
