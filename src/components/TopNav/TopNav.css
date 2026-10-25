@@ -1,0 +1,80 @@
+/* Figma node 161:415 (Top Nav). Every value is a semantic token, or a scale
+   token that nothing in tokens.css points at. */
+
+.top-nav {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Width 1440 in the node, described as Fill: the header fills its parent. */
+  width: 100%;
+  /* GAP: the node fixes the height at 72 with no variable bound. The height
+     is left to hug the content and is not set here. */
+  /* spacing/4xl. Nothing in tokens.css points at --spacing-4xl. */
+  padding-inline: var(--spacing-4xl);
+  /* GAP: top and bottom padding are bound to spacing/lg, a base token
+     (--padding-container, --padding-card, --margin-page and others point at
+     it). None of those names a header's padding, and --padding-container
+     changes under [data-layout]. padding-block is left unset. */
+  /* color/bg/base. Mode-varying: remapped under [data-semantic="dark"]. */
+  background: var(--color-bg-base);
+  /* Bottom border only: color/border/primary/subtle at border/width/1,
+     drawn inside the frame. Colour is mode-varying under
+     [data-semantic="dark"]. */
+  border: 0;
+  border-bottom: var(--border-width-1) solid var(--color-border-primary-subtle);
+}
+
+/* Skip link, from the node's accessibility notes. Hidden until it takes
+   keyboard focus.
+   GAP: the node draws no skip link, so its focused appearance has no bound
+   fill, type, padding or position. It shows as an unstyled link. */
+.top-nav__skip-link {
+  position: absolute;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.top-nav__skip-link:focus {
+  clip-path: none;
+}
+
+/* Left: Logo, then the links, centred on the cross axis.
+   GAP: the gap between Logo and links is bound to spacing/3xl, a base token
+   (--padding-footer and, under [data-layout="expanded"], --gap-section point
+   at it). Neither name fits, and --gap-section is spacing/2xl at the default
+   layout. The gap is left unset. */
+.top-nav__left {
+  display: flex;
+  align-items: center;
+}
+
+/* The home link wraps the Logo instance; it adds no box of its own. */
+.top-nav__home {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.top-nav__nav {
+  display: flex;
+}
+
+/* Links: top-aligned row.
+   GAP: the gap between links is bound to spacing/xl, a base token
+   (--gap-pane, --padding-button-inline, --padding-statcard point at it).
+   None names the space between nav links. The gap is left unset. */
+.top-nav__links {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Actions: spacing/sm apart. --gap-component points at spacing/sm and does
+   not vary by mode. */
+.top-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-component);
+}
