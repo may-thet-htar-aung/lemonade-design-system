@@ -239,6 +239,8 @@
   --size-logosymbol-md: 48px;
   --size-logosymbol-lg: 64px;
   --size-topnav-height: 72px;
+  --size-tabbar-pill-width: 56px;
+  --size-tabbar-pill-height: 32px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
@@ -388,6 +390,9 @@
   --padding-topnav-block: var(--spacing-md);
   --gap-topnav-brand: var(--spacing-3xl);
   --gap-topnav-links: var(--spacing-xl);
+  --padding-tabbar-inline: var(--spacing-md);
+  --padding-tabbar-top: var(--spacing-sm);
+  --padding-tabbar-bottom: var(--spacing-xl);
   --density-controlpaddingx: var(--spacing-lg);
   --density-controlpaddingy: var(--spacing-md);
   --h1-font-family: var(--fontfamily-heading); /** H1 — Bold 700 · Page and hero titles */
