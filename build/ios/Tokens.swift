@@ -355,6 +355,7 @@ public class Tokens {
     public static let fontweightMedium = 500
     public static let fontweightRegular = 400
     public static let fontweightSemibold = 600
+    public static let fontweightWordmarkFound = 500
     public static let gapCard = CGFloat(12)
     public static let gapComponent = CGFloat(8)
     public static let gapElement = CGFloat(4)
