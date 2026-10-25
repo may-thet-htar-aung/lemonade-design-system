@@ -9,14 +9,13 @@
   justify-content: space-between;
   /* Width 1440 in the node, described as Fill: the header fills its parent. */
   width: 100%;
-  /* GAP: the node fixes the height at 72 with no variable bound. The height
-     is left to hug the content and is not set here. */
+  /* size/topnav/height. The same in every density mode. The bottom border
+     sits inside it, as the node includes its stroke in layout. */
+  height: var(--size-topnav-height);
   /* spacing/4xl. Nothing in tokens.css points at --spacing-4xl. */
   padding-inline: var(--spacing-4xl);
-  /* GAP: top and bottom padding are bound to spacing/lg, a base token
-     (--padding-container, --padding-card, --margin-page and others point at
-     it). None of those names a header's padding, and --padding-container
-     changes under [data-layout]. padding-block is left unset. */
+  /* padding/topnav/block. The same in every layout mode. */
+  padding-block: var(--padding-topnav-block);
   /* color/bg/base. Mode-varying: remapped under [data-semantic="dark"]. */
   background: var(--color-bg-base);
   /* Bottom border only: color/border/primary/subtle at border/width/1,
@@ -39,17 +38,17 @@
   clip-path: none;
 }
 
-/* Left: Logo, then the links, centred on the cross axis.
-   GAP: the gap between Logo and links is bound to spacing/3xl, a base token
-   (--padding-footer and, under [data-layout="expanded"], --gap-section point
-   at it). Neither name fits, and --gap-section is spacing/2xl at the default
-   layout. The gap is left unset. */
+/* Left: Logo, then the links, centred on the cross axis, gap/topnav/brand
+   apart. The same in every layout mode. */
 .top-nav__left {
   display: flex;
   align-items: center;
+  gap: var(--gap-topnav-brand);
 }
 
-/* The home link wraps the Logo instance; it adds no box of its own. */
+/* The home link wraps the Logo instance; it adds no box of its own.
+   GAP: the node binds no focus ring for the home link, the Top Nav Links or
+   the Buttons. The browser default focus outline is left in place. */
 .top-nav__home {
   display: inline-flex;
   text-decoration: none;
@@ -59,13 +58,12 @@
   display: flex;
 }
 
-/* Links: top-aligned row.
-   GAP: the gap between links is bound to spacing/xl, a base token
-   (--gap-pane, --padding-button-inline, --padding-statcard point at it).
-   None names the space between nav links. The gap is left unset. */
+/* Links: top-aligned row, gap/topnav/links apart. The same in every layout
+   mode. */
 .top-nav__links {
   display: flex;
   align-items: flex-start;
+  gap: var(--gap-topnav-links);
   margin: 0;
   padding: 0;
   list-style: none;
