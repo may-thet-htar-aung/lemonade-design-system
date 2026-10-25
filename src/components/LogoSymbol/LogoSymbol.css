@@ -1,0 +1,47 @@
+/* Figma node 23:1470 (Logo/Symbol). Every value is a semantic token. */
+
+.logo-symbol {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/*
+ * DESIGN GAP: size. Every variant's width and height is unbound in Figma
+ * (Small 32, Medium 48, Large 64 are raw values on nodes 23:1471 to 23:1495).
+ * No width or height is set here until the Designer binds a size variable
+ * to each Size variant. The Size prop is wired (data-logo-symbol-size) so the
+ * binding only needs three rules once it exists.
+ */
+
+.logo-symbol__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Color=Brand: tile color/bg/brandYellow/idle, monogram color/bg/static/brandGreen. */
+.logo-symbol[data-logo-symbol-color='Brand'] .logo-symbol__tile {
+  fill: var(--color-bg-brandyellow-idle);
+}
+
+.logo-symbol[data-logo-symbol-color='Brand'] .logo-symbol__monogram {
+  fill: var(--color-bg-static-brandgreen);
+}
+
+/* Color=Black: tile color/bg/inverse, monogram color/icon/inverse. */
+.logo-symbol[data-logo-symbol-color='Black'] .logo-symbol__tile {
+  fill: var(--color-bg-inverse);
+}
+
+.logo-symbol[data-logo-symbol-color='Black'] .logo-symbol__monogram {
+  fill: var(--color-icon-inverse);
+}
+
+/* Color=White: tile color/bg/base, monogram color/bg/inverse. */
+.logo-symbol[data-logo-symbol-color='White'] .logo-symbol__tile {
+  fill: var(--color-bg-base);
+}
+
+.logo-symbol[data-logo-symbol-color='White'] .logo-symbol__monogram {
+  fill: var(--color-bg-inverse);
+}
