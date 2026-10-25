@@ -74,5 +74,17 @@
   "padding-logo-lg": {
     "$type": "dimension",
     "$value": "{spacing-lg}"
+  },
+  "padding-topnav-block": {
+    "$type": "dimension",
+    "$value": "{spacing-md}"
+  },
+  "gap-topnav-brand": {
+    "$type": "dimension",
+    "$value": "{spacing-3xl}"
+  },
+  "gap-topnav-links": {
+    "$type": "dimension",
+    "$value": "{spacing-xl}"
   }
 }
