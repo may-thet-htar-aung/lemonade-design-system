@@ -198,6 +198,7 @@
   --lineheight-8: 12px;
   --lineheight-20: 24px;
   --lineheight-80: 80px;
+  --fontweight-extrabold: 800;
   --density-touchtarget: 48px;
   --density-rowheight: 56px;
   --size-control-sm: 36px;
@@ -230,6 +231,10 @@
   --size-table-col-status: 180px;
   --size-dialog-width: 480px;
   --size-topnav-indicator: 3px;
+  --size-footer-brand: 380px;
+  --size-logo-mark: 40px;
+  --size-logo-marksm: 32px;
+  --size-logo-marklg: 56px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
@@ -356,6 +361,7 @@
   --color-icon-brandbold: var(--color-forest-green-600); /** Brand green icon in Light mode, white in Dark mode. Use for icons that sit next to color/text/primary titles on tinted backgrounds, such as Callout. */
   --color-bg-static-brandgreen: var(--color-forest-green-600); /** Brand green background that stays the same in Light and Dark mode. Pair with color/icon/static/light or color/text/static/light, such as the Done dot in Timeline Step. */
   --color-text-brandbold: var(--color-forest-green-800); /** Brand green text in Light mode, white in Dark mode. Text partner of color/icon/brandBold. Used for Outline and Ghost button labels. */
+  --fontweight-wordmark-found: var(--fontweight-medium);
   --margin-page: var(--spacing-lg);
   --gap-gutter: var(--spacing-lg);
   --gap-pane: var(--spacing-xl);
@@ -369,6 +375,12 @@
   --padding-button-inline: var(--spacing-xl);
   --padding-statcard: var(--spacing-xl);
   --padding-dialog: var(--spacing-2xl);
+  --padding-footer: var(--spacing-3xl);
+  --gap-footer-brand: var(--spacing-md);
+  --gap-logo-lg: var(--spacing-md);
+  --padding-logo-sm: var(--spacing-sm);
+  --padding-logo-md: var(--spacing-md);
+  --padding-logo-lg: var(--spacing-lg);
   --density-controlpaddingx: var(--spacing-lg);
   --density-controlpaddingy: var(--spacing-md);
   --h1-font-family: var(--fontfamily-heading); /** H1 — Bold 700 · Page and hero titles */

@@ -303,5 +303,13 @@
       "value": 80,
       "unit": "px"
     }
+  },
+  "fontweight-extrabold": {
+    "$type": "fontWeight",
+    "$value": 800
+  },
+  "fontweight-wordmark-found": {
+    "$type": "fontWeight",
+    "$value": "{fontweight-medium}"
   }
 }
