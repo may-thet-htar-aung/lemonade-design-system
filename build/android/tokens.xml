@@ -323,6 +323,7 @@
   <dimen name="lineheight_20">24sp</dimen>
   <dimen name="lineheight_80">80sp</dimen>
   <integer name="fontweight_extrabold">800</integer>
+  <integer name="fontweight_wordmark_found">500</integer>
   <dimen name="margin_page">16dp</dimen>
   <dimen name="gap_gutter">16dp</dimen>
   <dimen name="gap_pane">24dp</dimen>
