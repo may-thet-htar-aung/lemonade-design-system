@@ -266,5 +266,26 @@
       "value": 56,
       "unit": "px"
     }
+  },
+  "size-logosymbol-sm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    }
+  },
+  "size-logosymbol-md": {
+    "$type": "dimension",
+    "$value": {
+      "value": 48,
+      "unit": "px"
+    }
+  },
+  "size-logosymbol-lg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 64,
+      "unit": "px"
+    }
   }
 }

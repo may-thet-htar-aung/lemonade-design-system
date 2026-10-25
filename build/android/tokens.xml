@@ -381,6 +381,9 @@
   <dimen name="size_logo_mark">40dp</dimen>
   <dimen name="size_logo_marksm">32dp</dimen>
   <dimen name="size_logo_marklg">56dp</dimen>
+  <dimen name="size_logosymbol_sm">32dp</dimen>
+  <dimen name="size_logosymbol_md">48dp</dimen>
+  <dimen name="size_logosymbol_lg">64dp</dimen>
   <string name="h1_font_family">Manrope</string>
   <integer name="h1_font_weight">700</integer>
   <dimen name="h1_font_size">64sp</dimen>

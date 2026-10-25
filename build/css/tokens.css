@@ -235,6 +235,9 @@
   --size-logo-mark: 40px;
   --size-logo-marksm: 32px;
   --size-logo-marklg: 56px;
+  --size-logosymbol-sm: 32px;
+  --size-logosymbol-md: 48px;
+  --size-logosymbol-lg: 64px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
