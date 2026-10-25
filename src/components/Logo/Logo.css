@@ -1,0 +1,170 @@
+/* Figma node 23:1348 (Logo). Every value is a semantic token. */
+
+.logo {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+/* ---- Gap between mark and wordmark ---- */
+
+/* Small and Medium: spacing/sm, resolved through --gap-component. */
+.logo[data-logo-size='Small'],
+.logo[data-logo-size='Medium'] {
+  gap: var(--gap-component);
+}
+
+/* Large: gap/logo/lg. */
+.logo[data-logo-size='Large'] {
+  gap: var(--gap-logo-lg);
+}
+
+/* ---- Plates (Dark and White themes) ---- */
+
+.logo[data-logo-theme='Dark'] {
+  background: var(--color-bg-static-brandgreen);
+}
+
+.logo[data-logo-theme='White'] {
+  background: var(--color-bg-inverse);
+}
+
+.logo[data-logo-theme='Dark'][data-logo-size='Small'],
+.logo[data-logo-theme='White'][data-logo-size='Small'] {
+  border-radius: var(--border-radius-sm);
+}
+
+.logo[data-logo-theme='Dark'][data-logo-size='Medium'],
+.logo[data-logo-theme='White'][data-logo-size='Medium'] {
+  border-radius: var(--border-radius-md);
+}
+
+.logo[data-logo-theme='Dark'][data-logo-size='Large'],
+.logo[data-logo-theme='White'][data-logo-size='Large'] {
+  border-radius: var(--border-radius-lg);
+}
+
+/* Plate padding: Small padding/logo/md x padding/logo/sm, Medium
+   padding/logo/lg x padding/logo/md, Large padding/logo/lg all round. */
+.logo[data-logo-theme='Dark'][data-logo-size='Small'],
+.logo[data-logo-theme='White'][data-logo-size='Small'] {
+  padding-inline: var(--padding-logo-md);
+  padding-block: var(--padding-logo-sm);
+}
+
+.logo[data-logo-theme='Dark'][data-logo-size='Medium'],
+.logo[data-logo-theme='White'][data-logo-size='Medium'] {
+  padding-inline: var(--padding-logo-lg);
+  padding-block: var(--padding-logo-md);
+}
+
+.logo[data-logo-theme='Dark'][data-logo-size='Large'],
+.logo[data-logo-theme='White'][data-logo-size='Large'] {
+  padding: var(--padding-logo-lg);
+}
+
+/* ---- Mark ---- */
+
+.logo__mark {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* Mark size: size/logo/marksm, size/logo/mark, size/logo/marklg. */
+.logo[data-logo-size='Small'] .logo__mark {
+  width: var(--size-logo-marksm);
+  height: var(--size-logo-marksm);
+}
+
+.logo[data-logo-size='Medium'] .logo__mark {
+  width: var(--size-logo-mark);
+  height: var(--size-logo-mark);
+}
+
+.logo[data-logo-size='Large'] .logo__mark {
+  width: var(--size-logo-marklg);
+  height: var(--size-logo-marklg);
+}
+
+.logo__symbol {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Light and Dark themes: Brand symbol. */
+.logo[data-logo-theme='Light'] .logo__tile,
+.logo[data-logo-theme='Dark'] .logo__tile {
+  fill: var(--color-bg-brandyellow-idle);
+}
+
+.logo[data-logo-theme='Light'] .logo__monogram,
+.logo[data-logo-theme='Dark'] .logo__monogram {
+  fill: var(--color-bg-static-brandgreen);
+}
+
+/* Black theme: Black symbol. */
+.logo[data-logo-theme='Black'] .logo__tile {
+  fill: var(--color-bg-inverse);
+}
+
+.logo[data-logo-theme='Black'] .logo__monogram {
+  fill: var(--color-icon-inverse);
+}
+
+/* White theme: White symbol. */
+.logo[data-logo-theme='White'] .logo__tile {
+  fill: var(--color-bg-base);
+}
+
+.logo[data-logo-theme='White'] .logo__monogram {
+  fill: var(--color-bg-inverse);
+}
+
+/* ---- Wordmark ---- */
+
+/* fontfamily/heading, fontsize/md and lineheight/md are base tokens; the H5
+   text-style tokens point at exactly these three. */
+.logo[data-logo-size='Small'] .logo__wordmark {
+  font: var(--h5-font-size) / var(--h5-line-height) var(--h5-font-family);
+}
+
+/* fontfamily/heading and fontsize/20 are base tokens; the H4 tokens point at
+   them. lineheight/lg has no alias, so it is used directly. */
+.logo[data-logo-size='Medium'] .logo__wordmark {
+  font: var(--h4-font-size) / var(--lineheight-lg) var(--h4-font-family);
+}
+
+/* fontsize/2xl and lineheight/2xl have no alias, so they are used directly.
+   fontfamily/heading resolves through the heading family alias. */
+.logo[data-logo-size='Large'] .logo__wordmark {
+  font: var(--fontsize-2xl) / var(--lineheight-2xl) var(--h3-font-family);
+}
+
+.logo[data-logo-theme='Light'] .logo__wordmark {
+  color: var(--color-text-brandgreen);
+}
+
+.logo[data-logo-theme='Dark'] .logo__wordmark {
+  color: var(--color-text-static-light);
+}
+
+.logo[data-logo-theme='Black'] .logo__wordmark {
+  color: var(--color-text-primary);
+}
+
+.logo[data-logo-theme='White'] .logo__wordmark {
+  color: var(--color-text-inverse-primary);
+}
+
+/* "Lemonade": fontweight/extrabold. */
+.logo__wordmark-lemonade {
+  font-weight: var(--fontweight-extrabold);
+}
+
+/* "Found": fontweight/wordmark/found. */
+.logo__wordmark-found {
+  font-weight: var(--fontweight-wordmark-found);
+}
