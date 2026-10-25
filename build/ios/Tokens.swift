@@ -364,6 +364,8 @@ public class Tokens {
     public static let gapLogoLg = CGFloat(12)
     public static let gapPane = CGFloat(24)
     public static let gapSection = CGFloat(32)
+    public static let gapTopnavBrand = CGFloat(48)
+    public static let gapTopnavLinks = CGFloat(24)
     public static let h1FontFamily = "Manrope" /** H1 — Bold 700 · Page and hero titles */
     public static let h1FontSize = CGFloat(64) /** H1 — Bold 700 · Page and hero titles */
     public static let h1FontWeight = 700 /** H1 — Bold 700 · Page and hero titles */
@@ -436,6 +438,7 @@ public class Tokens {
     public static let paddingLogoMd = CGFloat(12)
     public static let paddingLogoSm = CGFloat(8)
     public static let paddingStatcard = CGFloat(24)
+    public static let paddingTopnavBlock = CGFloat(12)
     public static let sizeAvatarLg = CGFloat(64)
     public static let sizeAvatarMd = CGFloat(44)
     public static let sizeAvatarSm = CGFloat(32)
@@ -471,6 +474,7 @@ public class Tokens {
     public static let sizeTimelineDot = CGFloat(24)
     public static let sizeTimelineDotevent = CGFloat(10)
     public static let sizeTimelineStepminheight = CGFloat(56)
+    public static let sizeTopnavHeight = CGFloat(72)
     public static let sizeTopnavIndicator = CGFloat(3)
     public static let sizeWidthMinmobile = CGFloat(288) /** Smallest width for full-width content on a 320 px phone (320 minus margin/page on each side). Used by Callout. */
     public static let spacing2xl = CGFloat(32)
