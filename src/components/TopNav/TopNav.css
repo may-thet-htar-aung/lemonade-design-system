@@ -1,0 +1,78 @@
+/* Figma node 161:415 (Top Nav). Every value is a semantic token, or a scale
+   token that nothing in tokens.css points at. */
+
+.top-nav {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Width 1440 in the node, described as Fill: the header fills its parent. */
+  width: 100%;
+  /* size/topnav/height. The same in every density mode. The bottom border
+     sits inside it, as the node includes its stroke in layout. */
+  height: var(--size-topnav-height);
+  /* spacing/4xl. Nothing in tokens.css points at --spacing-4xl. */
+  padding-inline: var(--spacing-4xl);
+  /* padding/topnav/block. The same in every layout mode. */
+  padding-block: var(--padding-topnav-block);
+  /* color/bg/base. Mode-varying: remapped under [data-semantic="dark"]. */
+  background: var(--color-bg-base);
+  /* Bottom border only: color/border/primary/subtle at border/width/1,
+     drawn inside the frame. Colour is mode-varying under
+     [data-semantic="dark"]. */
+  border: 0;
+  border-bottom: var(--border-width-1) solid var(--color-border-primary-subtle);
+}
+
+/* Skip link, from the node's accessibility notes. Hidden until it takes
+   keyboard focus.
+   GAP: the node draws no skip link, so its focused appearance has no bound
+   fill, type, padding or position. It shows as an unstyled link. */
+.top-nav__skip-link {
+  position: absolute;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.top-nav__skip-link:focus {
+  clip-path: none;
+}
+
+/* Left: Logo, then the links, centred on the cross axis, gap/topnav/brand
+   apart. The same in every layout mode. */
+.top-nav__left {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-topnav-brand);
+}
+
+/* The home link wraps the Logo instance; it adds no box of its own.
+   GAP: the node binds no focus ring for the home link, the Top Nav Links or
+   the Buttons. The browser default focus outline is left in place. */
+.top-nav__home {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.top-nav__nav {
+  display: flex;
+}
+
+/* Links: top-aligned row, gap/topnav/links apart. The same in every layout
+   mode. */
+.top-nav__links {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap-topnav-links);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Actions: spacing/sm apart. --gap-component points at spacing/sm and does
+   not vary by mode. */
+.top-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-component);
+}
