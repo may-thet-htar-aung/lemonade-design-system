@@ -294,5 +294,19 @@
       "value": 72,
       "unit": "px"
     }
+  },
+  "size-tabbar-pill-width": {
+    "$type": "dimension",
+    "$value": {
+      "value": 56,
+      "unit": "px"
+    }
+  },
+  "size-tabbar-pill-height": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    }
   }
 }
