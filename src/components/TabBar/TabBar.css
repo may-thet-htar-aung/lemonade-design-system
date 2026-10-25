@@ -13,11 +13,8 @@
      inside the frame so it adds no height, as the node does. Colour is
      mode-varying under [data-semantic="dark"]. */
   box-shadow: inset 0 var(--border-width-1) 0 0 var(--color-border-primary-subtle);
-
-  /* GAP: padding. The node binds the base tokens spacing/md (left, right),
-     spacing/sm (top) and spacing/xl (bottom). Other tokens point at each of
-     them, so they are base, and no semantic token is meant for Tab Bar
-     padding. Left unset until the Designer binds Tab Bar padding tokens. */
+  /* padding/tabbar/inline, /top and /bottom. The same in every mode. */
+  padding: var(--padding-tabbar-top) var(--padding-tabbar-inline) var(--padding-tabbar-bottom);
 }
 
 /* Tabs: a row, top-aligned, no gap. Each tab shares the width equally. */
@@ -49,24 +46,22 @@
      [data-semantic="dark"]. */
   color: var(--color-text-tertiary);
   -webkit-tap-highlight-color: transparent;
-
-  /* GAP: the node has no hover or focus state. No hover style is drawn, and
-     the browser default focus outline is left in place for :focus-visible. */
+  /* No hover style, and the browser default focus outline, by design. */
 }
 
-/* Pill: holds the icon, centred, border/radius/circle. No fill when
-   inactive. Icon colour is color/icon/secondary when inactive (mode-varying
-   under [data-semantic="dark"]); the Icon takes it through currentColor. */
+/* Pill: size/tabbar/pill/width x height, the icon centred,
+   border/radius/circle. No fill when inactive. Icon colour is
+   color/icon/secondary when inactive (mode-varying under
+   [data-semantic="dark"]); the Icon takes it through currentColor. */
 .tab-bar__pill {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
+  width: var(--size-tabbar-pill-width);
+  height: var(--size-tabbar-pill-height);
   border-radius: var(--border-radius-circle);
   color: var(--color-icon-secondary);
-
-  /* GAP: width and height. The node fixes the pill at 56 x 32 with no
-     variable bound. Left unset, so the pill hugs the icon, until the
-     Designer binds pill size tokens. */
 }
 
 /* Label: Tagline/12. Family, line height and letter spacing are
