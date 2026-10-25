@@ -252,5 +252,19 @@
       "value": 40,
       "unit": "px"
     }
+  },
+  "size-logo-marksm": {
+    "$type": "dimension",
+    "$value": {
+      "value": 32,
+      "unit": "px"
+    }
+  },
+  "size-logo-marklg": {
+    "$type": "dimension",
+    "$value": {
+      "value": 56,
+      "unit": "px"
+    }
   }
 }

@@ -303,5 +303,9 @@
       "value": 104,
       "unit": "px"
     }
+  },
+  "fontweight-extrabold": {
+    "$type": "fontWeight",
+    "$value": 800
   }
 }
