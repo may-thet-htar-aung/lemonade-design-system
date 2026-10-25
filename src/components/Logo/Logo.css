@@ -17,10 +17,10 @@
   gap: var(--gap-component);
 }
 
-/* GAP: Large binds itemSpacing to spacing/md, a base token. The semantic
-   tokens that point at it are --gap-card (remapped to spacing/lg under
-   data-layout medium and expanded) and --gap-footer-brand (Footer's own gap).
-   Neither names this gap. Left unset. Designer to bind a semantic token. */
+/* Large: gap/logo/lg. */
+.logo[data-logo-size='Large'] {
+  gap: var(--gap-logo-lg);
+}
 
 /* ---- Plates (Dark and White themes) ---- */
 
@@ -47,12 +47,24 @@
   border-radius: var(--border-radius-lg);
 }
 
-/* GAP: plate padding. The node binds it to base spacing tokens:
-   Small 12 x 8 (spacing/md, spacing/sm), Medium 16 x 12 (spacing/lg,
-   spacing/md), Large 16 (spacing/lg). No semantic padding token names a logo
-   plate; the ones that resolve to these values are other components' padding,
-   gaps, or vary by data-layout or data-density. Left unset. Designer to bind
-   semantic tokens. */
+/* Plate padding: Small padding/logo/md x padding/logo/sm, Medium
+   padding/logo/lg x padding/logo/md, Large padding/logo/lg all round. */
+.logo[data-logo-theme='Dark'][data-logo-size='Small'],
+.logo[data-logo-theme='White'][data-logo-size='Small'] {
+  padding-inline: var(--padding-logo-md);
+  padding-block: var(--padding-logo-sm);
+}
+
+.logo[data-logo-theme='Dark'][data-logo-size='Medium'],
+.logo[data-logo-theme='White'][data-logo-size='Medium'] {
+  padding-inline: var(--padding-logo-lg);
+  padding-block: var(--padding-logo-md);
+}
+
+.logo[data-logo-theme='Dark'][data-logo-size='Large'],
+.logo[data-logo-theme='White'][data-logo-size='Large'] {
+  padding: var(--padding-logo-lg);
+}
 
 /* ---- Mark ---- */
 
@@ -61,14 +73,21 @@
   flex-shrink: 0;
 }
 
-/* Medium: size/logo/mark. */
+/* Mark size: size/logo/marksm, size/logo/mark, size/logo/marklg. */
+.logo[data-logo-size='Small'] .logo__mark {
+  width: var(--size-logo-marksm);
+  height: var(--size-logo-marksm);
+}
+
 .logo[data-logo-size='Medium'] .logo__mark {
   width: var(--size-logo-mark);
   height: var(--size-logo-mark);
 }
 
-/* GAP: the Small (32) and Large (56) mark sizes are unbound in the node.
-   Left unset. Designer to bind size tokens. */
+.logo[data-logo-size='Large'] .logo__mark {
+  width: var(--size-logo-marklg);
+  height: var(--size-logo-marklg);
+}
 
 .logo__symbol {
   display: block;
@@ -110,25 +129,19 @@
 /* fontfamily/heading, fontsize/md and lineheight/md are base tokens; the H5
    text-style tokens point at exactly these three. */
 .logo[data-logo-size='Small'] .logo__wordmark {
-  font-family: var(--h5-font-family);
-  font-size: var(--h5-font-size);
-  line-height: var(--h5-line-height);
+  font: var(--h5-font-size) / var(--h5-line-height) var(--h5-font-family);
 }
 
 /* fontfamily/heading and fontsize/20 are base tokens; the H4 tokens point at
    them. lineheight/lg has no alias, so it is used directly. */
 .logo[data-logo-size='Medium'] .logo__wordmark {
-  font-family: var(--h4-font-family);
-  font-size: var(--h4-font-size);
-  line-height: var(--lineheight-lg);
+  font: var(--h4-font-size) / var(--lineheight-lg) var(--h4-font-family);
 }
 
 /* fontsize/2xl and lineheight/2xl have no alias, so they are used directly.
    fontfamily/heading resolves through the heading family alias. */
 .logo[data-logo-size='Large'] .logo__wordmark {
-  font-family: var(--h3-font-family);
-  font-size: var(--fontsize-2xl);
-  line-height: var(--lineheight-2xl);
+  font: var(--fontsize-2xl) / var(--lineheight-2xl) var(--h3-font-family);
 }
 
 .logo[data-logo-theme='Light'] .logo__wordmark {
@@ -147,7 +160,13 @@
   color: var(--color-text-inverse-primary);
 }
 
-/* GAP: wordmark weights. "Lemonade" is Manrope ExtraBold (800) and "Found" is
-   Manrope Medium (500). Neither is bound to a variable in the node, and no
-   fontweight token for 800 exists. font-weight is left unset on both runs.
-   Designer to bind weight tokens. */
+/* "Lemonade": fontweight/extrabold. */
+.logo__wordmark-lemonade {
+  font-weight: var(--fontweight-extrabold);
+}
+
+/* GAP: "Found" binds fontWeight to fontweight/medium, a base token
+   (--caption1-font-weight and --caption2-font-weight point at it). Those are
+   the only semantic aliases, and they name caption text styles, not the
+   wordmark. font-weight is left unset on this run, so it inherits normal.
+   Designer to bind a semantic weight token for the wordmark. */
