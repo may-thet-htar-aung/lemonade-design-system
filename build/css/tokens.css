@@ -361,6 +361,7 @@
   --color-icon-brandbold: var(--color-forest-green-600); /** Brand green icon in Light mode, white in Dark mode. Use for icons that sit next to color/text/primary titles on tinted backgrounds, such as Callout. */
   --color-bg-static-brandgreen: var(--color-forest-green-600); /** Brand green background that stays the same in Light and Dark mode. Pair with color/icon/static/light or color/text/static/light, such as the Done dot in Timeline Step. */
   --color-text-brandbold: var(--color-forest-green-800); /** Brand green text in Light mode, white in Dark mode. Text partner of color/icon/brandBold. Used for Outline and Ghost button labels. */
+  --fontweight-wordmark-found: var(--fontweight-medium);
   --margin-page: var(--spacing-lg);
   --gap-gutter: var(--spacing-lg);
   --gap-pane: var(--spacing-xl);
