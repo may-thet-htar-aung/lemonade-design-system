@@ -1,5 +1,4 @@
-/* Figma node 23:1348 (Logo). Every value is a semantic token.
-   Gaps (unbound or base-only bindings) are left unset and named below. */
+/* Figma node 23:1348 (Logo). Every value is a semantic token. */
 
 .logo {
   display: inline-flex;
@@ -165,8 +164,7 @@
   font-weight: var(--fontweight-extrabold);
 }
 
-/* GAP: "Found" binds fontWeight to fontweight/medium, a base token
-   (--caption1-font-weight and --caption2-font-weight point at it). Those are
-   the only semantic aliases, and they name caption text styles, not the
-   wordmark. font-weight is left unset on this run, so it inherits normal.
-   Designer to bind a semantic weight token for the wordmark. */
+/* "Found": fontweight/wordmark/found. */
+.logo__wordmark-found {
+  font-weight: var(--fontweight-wordmark-found);
+}
