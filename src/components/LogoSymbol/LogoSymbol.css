@@ -5,13 +5,21 @@
   flex-shrink: 0;
 }
 
-/*
- * DESIGN GAP: size. Every variant's width and height is unbound in Figma
- * (Small 32, Medium 48, Large 64 are raw values on nodes 23:1471 to 23:1495).
- * No width or height is set here until the Designer binds a size variable
- * to each Size variant. The Size prop is wired (data-logo-symbol-size) so the
- * binding only needs three rules once it exists.
- */
+/* Size: width and height bound to size/logosymbol/sm, md, lg. */
+.logo-symbol[data-logo-symbol-size='Small'] {
+  width: var(--size-logosymbol-sm);
+  height: var(--size-logosymbol-sm);
+}
+
+.logo-symbol[data-logo-symbol-size='Medium'] {
+  width: var(--size-logosymbol-md);
+  height: var(--size-logosymbol-md);
+}
+
+.logo-symbol[data-logo-symbol-size='Large'] {
+  width: var(--size-logosymbol-lg);
+  height: var(--size-logosymbol-lg);
+}
 
 .logo-symbol__svg {
   display: block;
