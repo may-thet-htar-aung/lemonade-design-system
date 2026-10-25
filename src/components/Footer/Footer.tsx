@@ -1,4 +1,5 @@
 import type { HTMLAttributes } from 'react';
+import { Logo } from '../Logo/Logo';
 import './Footer.css';
 
 /* Figma node 162:69. The node is a single component with no properties, so
@@ -21,9 +22,9 @@ export function Footer({ className, ...rest }: FooterProps) {
     <footer {...rest} className={classes}>
       <div className="footer__top">
         <div className="footer__brand">
-          {/* GAP: the node places a Logo instance (component 23:1348) here.
-              Logo has no registry row and no coded component yet, so it is
-              not built. Footer will compose it once it exists. */}
+          {/* Logo instance 162:72: Theme Light, Size Medium (mark 40, no
+              plate), wordmark overridden to color/text/static/light. */}
+          <Logo className="footer__logo" Theme="Light" Size="Medium" />
           <p className="footer__tagline">
             A smarter way to reunite people with the things they have lost,
             through trusted venues and verified claims.
