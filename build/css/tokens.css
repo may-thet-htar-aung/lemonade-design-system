@@ -238,6 +238,7 @@
   --size-logosymbol-sm: 32px;
   --size-logosymbol-md: 48px;
   --size-logosymbol-lg: 64px;
+  --size-topnav-height: 72px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
@@ -384,6 +385,9 @@
   --padding-logo-sm: var(--spacing-sm);
   --padding-logo-md: var(--spacing-md);
   --padding-logo-lg: var(--spacing-lg);
+  --padding-topnav-block: var(--spacing-md);
+  --gap-topnav-brand: var(--spacing-3xl);
+  --gap-topnav-links: var(--spacing-xl);
   --density-controlpaddingx: var(--spacing-lg);
   --density-controlpaddingy: var(--spacing-md);
   --h1-font-family: var(--fontfamily-heading); /** H1 — Bold 700 · Page and hero titles */

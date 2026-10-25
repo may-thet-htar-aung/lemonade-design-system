@@ -287,5 +287,12 @@
       "value": 64,
       "unit": "px"
     }
+  },
+  "size-topnav-height": {
+    "$type": "dimension",
+    "$value": {
+      "value": 72,
+      "unit": "px"
+    }
   }
 }
