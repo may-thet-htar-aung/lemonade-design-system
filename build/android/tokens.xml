@@ -349,6 +349,15 @@
   <dimen name="padding_tabbar_inline">12dp</dimen>
   <dimen name="padding_tabbar_top">8dp</dimen>
   <dimen name="padding_tabbar_bottom">24dp</dimen>
+  <dimen name="padding_sidebar_block">24dp</dimen>
+  <dimen name="gap_sidebar_item">12dp</dimen>
+  <dimen name="gap_sidebar_collapsedheader">12dp</dimen>
+  <dimen name="padding_sidebar_itemcollapsed">12dp</dimen>
+  <dimen name="padding_sidebar_staff_inline">16dp</dimen>
+  <dimen name="padding_sidebar_staff_block">12dp</dimen>
+  <dimen name="padding_sidebar_divider_block">8dp</dimen>
+  <dimen name="padding_sidebar_divider_inline">4dp</dimen>
+  <dimen name="padding_sidebar_divider_inlinecollapsed">7dp</dimen>
   <dimen name="density_touchtarget">48dp</dimen>
   <dimen name="density_rowheight">56dp</dimen>
   <dimen name="density_controlpaddingx">16dp</dimen>
@@ -393,6 +402,10 @@
   <dimen name="size_topnav_height">72dp</dimen>
   <dimen name="size_tabbar_pill_width">56dp</dimen>
   <dimen name="size_tabbar_pill_height">32dp</dimen>
+  <dimen name="size_sidebar_width">260dp</dimen>
+  <dimen name="size_sidebar_collapsedwidth">80dp</dimen>
+  <dimen name="size_sidebar_height">900dp</dimen>
+  <dimen name="size_iconbutton">44dp</dimen>
   <string name="h1_font_family">Manrope</string>
   <integer name="h1_font_weight">700</integer>
   <dimen name="h1_font_size">64sp</dimen>
