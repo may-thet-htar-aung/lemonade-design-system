@@ -308,5 +308,33 @@
       "value": 32,
       "unit": "px"
     }
+  },
+  "size-sidebar-width": {
+    "$type": "dimension",
+    "$value": {
+      "value": 260,
+      "unit": "px"
+    }
+  },
+  "size-sidebar-collapsedwidth": {
+    "$type": "dimension",
+    "$value": {
+      "value": 80,
+      "unit": "px"
+    }
+  },
+  "size-sidebar-height": {
+    "$type": "dimension",
+    "$value": {
+      "value": 900,
+      "unit": "px"
+    }
+  },
+  "size-iconbutton": {
+    "$type": "dimension",
+    "$value": {
+      "value": 44,
+      "unit": "px"
+    }
   }
 }

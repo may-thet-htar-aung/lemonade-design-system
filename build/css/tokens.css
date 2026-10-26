@@ -199,6 +199,7 @@
   --lineheight-20: 24px;
   --lineheight-80: 80px;
   --fontweight-extrabold: 800;
+  --padding-sidebar-divider-inlinecollapsed: 7px;
   --density-touchtarget: 48px;
   --density-rowheight: 56px;
   --size-control-sm: 36px;
@@ -241,6 +242,10 @@
   --size-topnav-height: 72px;
   --size-tabbar-pill-width: 56px;
   --size-tabbar-pill-height: 32px;
+  --size-sidebar-width: 260px;
+  --size-sidebar-collapsedwidth: 80px;
+  --size-sidebar-height: 900px;
+  --size-iconbutton: 44px;
   --color-bg-base: var(--color-neutral-0);
   --color-bg-inverse: var(--color-neutral-900);
   --color-bg-surfaceprimary: var(--color-neutral-50);
@@ -393,6 +398,14 @@
   --padding-tabbar-inline: var(--spacing-md);
   --padding-tabbar-top: var(--spacing-sm);
   --padding-tabbar-bottom: var(--spacing-xl);
+  --padding-sidebar-block: var(--spacing-xl);
+  --gap-sidebar-item: var(--spacing-md);
+  --gap-sidebar-collapsedheader: var(--spacing-md);
+  --padding-sidebar-itemcollapsed: var(--spacing-md);
+  --padding-sidebar-staff-inline: var(--spacing-lg);
+  --padding-sidebar-staff-block: var(--spacing-md);
+  --padding-sidebar-divider-block: var(--spacing-sm);
+  --padding-sidebar-divider-inline: var(--spacing-xs);
   --density-controlpaddingx: var(--spacing-lg);
   --density-controlpaddingy: var(--spacing-md);
   --h1-font-family: var(--fontfamily-heading); /** H1 — Bold 700 · Page and hero titles */
