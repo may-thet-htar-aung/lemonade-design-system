@@ -6,15 +6,17 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  /* size/iconbutton on width and height, FIXED in the node, so it never
+     shrinks inside a flex parent. The icon is centred by flex. */
+  flex-shrink: 0;
+  width: var(--size-iconbutton);
+  height: var(--size-iconbutton);
   padding: 0;
   border: 0;
   border-radius: var(--border-radius-circle);
   background: transparent;
   cursor: pointer;
 }
-
-/* GAP: the 44 x 44 size has no token in the node ("no token yet"), so no
-   width or height is set. The Designer must bind a size. */
 
 /* GAP: the design has no focus style. The browser default focus outline is
    left in place. The Designer must bind a focus ring. */
