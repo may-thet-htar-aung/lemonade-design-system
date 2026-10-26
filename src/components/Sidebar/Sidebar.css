@@ -1,6 +1,6 @@
 /* Figma node 163:295 (Sidebar). Every value is a semantic token, or a scale
-   token that nothing in tokens.css points at. Bindings were read from every
-   variant with a read-only plugin pass. */
+   token that nothing in tokens.css points at. Bindings were read from all
+   twelve variants with a read-only plugin pass. */
 
 /* Root: vertical auto layout, children stretched to the frame width.
    color/bg/static/brandGreen. The same in Light and Dark mode. */
@@ -9,19 +9,22 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  /* size/sidebar/width and size/sidebar/height. Neither varies by mode. */
+  width: var(--size-sidebar-width);
+  height: var(--size-sidebar-height);
   /* spacing/sm. --gap-component points at it and does not vary by mode. */
   gap: var(--gap-component);
+  /* padding/sidebar/block. Does not vary by mode. */
+  padding-block: var(--padding-sidebar-block);
   /* spacing/lg. --padding-container points at it. Mode-varying: it becomes
      spacing/xl under [data-layout="medium"] and [data-layout="expanded"]. */
   padding-inline: var(--padding-container);
-  /* GAP: padding top and bottom are bound to spacing/xl, a base token. No
-     semantic token that points at spacing/xl names a sidebar or a container
-     edge (gap/pane, padding/button/inline, padding/statcard, gap/topnav/links,
-     padding/tabbar/bottom), so no block padding is set. */
   background: var(--color-bg-static-brandgreen);
-  /* GAP: the frame is a fixed 260 x 900 (Collapsed=False) and 80 x 900
-     (Collapsed=True) with no width or height variable bound, so neither is
-     set. The frame takes its content's size. */
+}
+
+/* Collapsed=True: size/sidebar/collapsedWidth. */
+.sidebar[data-collapsed='True'] {
+  width: var(--size-sidebar-collapsedwidth);
 }
 
 /* ---- Header ---- */
@@ -34,43 +37,44 @@
   justify-content: space-between;
 }
 
-/* Collapsed=True: column, centred.
-   GAP: the item spacing is bound to spacing/md, a base token, and no
-   semantic token that points at it fits a sidebar header, so no gap is set. */
+/* Collapsed=True: column, centred, gap/sidebar/collapsedHeader apart. */
 .sidebar[data-collapsed='True'] .sidebar__header {
   flex-direction: column;
   justify-content: flex-start;
+  gap: var(--gap-sidebar-collapsedheader);
 }
 
-/* OVERRIDE on the reused Logo: the node scales the Theme=Dark, Size=Small
-   instance to about 69% (134.89 x 34.41 instead of 196 x 48). No variable
-   is bound to the scaled size, so the Logo renders at its own Small size.
-   Nothing is set here. */
+/* The reused Logo (Theme Dark, Size Small) renders at its own size. */
 
 /* OVERRIDE on the reused Icon Buttons: the node rebinds the icon fill of
    the menu and maximize buttons to color/icon/static/light (Ghost uses
    color/icon/brandBold, which would be green on green). Narrow override:
-   the icon colour only. */
+   the icon colour only. The node also binds size/iconbutton; that belongs
+   in Icon Button itself and is not set here. */
 .sidebar__toggle .icon-button__icon {
   color: var(--color-icon-static-light);
 }
 
 /* ---- Divider ---- */
 
-/* The "Gap" frame holding Line 1.
-   GAP: its padding (8 x 4 when expanded, 8 x 7 when collapsed) is unbound,
-   so no padding is set. */
+/* The "Gap" frame holding Line 1. padding/sidebar/divider/block and
+   padding/sidebar/divider/inline. */
 .sidebar__divider {
   display: flex;
   flex-direction: column;
+  padding-block: var(--padding-sidebar-divider-block);
+  padding-inline: var(--padding-sidebar-divider-inline);
 }
 
-/* Line 1: stroke bound to color/icon/static/light.
-   GAP: the stroke weight is unbound, so no width is set and the line does
-   not draw until the Designer binds one. */
+/* Collapsed=True: padding/sidebar/divider/inlineCollapsed. */
+.sidebar[data-collapsed='True'] .sidebar__divider {
+  padding-inline: var(--padding-sidebar-divider-inlinecollapsed);
+}
+
+/* Line 1: stroke color/icon/static/light at border/width/1. */
 .sidebar__line {
   display: block;
-  border-top-color: var(--color-icon-static-light);
+  border-top: var(--border-width-1) solid var(--color-icon-static-light);
 }
 
 /* ---- Items ---- */
@@ -96,37 +100,39 @@
   flex-direction: column;
 }
 
-/* Item: row, centred on the cross axis, radius border/radius/md.
-   Padding is spacing/lg inline and spacing/md block.
-   --density-controlpaddingx and --density-controlpaddingy point at exactly
-   these and name the padding of an interactive control. Mode-varying: they
-   become spacing/md and spacing/sm under [data-density="back-office"]. */
+/* Item: row, centred on the cross axis, radius border/radius/md,
+   gap/sidebar/item between icon and label.
+   Padding block is spacing/md: --density-controlpaddingy points at it and
+   names the padding of an interactive control. Mode-varying: it becomes
+   spacing/sm under [data-density="back-office"]. */
 .sidebar__item {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: var(--gap-sidebar-item);
   padding-block: var(--density-controlpaddingy);
   border-radius: var(--border-radius-md);
   color: var(--color-text-static-light);
   text-decoration: none;
-  /* GAP: icon-to-label spacing is bound to spacing/md, a base token, and no
-     semantic token that points at it fits a menu item, so no gap is set. */
 }
 
-/* Collapsed=False: padding inline spacing/lg. */
+/* Collapsed=False: padding inline spacing/lg. --density-controlpaddingx
+   points at it. Mode-varying: spacing/md under [data-density="back-office"]. */
 .sidebar[data-collapsed='False'] .sidebar__item {
   padding-inline: var(--density-controlpaddingx);
 }
 
-/* Collapsed=True: the label is hidden and the icon is centred. Padding
-   block stays spacing/md through --density-controlpaddingy.
-   GAP: padding inline is bound to spacing/md. Nothing fits, so it is not
-   set; the icon is centred in the full-width item either way. */
+/* Collapsed=True: the label is hidden and the icon is centred.
+   padding/sidebar/itemCollapsed inline. */
 .sidebar[data-collapsed='True'] .sidebar__item {
   justify-content: center;
+  padding-inline: var(--padding-sidebar-itemcollapsed);
 }
 
+/* Icon instances use size/icon/md through the reused Icon (Size md).
+   GAP: the Claims icon binds only its width to size/icon/md; its height is
+   unbound. It renders 18 x 18 through the Icon's own md size. */
 .sidebar__icon {
   color: var(--color-icon-static-light);
 }
@@ -144,8 +150,8 @@
 
 /* Label: fontfamily/label, fontweight/semibold, fontsize/sm, lineheight/sm,
    letterspacing/widest. The Tagline/14 tokens point at exactly these five.
-   Family and line height are mode-varying under
-   [data-typography="burmese"]; letter spacing too. */
+   Family, line height and letter spacing are mode-varying under
+   [data-typography="burmese"]. */
 .sidebar__label {
   font-family: var(--tagline-14-font-family);
   font-weight: var(--tagline-14-font-weight);
@@ -163,15 +169,15 @@
 
 /* ---- Staff (Collapsed=False only; hidden when collapsed) ---- */
 
-/* Column, item spacing gap/element.
-   GAP: padding is bound to spacing/lg inline and spacing/md block, both
-   base tokens, and no semantic token that points at them names this block,
-   so no padding is set. */
+/* Column, gap/element apart, padding/sidebar/staff/inline and
+   padding/sidebar/staff/block. */
 .sidebar__staff {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--gap-element);
+  padding-inline: var(--padding-sidebar-staff-inline);
+  padding-block: var(--padding-sidebar-staff-block);
 }
 
 /* Venue: same text style as the item labels (Tagline/14 tokens). */
