@@ -98,5 +98,44 @@
   "padding-tabbar-bottom": {
     "$type": "dimension",
     "$value": "{spacing-xl}"
+  },
+  "padding-sidebar-block": {
+    "$type": "dimension",
+    "$value": "{spacing-xl}"
+  },
+  "gap-sidebar-item": {
+    "$type": "dimension",
+    "$value": "{spacing-md}"
+  },
+  "gap-sidebar-collapsedheader": {
+    "$type": "dimension",
+    "$value": "{spacing-md}"
+  },
+  "padding-sidebar-itemcollapsed": {
+    "$type": "dimension",
+    "$value": "{spacing-md}"
+  },
+  "padding-sidebar-staff-inline": {
+    "$type": "dimension",
+    "$value": "{spacing-lg}"
+  },
+  "padding-sidebar-staff-block": {
+    "$type": "dimension",
+    "$value": "{spacing-md}"
+  },
+  "padding-sidebar-divider-block": {
+    "$type": "dimension",
+    "$value": "{spacing-sm}"
+  },
+  "padding-sidebar-divider-inline": {
+    "$type": "dimension",
+    "$value": "{spacing-xs}"
+  },
+  "padding-sidebar-divider-inlinecollapsed": {
+    "$type": "dimension",
+    "$value": {
+      "value": 7,
+      "unit": "px"
+    }
   }
 }
