@@ -1,0 +1,197 @@
+/* Figma node 163:295 (Sidebar). Every value is a semantic token, or a scale
+   token that nothing in tokens.css points at. Bindings were read from every
+   variant with a read-only plugin pass. */
+
+/* Root: vertical auto layout, children stretched to the frame width.
+   color/bg/static/brandGreen. The same in Light and Dark mode. */
+.sidebar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* spacing/sm. --gap-component points at it and does not vary by mode. */
+  gap: var(--gap-component);
+  /* spacing/lg. --padding-container points at it. Mode-varying: it becomes
+     spacing/xl under [data-layout="medium"] and [data-layout="expanded"]. */
+  padding-inline: var(--padding-container);
+  /* GAP: padding top and bottom are bound to spacing/xl, a base token. No
+     semantic token that points at spacing/xl names a sidebar or a container
+     edge (gap/pane, padding/button/inline, padding/statcard, gap/topnav/links,
+     padding/tabbar/bottom), so no block padding is set. */
+  background: var(--color-bg-static-brandgreen);
+  /* GAP: the frame is a fixed 260 x 900 (Collapsed=False) and 80 x 900
+     (Collapsed=True) with no width or height variable bound, so neither is
+     set. The frame takes its content's size. */
+}
+
+/* ---- Header ---- */
+
+/* Collapsed=False: row, space between, centred on the cross axis, no gap. */
+.sidebar__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Collapsed=True: column, centred.
+   GAP: the item spacing is bound to spacing/md, a base token, and no
+   semantic token that points at it fits a sidebar header, so no gap is set. */
+.sidebar[data-collapsed='True'] .sidebar__header {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* OVERRIDE on the reused Logo: the node scales the Theme=Dark, Size=Small
+   instance to about 69% (134.89 x 34.41 instead of 196 x 48). No variable
+   is bound to the scaled size, so the Logo renders at its own Small size.
+   Nothing is set here. */
+
+/* OVERRIDE on the reused Icon Buttons: the node rebinds the icon fill of
+   the menu and maximize buttons to color/icon/static/light (Ghost uses
+   color/icon/brandBold, which would be green on green). Narrow override:
+   the icon colour only. */
+.sidebar__toggle .icon-button__icon {
+  color: var(--color-icon-static-light);
+}
+
+/* ---- Divider ---- */
+
+/* The "Gap" frame holding Line 1.
+   GAP: its padding (8 x 4 when expanded, 8 x 7 when collapsed) is unbound,
+   so no padding is set. */
+.sidebar__divider {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Line 1: stroke bound to color/icon/static/light.
+   GAP: the stroke weight is unbound, so no width is set and the line does
+   not draw until the Designer binds one. */
+.sidebar__line {
+  display: block;
+  border-top-color: var(--color-icon-static-light);
+}
+
+/* ---- Items ---- */
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* The items are direct children of the root frame in the node, spaced by
+   the root's spacing/sm. The list keeps that spacing. */
+.sidebar__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-component);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar__entry {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Item: row, centred on the cross axis, radius border/radius/md.
+   Padding is spacing/lg inline and spacing/md block.
+   --density-controlpaddingx and --density-controlpaddingy point at exactly
+   these and name the padding of an interactive control. Mode-varying: they
+   become spacing/md and spacing/sm under [data-density="back-office"]. */
+.sidebar__item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-block: var(--density-controlpaddingy);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-static-light);
+  text-decoration: none;
+  /* GAP: icon-to-label spacing is bound to spacing/md, a base token, and no
+     semantic token that points at it fits a menu item, so no gap is set. */
+}
+
+/* Collapsed=False: padding inline spacing/lg. */
+.sidebar[data-collapsed='False'] .sidebar__item {
+  padding-inline: var(--density-controlpaddingx);
+}
+
+/* Collapsed=True: the label is hidden and the icon is centred. Padding
+   block stays spacing/md through --density-controlpaddingy.
+   GAP: padding inline is bound to spacing/md. Nothing fits, so it is not
+   set; the icon is centred in the full-width item either way. */
+.sidebar[data-collapsed='True'] .sidebar__item {
+  justify-content: center;
+}
+
+.sidebar__icon {
+  color: var(--color-icon-static-light);
+}
+
+/* Active item: color/bg/brandYellow/hover, with dark text and icon.
+   The background is mode-varying under [data-semantic="dark"]. */
+.sidebar__item[aria-current='page'] {
+  background: var(--color-bg-brandyellow-hover);
+  color: var(--color-text-static-dark);
+}
+
+.sidebar__item[aria-current='page'] .sidebar__icon {
+  color: var(--color-icon-static-dark);
+}
+
+/* Label: fontfamily/label, fontweight/semibold, fontsize/sm, lineheight/sm,
+   letterspacing/widest. The Tagline/14 tokens point at exactly these five.
+   Family and line height are mode-varying under
+   [data-typography="burmese"]; letter spacing too. */
+.sidebar__label {
+  font-family: var(--tagline-14-font-family);
+  font-weight: var(--tagline-14-font-weight);
+  font-size: var(--tagline-14-font-size);
+  line-height: var(--tagline-14-line-height);
+  letter-spacing: var(--tagline-14-letter-spacing);
+  white-space: nowrap;
+}
+
+/* ---- Spacer ---- */
+
+.sidebar__spacer {
+  flex-grow: 1;
+}
+
+/* ---- Staff (Collapsed=False only; hidden when collapsed) ---- */
+
+/* Column, item spacing gap/element.
+   GAP: padding is bound to spacing/lg inline and spacing/md block, both
+   base tokens, and no semantic token that points at them names this block,
+   so no padding is set. */
+.sidebar__staff {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-element);
+}
+
+/* Venue: same text style as the item labels (Tagline/14 tokens). */
+.sidebar__venue {
+  font-family: var(--tagline-14-font-family);
+  font-weight: var(--tagline-14-font-weight);
+  font-size: var(--tagline-14-font-size);
+  line-height: var(--tagline-14-line-height);
+  letter-spacing: var(--tagline-14-letter-spacing);
+  color: var(--color-text-static-light);
+}
+
+/* Role: fontfamily/body, fontweight/regular, fontsize/xs, lineheight/xs,
+   letterspacing/normal. The Body3 tokens point at exactly these five.
+   Family and line height are mode-varying under [data-typography="burmese"]. */
+.sidebar__role {
+  font-family: var(--body3-font-family);
+  font-weight: var(--body3-font-weight);
+  font-size: var(--body3-font-size);
+  line-height: var(--body3-line-height);
+  letter-spacing: var(--body3-letter-spacing);
+  color: var(--color-text-static-light);
+}
