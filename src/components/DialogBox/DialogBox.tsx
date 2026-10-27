@@ -4,7 +4,6 @@ import { createPortal } from 'react-dom';
 import { Button } from '../Button/Button';
 import { Callout } from '../Callout/Callout';
 import type { CalloutProps } from '../Callout/Callout';
-import './DialogBox.css';
 
 export type DialogBoxType = 'Default' | 'Danger';
 

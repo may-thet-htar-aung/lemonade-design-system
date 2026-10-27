@@ -1,5 +1,4 @@
 import type { HTMLAttributes } from 'react';
-import './StatCard.css';
 
 export type StatCardProps = Omit<HTMLAttributes<HTMLDivElement>, 'children'> & {
   /** Figma text property: a short noun phrase, such as Open reports. */

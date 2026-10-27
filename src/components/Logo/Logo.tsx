@@ -1,5 +1,4 @@
 import type { HTMLAttributes } from 'react';
-import './Logo.css';
 
 export type LogoTheme = 'Light' | 'Dark' | 'Black' | 'White';
 export type LogoSize = 'Small' | 'Medium' | 'Large';

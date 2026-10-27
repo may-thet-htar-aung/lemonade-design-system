@@ -1,5 +1,4 @@
 import type { HTMLAttributes } from 'react';
-import './LogoSymbol.css';
 
 export type LogoSymbolColor = 'Brand' | 'Black' | 'White';
 export type LogoSymbolSize = 'Small' | 'Medium' | 'Large';

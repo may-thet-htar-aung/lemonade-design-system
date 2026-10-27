@@ -1,6 +1,5 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 import { TableRow } from '../TableRow/TableRow';
-import './Table.css';
 
 export type TableProps = Omit<HTMLAttributes<HTMLDivElement>, 'children'> & {
   /**
