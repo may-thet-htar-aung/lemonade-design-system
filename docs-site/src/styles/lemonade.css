@@ -1,0 +1,80 @@
+/* The docs site wears the Lemonade tokens. Every value here is a semantic
+   token from tokens.css (copied from build/css/tokens.css at the documented
+   commit). No hex and no base token. Dark mode: Starlight's data-theme="dark"
+   is mirrored onto data-semantic="dark" by a head script in astro.config.mjs,
+   so the token values flip by themselves and one mapping serves both themes. */
+
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+  --sl-font: var(--body2-font-family);
+  --sl-font-system: var(--body2-font-family);
+
+  --sl-color-accent-low: var(--color-bg-brandyellow-light);
+  --sl-color-accent: var(--color-text-brandgreen);
+  --sl-color-accent-high: var(--color-text-brandbold);
+
+  --sl-color-white: var(--color-text-primary);
+  --sl-color-gray-1: var(--color-text-primary);
+  --sl-color-gray-2: var(--color-text-secondary);
+  --sl-color-gray-3: var(--color-text-tertiary);
+  --sl-color-gray-4: var(--color-text-tertiary);
+  --sl-color-gray-5: var(--color-border-primary-default);
+  --sl-color-gray-6: var(--color-bg-surfaceprimary);
+  --sl-color-gray-7: var(--color-bg-surfacesecondary);
+  --sl-color-black: var(--color-bg-base);
+
+  --sl-color-text: var(--color-text-primary);
+  --sl-color-text-accent: var(--color-text-brandgreen);
+  --sl-color-text-invert: var(--color-text-inverse-primary);
+  --sl-color-bg: var(--color-bg-base);
+  --sl-color-bg-nav: var(--color-bg-base);
+  --sl-color-bg-sidebar: var(--color-bg-base);
+  --sl-color-bg-inline-code: var(--color-bg-surfaceprimary);
+  --sl-color-bg-accent: var(--color-bg-brandyellow-idle);
+  --sl-color-hairline-light: var(--color-border-primary-subtle);
+  --sl-color-hairline: var(--color-border-primary-subtle);
+  --sl-color-hairline-shade: var(--color-border-primary-default);
+
+  --sl-color-orange-low: var(--color-bg-warning-light);
+  --sl-color-orange: var(--color-text-warning);
+  --sl-color-orange-high: var(--color-text-warning);
+  --sl-color-green-low: var(--color-bg-positive-light);
+  --sl-color-green: var(--color-text-positive);
+  --sl-color-green-high: var(--color-text-positive);
+  --sl-color-blue-low: var(--color-bg-information-light);
+  --sl-color-blue: var(--color-text-information);
+  --sl-color-blue-high: var(--color-text-information);
+  --sl-color-red-low: var(--color-bg-negative-light);
+  --sl-color-red: var(--color-text-negative);
+  --sl-color-red-high: var(--color-text-negative);
+  --sl-color-purple-low: var(--color-bg-update-light);
+  --sl-color-purple: var(--color-text-update);
+  --sl-color-purple-high: var(--color-text-update);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--h2-font-family);
+}
+
+.lds-strip {
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-md);
+  background: var(--color-bg-surfaceprimary);
+  padding: var(--padding-card);
+}
+
+.lds-story,
+.lds-figma {
+  width: 100%;
+  min-height: var(--size-sidebar-height);
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-md);
+  background: var(--color-bg-base);
+}
+
+.lds-story {
+  min-height: var(--size-topnav-height);
+  height: auto;
+  aspect-ratio: 16 / 7;
+}

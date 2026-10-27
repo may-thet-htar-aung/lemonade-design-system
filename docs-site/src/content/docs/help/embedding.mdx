@@ -1,0 +1,17 @@
+---
+title: Embedding
+description: Embedding a component's story in another page.
+---
+
+Every story in the production Storybook can be embedded on its own, without the Storybook interface:
+
+```html
+<iframe
+  src="https://lemonade-design-system.vercel.app/iframe.html?id=components-<name>--<story>&viewMode=story"
+  title="Component name: story name"
+></iframe>
+```
+
+The list of every story ID is at https://lemonade-design-system.vercel.app/index.json. The component pages on this site embed their stories this way.
+
+Storybook answers 200 even for a story that does not exist, so look at what rendered.

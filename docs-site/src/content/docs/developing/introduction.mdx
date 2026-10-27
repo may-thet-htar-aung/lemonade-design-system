@@ -1,0 +1,39 @@
+---
+title: Introduction
+description: Install the package and use the components.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+
+Install the package and its React peer:
+
+```bash
+npm install @may_thet_htar_aung/lemonade-design-system react react-dom
+```
+
+Load the token stylesheet and the component styles once, then use the components:
+
+```tsx
+import '@may_thet_htar_aung/lemonade-design-system/tokens.css';
+import '@may_thet_htar_aung/lemonade-design-system/styles.css';
+import { StatusBadge } from '@may_thet_htar_aung/lemonade-design-system';
+
+<StatusBadge Status="Found" />
+```
+
+Prop names match the Figma property names exactly. The package exports only components whose release review is Cleared; the rest are in Storybook and join a later release once they clear. Components do not import their own CSS: a Cleared component's styles, and those of anything it renders, ship in `styles.css`.
+
+## Modes
+
+Tokens switch by attributes on any ancestor element. See [Theming](/styling/theming/).
+
+## Working in the repo
+
+```bash
+npm install
+npm run build:tokens              # regenerate build/ from tokens/
+npm run typecheck                 # tsc --noEmit; must exit 0
+npm run storybook                 # local Storybook on port 6006
+npm run build-storybook           # static Storybook, what Vercel deploys
+```

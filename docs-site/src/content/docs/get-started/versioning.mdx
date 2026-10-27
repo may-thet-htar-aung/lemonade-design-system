@@ -1,0 +1,18 @@
+---
+title: Versioning
+description: How a version of the Lemonade package is chosen and published.
+---
+
+The package is `@may_thet_htar_aung/lemonade-design-system` on npm. Its version is a semantic version (`MAJOR.MINOR.PATCH`, with an optional pre-release suffix); `scripts/release-publish.mjs` refuses any other shape.
+
+## How a version is chosen
+
+- Every commit that touches a component since the last `v*` tag is classified as added, changed, fixed, deprecated or removed, and as breaking or not. This is gate 7 of the release review (`.claude/skills/release-review/SKILL.md`).
+- The Release agent proposes a version from those classifications, naming the change that forces it. It never decides the version: a human approves it.
+- `package.json` must carry the version on `main` before publishing.
+
+## How it is published
+
+`npm run release:publish -- <version>` is the one way the package is published. It re-runs the gates, refuses a version already on the registry, lifts `"private": true` for the publish only, publishes, tags the commit, then installs the published copy into an empty folder and renders components from it. Run it with `--dry-run` first.
+
+A component goes out in a release only when its release review reads `Cleared`.

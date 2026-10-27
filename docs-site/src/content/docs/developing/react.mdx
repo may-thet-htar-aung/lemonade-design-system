@@ -1,0 +1,18 @@
+---
+title: React
+description: Using the components in a React app.
+---
+
+The components are React function components written in TypeScript. The package's peer dependencies are `react` and `react-dom` `^19.0.0`, and it ships ES module and CommonJS builds with type declarations.
+
+```tsx
+import '@may_thet_htar_aung/lemonade-design-system/tokens.css';
+import '@may_thet_htar_aung/lemonade-design-system/styles.css';
+import { StatusBadge } from '@may_thet_htar_aung/lemonade-design-system';
+
+<StatusBadge Status="Found" />
+```
+
+- Import the two stylesheets once, at the root of the app.
+- Every component whose release review is Cleared, and its prop types, are named exports of the package entry. Each component page lists them on its Usage tab, and its props on its Code tab.
+- Props mirror the Figma property names, including their capital letters, such as `Style`, `State` and `Size`.

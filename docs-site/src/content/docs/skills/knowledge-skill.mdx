@@ -1,0 +1,20 @@
+---
+title: Knowledge skill
+description: The intent files an agent or a person can read to know what each component is for.
+---
+
+Each component carries an intent file, `src/components/<Name>/<Name>.intent.json`, written by the `component-intent` skill (`.claude/skills/component-intent/SKILL.md`). It says what the component is for, and every entry names its source.
+
+| Field | What it holds | Source |
+|---|---|---|
+| `use_when` | When to reach for the component | The component's documentation page in Figma |
+| `dont_use_when` | When not to, with the alternative if the source names one | The documentation page in Figma |
+| `best_practice` | How to use it well | The documentation page in Figma |
+| `variant_intent` | What each variant value is for | The code's union types, with the meaning from Figma |
+| `placement` | Where it goes | The stories |
+| `pairs_with` | What it is used with | The stories |
+| `required_tokens` | The tokens its CSS uses | The code |
+| `a11y` | What it promises assistive technology | The code and Figma |
+| `gaps` | Every field with no source | — |
+
+A field with no source stays empty and is listed in `gaps`; it is never filled with a plausible sentence. The Release agent gates on these files, and this site prints them as each component's Usage tab.

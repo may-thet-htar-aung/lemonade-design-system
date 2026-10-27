@@ -1,0 +1,550 @@
+{
+  "readAt": "2026-10-27",
+  "source": "Airtable Components table (Components, Development, Release Verdict, Figma, Production Storybook) and Staging Testing rows whose Suggestion for Improvement records a design gap, read live by Doc-generator. Focus-ring items are left out: the Designer ruled them out of scope.",
+  "components": [
+    {
+      "name": "Callout",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=109-69",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-callout--privacy",
+      "designGaps": [
+        {
+          "case": "Callout · Type=AI Match · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). The default width 358 has no variable bound in Figma node 109:63, so there is no token to expect and width is not a pass or fail criterion. The component fills its container (768 wide in an 800 viewport) and holds min-width --size-width-minmobile (288, measured). The Designer must bind a width token or confirm Fill."
+        },
+        {
+          "case": "Callout · Type=Privacy · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). The default width 358 has no variable bound in Figma node 109:57, so there is no token to expect and width is not a pass or fail criterion. The component fills its container (768 wide in an 800 viewport) and holds min-width --size-width-minmobile (288, measured). The Designer must bind a width token or confirm Fill."
+        }
+      ]
+    },
+    {
+      "name": "Logo/Symbol",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=23-1470",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-logosymbol--brand-small",
+      "designGaps": []
+    },
+    {
+      "name": "Input",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=88-62",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-input--single-default",
+      "designGaps": [
+        {
+          "case": "Input · Type=Multi, State=Default · null · idle",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Multi, State=Disabled · null · disabled",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Multi, State=Error · null · error",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Multi, State=Focused · null · focus",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Password Hidden, State=Default · null · idle",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Password Hidden, State=Disabled · null · disabled",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Password Hidden, State=Error · null · error",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Password Hidden, State=Focused · null · focus",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Password Shown, State=Default · null · idle",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Password Shown, State=Disabled · null · disabled",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Password Shown, State=Error · null · error",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Password Shown, State=Focused · null · focus",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Single, State=Default · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). Node 88:62 binds field padding to spacing/lg (sides) and spacing/md (top, bottom), but its description says control height follows density (48 Mobile, 44 Web, 36 Back Office) and --density-controlpaddingx/y exist. The node does not bind them, so the field padding in Web and Back Office density has no design expectation. The component uses --density-controlpaddingy/x, which equal 12/16 in default density. The Designer must confirm the binding."
+        },
+        {
+          "case": "Input · Type=Single, State=Disabled · null · disabled",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Single, State=Error · null · error",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Input · Type=Single, State=Focused · null · focus",
+          "text": "Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y (binds spacing/lg, spacing/md). Designer to confirm."
+        }
+      ]
+    },
+    {
+      "name": "Dialog Box",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=160-307",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-dialog-box--default",
+      "designGaps": [
+        {
+          "case": "Dialog Box · Danger · null · idle",
+          "text": "Open for the Designer (Type: design gap): Danger confirm hover fill unspecified (code keeps --color-bg-negative-idle; --color-bg-negative-hover exists); plus the same gaps as Default: button width 199 and 24 between buttons unbound, base spacing/lg section gap, click-outside, scroll lock, placement, stacking, focus style and small-screen width unspecified. Full detail in reports/DialogBox.md."
+        },
+        {
+          "case": "Dialog Box · Default · null · idle",
+          "text": "Open for the Designer (Type: design gap): button width 199 unbound (code hugs, 172 each); 24 between buttons unbound and the node's space-between leaves 18 (code leaves 70); section gap binds base spacing/lg (code --gap-gutter is 24 under data-layout medium/expanded); click-outside, scroll lock, placement, stacking, focus style and small-screen width unspecified. Full detail in reports/DialogBox.md."
+        }
+      ]
+    },
+    {
+      "name": "Search Field",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=105-26",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-search-field--default",
+      "designGaps": [
+        {
+          "case": "Search Field · State=Clear Hover · null · hovered",
+          "text": "Type: design gap, for the Designer, not the Engineer. The Clear button is 24 x 24 in node 105:26 (Clear button 115:14) but no variable binds that size, so there is no token to expect. It renders at its icon size --size-icon-md (18 x 18), so the --color-bg-surfaceprimary circle is 18 not 24. Designer must bind a size token (or confirm 18). Also the padding note: node binds spacing/lg and spacing/md, not --density-controlpaddingx/y."
+        },
+        {
+          "case": "Search Field · State=Default · null · idle",
+          "text": "Type: design gap, for the Designer. Node 105:26 binds padding to spacing/lg and spacing/md (base tokens), not --density-controlpaddingx/y. Same in default density (16/12); Web and Back Office density have no design expectation. Designer to confirm."
+        },
+        {
+          "case": "Search Field · State=Disabled · null · disabled",
+          "text": "Type: design gap, for the Designer. Same padding note as the Default row: node 105:26 binds spacing/lg and spacing/md, not --density-controlpaddingx/y. Designer to confirm."
+        },
+        {
+          "case": "Search Field · State=Filled · null · filled",
+          "text": "Type: design gap, for the Designer, not the Engineer. The Clear button is 24 x 24 in node 105:26 (Clear button 115:10) but no variable binds that size, so there is no token to expect. It renders at its icon size --size-icon-md (18 x 18), so the hover circle and hit area are 18 not 24. Designer must bind a size token (or confirm 18). Also the padding note: node binds spacing/lg and spacing/md, not --density-controlpaddingx/y."
+        },
+        {
+          "case": "Search Field · State=Focused · null · focus",
+          "text": "Type: design gap, for the Designer. Same padding note as the Default row: node 105:26 binds spacing/lg and spacing/md, not --density-controlpaddingx/y. Designer to confirm."
+        }
+      ]
+    },
+    {
+      "name": "Icon Button",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=192-33",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-icon-button--primary-default",
+      "designGaps": [
+        {
+          "case": "Icon Button · Ghost · null · disabled",
+          "text": "Still open for the Designer (Type: design gap, not for the Engineer): the Show badge dot size (10 x 10) and its corner offset have no token. Not in the 9-case matrix."
+        },
+        {
+          "case": "Icon Button · Ghost · null · hovered",
+          "text": "Still open for the Designer (Type: design gap, not for the Engineer): the Show badge dot size (10 x 10) and its corner offset have no token. Not in the 9-case matrix."
+        },
+        {
+          "case": "Icon Button · Ghost · null · idle",
+          "text": "Still open for the Designer (Type: design gap, not for the Engineer): the Show badge dot size (10 x 10) and its corner offset have no token. Not in the 9-case matrix."
+        },
+        {
+          "case": "Icon Button · Outline · null · disabled",
+          "text": "Still open for the Designer (Type: design gap, not for the Engineer): the Show badge dot size (10 x 10) and its corner offset have no token. Not in the 9-case matrix."
+        },
+        {
+          "case": "Icon Button · Outline · null · hovered",
+          "text": "Still open for the Designer (Type: design gap, not for the Engineer): the Show badge dot size (10 x 10) and its corner offset have no token. Not in the 9-case matrix."
+        },
+        {
+          "case": "Icon Button · Outline · null · idle",
+          "text": "Still open for the Designer (Type: design gap, not for the Engineer): the Show badge dot size (10 x 10) and its corner offset have no token. Not in the 9-case matrix."
+        },
+        {
+          "case": "Icon Button · Primary · null · disabled",
+          "text": "Still open for the Designer (Type: design gap, not for the Engineer): the Show badge dot size (10 x 10) and its corner offset have no token. Not in the 9-case matrix."
+        },
+        {
+          "case": "Icon Button · Primary · null · hovered",
+          "text": "Still open for the Designer (Type: design gap, not for the Engineer): the Show badge dot size (10 x 10) and its corner offset have no token. Not in the 9-case matrix."
+        },
+        {
+          "case": "Icon Button · Primary · null · idle",
+          "text": "Still open for the Designer (Type: design gap, not for the Engineer): the Show badge dot size (10 x 10) and its corner offset have no token. Not in the 9-case matrix."
+        }
+      ]
+    },
+    {
+      "name": "Item Card",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=108-39",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-item-card--grid-default",
+      "designGaps": [
+        {
+          "case": "Item Card · Layout=Grid Large, State=Default · null · idle",
+          "text": "Type: design gap, for the Designer. Unbound in node 108:39: card width 320 and photo height 180 are raw (get_design_context). Card fills its container (768 x 126 against 320 x 274 in the node) and the photo hugs its icon (32 high), so on staging Grid Large renders identically to Grid. Body padding is spacing/md in the node; component uses --gap-card, Designer to confirm. No focus style in the node. Nested Status Badge padding-inline is the known Status Badge gap. See reports/ItemCard.md."
+        },
+        {
+          "case": "Item Card · Layout=Grid Large, State=Hover · null · hovered",
+          "text": "Type: design gap, for the Designer. Same gaps as Layout=Grid Large, State=Default: card width 320 and photo height 180 unbound (card 768 x 126, photo 32 high, identical to Grid Hover), body padding spacing/md versus --gap-card, no focus style in the node, Status Badge padding-inline. See reports/ItemCard.md."
+        },
+        {
+          "case": "Item Card · Layout=Grid, State=Default · null · idle",
+          "text": "Type: design gap, for the Designer. Unbound in node 108:39: card width 170 and photo height 112 are raw (get_design_context), so no token to expect. Card fills its container (768 x 126 at an 800 px viewport against 170 x 206 in the node) and the photo hugs its icon (32 high). Body padding is spacing/md in the node; component uses --gap-card (12 default, 16 under data-layout medium/expanded), Designer to confirm the binding. No focus style in the node (browser default ring shown). Nested Status Badge padding-inline is the known Status Badge gap. See reports/ItemCard.md."
+        },
+        {
+          "case": "Item Card · Layout=Grid, State=Hover · null · hovered",
+          "text": "Type: design gap, for the Designer. Same gaps as Layout=Grid, State=Default: card width 170 and photo height 112 unbound (card 768 x 126, photo 32 high), body padding spacing/md versus --gap-card, no focus style in the node, Status Badge padding-inline. See reports/ItemCard.md."
+        },
+        {
+          "case": "Item Card · Layout=List, State=Default · null · idle",
+          "text": "Type: design gap, for the Designer. Unbound in node 108:39: card width 358 and photo width 88 are raw (get_design_context). Card fills its container (768 x 94; height equals the node's 94) and the photo is 32 wide (node 88). Body padding is spacing/md in the node; component uses --gap-card (12 default, 16 under data-layout medium/expanded), Designer to confirm. No focus style in the node (browser default ring shown). Nested Status Badge padding-inline is the known Status Badge gap. See reports/ItemCard.md."
+        },
+        {
+          "case": "Item Card · Layout=List, State=Hover · null · hovered",
+          "text": "Type: design gap, for the Designer. Same gaps as Layout=List, State=Default: card width 358 and photo width 88 unbound (card 768 x 94, photo 32 wide), body padding spacing/md versus --gap-card, no focus style in the node, Status Badge padding-inline. See reports/ItemCard.md."
+        }
+      ]
+    },
+    {
+      "name": "Pagination",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=151-76",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-pagination--first",
+      "designGaps": [
+        {
+          "case": "Pagination · First · null · idle",
+          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): (1) Frame width 1116 and height 40 are raw in node 151:10 with no variable bound, so the component fills its container (spec says set to Fill) and hugs 36px (--size-control-sm). (2) The description asks for a visible focus indicator on :focus-visible but binds no token. Tab shows the browser default outline. (3) The node binds primitive spacing/lg for the Pager gap and spacing/xl for Controls, while the code uses semantic --gap-gutter and --gap-pane, which change under data-layout medium/expanded (Pager gap 24px there). The Designer must decide whether these gaps should follow layout mode."
+        },
+        {
+          "case": "Pagination · Last · null · idle",
+          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): (1) Frame width 1116 and height 40 are raw in node 151:54 with no variable bound; the component fills its container and hugs 36px (--size-control-sm). (2) No focus token is bound; Tab shows the browser default outline. (3) Pager and Controls gaps bind primitive spacing/lg and spacing/xl in the node while the code uses mode-aware --gap-gutter and --gap-pane (Pager gap 24px under data-layout medium/expanded). The Designer must decide whether these follow layout mode."
+        },
+        {
+          "case": "Pagination · Middle · null · idle",
+          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): (1) Frame width 1116 and height 40 are raw in node 151:32 with no variable bound; the component fills its container and hugs 36px (--size-control-sm). (2) No focus token is bound; Tab shows the browser default outline. (3) The node binds spacing/2xl for the Middle Controls gap but spacing/xl for First and Last, yet Controls holds only the Pager so the gap has no visible effect: possible Designer inconsistency. Semantic --gap-section and --gap-gutter also change under data-layout (Controls 40px medium, 48px expanded); the Designer must decide whether that is intended."
+        }
+      ]
+    },
+    {
+      "name": "Timeline Step",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=110-34",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-timeline-step--event",
+      "designGaps": [
+        {
+          "case": "Timeline Step · Current",
+          "text": "None. The round 1 design gap is closed: node 110:20 now binds size/timeline/dot, size/timeline/stepminheight, border/width/2 (line) and spacing/lg (text padding), and staging measures each. Full matrix: reports/TimelineStep.md"
+        },
+        {
+          "case": "Timeline Step · Done",
+          "text": "None. The round 1 design gap is closed: node 110:11 now binds size/timeline/dot, size/timeline/stepminheight, border/width/2 (line) and spacing/lg (text padding), and staging measures each. Full matrix: reports/TimelineStep.md"
+        },
+        {
+          "case": "Timeline Step · Upcoming",
+          "text": "None. The round 1 design gap is closed: node 110:27 now binds size/timeline/dot, size/timeline/stepminheight, border/width/2 (line) and spacing/lg (text padding), and staging measures each. Full matrix: reports/TimelineStep.md"
+        }
+      ]
+    },
+    {
+      "name": "Top Nav",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=161-415",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-top-nav--home",
+      "designGaps": [
+        {
+          "case": "Top Nav · Browse · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same four gaps as the Home row (Logo instance wordmark override, undesigned skip link, Actions gap on a base token). Details in reports/TopNav.md."
+        },
+        {
+          "case": "Top Nav · Home · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer), details in reports/TopNav.md: (1) the node's Logo instance overrides the wordmark (Lemonade loses fontweight/extrabold, text detached from its variables), so it is 202 against the Logo's 213 and the links sit 10.39 right of the node; (2) the skip link's focused look is not designed and shows unstyled over the Logo; (4) the Actions gap binds spacing/sm, a base token."
+        },
+        {
+          "case": "Top Nav · Report · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same four gaps as the Home row. Details in reports/TopNav.md."
+        },
+        {
+          "case": "Top Nav · Track · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same four gaps as the Home row. Details in reports/TopNav.md."
+        }
+      ]
+    },
+    {
+      "name": "Logo",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=23-1348",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-logo--light-medium",
+      "designGaps": [
+        {
+          "case": "Logo · Dark · lg · idle",
+          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): the component description says the Dark theme looks the same in Light and Dark mode, but the mark tile in this variant is bound to color/bg/brandYellow/idle (Figma node 23:1385, get_variable_defs), which is mode-varying. Measured on staging under data-semantic=\"dark\": plate --color-bg-static-brandgreen, wordmark --color-text-static-light and monogram --color-bg-static-brandgreen stay unchanged, but the tile --color-bg-brandyellow-idle moves from lemon-yellow-600 to lemon-yellow-300. The code applies the bound token correctly. No static brand-yellow token exists; the Designer must add one (or accept the shift) and rebind the tile."
+        },
+        {
+          "case": "Logo · Dark · md · idle",
+          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): the component description says the Dark theme looks the same in Light and Dark mode, but the mark tile in this variant is bound to color/bg/brandYellow/idle (Figma node 23:1369, get_variable_defs), which is mode-varying. Measured on staging under data-semantic=\"dark\": plate --color-bg-static-brandgreen, wordmark --color-text-static-light and monogram --color-bg-static-brandgreen stay unchanged, but the tile --color-bg-brandyellow-idle moves from lemon-yellow-600 to lemon-yellow-300. The code applies the bound token correctly. No static brand-yellow token exists; the Designer must add one (or accept the shift) and rebind the tile."
+        },
+        {
+          "case": "Logo · Dark · sm · idle",
+          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): the component description says the Dark theme looks the same in Light and Dark mode, but the mark tile in this variant is bound to color/bg/brandYellow/idle (Figma node 23:1353, get_variable_defs), which is mode-varying. Measured on staging under data-semantic=\"dark\": plate --color-bg-static-brandgreen, wordmark --color-text-static-light and monogram --color-bg-static-brandgreen stay unchanged, but the tile --color-bg-brandyellow-idle moves from lemon-yellow-600 to lemon-yellow-300. The code applies the bound token correctly. No static brand-yellow token exists; the Designer must add one (or accept the shift) and rebind the tile."
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=165-1639",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-button--primary-default",
+      "designGaps": []
+    },
+    {
+      "name": "Table",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=141-8",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-table--default",
+      "designGaps": []
+    },
+    {
+      "name": "Icon",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/AVDd45Hg9VOvZFgkykg9X3/Lemonade-Icons?node-id=76-12",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-icon--home",
+      "designGaps": []
+    },
+    {
+      "name": "Table Row",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=112-32",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-table-row--header",
+      "designGaps": [
+        {
+          "case": "Table Row · Body · null · idle",
+          "text": "Open for the Designer (Type: design gap): row padding against density (node binds static spacing/md; code follows --density-controlpaddingy, so back-office now measures 40 = --density-rowheight); Action column has no minimum width."
+        },
+        {
+          "case": "Table Row · Body Hover · null · hovered",
+          "text": "Open for the Designer (Type: design gap): same as Body, row padding under back-office density, and no minimum width on the Action column."
+        },
+        {
+          "case": "Table Row · Header · null · idle",
+          "text": "Open for the Designer (Type: design gap): Action column has no minimum width in the node."
+        }
+      ]
+    },
+    {
+      "name": "Link Button",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=147-183",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-link-button--default",
+      "designGaps": []
+    },
+    {
+      "name": "Status Badge",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=66-22",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-status-badge--lost",
+      "designGaps": [
+        {
+          "case": "Status Badge · Claim Pending · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:13, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 90.3px against 106px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+        },
+        {
+          "case": "Status Badge · Found · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:7, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 39.8px against 56px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+        },
+        {
+          "case": "Status Badge · Lost · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:4, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 28.6px against 45px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+        },
+        {
+          "case": "Status Badge · Potential Match · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:10, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 100.1px against 116px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+        },
+        {
+          "case": "Status Badge · Rejected · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 68:4, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 57.5px against 73px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+        },
+        {
+          "case": "Status Badge · Returned · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:19, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 59.8px against 76px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+        },
+        {
+          "case": "Status Badge · Verified · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:16, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 50.1px against 66px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+        }
+      ]
+    },
+    {
+      "name": "Avatar",
+      "development": "Completed",
+      "releaseVerdict": "Blocked",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=192-54",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-avatar--initials-small-hover",
+      "designGaps": []
+    },
+    {
+      "name": "Tab Bar",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=159-141",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-tab-bar--home",
+      "designGaps": []
+    },
+    {
+      "name": "Pagination Arrow",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=155-30",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-pagination-arrow--previous-default",
+      "designGaps": []
+    },
+    {
+      "name": "Sidebar",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=163-295",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-sidebar--collapsed-false-dashboard",
+      "designGaps": [
+        {
+          "case": "Sidebar · Collapsed False · Claims · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed False · Dashboard row, including the Claims icon binding only its width. Details in reports/Sidebar.md."
+        },
+        {
+          "case": "Sidebar · Collapsed False · Dashboard · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer), details in reports/Sidebar.md: (1) divider layer opacity 10% has no token, so the line renders at full --color-icon-static-light; (2) the node binds base tokens spacing/lg and spacing/md for padding; the code's --padding-container and --density-controlpaddingx/y match in default modes but change under data-layout medium/expanded and data-density back-office; (3) the collapsed hover tooltip is specified but not designed; (4) the Claims icon binds only its width (renders 18 x 18); (5) the node text names the nav \"Back Office\", the code and the brief use \"Main\"."
+        },
+        {
+          "case": "Sidebar · Collapsed False · Handovers · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed False · Dashboard row. Details in reports/Sidebar.md."
+        },
+        {
+          "case": "Sidebar · Collapsed False · Matches · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed False · Dashboard row. Details in reports/Sidebar.md."
+        },
+        {
+          "case": "Sidebar · Collapsed False · Reports · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed False · Dashboard row (divider opacity 10% unbound, base spacing tokens in the node, collapsed tooltip not designed, Claims icon height unbound, nav name \"Back Office\" vs \"Main\"). Details in reports/Sidebar.md."
+        },
+        {
+          "case": "Sidebar · Collapsed False · Users & Venues · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed False · Dashboard row. Details in reports/Sidebar.md."
+        },
+        {
+          "case": "Sidebar · Collapsed True · Claims · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed True · Dashboard row, including the Claims icon binding only its width. Details in reports/Sidebar.md."
+        },
+        {
+          "case": "Sidebar · Collapsed True · Dashboard · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer), details in reports/Sidebar.md: (1) divider layer opacity 10% has no token, so the line renders at full --color-icon-static-light; (2) the node binds base tokens spacing/lg and spacing/md for padding; the code's --padding-container and --density-controlpaddingy match in default modes but change under data-layout medium/expanded and data-density back-office; (3) the hover tooltip with the item name is specified but not designed, so none shows; (4) the Claims icon binds only its width (renders 18 x 18); (5) the node text names the nav \"Back Office\", the code and the brief use \"Main\"."
+        },
+        {
+          "case": "Sidebar · Collapsed True · Handovers · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed True · Dashboard row. Details in reports/Sidebar.md."
+        },
+        {
+          "case": "Sidebar · Collapsed True · Matches · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed True · Dashboard row. Details in reports/Sidebar.md."
+        },
+        {
+          "case": "Sidebar · Collapsed True · Reports · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed True · Dashboard row. Details in reports/Sidebar.md."
+        },
+        {
+          "case": "Sidebar · Collapsed True · Users & Venues · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): the same five items as the Collapsed True · Dashboard row. Details in reports/Sidebar.md."
+        }
+      ]
+    },
+    {
+      "name": "Top Nav Link",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=173-59",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-top-nav-link--default",
+      "designGaps": []
+    },
+    {
+      "name": "Filter Chip",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=73-60",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-filter-chip--default",
+      "designGaps": [
+        {
+          "case": "Filter Chip · Active · null · selected",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-top and padding-bottom are bound to spacing/sm in node 73:54, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px, height held at 36px by --size-control-sm only. The design also does not say what an Active chip looks like under hover. Every other bound property passed."
+        },
+        {
+          "case": "Filter Chip · Default · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). Three gaps. (1) padding-top and padding-bottom are bound to spacing/sm in node 73:48, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px (the border), the 36px height comes only from --size-control-sm min-height, so a two-line label will not reach the 56px the design gives it. (3) The 48px Mobile hit area in the component description has no size token, so it is not extended. Every bound property passed."
+        },
+        {
+          "case": "Filter Chip · Disabled · null · disabled",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-top and padding-bottom are bound to spacing/sm in node 73:52, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px, height held at 36px by --size-control-sm only. Every other bound property passed."
+        },
+        {
+          "case": "Filter Chip · Hover · null · hovered",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-top and padding-bottom are bound to spacing/sm in node 73:50, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px, height held at 36px by --size-control-sm only. Every other bound property passed."
+        }
+      ]
+    },
+    {
+      "name": "Footer",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=162-69",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-footer--default",
+      "designGaps": [
+        {
+          "case": "Footer · Default · null · idle",
+          "text": "Open for the Designer (Type: design gap, not for the Engineer): (1) the node defines no hover or pressed style for the links. (2) The row gap binds spacing/2xl, a base token; the code uses --gap-section, which becomes 40 under data-layout medium and 48 under expanded, while the node fixes 32. (3) The Logo tile follows --color-bg-brandyellow-idle and lightens in dark mode, while the footer description asks for the same look in both modes. (4) Only 1440 is defined; narrow widths are not specified."
+        }
+      ]
+    },
+    {
+      "name": "Stat Card",
+      "development": "Completed",
+      "releaseVerdict": "Cleared",
+      "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=111-16",
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-stat-card--show-delta-on",
+      "designGaps": [
+        {
+          "case": "Stat Card · Show delta = false",
+          "text": "Re-test 24/10/2026 closed the 19/10/2026 padding finding: padding on all four sides uses --padding-statcard, matching the node's padding/statcard (Figma node 111:16, get_design_context), in default, medium and expanded layouts, light and dark (computed style, staging). Delta absent from the DOM. No open finding. Width stays a design gap for the Designer (unbound in the node). Full report: reports/StatCard.md"
+        },
+        {
+          "case": "Stat Card · Show delta = true",
+          "text": "Re-test 24/10/2026 closed the 19/10/2026 padding finding: padding on all four sides uses --padding-statcard, matching the node's padding/statcard (Figma node 111:16, get_design_context), in default, medium and expanded layouts, light and dark (computed style, staging). No open finding. Width stays a design gap for the Designer (unbound in the node). Full report: reports/StatCard.md"
+        }
+      ]
+    }
+  ]
+}

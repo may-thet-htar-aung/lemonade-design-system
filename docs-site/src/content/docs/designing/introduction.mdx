@@ -1,0 +1,21 @@
+---
+title: Introduction
+description: How the design in Figma becomes tokens and components.
+---
+
+The design lives in Figma and is owned by a human designer. Everything in the code comes from it.
+
+## Tokens
+
+Every value is a Figma variable. The variables are exported to `tokens/`, one JSON file per collection mode, and built into `build/` (CSS, iOS and Android). Neither folder is edited by hand: a missing or wrong token is fixed in Figma and exported again. See [Tokens](/tokens/).
+
+## Components
+
+- One Figma component set becomes one component. Its variant matrix sets the props, the stories and the test cases.
+- Prop names match the Figma property names exactly (`Style`, `State`, `Size`, `Type`, ...).
+- Every CSS value is a semantic token, `var(--token)`. No hex, `px` or font family appears in a component.
+- A value the design leaves unbound to a variable is a design gap. It is reported to the designer, never guessed. Each component page lists the values Figma never bound and the design gaps recorded against it, on its Design tab.
+
+## Documentation in Figma
+
+Each component's usage (when to use it, when not to, best practice and accessibility notes) is written on its documentation page in Figma. The docs site prints it on the component's Usage tab, with a link to the Figma node each sentence came from.

@@ -1,0 +1,665 @@
+{
+  "readAt": "2026-10-27",
+  "file": "q0faf7S1uuzwQo4UOe7bJq",
+  "method": "Figma MCP: get_metadata on each node, and a read-only Plugin API pass listing every fill, stroke, radius, padding, gap, stroke weight, fixed size and text property with no bound variable (other components nested as instances are excluded; they are read on their own node). Re-read for the 5a7e2b4 staging run: node, type, variant list and documentation text of all 14 nodes read again over the Figma MCP and identical; the unbound lists were spot-checked against live boundVariables (per-side stroke weights, vector layers scaled inside a bound frame, Wordmark letterSpacing, Sidebar divider) and stand.",
+  "components": {
+    "Filter Chip": {
+      "node": "73:60",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "State=Default",
+          "values": [
+            "Default"
+          ]
+        },
+        {
+          "name": "State=Hover",
+          "values": [
+            "Hover"
+          ]
+        },
+        {
+          "name": "State=Active",
+          "values": [
+            "Active"
+          ]
+        },
+        {
+          "name": "State=Disabled",
+          "values": [
+            "Disabled"
+          ]
+        }
+      ],
+      "unbound": []
+    },
+    "Footer": {
+      "node": "162:69",
+      "type": "COMPONENT",
+      "matrix": [
+        {
+          "name": "Footer",
+          "values": [
+            "default"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 1440 on \"Footer\""
+      ]
+    },
+    "Icon Button": {
+      "node": "192:33",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Style=Outline, State=Default",
+          "values": [
+            "Outline",
+            "Default"
+          ]
+        },
+        {
+          "name": "Style=Outline, State=Hover",
+          "values": [
+            "Outline",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Style=Outline, State=Disabled",
+          "values": [
+            "Outline",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "Style=Ghost, State=Default",
+          "values": [
+            "Ghost",
+            "Default"
+          ]
+        },
+        {
+          "name": "Style=Ghost, State=Hover",
+          "values": [
+            "Ghost",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Style=Ghost, State=Disabled",
+          "values": [
+            "Ghost",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "Style=Primary, State=Default",
+          "values": [
+            "Primary",
+            "Default"
+          ]
+        },
+        {
+          "name": "Style=Primary, State=Hover",
+          "values": [
+            "Primary",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Style=Primary, State=Disabled",
+          "values": [
+            "Primary",
+            "Disabled"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 10 on \"Badge\"",
+        "height 10 on \"Badge\""
+      ]
+    },
+    "Logo": {
+      "node": "23:1348",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Theme=Light, Size=Small",
+          "values": [
+            "Light",
+            "Small"
+          ]
+        },
+        {
+          "name": "Theme=Dark, Size=Small",
+          "values": [
+            "Dark",
+            "Small"
+          ]
+        },
+        {
+          "name": "Theme=Black, Size=Small",
+          "values": [
+            "Black",
+            "Small"
+          ]
+        },
+        {
+          "name": "Theme=White, Size=Small",
+          "values": [
+            "White",
+            "Small"
+          ]
+        },
+        {
+          "name": "Theme=Light, Size=Medium",
+          "values": [
+            "Light",
+            "Medium"
+          ]
+        },
+        {
+          "name": "Theme=Dark, Size=Medium",
+          "values": [
+            "Dark",
+            "Medium"
+          ]
+        },
+        {
+          "name": "Theme=Black, Size=Medium",
+          "values": [
+            "Black",
+            "Medium"
+          ]
+        },
+        {
+          "name": "Theme=White, Size=Medium",
+          "values": [
+            "White",
+            "Medium"
+          ]
+        },
+        {
+          "name": "Theme=Light, Size=Large",
+          "values": [
+            "Light",
+            "Large"
+          ]
+        },
+        {
+          "name": "Theme=Dark, Size=Large",
+          "values": [
+            "Dark",
+            "Large"
+          ]
+        },
+        {
+          "name": "Theme=Black, Size=Large",
+          "values": [
+            "Black",
+            "Large"
+          ]
+        },
+        {
+          "name": "Theme=White, Size=Large",
+          "values": [
+            "White",
+            "Large"
+          ]
+        }
+      ],
+      "unbound": [
+        "letterSpacing 0% on \"Wordmark\""
+      ]
+    },
+    "Logo/Symbol": {
+      "node": "23:1470",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Color=Brand, Size=Small",
+          "values": [
+            "Brand",
+            "Small"
+          ]
+        },
+        {
+          "name": "Color=Brand, Size=Medium",
+          "values": [
+            "Brand",
+            "Medium"
+          ]
+        },
+        {
+          "name": "Color=Brand, Size=Large",
+          "values": [
+            "Brand",
+            "Large"
+          ]
+        },
+        {
+          "name": "Color=Black, Size=Small",
+          "values": [
+            "Black",
+            "Small"
+          ]
+        },
+        {
+          "name": "Color=Black, Size=Medium",
+          "values": [
+            "Black",
+            "Medium"
+          ]
+        },
+        {
+          "name": "Color=Black, Size=Large",
+          "values": [
+            "Black",
+            "Large"
+          ]
+        },
+        {
+          "name": "Color=White, Size=Small",
+          "values": [
+            "White",
+            "Small"
+          ]
+        },
+        {
+          "name": "Color=White, Size=Medium",
+          "values": [
+            "White",
+            "Medium"
+          ]
+        },
+        {
+          "name": "Color=White, Size=Large",
+          "values": [
+            "White",
+            "Large"
+          ]
+        }
+      ],
+      "unbound": []
+    },
+    "Pagination Arrow": {
+      "node": "155:30",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Direction=Previous, State=Default",
+          "values": [
+            "Previous",
+            "Default"
+          ]
+        },
+        {
+          "name": "Direction=Previous, State=Hover",
+          "values": [
+            "Previous",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Direction=Previous, State=Disabled",
+          "values": [
+            "Previous",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "Direction=Next, State=Default",
+          "values": [
+            "Next",
+            "Default"
+          ]
+        },
+        {
+          "name": "Direction=Next, State=Hover",
+          "values": [
+            "Next",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Direction=Next, State=Disabled",
+          "values": [
+            "Next",
+            "Disabled"
+          ]
+        }
+      ],
+      "unbound": []
+    },
+    "Search Field": {
+      "node": "105:26",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "State=Default",
+          "values": [
+            "Default"
+          ]
+        },
+        {
+          "name": "State=Focused",
+          "values": [
+            "Focused"
+          ]
+        },
+        {
+          "name": "State=Filled",
+          "values": [
+            "Filled"
+          ]
+        },
+        {
+          "name": "State=Clear Hover",
+          "values": [
+            "Clear Hover"
+          ]
+        },
+        {
+          "name": "State=Disabled",
+          "values": [
+            "Disabled"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 24 on \"Clear button\"",
+        "height 24 on \"Clear button\""
+      ]
+    },
+    "Sidebar": {
+      "node": "163:295",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Collapsed=False, Active=Dashboard",
+          "values": [
+            "False",
+            "Dashboard"
+          ]
+        },
+        {
+          "name": "Collapsed=False, Active=Reports",
+          "values": [
+            "False",
+            "Reports"
+          ]
+        },
+        {
+          "name": "Collapsed=False, Active=Matches",
+          "values": [
+            "False",
+            "Matches"
+          ]
+        },
+        {
+          "name": "Collapsed=False, Active=Claims",
+          "values": [
+            "False",
+            "Claims"
+          ]
+        },
+        {
+          "name": "Collapsed=False, Active=Users & Venues",
+          "values": [
+            "False",
+            "Users & Venues"
+          ]
+        },
+        {
+          "name": "Collapsed=False, Active=Handovers",
+          "values": [
+            "False",
+            "Handovers"
+          ]
+        },
+        {
+          "name": "Collapsed=True, Active=Dashboard",
+          "values": [
+            "True",
+            "Dashboard"
+          ]
+        },
+        {
+          "name": "Collapsed=True, Active=Reports",
+          "values": [
+            "True",
+            "Reports"
+          ]
+        },
+        {
+          "name": "Collapsed=True, Active=Matches",
+          "values": [
+            "True",
+            "Matches"
+          ]
+        },
+        {
+          "name": "Collapsed=True, Active=Claims",
+          "values": [
+            "True",
+            "Claims"
+          ]
+        },
+        {
+          "name": "Collapsed=True, Active=Users & Venues",
+          "values": [
+            "True",
+            "Users & Venues"
+          ]
+        },
+        {
+          "name": "Collapsed=True, Active=Handovers",
+          "values": [
+            "True",
+            "Handovers"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 220 on \"Line 1\"",
+        "width 34 on \"Line 1\"",
+        "width 48 on \"Staff\""
+      ]
+    },
+    "Stat Card": {
+      "node": "111:16",
+      "type": "COMPONENT",
+      "properties": {
+        "Label": "TEXT",
+        "Value": "TEXT",
+        "Delta": "TEXT",
+        "Show delta": "BOOLEAN"
+      },
+      "matrix": [
+        {
+          "name": "Show delta=true",
+          "values": [
+            "true"
+          ]
+        },
+        {
+          "name": "Show delta=false",
+          "values": [
+            "false"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 267 on \"Stat Card\""
+      ]
+    },
+    "Status Badge": {
+      "node": "66:22",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Status=Lost",
+          "values": [
+            "Lost"
+          ]
+        },
+        {
+          "name": "Status=Found",
+          "values": [
+            "Found"
+          ]
+        },
+        {
+          "name": "Status=Potential Match",
+          "values": [
+            "Potential Match"
+          ]
+        },
+        {
+          "name": "Status=Claim Pending",
+          "values": [
+            "Claim Pending"
+          ]
+        },
+        {
+          "name": "Status=Verified",
+          "values": [
+            "Verified"
+          ]
+        },
+        {
+          "name": "Status=Returned",
+          "values": [
+            "Returned"
+          ]
+        },
+        {
+          "name": "Status=Rejected",
+          "values": [
+            "Rejected"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 6 on \"Dot\"",
+        "height 6 on \"Dot\"",
+        "width 116 on \"Status=Potential Match\""
+      ]
+    },
+    "Tab Bar": {
+      "node": "159:141",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Active=Home",
+          "values": [
+            "Home"
+          ]
+        },
+        {
+          "name": "Active=Search",
+          "values": [
+            "Search"
+          ]
+        },
+        {
+          "name": "Active=Report",
+          "values": [
+            "Report"
+          ]
+        },
+        {
+          "name": "Active=Activity",
+          "values": [
+            "Activity"
+          ]
+        },
+        {
+          "name": "Active=Profile",
+          "values": [
+            "Profile"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 390 and height 84 on every variant (Active=Home, Search, Report, Activity, Profile)"
+      ]
+    },
+    "Table": {
+      "node": "141:8",
+      "type": "COMPONENT",
+      "matrix": [
+        {
+          "name": "Table",
+          "values": [
+            "default"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 1116 on \"Table\""
+      ]
+    },
+    "Top Nav": {
+      "node": "161:415",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Page=Home",
+          "values": [
+            "Home"
+          ]
+        },
+        {
+          "name": "Page=Browse",
+          "values": [
+            "Browse"
+          ]
+        },
+        {
+          "name": "Page=Report",
+          "values": [
+            "Report"
+          ]
+        },
+        {
+          "name": "Page=Track",
+          "values": [
+            "Track"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 1440 on every variant (Page=Home, Browse, Report, Track)"
+      ]
+    },
+    "Top Nav Link": {
+      "node": "173:59",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "State=Default",
+          "values": [
+            "Default"
+          ]
+        },
+        {
+          "name": "State=Hover",
+          "values": [
+            "Hover"
+          ]
+        },
+        {
+          "name": "State=Active",
+          "values": [
+            "Active"
+          ]
+        }
+      ],
+      "unbound": []
+    }
+  }
+}
