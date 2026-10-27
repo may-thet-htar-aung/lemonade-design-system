@@ -106,4 +106,4 @@ Both are dependency-free. See the `tokens` and `security-check` skills.
 
 - No lint config. The Engineer's checks are `typecheck`, the raw-value grep in the `build` skill, and rendered stories.
 - No CI on pull requests. Nothing runs between a push and a Vercel deploy.
-- The `deploy-gate`, `release-review`, `component-intent` and `astro-page` skills do not exist. The agents that need them stop.
+- The `deploy-gate` skill does not exist, so DevOps stops when it needs it.
