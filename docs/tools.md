@@ -65,7 +65,7 @@ Node 24 and npm 11.
 - `.storybook/preview.ts` imports `build/css/tokens.css`, so every story has the tokens.
 - `.storybook/preview-head.html` loads Manrope and Noto Sans Myanmar from Google Fonts. Without it the fonts fall back silently, and every text measurement is wrong.
 - `.storybook/main.ts` forces Vite to pre-bundle React. Without that, stories fail with "does not provide an export named 'default'".
-- Components do not import CSS. Each component's `<Name>.css` is imported once in `src/styles.css`, which `.storybook/preview.ts` loads and the package ships as `styles.css`. A new component adds its line there.
+- Components do not import CSS. A Cleared component's `<Name>.css` (and the CSS of anything it renders) is imported in `src/styles.css`, which the package ships as `styles.css`; every other component's is in `src/styles.unreleased.css`. `.storybook/preview.ts` loads both. When a component clears, move its line across and add it to `src/index.ts`.
 - Components may import other components, and assets with `import.meta.glob` (Icon loads its SVGs this way). The package build swaps that call for static imports (`tsup.config.ts`), so it stays Vite-only syntax in the source.
 - One story per matrix row. A story's iframe is `/iframe.html?id=components-<name>--<story>&viewMode=story`, and the list of every story is `/index.json`.
 

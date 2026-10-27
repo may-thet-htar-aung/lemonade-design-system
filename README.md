@@ -34,10 +34,12 @@ Load the token stylesheet and the component styles once, then use the components
 ```tsx
 import '@may_thet_htar_aung/lemonade-design-system/tokens.css';
 import '@may_thet_htar_aung/lemonade-design-system/styles.css';
-import { Button } from '@may_thet_htar_aung/lemonade-design-system';
+import { StatusBadge } from '@may_thet_htar_aung/lemonade-design-system';
 
-<Button Style="Primary" Label="Report an item" />
+<StatusBadge Status="Found" />
 ```
+
+The package exports only components whose release review is Cleared (14 in 0.1.0). The rest are in Storybook and join a later release once they clear.
 
 Prop names match the Figma property names exactly (`Style`, `State`, `Size`, `Type`, ...).
 

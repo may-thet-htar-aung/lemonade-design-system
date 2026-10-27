@@ -1,32 +1,33 @@
 # Release review: Top Nav Link
 
-Reviewed commit: 162af96 (full SHA in the footer)
+Reviewed commit: 8d005aa (full SHA in the footer)
 Date: 27/10/2026
-Verdict: **Blocked**
+Verdict: **Cleared**
 
 Production Storybook opened and seen to render: yes (`TopNavLink` root element rendered, no error display).
 Figma node: 173:59.
+Rules: `.claude/skills/release-review/SKILL.md` at 8d005aa, including the three clarifications from #91 (check 3 figma: sources, check 6 parent and sub-component, gate 3 font-family tokens).
 
 ## Gates
 | # | Gate | Result | Evidence | Owner |
 |---|---|---|---|---|
-| 1 | Intent written | ✓ | src/components/TopNavLink/TopNavLink.intent.json exists at 162af96; 3 listed gaps; empty fields pairs_with are listed in gaps |  |
+| 1 | Intent written | ✓ | src/components/TopNavLink/TopNavLink.intent.json exists at 8d005aa; 3 listed gap(s); empty fields pairs_with are listed in gaps |  |
 | 2 | Development status is Completed | ✓ | Components.Development reads Completed (read 27/10/2026 at start and again before the write) |  |
-| 3 | Tokens clean | ✓ | stage-3 grep returns nothing; all 12 var(--…) names are semantic; node scripts/verify-tokens.mjs at the pinned tree: RESULT: PASS (8 checks) |  |
-| 4 | Public surface decided | ✓ | src/index.ts exports TopNavLink, TopNavLinkProps |  |
-| 5 | Names final | ✓ | Figma node 173:59 is named "Top Nav Link"; component set name matches. Every prop name and variant value matches its Figma property character for character; no New/Temp/WIP/v2 names. |  |
+| 3 | Tokens clean | ✓ | stage-3 grep returns nothing (font-family: var(--token) lines excluded per the skill); all 12 var(--…) names are semantic; node scripts/verify-tokens.mjs at the pinned tree: RESULT: PASS (8 checks) |  |
+| 4 | Public surface decided | ✓ | src/index.ts exports TopNavLink, TopNavLinkProps and nothing else from TopNavLink/ |  |
+| 5 | Names final | ✓ | Figma node 173:59 is named "Top Nav Link"; component set name matches. Every prop that mirrors a Figma property matches it character for character; variant values all match; no New/Temp/WIP/v2 names. |  |
 | 6 | States complete | ✓ | 3 stories in TopNavLink.stories.tsx (one per matrix row); 3 linked Staging Testing rows, 3 Passed; none Failed or Fixed (To re-test) |  |
-| 7 | Version meaning known | ✓ | No v* tag exists and the package was never published (npm view: 404), so 4 commit(s) from the start of history to 162af96 were read. All are classified "added", none breaking. There is no prior public API to change. |  |
+| 7 | Version meaning known | ✓ | No v* tag exists and the package was never published (npm view: E404), so 4 commit(s) from the start of history to 8d005aa were read. All are classified "added", none breaking. There is no prior public API to change. |  |
 
 ## Checks
 | # | Check | Result | Evidence | Owner |
 |---|---|---|---|---|
 | 1 | Fields present | ✓ | all seven fields present as arrays |  |
 | 2 | Every dont_use_when names an alternative | ⚠ | 1 entry without an alternative (warning) | Designer (Figma names none), warning only |
-| 3 | a11y is specific, not generic | ✗ | 3 of 6 entries cite no code: line (Figma-sourced guidance, not a fact tied to a line): a11y[3] (figma:184:1345), a11y[4] (figma:184:1351), a11y[5] (figma:184:1354) | Doc-generator |
-| 4 | required_tokens resolve in the built output | ✓ | all listed names are defined in build/css/tokens.css at 162af96, and the list equals the var(--…) set in TopNavLink.css |  |
+| 3 | a11y is specific, not generic | ✓ | 6 entries; each names an element, role, attribute, key or hidden state and cites a code: line or a figma: node. Every figma: source was read in Figma and its text matches the entry word for word. No generic entry |  |
+| 4 | required_tokens resolve in the built output | ✓ | all listed names are defined in build/css/tokens.css at 8d005aa, and the list equals the var(--…) set in TopNavLink.css |  |
 | 5 | All variants covered | ✓ | variant props in TopNavLink.tsx: State (3); every value has a variant_intent entry, and each empty intent is listed in gaps |  |
-| 6 | No two components claiming the same job | ✗ | Top Nav and Top Nav Link: both carry "Set a link to Hover through its nested Top Nav Link." | Designer |
+| 6 | No two components claiming the same job | ✓ | Shares one Figma sentence with Top Nav, its parent (renders it; both on the Top Nav page): exempt. No other overlap |  |
 
 ## Warnings
 - dont_use_when[0] names no alternative.
@@ -37,4 +38,4 @@ Figma node: 173:59.
 - 3f59ea3 Top Nav Link: bind indicator height to --size-topnav-indicator (node 173:59)
 - d2e8e8c Top Nav Link: link with Default, Hover and Active states (node 173:59)
 
-Full SHA: 162af966d1987a75a841c1d2695587000be9ec84
+Full SHA: 8d005aaeffa9d3a15f8eed36edb28bba24bec5f1
