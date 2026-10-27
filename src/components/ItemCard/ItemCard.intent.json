@@ -1,0 +1,172 @@
+{
+  "component": "Item Card",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=108-39",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use Grid in two-column item lists on mobile.",
+      "source": "figma:123:314"
+    },
+    {
+      "text": "Use List in search results and dense lists where people scan names.",
+      "source": "figma:123:318"
+    },
+    {
+      "text": "Use Grid Large for featured items and the item detail preview.",
+      "source": "figma:123:322"
+    },
+    {
+      "text": "Use Hover when the pointer is over the card.",
+      "source": "figma:123:326"
+    },
+    {
+      "text": "Write Meta as place and time, such as Central Station · 2h ago.",
+      "source": "figma:123:330"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not show more than one status on a card.",
+      "source": "figma:123:336"
+    },
+    {
+      "text": "Do not put actions such as Claim inside the card. Put them on the item page.",
+      "source": "figma:123:340"
+    },
+    {
+      "text": "Do not mix Grid and List cards in the same list.",
+      "source": "figma:123:344"
+    },
+    {
+      "text": "Do not stretch a photo out of shape. Crop it to fill the Photo area.",
+      "source": "figma:123:348"
+    },
+    {
+      "text": "Do not recolour the card outside the bound tokens.",
+      "source": "figma:123:352"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Use a clear photo of the item on a plain background, so people recognise it quickly.",
+      "source": "figma:123:358"
+    },
+    {
+      "text": "Keep titles short and specific, such as Black leather wallet rather than Wallet.",
+      "source": "figma:123:362"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Layout",
+      "value": "Grid",
+      "intent": "Use Grid in two-column item lists on mobile.",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:7 · figma:123:314"
+    },
+    {
+      "prop": "Layout",
+      "value": "List",
+      "intent": "Use List in search results and dense lists where people scan names.",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:7 · figma:123:318"
+    },
+    {
+      "prop": "Layout",
+      "value": "Grid Large",
+      "intent": "Use Grid Large for featured items and the item detail preview.",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:7 · figma:123:322"
+    },
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:8"
+    },
+    {
+      "prop": "State",
+      "value": "Hover",
+      "intent": "Use Hover when the pointer is over the card.",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:8 · figma:123:326"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Status Badge",
+      "how": "Nested Status Badge above the Title, Found by default; off with \"Show status\"",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:4 · code:src/components/ItemCard/ItemCard.tsx:70 · story:src/components/ItemCard/ItemCard.stories.tsx:GridDefault"
+    },
+    {
+      "component": "Icon",
+      "how": "box Icon at Size xl as the photo placeholder when no Photo is given",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:3 · code:src/components/ItemCard/ItemCard.tsx:66"
+    }
+  ],
+  "required_tokens": [
+    "--body3-font-family",
+    "--body3-font-size",
+    "--body3-font-weight",
+    "--body3-letter-spacing",
+    "--body3-line-height",
+    "--border-radius-lg",
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-bg-surfaceprimary",
+    "--color-border-brandgreen-strong",
+    "--color-border-primary-subtle",
+    "--color-icon-secondary",
+    "--color-text-primary",
+    "--color-text-secondary",
+    "--elevation-level2",
+    "--gap-card",
+    "--gap-element",
+    "--tagline-14-font-family",
+    "--tagline-14-font-size",
+    "--tagline-14-font-weight",
+    "--tagline-14-letter-spacing",
+    "--tagline-14-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "The whole card is one <a> element, with href defaulting to \"#\".",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:53 · code:src/components/ItemCard/ItemCard.tsx:42"
+    },
+    {
+      "text": "Its accessible name is the Title, through aria-labelledby; aria-describedby points at the Status Badge (when shown) and the Meta.",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:59 · code:src/components/ItemCard/ItemCard.tsx:60"
+    },
+    {
+      "text": "A Photo renders an <img> whose alt is PhotoAlt (empty by default); without a Photo the placeholder Icon is aria-hidden.",
+      "source": "code:src/components/ItemCard/ItemCard.tsx:64 · code:src/components/ItemCard/ItemCard.tsx:41 · code:src/components/ItemCard/ItemCard.tsx:66 · code:src/components/Icon/Icon.tsx:75"
+    },
+    {
+      "text": "Make the whole card one link to the item page, with the title as its accessible name.",
+      "source": "figma:123:371"
+    },
+    {
+      "text": "Give photos alt text that describes the item. Mark the placeholder icon aria-hidden=\"true\".",
+      "source": "figma:123:374"
+    },
+    {
+      "text": "Read the status as text, not colour alone. The badge label does this.",
+      "source": "figma:123:377"
+    },
+    {
+      "text": "Keep a visible focus indicator on the card when it is reached by keyboard.",
+      "source": "figma:123:380"
+    },
+    {
+      "text": "Title and meta text are above 4.5:1 on the card background.",
+      "source": "figma:123:383"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default: the Figma documentation page for Item Card (123:40) does not say what this value is for (checked usage region 123:304)."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Item Card inside another component, and its own stories show it alone."
+    }
+  ]
+}

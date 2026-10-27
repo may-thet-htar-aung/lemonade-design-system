@@ -1,0 +1,115 @@
+{
+  "component": "Pagination Arrow",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=155-30",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Set an arrow to Hover through its nested instance to show the pointer over it.",
+      "source": "figma:156:284"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use Pagination Arrow on its own outside Pagination.",
+      "source": "figma:156:302"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Direction",
+      "value": "Previous",
+      "intent": "Pagination Arrow, Direction Previous. Disabled on the first page.",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:8 · figma:156:185"
+    },
+    {
+      "prop": "Direction",
+      "value": "Next",
+      "intent": "Pagination Arrow, Direction Next. Disabled on the last page.",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:8 · figma:156:191"
+    },
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:10"
+    },
+    {
+      "prop": "State",
+      "value": "Hover",
+      "intent": "Set an arrow to Hover through its nested instance to show the pointer over it.",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:10 · figma:156:284"
+    },
+    {
+      "prop": "State",
+      "value": "Disabled",
+      "intent": "Use the disabled attribute on the arrow that cannot be used.",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:10 · figma:156:335"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Pagination pager: Previous then Next; Previous is Disabled on First and Next is Disabled on Last.",
+      "source": "story:src/components/Pagination/Pagination.stories.tsx:First · story:src/components/Pagination/Pagination.stories.tsx:Last · code:src/components/Pagination/Pagination.tsx:39 · code:src/components/Pagination/Pagination.tsx:44"
+    }
+  ],
+  "pairs_with": [
+    {
+      "component": "Icon",
+      "how": "chevron-left (Previous) or chevron-right (Next) Icon at Size md",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:2 · code:src/components/PaginationArrow/PaginationArrow.tsx:30"
+    }
+  ],
+  "required_tokens": [
+    "--border-radius-sm",
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-bg-positive-light",
+    "--color-bg-surfaceprimary",
+    "--color-border-disabled",
+    "--color-border-positive-default",
+    "--color-border-positive-strong",
+    "--color-icon-disabled",
+    "--color-icon-positive",
+    "--size-control-sm"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a native <button> with type=\"button\" by default.",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:22 · code:src/components/PaginationArrow/PaginationArrow.tsx:17"
+    },
+    {
+      "text": "aria-label is set by Direction to \"Previous page\" or \"Next page\" and cannot be overridden.",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:27 · code:src/components/PaginationArrow/PaginationArrow.tsx:6"
+    },
+    {
+      "text": "State Disabled sets the native disabled attribute.",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:28"
+    },
+    {
+      "text": "The chevron Icon has no Label, so it is aria-hidden.",
+      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:30 · code:src/components/Icon/Icon.tsx:75"
+    },
+    {
+      "text": "Make each arrow a button with aria-label=\"Previous page\" or \"Next page\".",
+      "source": "figma:156:332"
+    },
+    {
+      "text": "Use the disabled attribute on the arrow that cannot be used.",
+      "source": "figma:156:335"
+    },
+    {
+      "text": "The summary is above 4.5:1. Active arrow icons are above 3:1. Disabled arrows are exempt.",
+      "source": "figma:156:341"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default: the Pagination documentation page (156:27), which holds the Pagination Arrow set does not say what this value is for (checked usage region 156:262)."
+    },
+    {
+      "field": "use_when",
+      "detail": "Pagination Arrow has no documentation page of its own; its entries are the rules on the Pagination documentation page (156:27), which holds the Pagination Arrow set that name Pagination Arrow or its variants. Rules written for the Pagination as a whole are not copied."
+    }
+  ]
+}

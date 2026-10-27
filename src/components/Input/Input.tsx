@@ -1,7 +1,6 @@
 import { useEffect, useId, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Icon } from '../Icon/Icon';
-import './Input.css';
 
 export type InputType = 'Single' | 'Multi' | 'Password Hidden' | 'Password Shown';
 export type InputState = 'Default' | 'Focused' | 'Error' | 'Disabled';

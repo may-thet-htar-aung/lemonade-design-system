@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { Icon } from '../Icon/Icon';
-import './SearchField.css';
 
 export type SearchFieldState = 'Default' | 'Focused' | 'Filled' | 'Disabled' | 'Clear Hover';
 

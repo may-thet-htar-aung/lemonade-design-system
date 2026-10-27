@@ -1,5 +1,4 @@
 import { Icon } from '../Icon/Icon';
-import './TimelineStep.css';
 
 export type TimelineStepProps = {
   State?: 'Upcoming' | 'Current' | 'Done' | 'Event';

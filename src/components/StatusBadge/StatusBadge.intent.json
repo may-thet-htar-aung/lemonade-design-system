@@ -1,0 +1,187 @@
+{
+  "component": "Status Badge",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=66-22",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use Lost and Found to show what kind of report an item is.",
+      "source": "figma:70:543"
+    },
+    {
+      "text": "Use Potential Match when a found item may belong to a lost report.",
+      "source": "figma:70:547"
+    },
+    {
+      "text": "Use Claim Pending until staff review the claim, then switch to Verified or Rejected.",
+      "source": "figma:70:551"
+    },
+    {
+      "text": "Use Returned once the item is back with its owner.",
+      "source": "figma:70:555"
+    },
+    {
+      "text": "Put it next to the item name in cards, table rows and the item detail header.",
+      "source": "figma:70:559"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it as a button or filter. Use Filter Chip for filtering.",
+      "source": "figma:70:565",
+      "alternative": "Filter Chip"
+    },
+    {
+      "text": "Do not change the label to a word that does not match the status.",
+      "source": "figma:70:569"
+    },
+    {
+      "text": "Do not recolour it outside the status tokens.",
+      "source": "figma:70:573"
+    },
+    {
+      "text": "Do not show more than one status badge for the same item.",
+      "source": "figma:70:577"
+    },
+    {
+      "text": "Do not use it for counts or general tags.",
+      "source": "figma:70:581"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep one status per item and update the badge as the item moves through the process.",
+      "source": "figma:70:587"
+    },
+    {
+      "text": "Turn on Dot only in long lists where it helps people scan. Keep it off everywhere else.",
+      "source": "figma:70:591"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Status",
+      "value": "Lost",
+      "intent": "Use Lost and Found to show what kind of report an item is.",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:4 · figma:70:543"
+    },
+    {
+      "prop": "Status",
+      "value": "Found",
+      "intent": "Use Lost and Found to show what kind of report an item is.",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:5 · figma:70:543"
+    },
+    {
+      "prop": "Status",
+      "value": "Potential Match",
+      "intent": "Use Potential Match when a found item may belong to a lost report.",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:6 · figma:70:547"
+    },
+    {
+      "prop": "Status",
+      "value": "Claim Pending",
+      "intent": "Use Claim Pending until staff review the claim, then switch to Verified or Rejected.",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:7 · figma:70:551"
+    },
+    {
+      "prop": "Status",
+      "value": "Verified",
+      "intent": "Use Claim Pending until staff review the claim, then switch to Verified or Rejected.",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:8 · figma:70:551"
+    },
+    {
+      "prop": "Status",
+      "value": "Returned",
+      "intent": "Use Returned once the item is back with its owner.",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:9 · figma:70:555"
+    },
+    {
+      "prop": "Status",
+      "value": "Rejected",
+      "intent": "Use Claim Pending until staff review the claim, then switch to Verified or Rejected.",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:10 · figma:70:551"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Item Card body, above the Title.",
+      "source": "story:src/components/ItemCard/ItemCard.stories.tsx:GridDefault · code:src/components/ItemCard/ItemCard.tsx:70"
+    },
+    {
+      "text": "Table Row, Body type: the Status column, fifth cell.",
+      "source": "story:src/components/TableRow/TableRow.stories.tsx:Body · code:src/components/TableRow/TableRow.tsx:89"
+    }
+  ],
+  "pairs_with": [],
+  "required_tokens": [
+    "--border-radius-circle",
+    "--border-width-1",
+    "--color-bg-brandyellow-light",
+    "--color-status-matched-bg",
+    "--color-status-matched-border",
+    "--color-status-matched-text",
+    "--color-status-ready-bg",
+    "--color-status-ready-border",
+    "--color-status-ready-text",
+    "--color-status-rejected-bg",
+    "--color-status-rejected-border",
+    "--color-status-rejected-text",
+    "--color-status-reported-bg",
+    "--color-status-reported-border",
+    "--color-status-reported-text",
+    "--color-status-returned-bg",
+    "--color-status-returned-border",
+    "--color-status-returned-text",
+    "--color-status-verifying-bg",
+    "--color-status-verifying-border",
+    "--color-status-verifying-text",
+    "--color-text-accent",
+    "--gap-element",
+    "--size-badge-height",
+    "--spacing-2xs",
+    "--tagline-12-font-family",
+    "--tagline-12-font-size",
+    "--tagline-12-font-weight",
+    "--tagline-12-letter-spacing",
+    "--tagline-12-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <span> with no role; the label text is the Status value.",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:27 · code:src/components/StatusBadge/StatusBadge.tsx:29"
+    },
+    {
+      "text": "The Dot is aria-hidden=\"true\".",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:28"
+    },
+    {
+      "text": "Sets no aria-live; announcing status changes is left to the page.",
+      "source": "code:src/components/StatusBadge/StatusBadge.tsx:27"
+    },
+    {
+      "text": "Do not rely on colour alone. The label always names the status.",
+      "source": "figma:70:600"
+    },
+    {
+      "text": "Mark the dot aria-hidden=\"true\". It is decorative.",
+      "source": "figma:70:603"
+    },
+    {
+      "text": "When the status changes on screen, announce it with a polite live region (aria-live=\"polite\").",
+      "source": "figma:70:606"
+    },
+    {
+      "text": "Give the column a header such as Status so screen readers read the badge in context.",
+      "source": "figma:70:609"
+    },
+    {
+      "text": "Label contrast is above 4.5:1 on every status background.",
+      "source": "figma:70:612"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "pairs_with",
+      "detail": "Status Badge composes no other component and no story pairs it with a sibling component."
+    }
+  ]
+}

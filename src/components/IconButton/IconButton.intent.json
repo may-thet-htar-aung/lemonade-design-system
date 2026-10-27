@@ -1,0 +1,174 @@
+{
+  "component": "Icon Button",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=192-33",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use it for actions that are clear from the icon alone, such as notifications.",
+      "source": "figma:205:462"
+    },
+    {
+      "text": "Use Primary for the one main icon action in a group.",
+      "source": "figma:205:466"
+    },
+    {
+      "text": "Use Outline when it sits on its own, such as next to the Avatar.",
+      "source": "figma:205:470"
+    },
+    {
+      "text": "Use Ghost inside toolbars, cards and the Sidebar.",
+      "source": "figma:205:474"
+    },
+    {
+      "text": "Turn on Show badge when there is something new.",
+      "source": "figma:205:478"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it for actions people may not recognise from the icon. Use Button with a label.",
+      "source": "figma:205:484",
+      "alternative": "Button"
+    },
+    {
+      "text": "Do not use it for the main action on a screen.",
+      "source": "figma:205:488"
+    },
+    {
+      "text": "Do not put a number in the badge.",
+      "source": "figma:205:492"
+    },
+    {
+      "text": "Do not change the icon colour, except on static surfaces such as the Sidebar.",
+      "source": "figma:205:496"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:205:500"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Show the action’s name as a tooltip on hover.",
+      "source": "figma:205:506"
+    },
+    {
+      "text": "Use the same icon for the same action everywhere.",
+      "source": "figma:205:510"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Style",
+      "value": "Primary",
+      "intent": "Use Primary for the one main icon action in a group.",
+      "source": "code:src/components/IconButton/IconButton.tsx:8 · figma:205:466"
+    },
+    {
+      "prop": "Style",
+      "value": "Outline",
+      "intent": "Use Outline when it sits on its own, such as next to the Avatar.",
+      "source": "code:src/components/IconButton/IconButton.tsx:8 · figma:205:470"
+    },
+    {
+      "prop": "Style",
+      "value": "Ghost",
+      "intent": "Use Ghost inside toolbars, cards and the Sidebar.",
+      "source": "code:src/components/IconButton/IconButton.tsx:8 · figma:205:474"
+    },
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/IconButton/IconButton.tsx:10"
+    },
+    {
+      "prop": "State",
+      "value": "Hover",
+      "intent": "",
+      "source": "code:src/components/IconButton/IconButton.tsx:10"
+    },
+    {
+      "prop": "State",
+      "value": "Disabled",
+      "intent": "",
+      "source": "code:src/components/IconButton/IconButton.tsx:10"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Sidebar header, Style Ghost, as the collapse/expand toggle with icon menu (expanded) or maximize (collapsed).",
+      "source": "story:src/components/Sidebar/Sidebar.stories.tsx:CollapsedFalseDashboard · story:src/components/Sidebar/Sidebar.stories.tsx:CollapsedTrueDashboard · code:src/components/Sidebar/Sidebar.tsx:96 · code:src/components/Sidebar/Sidebar.tsx:104"
+    }
+  ],
+  "pairs_with": [
+    {
+      "component": "Icon",
+      "how": "Default bell Icon at Size md, replaceable through the \"Icon swap\" slot",
+      "source": "code:src/components/IconButton/IconButton.tsx:2 · code:src/components/IconButton/IconButton.tsx:40"
+    }
+  ],
+  "required_tokens": [
+    "--border-radius-circle",
+    "--border-width-1",
+    "--border-width-2",
+    "--color-bg-base",
+    "--color-bg-brandgreen-hover",
+    "--color-bg-brandgreen-light",
+    "--color-bg-disabled",
+    "--color-bg-negative-idle",
+    "--color-bg-static-brandgreen",
+    "--color-bg-surfaceprimary",
+    "--color-border-brandgreen-default",
+    "--color-border-brandgreen-strong",
+    "--color-border-disabled",
+    "--color-icon-brandbold",
+    "--color-icon-disabled",
+    "--color-icon-static-light",
+    "--size-iconbutton"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a native <button> with type=\"button\" by default.",
+      "source": "code:src/components/IconButton/IconButton.tsx:32 · code:src/components/IconButton/IconButton.tsx:24"
+    },
+    {
+      "text": "aria-label is a required prop and is the only accessible name; the icon wrapper is aria-hidden=\"true\".",
+      "source": "code:src/components/IconButton/IconButton.tsx:15 · code:src/components/IconButton/IconButton.tsx:39"
+    },
+    {
+      "text": "The badge dot is aria-hidden=\"true\"; the prop comment says to include the badge in the aria-label, such as \"Notifications, 3 unread\".",
+      "source": "code:src/components/IconButton/IconButton.tsx:42 · code:src/components/IconButton/IconButton.tsx:14"
+    },
+    {
+      "text": "State Disabled sets the native disabled attribute.",
+      "source": "code:src/components/IconButton/IconButton.tsx:37"
+    },
+    {
+      "text": "Give it an aria-label, such as \"Notifications\". The icon alone is not a name.",
+      "source": "figma:205:519"
+    },
+    {
+      "text": "Include the badge in the name, such as \"Notifications, 3 unread\".",
+      "source": "figma:205:522"
+    },
+    {
+      "text": "44 × 44 meets the touch target.",
+      "source": "figma:205:525"
+    },
+    {
+      "text": "Keep a visible focus indicator on keyboard focus (:focus-visible).",
+      "source": "figma:205:528"
+    },
+    {
+      "text": "Icons are above 3:1 in every enabled style.",
+      "source": "figma:205:531"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default, Hover, Disabled: the Figma documentation page for Icon Button (205:109) does not say what these values are for (checked usage region 205:452)."
+    }
+  ]
+}

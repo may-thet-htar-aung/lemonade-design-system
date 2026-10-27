@@ -1,0 +1,402 @@
+{
+  "component": "Icon",
+  "figma": "https://www.figma.com/design/AVDd45Hg9VOvZFgkykg9X3/Lemonade-Icons?node-id=76-12",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Pick the icon with the Name property on the instance.",
+      "source": "figma:79:582"
+    },
+    {
+      "text": "Use the same icon for the same action everywhere, such as x to close.",
+      "source": "figma:81:381"
+    },
+    {
+      "text": "Use one of the documented sizes. 24 px is the default.",
+      "source": "figma:81:385"
+    },
+    {
+      "text": "Set the colour on the instance to match the text or surface around it.",
+      "source": "figma:81:389"
+    },
+    {
+      "text": "Add a text label when the meaning is not obvious from the icon.",
+      "source": "figma:81:393"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not detach an icon to change it. Switch the Name instead.",
+      "source": "figma:79:604"
+    },
+    {
+      "text": "Do not edit or redraw the vector inside an instance.",
+      "source": "figma:81:397"
+    },
+    {
+      "text": "Do not use sizes outside 16 to 48 px.",
+      "source": "figma:81:401"
+    },
+    {
+      "text": "Do not mix in icons from other icon sets.",
+      "source": "figma:81:405"
+    },
+    {
+      "text": "Do not use an icon alone for an action people may not recognise.",
+      "source": "figma:81:409"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Give an icon and its label the same colour in a row.",
+      "source": "figma:79:626"
+    },
+    {
+      "text": "Add new icons to this file on the 24 px grid instead of drawing them in a product file.",
+      "source": "figma:81:413"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Name",
+      "value": "arrow-right",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:9"
+    },
+    {
+      "prop": "Name",
+      "value": "bell",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:10"
+    },
+    {
+      "prop": "Name",
+      "value": "box",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:11"
+    },
+    {
+      "prop": "Name",
+      "value": "building",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:12"
+    },
+    {
+      "prop": "Name",
+      "value": "camera",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:13"
+    },
+    {
+      "prop": "Name",
+      "value": "check",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:14"
+    },
+    {
+      "prop": "Name",
+      "value": "chevron-down",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:15"
+    },
+    {
+      "prop": "Name",
+      "value": "chevron-left",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:16"
+    },
+    {
+      "prop": "Name",
+      "value": "chevron-right",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:17"
+    },
+    {
+      "prop": "Name",
+      "value": "clock",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:18"
+    },
+    {
+      "prop": "Name",
+      "value": "collapse",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:19"
+    },
+    {
+      "prop": "Name",
+      "value": "dashboard",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:20"
+    },
+    {
+      "prop": "Name",
+      "value": "expand",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:21"
+    },
+    {
+      "prop": "Name",
+      "value": "eye",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:22"
+    },
+    {
+      "prop": "Name",
+      "value": "eye-off",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:23"
+    },
+    {
+      "prop": "Name",
+      "value": "file",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:24"
+    },
+    {
+      "prop": "Name",
+      "value": "filter",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:25"
+    },
+    {
+      "prop": "Name",
+      "value": "flag",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:26"
+    },
+    {
+      "prop": "Name",
+      "value": "handover",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:27"
+    },
+    {
+      "prop": "Name",
+      "value": "home",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:28"
+    },
+    {
+      "prop": "Name",
+      "value": "key",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:29"
+    },
+    {
+      "prop": "Name",
+      "value": "list",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:30"
+    },
+    {
+      "prop": "Name",
+      "value": "lock",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:31"
+    },
+    {
+      "prop": "Name",
+      "value": "maximize",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:32"
+    },
+    {
+      "prop": "Name",
+      "value": "menu",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:33"
+    },
+    {
+      "prop": "Name",
+      "value": "pin",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:34"
+    },
+    {
+      "prop": "Name",
+      "value": "plus",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:35"
+    },
+    {
+      "prop": "Name",
+      "value": "search",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:36"
+    },
+    {
+      "prop": "Name",
+      "value": "shield",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:37"
+    },
+    {
+      "prop": "Name",
+      "value": "sparkle",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:38"
+    },
+    {
+      "prop": "Name",
+      "value": "user",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:39"
+    },
+    {
+      "prop": "Name",
+      "value": "users",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:40"
+    },
+    {
+      "prop": "Name",
+      "value": "x",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:41"
+    },
+    {
+      "prop": "Size",
+      "value": "sm",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:62"
+    },
+    {
+      "prop": "Size",
+      "value": "md",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:62"
+    },
+    {
+      "prop": "Size",
+      "value": "lg",
+      "intent": "Use one of the documented sizes. 24 px is the default.",
+      "source": "code:src/components/Icon/Icon.tsx:62 · code:src/components/Icon/Icon.tsx:68 · figma:81:385"
+    },
+    {
+      "prop": "Size",
+      "value": "xl",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:62"
+    },
+    {
+      "prop": "Size",
+      "value": "2xl",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:62"
+    },
+    {
+      "prop": "Size",
+      "value": "3xl",
+      "intent": "",
+      "source": "code:src/components/Icon/Icon.tsx:62"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Inside Callout, before the text: lock for Privacy, sparkle for AI Match, Size md.",
+      "source": "story:src/components/Callout/Callout.stories.tsx:Privacy · code:src/components/Callout/Callout.tsx:43"
+    },
+    {
+      "text": "Inside Icon Button as the default bell, Size md.",
+      "source": "story:src/components/IconButton/IconButton.stories.tsx:PrimaryDefault · code:src/components/IconButton/IconButton.tsx:40"
+    },
+    {
+      "text": "Inside Input: chevron-down on the right when Icon Right is on, and eye / eye-off in the password toggle, Size md.",
+      "source": "story:src/components/Input/Input.stories.tsx:PasswordHiddenDefault · code:src/components/Input/Input.tsx:91 · code:src/components/Input/Input.tsx:102"
+    },
+    {
+      "text": "Inside Search Field: search before the input and x in the clear button, Size md.",
+      "source": "story:src/components/SearchField/SearchField.stories.tsx:Filled · code:src/components/SearchField/SearchField.tsx:51 · code:src/components/SearchField/SearchField.tsx:65"
+    },
+    {
+      "text": "Inside Item Card photo area as the box placeholder, Size xl, when no Photo is given.",
+      "source": "story:src/components/ItemCard/ItemCard.stories.tsx:GridDefault · code:src/components/ItemCard/ItemCard.tsx:66"
+    },
+    {
+      "text": "Inside Link Button as arrow-right, Size sm, when Icon Right is on.",
+      "source": "story:src/components/LinkButton/LinkButton.stories.tsx:Default · code:src/components/LinkButton/LinkButton.tsx:38"
+    },
+    {
+      "text": "Inside Pagination Arrow: chevron-left or chevron-right, Size md.",
+      "source": "story:src/components/PaginationArrow/PaginationArrow.stories.tsx:PreviousDefault · code:src/components/PaginationArrow/PaginationArrow.tsx:30"
+    },
+    {
+      "text": "Inside Sidebar: one Icon per item, Size md, and menu / maximize in the toggle.",
+      "source": "story:src/components/Sidebar/Sidebar.stories.tsx:CollapsedFalseDashboard · code:src/components/Sidebar/Sidebar.tsx:126 · code:src/components/Sidebar/Sidebar.tsx:104"
+    },
+    {
+      "text": "Inside Tab Bar: one Icon per tab in the pill, Size lg.",
+      "source": "story:src/components/TabBar/TabBar.stories.tsx:Home · code:src/components/TabBar/TabBar.tsx:54"
+    },
+    {
+      "text": "Inside Timeline Step: the check in the Done dot, Size sm.",
+      "source": "story:src/components/TimelineStep/TimelineStep.stories.tsx:Done · code:src/components/TimelineStep/TimelineStep.tsx:33"
+    },
+    {
+      "text": "Inside Avatar, Type Image: the user Icon.",
+      "source": "story:src/components/Avatar/Avatar.stories.tsx:ImageSmall · code:src/components/Avatar/Avatar.tsx:37"
+    }
+  ],
+  "pairs_with": [],
+  "required_tokens": [
+    "--size-icon-2xl",
+    "--size-icon-3xl",
+    "--size-icon-lg",
+    "--size-icon-md",
+    "--size-icon-sm",
+    "--size-icon-xl"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <span> holding the SVG markup.",
+      "source": "code:src/components/Icon/Icon.tsx:71 · code:src/components/Icon/Icon.tsx:76"
+    },
+    {
+      "text": "Without a Label it is aria-hidden=\"true\" and has no role.",
+      "source": "code:src/components/Icon/Icon.tsx:73 · code:src/components/Icon/Icon.tsx:75"
+    },
+    {
+      "text": "With a Label it gets role=\"img\" and aria-label set to the Label.",
+      "source": "code:src/components/Icon/Icon.tsx:73 · code:src/components/Icon/Icon.tsx:74"
+    },
+    {
+      "text": "It is never focusable: no tabindex and no interactive element.",
+      "source": "code:src/components/Icon/Icon.tsx:71"
+    },
+    {
+      "text": "When a text label sits next to the icon, hide the icon from screen readers with aria-hidden=\"true\".",
+      "source": "figma:79:639"
+    },
+    {
+      "text": "An icon on its own needs an accessible name on its control, such as aria-label=\"Search\".",
+      "source": "figma:79:642"
+    },
+    {
+      "text": "Icons never take focus. Focus goes to the button or link that holds them.",
+      "source": "figma:79:645"
+    },
+    {
+      "text": "The 24 × 24 icon is not a touch target. Place it in a control of at least 44 × 44, such as Icon Button.",
+      "source": "figma:79:648"
+    },
+    {
+      "text": "Keep the icon at 3:1 or more against its background (WCAG 1.4.11). #2A313A passes on light surfaces, so override it on dark ones.",
+      "source": "figma:79:651"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "Name=arrow-right, bell, box, building, camera, check, chevron-down, chevron-left, chevron-right, clock, collapse, dashboard, expand, eye, eye-off, file, filter, flag, handover, home, key, list, lock, maximize, menu, pin, plus, search, shield, sparkle, user, users, x: the Figma documentation page for Icon (79:210) does not say what these values are for (checked usage region 79:572)."
+    },
+    {
+      "field": "variant_intent",
+      "detail": "Size=sm, md, xl, 2xl, 3xl: the Figma documentation page for Icon (79:210) does not say what these values are for (checked usage region 79:572)."
+    },
+    {
+      "field": "pairs_with",
+      "detail": "Icon composes no other component; it is composed by others (see placement)."
+    }
+  ]
+}

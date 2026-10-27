@@ -1,0 +1,179 @@
+{
+  "component": "Avatar",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=192-54",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use Medium in the Back Office header, next to the notifications Icon Button.",
+      "source": "figma:206:288"
+    },
+    {
+      "text": "Use Small in lists and table rows, and Large on profile pages.",
+      "source": "figma:206:292"
+    },
+    {
+      "text": "Use Image when the person has a photo, and Initials when they do not.",
+      "source": "figma:206:296"
+    },
+    {
+      "text": "Write two letters, first and last name, such as AC.",
+      "source": "figma:206:300"
+    },
+    {
+      "text": "Crop photos to a square so they fill the circle.",
+      "source": "figma:206:304"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it for venues or items.",
+      "source": "figma:206:310"
+    },
+    {
+      "text": "Do not put more than two letters in Initials.",
+      "source": "figma:206:314"
+    },
+    {
+      "text": "Do not stretch a photo out of shape.",
+      "source": "figma:206:318"
+    },
+    {
+      "text": "Do not add a border or shadow to the avatar.",
+      "source": "figma:206:322"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:206:326"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Use the same size for every avatar in one list.",
+      "source": "figma:206:332"
+    },
+    {
+      "text": "Show the person’s name nearby, so the avatar is not the only way to identify them.",
+      "source": "figma:206:336"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Type",
+      "value": "Initials",
+      "intent": "Use Image when the person has a photo, and Initials when they do not.",
+      "source": "code:src/components/Avatar/Avatar.tsx:5 · figma:206:296"
+    },
+    {
+      "prop": "Type",
+      "value": "Image",
+      "intent": "Use Image when the person has a photo, and Initials when they do not.",
+      "source": "code:src/components/Avatar/Avatar.tsx:5 · figma:206:296"
+    },
+    {
+      "prop": "Size",
+      "value": "Small",
+      "intent": "Use Small in lists and table rows, and Large on profile pages.",
+      "source": "code:src/components/Avatar/Avatar.tsx:6 · figma:206:292"
+    },
+    {
+      "prop": "Size",
+      "value": "Medium",
+      "intent": "Use Medium in the Back Office header, next to the notifications Icon Button.",
+      "source": "code:src/components/Avatar/Avatar.tsx:6 · figma:206:288"
+    },
+    {
+      "prop": "Size",
+      "value": "Large",
+      "intent": "Use Small in lists and table rows, and Large on profile pages.",
+      "source": "code:src/components/Avatar/Avatar.tsx:6 · figma:206:292"
+    },
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/Avatar/Avatar.tsx:8"
+    },
+    {
+      "prop": "State",
+      "value": "Hover",
+      "intent": "",
+      "source": "code:src/components/Avatar/Avatar.tsx:8"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Icon",
+      "how": "Type Image renders the user Icon, sized sm, lg or xl by Size",
+      "source": "code:src/components/Avatar/Avatar.tsx:2 · code:src/components/Avatar/Avatar.tsx:37"
+    }
+  ],
+  "required_tokens": [
+    "--border-radius-circle",
+    "--color-bg-brandgreen-light",
+    "--color-bg-brandgreen-lighthover",
+    "--color-bg-brandyellow-hover",
+    "--color-bg-brandyellow-idle",
+    "--color-icon-brandbold",
+    "--color-icon-static-light",
+    "--color-text-static-dark",
+    "--fontfamily-heading",
+    "--fontfamily-label",
+    "--fontsize-md",
+    "--fontsize-sm",
+    "--fontsize-xs",
+    "--fontweight-semibold",
+    "--letterspacing-normal",
+    "--letterspacing-widest",
+    "--lineheight-md",
+    "--lineheight-sm",
+    "--lineheight-xs",
+    "--size-avatar-lg",
+    "--size-avatar-md",
+    "--size-avatar-sm"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <span> with role=\"img\"; aria-label is a required prop (the person's full name).",
+      "source": "code:src/components/Avatar/Avatar.tsx:35 · code:src/components/Avatar/Avatar.tsx:12"
+    },
+    {
+      "text": "The Initials text is aria-hidden=\"true\", so the aria-label is the only name read.",
+      "source": "code:src/components/Avatar/Avatar.tsx:39"
+    },
+    {
+      "text": "Type Image renders the user Icon, which is aria-hidden by default.",
+      "source": "code:src/components/Avatar/Avatar.tsx:37 · code:src/components/Icon/Icon.tsx:75"
+    },
+    {
+      "text": "Give it alt text or an aria-label with the full name, such as \"Aye Chan\".",
+      "source": "figma:206:345"
+    },
+    {
+      "text": "If it opens a menu, make it a button, such as \"Account menu for Aye Chan\".",
+      "source": "figma:206:348"
+    },
+    {
+      "text": "When the name is already written next to it, mark it aria-hidden=\"true\".",
+      "source": "figma:206:351"
+    },
+    {
+      "text": "Small avatars are 32 px. Give them a 44 px hit area when they are clickable.",
+      "source": "figma:206:354"
+    },
+    {
+      "text": "Initials on the yellow are above 4.5:1 in both modes.",
+      "source": "figma:206:357"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default, Hover: the Figma documentation page for Avatar (206:39) does not say what these values are for (checked usage region 206:278)."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Avatar inside another component, and its own stories show it alone."
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 import type { HTMLAttributes } from 'react';
 import { Icon } from '../Icon/Icon';
-import './Callout.css';
 
 export type CalloutType = 'Privacy' | 'AI Match';
 

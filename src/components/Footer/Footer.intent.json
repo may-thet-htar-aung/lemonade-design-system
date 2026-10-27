@@ -1,0 +1,142 @@
+{
+  "component": "Footer",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=162-69",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use it at the bottom of every Public Website page.",
+      "source": "figma:187:464"
+    },
+    {
+      "text": "Set the width to Fill so it matches the page.",
+      "source": "figma:187:468"
+    },
+    {
+      "text": "Keep three columns with up to four links each.",
+      "source": "figma:187:472"
+    },
+    {
+      "text": "Edit link text directly on the instance.",
+      "source": "figma:187:476"
+    },
+    {
+      "text": "Keep the privacy note, so people know ownership details stay private.",
+      "source": "figma:187:480"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it in the Mobile App or Back Office.",
+      "source": "figma:187:486"
+    },
+    {
+      "text": "Do not put the main actions here. Put them in Top Nav.",
+      "source": "figma:187:490",
+      "alternative": "Top Nav"
+    },
+    {
+      "text": "Do not change the background or text colours.",
+      "source": "figma:187:494"
+    },
+    {
+      "text": "Do not add a fourth column. Group extra links into the existing ones.",
+      "source": "figma:187:498"
+    },
+    {
+      "text": "Do not swap the logo to the Dark theme. Its plate breaks the alignment.",
+      "source": "figma:187:502"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Put the links people look for last, such as Privacy and Terms, in the Trust column.",
+      "source": "figma:187:508"
+    },
+    {
+      "text": "Update the copyright year each year.",
+      "source": "figma:187:512"
+    }
+  ],
+  "variant_intent": [],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Logo",
+      "how": "Logo Theme Light, Size Medium, in the brand column above the tagline",
+      "source": "code:src/components/Footer/Footer.tsx:2 · code:src/components/Footer/Footer.tsx:26 · story:src/components/Footer/Footer.stories.tsx:Default"
+    }
+  ],
+  "required_tokens": [
+    "--body2-font-family",
+    "--body2-font-size",
+    "--body2-font-weight",
+    "--body2-letter-spacing",
+    "--body2-line-height",
+    "--body3-font-family",
+    "--body3-font-size",
+    "--body3-font-weight",
+    "--body3-letter-spacing",
+    "--body3-line-height",
+    "--color-bg-static-brandgreen",
+    "--color-text-static-light",
+    "--gap-component",
+    "--gap-footer-brand",
+    "--gap-section",
+    "--padding-footer",
+    "--size-footer-brand",
+    "--spacing-4xl",
+    "--tagline-14-font-family",
+    "--tagline-14-font-size",
+    "--tagline-14-font-weight",
+    "--tagline-14-letter-spacing",
+    "--tagline-14-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <footer>; the link columns are wrapped in <nav aria-label=\"Footer\">.",
+      "source": "code:src/components/Footer/Footer.tsx:21 · code:src/components/Footer/Footer.tsx:32"
+    },
+    {
+      "text": "Each column heading is an <h2>, and its <ul> of links is labelled by that heading with aria-labelledby.",
+      "source": "code:src/components/Footer/Footer.tsx:37 · code:src/components/Footer/Footer.tsx:40"
+    },
+    {
+      "text": "Links are <a> elements with href=\"#\".",
+      "source": "code:src/components/Footer/Footer.tsx:43"
+    },
+    {
+      "text": "The Logo carries the accessible name \"Lemonade Found\" (Logo default) and is not linked.",
+      "source": "code:src/components/Footer/Footer.tsx:26 · code:src/components/Logo/Logo.tsx:12"
+    },
+    {
+      "text": "Use a footer element, and wrap the link columns in a nav with aria-label=\"Footer\".",
+      "source": "figma:187:521"
+    },
+    {
+      "text": "Make each column heading a heading element (h2) so screen readers can jump between groups.",
+      "source": "figma:187:524"
+    },
+    {
+      "text": "Use real links with clear text, never \"Click here\".",
+      "source": "figma:187:527"
+    },
+    {
+      "text": "Give the logo the alt text \"Lemonade Found\", or link it to the home page.",
+      "source": "figma:187:530"
+    },
+    {
+      "text": "White text on the brand green is 10.6:1.",
+      "source": "figma:187:533"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "Footer has no variant prop in code (Footer.tsx:4-7: a single component with no properties), so there is nothing to describe."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Footer inside another component, and its own story shows it alone."
+    }
+  ]
+}

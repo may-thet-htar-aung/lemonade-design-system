@@ -5,7 +5,6 @@ import { LogoSymbol } from '../LogoSymbol/LogoSymbol';
 import { IconButton } from '../IconButton/IconButton';
 import { Icon } from '../Icon/Icon';
 import type { IconName } from '../Icon/Icon';
-import './Sidebar.css';
 
 /* Figma node 163:295 (component set Sidebar, properties Collapsed and Active).
    Composes Logo (Theme Dark, Size Small) and Logo/Symbol (Color Brand,

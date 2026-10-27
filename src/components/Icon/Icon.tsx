@@ -1,4 +1,3 @@
-import './Icon.css';
 
 const files = import.meta.glob<string>('./svg/*.svg', {
   query: '?raw',

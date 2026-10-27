@@ -2,7 +2,6 @@ import type { HTMLAttributes } from 'react';
 import { Logo } from '../Logo/Logo';
 import { TopNavLink } from '../TopNavLink/TopNavLink';
 import { Button } from '../Button/Button';
-import './TopNav.css';
 
 /* Figma node 161:415 (component set Top Nav, property Page).
    Composes Logo (Light, Medium), four Top Nav Link instances, and two

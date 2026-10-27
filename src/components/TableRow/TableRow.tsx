@@ -2,7 +2,6 @@ import type { HTMLAttributes } from 'react';
 import { StatusBadge } from '../StatusBadge/StatusBadge';
 import type { StatusBadgeStatus } from '../StatusBadge/StatusBadge';
 import { LinkButton } from '../LinkButton/LinkButton';
-import './TableRow.css';
 
 export type TableRowType = 'Header' | 'Body' | 'Body Hover';
 

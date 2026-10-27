@@ -1,0 +1,179 @@
+{
+  "component": "Button",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=165-1639",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use Primary for the one main action on a screen, such as Report lost item.",
+      "source": "figma:64:415"
+    },
+    {
+      "text": "Use Outline for a secondary action next to a Primary, such as Cancel or Back.",
+      "source": "figma:64:419"
+    },
+    {
+      "text": "Use Ghost for low-emphasis actions in toolbars, cards and table rows.",
+      "source": "figma:64:423"
+    },
+    {
+      "text": "Turn on Icon Left when an icon makes the action clearer, such as plus for Add item.",
+      "source": "figma:64:427"
+    },
+    {
+      "text": "Turn on Icon Right for actions that move the user forward, such as Next.",
+      "source": "figma:64:431"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not put two Primary buttons in the same group.",
+      "source": "figma:64:437"
+    },
+    {
+      "text": "Do not use Ghost for the main action on a screen.",
+      "source": "figma:64:441"
+    },
+    {
+      "text": "Do not use a button to go to another page. Use a link.",
+      "source": "figma:64:445"
+    },
+    {
+      "text": "Do not make it narrower than 172 or truncate the Label.",
+      "source": "figma:64:449"
+    },
+    {
+      "text": "Do not hide the Label to make an icon-only button.",
+      "source": "figma:64:453"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Write the Label as a short verb and noun, such as Submit claim. Change the height with the density mode on the frame, not by hand.",
+      "source": "figma:64:459"
+    },
+    {
+      "text": "Set the width to Fill for full-width buttons on mobile. When a button is disabled, say why next to it.",
+      "source": "figma:64:463"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Style",
+      "value": "Primary",
+      "intent": "Use Primary for the one main action on a screen, such as Report lost item.",
+      "source": "code:src/components/Button/Button.tsx:7 · figma:64:415"
+    },
+    {
+      "prop": "Style",
+      "value": "Outline",
+      "intent": "Use Outline for a secondary action next to a Primary, such as Cancel or Back.",
+      "source": "code:src/components/Button/Button.tsx:7 · figma:64:419"
+    },
+    {
+      "prop": "Style",
+      "value": "Ghost",
+      "intent": "Use Ghost for low-emphasis actions in toolbars, cards and table rows.",
+      "source": "code:src/components/Button/Button.tsx:7 · figma:64:423"
+    },
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/Button/Button.tsx:9"
+    },
+    {
+      "prop": "State",
+      "value": "Hover",
+      "intent": "",
+      "source": "code:src/components/Button/Button.tsx:9"
+    },
+    {
+      "prop": "State",
+      "value": "Disabled",
+      "intent": "",
+      "source": "code:src/components/Button/Button.tsx:9"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Dialog Box actions row: Outline Cancel first, then Primary confirm.",
+      "source": "story:src/components/DialogBox/DialogBox.stories.tsx:Default · code:src/components/DialogBox/DialogBox.tsx:163 · code:src/components/DialogBox/DialogBox.tsx:164"
+    },
+    {
+      "text": "Top Nav actions, right side: Ghost \"Sign in\", then Primary \"Report an item\".",
+      "source": "story:src/components/TopNav/TopNav.stories.tsx:Home · code:src/components/TopNav/TopNav.tsx:62 · code:src/components/TopNav/TopNav.tsx:63"
+    }
+  ],
+  "pairs_with": [],
+  "required_tokens": [
+    "--border-radius-md",
+    "--border-width-1",
+    "--button-medium-font-family",
+    "--button-medium-font-size",
+    "--button-medium-font-weight",
+    "--button-medium-letter-spacing",
+    "--button-medium-line-height",
+    "--color-bg-brandgreen-hover",
+    "--color-bg-brandgreen-light",
+    "--color-bg-disabled",
+    "--color-bg-static-brandgreen",
+    "--color-bg-surfaceprimary",
+    "--color-border-brandgreen-default",
+    "--color-border-brandgreen-strong",
+    "--color-border-disabled",
+    "--color-icon-brandbold",
+    "--color-icon-disabled",
+    "--color-icon-static-light",
+    "--color-text-brandbold",
+    "--color-text-disabled",
+    "--color-text-static-light",
+    "--gap-component",
+    "--padding-button-inline",
+    "--size-button-minwidth",
+    "--size-control-md"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a native <button> with type=\"button\" by default.",
+      "source": "code:src/components/Button/Button.tsx:34 · code:src/components/Button/Button.tsx:26"
+    },
+    {
+      "text": "State Disabled sets the native disabled attribute.",
+      "source": "code:src/components/Button/Button.tsx:39"
+    },
+    {
+      "text": "The Icon Left and Icon Right wrappers are aria-hidden=\"true\"; the Label is the accessible name.",
+      "source": "code:src/components/Button/Button.tsx:42 · code:src/components/Button/Button.tsx:48 · code:src/components/Button/Button.tsx:46"
+    },
+    {
+      "text": "Build it as a native button element. If that is not possible, use role=\"button\" and handle Enter and Space.",
+      "source": "figma:64:472"
+    },
+    {
+      "text": "Keep a visible focus indicator on keyboard focus (:focus-visible). Do not remove the browser outline without replacing it.",
+      "source": "figma:64:475"
+    },
+    {
+      "text": "Use aria-disabled=\"true\" when a disabled button must stay focusable, so screen readers still announce it.",
+      "source": "figma:64:478"
+    },
+    {
+      "text": "On Mobile density the button is 48 px tall, which meets the 48 px touch target. Web and Back Office are shorter because they are used with a pointer.",
+      "source": "figma:64:481"
+    },
+    {
+      "text": "Label contrast stays above 4.5:1 in every enabled state. Mark icons aria-hidden=\"true\" when the Label is showing.",
+      "source": "figma:64:722"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default, Hover, Disabled: the Figma documentation page for Button (64:68) does not say what these values are for (checked usage region 64:405)."
+    },
+    {
+      "field": "pairs_with",
+      "detail": "Button imports no other component; IconLeftSwap and IconRightSwap take any ReactNode (Button.tsx:12, 15) and no story fills them, so no paired component is shown."
+    }
+  ]
+}

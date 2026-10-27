@@ -3,7 +3,6 @@ import type { AnchorHTMLAttributes } from 'react';
 import { Icon } from '../Icon/Icon';
 import { StatusBadge } from '../StatusBadge/StatusBadge';
 import type { StatusBadgeStatus } from '../StatusBadge/StatusBadge';
-import './ItemCard.css';
 
 export type ItemCardLayout = 'Grid' | 'List' | 'Grid Large';
 export type ItemCardState = 'Default' | 'Hover';
