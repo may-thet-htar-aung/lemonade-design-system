@@ -155,6 +155,14 @@ const compLink = (dir) => {
   return `${c.name} (Release Verdict ${c.releaseVerdict || 'none'} at this commit, so it has no page)`;
 };
 const storyIframe = (id) => `${SB}/iframe.html?id=${id}&viewMode=story`;
+// The production Storybook's Mode switch (#103) renders a story dark when its iframe URL adds
+// globals=semantic:dark. Story iframes carry data-src, like the docs embed, because Storybook
+// renders blank when its iframe loads inside a hidden tab panel; the head script in
+// astro.config.mjs sets src once the iframe is visible.
+const storyThemes = (c, s) => [
+  '*Light*', '', `<iframe class="lds-story" data-src="${storyIframe(s.id)}" title="${esc(c.name)}: ${esc(s.name)}, light"></iframe>`, '',
+  '*Dark*', '', `<iframe class="lds-story" data-src="${storyIframe(s.id)}&globals=semantic:dark" title="${esc(c.name)}: ${esc(s.name)}, dark"></iframe>`, '',
+];
 const storyPage = (id) => `${SB}/?path=/story/${id}`;
 const matchRow = (row, st) => {
   const vals = row.values.map((v) => norm(v === 'true' ? 'on' : v === 'false' ? 'off' : v)).join('-');
@@ -309,10 +317,8 @@ const componentPage = (c) => {
     notices.push(`${c.name} Examples (every story is a matrix row)`);
   } else {
     for (const s of extra) {
-      L.push(`#### ${esc(s.name)}`, '', `<iframe class="lds-story" src="${storyIframe(s.id)}" title="${esc(c.name)}: ${esc(s.name)}, light" loading="lazy"></iframe>`, '');
+      L.push(`#### ${esc(s.name)}`, '', ...storyThemes(c, s));
     }
-    L.push(caution('No dark rendering', 'The production Storybook has no mode switch (`.storybook/preview.ts` defines no globals or toolbar), so stories are embedded in light only.'));
-    notices.push(`${c.name} Examples (no dark switch in Storybook)`);
   }
   L.push('</TabItem>');
 
@@ -378,9 +384,11 @@ const componentPage = (c) => {
     L.push('');
     L.push('### Both themes', '');
     const first = c.stories[0];
-    if (first) L.push(`<iframe class="lds-story" src="${storyIframe(first.id)}" title="${esc(c.name)}: ${esc(first.name)}, light" loading="lazy"></iframe>`, '');
-    L.push(caution('No dark rendering', 'The production Storybook has no mode switch, so only light can be embedded. Dark token values are listed on the Code tab.'));
-    notices.push(`${c.name} Design (no dark switch in Storybook)`);
+    if (first) L.push(`Story: [${esc(first.name)}](${storyPage(first.id)}).`, '', ...storyThemes(c, first));
+    else {
+      L.push(caution('No story', `The production Storybook's \`index.json\` has no story for ${esc(c.name)}, so neither theme can be embedded.`));
+      notices.push(`${c.name} Design (no story to embed in either theme)`);
+    }
     L.push('### Values Figma never bound', '');
     const unbound = (f.unbound || []).filter((u) => !/2A313A/i.test(u));
     if (unbound.length) { for (const u of unbound) L.push(`- ${esc(u)}`); L.push(''); }
