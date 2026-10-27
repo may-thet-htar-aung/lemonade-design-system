@@ -23,11 +23,18 @@ Each lives in `src/components/<Name>/` as `<Name>.tsx`, `<Name>.css` and `<Name>
 
 ## Using it
 
-Load the token stylesheet once, then use the components:
+Install the package and its React peer:
+
+```bash
+npm install @may_thet_htar_aung/lemonade-design-system react react-dom
+```
+
+Load the token stylesheet and the component styles once, then use the components:
 
 ```tsx
-import './build/css/tokens.css';
-import { Button } from './src/components/Button/Button';
+import '@may_thet_htar_aung/lemonade-design-system/tokens.css';
+import '@may_thet_htar_aung/lemonade-design-system/styles.css';
+import { Button } from '@may_thet_htar_aung/lemonade-design-system';
 
 <Button Style="Primary" Label="Report an item" />
 ```
