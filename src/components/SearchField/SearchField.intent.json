@@ -1,0 +1,178 @@
+{
+  "component": "Search Field",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=105-26",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use it at the top of item lists and Back Office tables to search by keyword.",
+      "source": "figma:117:263"
+    },
+    {
+      "text": "Use Focused while the person is typing.",
+      "source": "figma:117:267"
+    },
+    {
+      "text": "Use Filled once there is a search term, and Clear Hover when the pointer is over the clear icon.",
+      "source": "figma:117:271"
+    },
+    {
+      "text": "Name what can be searched in the placeholder, such as items, places or reference numbers.",
+      "source": "figma:117:275"
+    },
+    {
+      "text": "Pair it with Filter Chips below it to narrow the results.",
+      "source": "figma:117:279"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it for form answers. Use Input.",
+      "source": "figma:117:285",
+      "alternative": "Input"
+    },
+    {
+      "text": "Do not put more than one search field on a screen.",
+      "source": "figma:117:289"
+    },
+    {
+      "text": "Do not leave the placeholder empty.",
+      "source": "figma:117:293"
+    },
+    {
+      "text": "Do not hide the clear button once there is text.",
+      "source": "figma:117:297"
+    },
+    {
+      "text": "Do not recolour the field outside the bound tokens.",
+      "source": "figma:117:301"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep the search term in the field after the results load, so people can see what they searched for.",
+      "source": "figma:117:307"
+    },
+    {
+      "text": "Set the width to Fill on mobile so the field spans the screen.",
+      "source": "figma:117:311"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/SearchField/SearchField.tsx:4"
+    },
+    {
+      "prop": "State",
+      "value": "Focused",
+      "intent": "Use Focused while the person is typing.",
+      "source": "code:src/components/SearchField/SearchField.tsx:4 · figma:117:267"
+    },
+    {
+      "prop": "State",
+      "value": "Filled",
+      "intent": "Use Filled once there is a search term, and Clear Hover when the pointer is over the clear icon.",
+      "source": "code:src/components/SearchField/SearchField.tsx:4 · figma:117:271"
+    },
+    {
+      "prop": "State",
+      "value": "Disabled",
+      "intent": "",
+      "source": "code:src/components/SearchField/SearchField.tsx:4"
+    },
+    {
+      "prop": "State",
+      "value": "Clear Hover",
+      "intent": "Use Filled once there is a search term, and Clear Hover when the pointer is over the clear icon.",
+      "source": "code:src/components/SearchField/SearchField.tsx:4 · figma:117:271"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Icon",
+      "how": "search Icon before the input and x Icon inside the clear button, both Size md",
+      "source": "code:src/components/SearchField/SearchField.tsx:2 · code:src/components/SearchField/SearchField.tsx:51 · code:src/components/SearchField/SearchField.tsx:65"
+    }
+  ],
+  "required_tokens": [
+    "--body1-font-family",
+    "--body1-font-size",
+    "--body1-font-weight",
+    "--body1-letter-spacing",
+    "--body1-line-height",
+    "--border-radius-circle",
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-bg-disabled",
+    "--color-bg-surfaceprimary",
+    "--color-border-brandgreen-strong",
+    "--color-border-disabled",
+    "--color-border-primary-default",
+    "--color-icon-disabled",
+    "--color-icon-primary",
+    "--color-icon-secondary",
+    "--color-text-disabled",
+    "--color-text-primary",
+    "--color-text-tertiary",
+    "--density-controlpaddingx",
+    "--density-controlpaddingy",
+    "--gap-component",
+    "--size-control-md",
+    "--size-field-width"
+  ],
+  "a11y": [
+    {
+      "text": "Wraps the field in a <div role=\"search\">.",
+      "source": "code:src/components/SearchField/SearchField.tsx:50"
+    },
+    {
+      "text": "Renders a native <input type=\"search\"> with an aria-label, defaulting to \"Search lost and found items\".",
+      "source": "code:src/components/SearchField/SearchField.tsx:54 · code:src/components/SearchField/SearchField.tsx:58 · code:src/components/SearchField/SearchField.tsx:25"
+    },
+    {
+      "text": "The clear control is a <button type=\"button\" aria-label=\"Clear search\">, shown only when there is text and the field is not disabled; clearing returns focus to the input.",
+      "source": "code:src/components/SearchField/SearchField.tsx:63 · code:src/components/SearchField/SearchField.tsx:64 · code:src/components/SearchField/SearchField.tsx:46"
+    },
+    {
+      "text": "State Disabled sets the native disabled attribute on the input.",
+      "source": "code:src/components/SearchField/SearchField.tsx:60"
+    },
+    {
+      "text": "The leading search Icon is aria-hidden by default.",
+      "source": "code:src/components/SearchField/SearchField.tsx:51 · code:src/components/Icon/Icon.tsx:75"
+    },
+    {
+      "text": "Use an input with type=\"search\" inside an element with role=\"search\".",
+      "source": "figma:117:320"
+    },
+    {
+      "text": "Give it an accessible name, such as aria-label=\"Search lost and found items\". The placeholder is not a label.",
+      "source": "figma:117:323"
+    },
+    {
+      "text": "Make the clear icon a button with aria-label=\"Clear search\", and return focus to the field after clearing.",
+      "source": "figma:117:326"
+    },
+    {
+      "text": "Keep a visible focus indicator. The Focused border does this.",
+      "source": "figma:117:329"
+    },
+    {
+      "text": "Placeholder and typed text are above 4.5:1. The border is above 3:1 in Light and Dark.",
+      "source": "figma:117:332"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default, Disabled: the Figma documentation page for Search Field (117:20) does not say what these values are for (checked usage region 117:253)."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Search Field inside another component, and its own stories show it alone."
+    }
+  ]
+}

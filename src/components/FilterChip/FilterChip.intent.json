@@ -1,0 +1,159 @@
+{
+  "component": "Filter Chip",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=73-60",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use a row of chips above a list to filter it, such as All, Wallets, Phones and Keys.",
+      "source": "figma:84:364"
+    },
+    {
+      "text": "Use it to switch between report types, such as Lost and Found.",
+      "source": "figma:84:368"
+    },
+    {
+      "text": "Set State to Active on every filter that is on. Start with All active.",
+      "source": "figma:84:372"
+    },
+    {
+      "text": "Keep labels to one or two words.",
+      "source": "figma:84:376"
+    },
+    {
+      "text": "Let the row scroll sideways on mobile when the chips do not fit.",
+      "source": "figma:84:380"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it to show an item’s status. Use Status Badge.",
+      "source": "figma:84:386",
+      "alternative": "Status Badge"
+    },
+    {
+      "text": "Do not use it for actions such as Submit or Save. Use Button.",
+      "source": "figma:84:390",
+      "alternative": "Button"
+    },
+    {
+      "text": "Do not mix filter chips and buttons in the same row.",
+      "source": "figma:84:394"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:84:398"
+    },
+    {
+      "text": "Do not let a label run past two lines. Shorten it instead.",
+      "source": "figma:84:402"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep the chips in the same order on every screen, so people learn where each filter is.",
+      "source": "figma:84:408"
+    },
+    {
+      "text": "Change the height with the density mode on the frame, not by hand.",
+      "source": "figma:84:412"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/FilterChip/FilterChip.tsx:3"
+    },
+    {
+      "prop": "State",
+      "value": "Hover",
+      "intent": "",
+      "source": "code:src/components/FilterChip/FilterChip.tsx:3"
+    },
+    {
+      "prop": "State",
+      "value": "Active",
+      "intent": "Set State to Active on every filter that is on. Start with All active.",
+      "source": "code:src/components/FilterChip/FilterChip.tsx:3 · figma:84:372"
+    },
+    {
+      "prop": "State",
+      "value": "Disabled",
+      "intent": "",
+      "source": "code:src/components/FilterChip/FilterChip.tsx:3"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [],
+  "required_tokens": [
+    "--border-radius-circle",
+    "--border-width-1",
+    "--button-medium-font-family",
+    "--button-medium-font-size",
+    "--button-medium-font-weight",
+    "--button-medium-letter-spacing",
+    "--button-medium-line-height",
+    "--color-bg-base",
+    "--color-bg-brandyellow-idle",
+    "--color-bg-surfaceprimary",
+    "--color-border-disabled",
+    "--color-border-primary-default",
+    "--color-border-primary-strong",
+    "--color-text-disabled",
+    "--color-text-primary",
+    "--color-text-static-dark",
+    "--density-controlpaddingx",
+    "--size-chip-maxwidth",
+    "--size-chip-minwidth",
+    "--size-control-sm"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a native <button> with type=\"button\" by default.",
+      "source": "code:src/components/FilterChip/FilterChip.tsx:29 · code:src/components/FilterChip/FilterChip.tsx:21"
+    },
+    {
+      "text": "aria-pressed is true when State is Active and false otherwise.",
+      "source": "code:src/components/FilterChip/FilterChip.tsx:35"
+    },
+    {
+      "text": "State Disabled sets the native disabled attribute and drops onClick.",
+      "source": "code:src/components/FilterChip/FilterChip.tsx:34 · code:src/components/FilterChip/FilterChip.tsx:36"
+    },
+    {
+      "text": "Build each chip as a button with aria-pressed=\"true\" or \"false\", so screen readers announce whether the filter is on.",
+      "source": "figma:84:421"
+    },
+    {
+      "text": "Group the row with a label, such as role=\"group\" and aria-label=\"Filter by category\".",
+      "source": "figma:84:424"
+    },
+    {
+      "text": "Keep a visible focus indicator on keyboard focus (:focus-visible).",
+      "source": "figma:84:427"
+    },
+    {
+      "text": "At 36 px the chip is under the 48 px touch target on Mobile. Extend its hit area to 48 px.",
+      "source": "figma:84:430"
+    },
+    {
+      "text": "Label contrast is above 4.5:1 in every enabled state, including dark text on brand yellow (7.7:1 Light, 10.4:1 Dark).",
+      "source": "figma:84:433"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default, Hover, Disabled: the Figma documentation page for Filter Chip (84:53) does not say what these values are for (checked usage region 84:354)."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Filter Chip inside another component, and its own stories show it alone."
+    },
+    {
+      "field": "pairs_with",
+      "detail": "Filter Chip composes no other component and no story pairs it with a sibling component."
+    }
+  ]
+}

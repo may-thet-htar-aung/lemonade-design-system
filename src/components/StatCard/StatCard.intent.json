@@ -1,0 +1,142 @@
+{
+  "component": "Stat Card",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=111-16",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use it on Back Office dashboards for numbers staff check every day.",
+      "source": "figma:137:394"
+    },
+    {
+      "text": "Put three or four cards in a row with the same width.",
+      "source": "figma:137:398"
+    },
+    {
+      "text": "Write the Label as a short noun phrase, such as Open reports.",
+      "source": "figma:137:402"
+    },
+    {
+      "text": "Write the Delta as a change with a time, such as +12 since yesterday.",
+      "source": "figma:137:406"
+    },
+    {
+      "text": "Turn off Show delta when there is nothing to compare.",
+      "source": "figma:137:410"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not put more than one number in a card.",
+      "source": "figma:137:416"
+    },
+    {
+      "text": "Do not use it for text that is not a number.",
+      "source": "figma:137:420"
+    },
+    {
+      "text": "Do not use colour alone to show whether a change is good or bad.",
+      "source": "figma:137:424"
+    },
+    {
+      "text": "Do not mix card widths in the same row.",
+      "source": "figma:137:428"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:137:432"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Order cards by what staff act on first, such as Claims pending before Returned.",
+      "source": "figma:137:438"
+    },
+    {
+      "text": "Round large numbers, such as 1.2k, only when the exact count does not matter.",
+      "source": "figma:137:442"
+    }
+  ],
+  "variant_intent": [],
+  "placement": [],
+  "pairs_with": [],
+  "required_tokens": [
+    "--body3-font-family",
+    "--body3-font-size",
+    "--body3-font-weight",
+    "--body3-letter-spacing",
+    "--body3-line-height",
+    "--border-radius-lg",
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-border-primary-subtle",
+    "--color-text-brandgreen",
+    "--color-text-secondary",
+    "--gap-element",
+    "--h2-font-family",
+    "--h2-font-size",
+    "--h2-font-weight",
+    "--h2-letter-spacing",
+    "--h2-line-height",
+    "--padding-statcard",
+    "--tagline-14-font-family",
+    "--tagline-14-font-size",
+    "--tagline-14-font-weight",
+    "--tagline-14-letter-spacing",
+    "--tagline-14-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <div> with no role holding three <p> elements in order: Label, Value, Delta.",
+      "source": "code:src/components/StatCard/StatCard.tsx:29 · code:src/components/StatCard/StatCard.tsx:30 · code:src/components/StatCard/StatCard.tsx:31 · code:src/components/StatCard/StatCard.tsx:32"
+    },
+    {
+      "text": "Not interactive: no button, link or tabindex.",
+      "source": "code:src/components/StatCard/StatCard.tsx:15 · code:src/components/StatCard/StatCard.tsx:29"
+    },
+    {
+      "text": "Sets no aria-live.",
+      "source": "code:src/components/StatCard/StatCard.tsx:29"
+    },
+    {
+      "text": "Read the card as one sentence, such as \"Open reports, 128, up 12 since yesterday\".",
+      "source": "figma:137:451"
+    },
+    {
+      "text": "Write changes in words where they matter, since \"+\" and \"−\" can be read inconsistently.",
+      "source": "figma:137:454"
+    },
+    {
+      "text": "Use a heading, or a dt and dd pair, so the label and value stay linked.",
+      "source": "figma:137:457"
+    },
+    {
+      "text": "If the number updates live, announce changes with aria-live=\"polite\".",
+      "source": "figma:137:460"
+    },
+    {
+      "text": "Label, value and delta text are above 4.5:1 on the card background.",
+      "source": "figma:137:463"
+    }
+  ],
+  "differences": [
+    {
+      "figma": "figma:137:457",
+      "code": "code:src/components/StatCard/StatCard.tsx:30 · code:src/components/StatCard/StatCard.tsx:31",
+      "detail": "Figma asks for a heading, or a dt and dd pair, so the label and value stay linked. The code renders Label and Value as two sibling <p> elements with no heading and no dt/dd."
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "Stat Card has no union-typed variant prop in code (StatCard.tsx:3-12: Label, Value, Delta, boolean \"Show delta\"), so there is nothing to describe."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Stat Card inside another component, and its own stories show it alone."
+    },
+    {
+      "field": "pairs_with",
+      "detail": "Stat Card composes no other component and no story pairs it with a sibling component."
+    }
+  ]
+}

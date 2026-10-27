@@ -1,0 +1,157 @@
+{
+  "component": "Link Button",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=147-183",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use it for the action in a table row, such as Review.",
+      "source": "figma:232:547"
+    },
+    {
+      "text": "Use it for secondary actions inside cards and callouts, such as View details.",
+      "source": "figma:232:551"
+    },
+    {
+      "text": "Use Hover when the pointer is over it.",
+      "source": "figma:232:555"
+    },
+    {
+      "text": "Turn on Icon Right for actions that open another page.",
+      "source": "figma:232:559"
+    },
+    {
+      "text": "Write the Label as a short verb, such as Review or View.",
+      "source": "figma:232:563"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it for the main action on a screen. Use Button in the Primary style.",
+      "source": "figma:232:569",
+      "alternative": "Button"
+    },
+    {
+      "text": "Do not put two link buttons side by side without space between them.",
+      "source": "figma:232:573"
+    },
+    {
+      "text": "Do not use it for plain navigation in a sentence. Use a text link.",
+      "source": "figma:232:577"
+    },
+    {
+      "text": "Do not underline it in the Default state.",
+      "source": "figma:232:581"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:232:585"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep one link button per row or card, so the next step is obvious.",
+      "source": "figma:232:591"
+    },
+    {
+      "text": "Pair it with a full Button only when the Button is the main action and the link button is secondary.",
+      "source": "figma:232:595"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/LinkButton/LinkButton.tsx:9"
+    },
+    {
+      "prop": "State",
+      "value": "Hover",
+      "intent": "Use Hover when the pointer is over it.",
+      "source": "code:src/components/LinkButton/LinkButton.tsx:9 · figma:232:555"
+    },
+    {
+      "prop": "State",
+      "value": "Disabled",
+      "intent": "",
+      "source": "code:src/components/LinkButton/LinkButton.tsx:9"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Table Row, Body type: the Action column, last cell, labelled \"Review\".",
+      "source": "story:src/components/TableRow/TableRow.stories.tsx:Body · code:src/components/TableRow/TableRow.tsx:92"
+    },
+    {
+      "text": "Table: the Action column of each of the five default Body rows.",
+      "source": "story:src/components/Table/Table.stories.tsx:Default · code:src/components/Table/Table.tsx:34"
+    }
+  ],
+  "pairs_with": [
+    {
+      "component": "Icon",
+      "how": "Icon Right slot, arrow-right at Size sm by default, replaceable through IconRightSwap",
+      "source": "code:src/components/LinkButton/LinkButton.tsx:2 · code:src/components/LinkButton/LinkButton.tsx:38"
+    }
+  ],
+  "required_tokens": [
+    "--border-width-1",
+    "--button-medium-font-family",
+    "--button-medium-font-size",
+    "--button-medium-font-weight",
+    "--button-medium-letter-spacing",
+    "--button-medium-line-height",
+    "--color-icon-brand",
+    "--color-icon-disabled",
+    "--color-text-brandgreen",
+    "--color-text-disabled",
+    "--gap-element"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a native <button> with type=\"button\" by default; it cannot render an <a>.",
+      "source": "code:src/components/LinkButton/LinkButton.tsx:28 · code:src/components/LinkButton/LinkButton.tsx:22 · code:src/components/LinkButton/LinkButton.tsx:4"
+    },
+    {
+      "text": "State Disabled sets the native disabled attribute.",
+      "source": "code:src/components/LinkButton/LinkButton.tsx:33"
+    },
+    {
+      "text": "The Icon Right wrapper is aria-hidden=\"true\"; the Label is the accessible name.",
+      "source": "code:src/components/LinkButton/LinkButton.tsx:37 · code:src/components/LinkButton/LinkButton.tsx:35"
+    },
+    {
+      "text": "Use a button element for actions, or an a element when it opens another page.",
+      "source": "figma:232:604"
+    },
+    {
+      "text": "Include what it acts on when the label alone is unclear, such as \"Review LF-2041\".",
+      "source": "figma:232:607"
+    },
+    {
+      "text": "Give it a hit area of at least 24 × 24, with padding in code if needed.",
+      "source": "figma:232:610"
+    },
+    {
+      "text": "Keep a visible focus indicator on keyboard focus (:focus-visible).",
+      "source": "figma:232:613"
+    },
+    {
+      "text": "The label is above 4.5:1 on white and on table rows.",
+      "source": "figma:232:616"
+    }
+  ],
+  "differences": [
+    {
+      "figma": "figma:232:604",
+      "code": "code:src/components/LinkButton/LinkButton.tsx:28 · code:src/components/LinkButton/LinkButton.tsx:4",
+      "detail": "Figma says to use an a element when the link button opens another page (and 232:559 pairs Icon Right with opening another page). The code always renders a <button> and its props are button attributes only, so it cannot render a link."
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default, Disabled: the Figma documentation page for Link Button (232:306) does not say what these values are for (checked usage region 232:537)."
+    }
+  ]
+}

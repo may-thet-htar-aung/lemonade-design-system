@@ -1,0 +1,181 @@
+{
+  "component": "Dialog Box",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=160-307",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use it in the Back Office when an action changes a record and is hard to undo, such as approving a claim.",
+      "source": "figma:184:462"
+    },
+    {
+      "text": "Use Danger when the action removes or rejects something.",
+      "source": "figma:184:466"
+    },
+    {
+      "text": "Write the title as a question that names the action, and the confirm button as the same action.",
+      "source": "figma:184:470"
+    },
+    {
+      "text": "Keep the body to one or two sentences on what happens next.",
+      "source": "figma:184:474"
+    },
+    {
+      "text": "Show it over a dimmed page with color/bg/scrim behind it.",
+      "source": "figma:184:478"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it for information that needs no decision. Use Callout.",
+      "source": "figma:184:484",
+      "alternative": "Callout"
+    },
+    {
+      "text": "Do not stack dialog boxes on top of each other.",
+      "source": "figma:184:488"
+    },
+    {
+      "text": "Do not use vague labels such as OK or Yes.",
+      "source": "figma:184:492"
+    },
+    {
+      "text": "Do not put a long form inside it.",
+      "source": "figma:184:496"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:184:500"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Put the safe choice, Cancel, on the left and the confirm action on the right.",
+      "source": "figma:184:506"
+    },
+    {
+      "text": "Let Escape close it, the same as Cancel.",
+      "source": "figma:184:510"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Type",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:8"
+    },
+    {
+      "prop": "Type",
+      "value": "Danger",
+      "intent": "Use Danger when the action removes or rejects something.",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:8 · figma:184:466"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Button",
+      "how": "Actions row: Outline Cancel, then Primary confirm",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:4 · code:src/components/DialogBox/DialogBox.tsx:163 · code:src/components/DialogBox/DialogBox.tsx:164 · story:src/components/DialogBox/DialogBox.stories.tsx:Default"
+    },
+    {
+      "component": "Callout",
+      "how": "Nested Callout between body and actions, Privacy by default, off with ShowCallout",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:5 · code:src/components/DialogBox/DialogBox.tsx:161 · story:src/components/DialogBox/DialogBox.stories.tsx:Default"
+    },
+    {
+      "component": "Button",
+      "how": "The story opens it from an Outline \"Open dialog\" Button, which gets focus back on close",
+      "source": "story:src/components/DialogBox/DialogBox.stories.tsx:Default"
+    }
+  ],
+  "required_tokens": [
+    "--body1-font-family",
+    "--body1-font-size",
+    "--body1-font-weight",
+    "--body1-letter-spacing",
+    "--body1-line-height",
+    "--border-radius-xl",
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-bg-negative-idle",
+    "--color-bg-scrim",
+    "--color-border-primary-subtle",
+    "--color-text-inverse-primary",
+    "--color-text-primary",
+    "--color-text-secondary",
+    "--elevation-level5",
+    "--gap-gutter",
+    "--h4-font-family",
+    "--h4-font-size",
+    "--h4-font-weight",
+    "--h4-letter-spacing",
+    "--h4-line-height",
+    "--padding-dialog",
+    "--size-dialog-width"
+  ],
+  "a11y": [
+    {
+      "text": "Renders role=\"dialog\", or role=\"alertdialog\" when Type is Danger, with aria-modal=\"true\".",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:149 · code:src/components/DialogBox/DialogBox.tsx:150"
+    },
+    {
+      "text": "aria-labelledby points at the <h2> title and aria-describedby at the body <p>.",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:151 · code:src/components/DialogBox/DialogBox.tsx:152 · code:src/components/DialogBox/DialogBox.tsx:155 · code:src/components/DialogBox/DialogBox.tsx:158"
+    },
+    {
+      "text": "On open, focus moves to Cancel; focus is kept inside while open; on close or unmount, focus returns to the element that had it before.",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:83 · code:src/components/DialogBox/DialogBox.tsx:86 · code:src/components/DialogBox/DialogBox.tsx:88 · code:src/components/DialogBox/DialogBox.tsx:106 · code:src/components/DialogBox/DialogBox.tsx:107"
+    },
+    {
+      "text": "Tab and Shift+Tab wrap between the first and last focusable element.",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:113 · code:src/components/DialogBox/DialogBox.tsx:119 · code:src/components/DialogBox/DialogBox.tsx:122"
+    },
+    {
+      "text": "Escape calls onCancel.",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:94 · code:src/components/DialogBox/DialogBox.tsx:95 · code:src/components/DialogBox/DialogBox.tsx:97"
+    },
+    {
+      "text": "Cancel comes before Confirm in the DOM, so it is first in the reading order.",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:163 · code:src/components/DialogBox/DialogBox.tsx:164"
+    },
+    {
+      "text": "A press on the scrim does nothing and does not move focus out of the dialog.",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:137 · code:src/components/DialogBox/DialogBox.tsx:140"
+    },
+    {
+      "text": "Rendered through a portal at the end of <body>.",
+      "source": "code:src/components/DialogBox/DialogBox.tsx:134 · code:src/components/DialogBox/DialogBox.tsx:168"
+    },
+    {
+      "text": "Use role=\"dialog\" (or \"alertdialog\" for Danger) with aria-modal=\"true\" and aria-labelledby pointing at the title.",
+      "source": "figma:184:519"
+    },
+    {
+      "text": "Move focus into the dialog box when it opens, keep it inside, and return it to the trigger when it closes.",
+      "source": "figma:184:522"
+    },
+    {
+      "text": "Close it with Escape, the same as Cancel.",
+      "source": "figma:184:525"
+    },
+    {
+      "text": "Put Cancel first in the reading order so the safe choice comes first.",
+      "source": "figma:184:528"
+    },
+    {
+      "text": "Title, body and button text are above 4.5:1. The red confirm label is 5.8:1 in Light and 4.5:1 in Dark.",
+      "source": "figma:184:531"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "Type=Default: the Figma documentation page for Dialog Box (184:109) does not say what this value is for (checked usage region 184:452)."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Dialog Box inside another component; its stories show it over the page, opened by an Outline \"Open dialog\" Button."
+    }
+  ]
+}

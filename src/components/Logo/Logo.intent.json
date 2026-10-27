@@ -1,0 +1,188 @@
+{
+  "component": "Logo",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=23-1348",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use Light on white or cream surfaces.",
+      "source": "figma:23:1161"
+    },
+    {
+      "text": "Use Dark on brand-green or photo backgrounds that need a plate.",
+      "source": "figma:23:1165"
+    },
+    {
+      "text": "Use Black for one-colour print.",
+      "source": "figma:23:1169"
+    },
+    {
+      "text": "Use White for one-colour placement on dark surfaces.",
+      "source": "figma:23:1173"
+    },
+    {
+      "text": "Use Logo/Symbol on its own for the app icon and favicon.",
+      "source": "figma:23:1177"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not recolor the tile or monogram outside the four themes.",
+      "source": "figma:23:1183"
+    },
+    {
+      "text": "Do not stretch, rotate, outline or add effects.",
+      "source": "figma:23:1187"
+    },
+    {
+      "text": "Do not retype the wordmark or change its weights.",
+      "source": "figma:23:1191"
+    },
+    {
+      "text": "Do not put Light on dark or busy photos.",
+      "source": "figma:23:1195"
+    },
+    {
+      "text": "Do not go below 24 px. Use the symbol alone instead.",
+      "source": "figma:23:1199",
+      "alternative": "Logo/Symbol"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Choose the theme first, then the size. Use Medium unless the space says otherwise.",
+      "source": "figma:23:1205"
+    },
+    {
+      "text": "Check the logo against the real background before you ship it.",
+      "source": "figma:23:1209"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Theme",
+      "value": "Light",
+      "intent": "Use Light on white or cream surfaces.",
+      "source": "code:src/components/Logo/Logo.tsx:3 · figma:23:1161"
+    },
+    {
+      "prop": "Theme",
+      "value": "Dark",
+      "intent": "Use Dark on brand-green or photo backgrounds that need a plate.",
+      "source": "code:src/components/Logo/Logo.tsx:3 · figma:23:1165"
+    },
+    {
+      "prop": "Theme",
+      "value": "Black",
+      "intent": "Use Black for one-colour print.",
+      "source": "code:src/components/Logo/Logo.tsx:3 · figma:23:1169"
+    },
+    {
+      "prop": "Theme",
+      "value": "White",
+      "intent": "Use White for one-colour placement on dark surfaces.",
+      "source": "code:src/components/Logo/Logo.tsx:3 · figma:23:1173"
+    },
+    {
+      "prop": "Size",
+      "value": "Small",
+      "intent": "",
+      "source": "code:src/components/Logo/Logo.tsx:4"
+    },
+    {
+      "prop": "Size",
+      "value": "Medium",
+      "intent": "Use Medium unless the space says otherwise.",
+      "source": "code:src/components/Logo/Logo.tsx:4 · figma:23:1205"
+    },
+    {
+      "prop": "Size",
+      "value": "Large",
+      "intent": "",
+      "source": "code:src/components/Logo/Logo.tsx:4"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Top Nav, left side, inside the home link, Theme Light, Size Medium.",
+      "source": "story:src/components/TopNav/TopNav.stories.tsx:Home · code:src/components/TopNav/TopNav.tsx:46"
+    },
+    {
+      "text": "Footer brand column, Theme Light, Size Medium, above the tagline.",
+      "source": "story:src/components/Footer/Footer.stories.tsx:Default · code:src/components/Footer/Footer.tsx:26"
+    },
+    {
+      "text": "Sidebar header when expanded, Theme Dark, Size Small, beside the collapse Icon Button.",
+      "source": "story:src/components/Sidebar/Sidebar.stories.tsx:CollapsedFalseDashboard · code:src/components/Sidebar/Sidebar.tsx:94"
+    }
+  ],
+  "pairs_with": [],
+  "required_tokens": [
+    "--border-radius-lg",
+    "--border-radius-md",
+    "--border-radius-sm",
+    "--color-bg-base",
+    "--color-bg-brandyellow-idle",
+    "--color-bg-inverse",
+    "--color-bg-static-brandgreen",
+    "--color-icon-inverse",
+    "--color-text-brandgreen",
+    "--color-text-inverse-primary",
+    "--color-text-primary",
+    "--color-text-static-light",
+    "--fontsize-2xl",
+    "--fontweight-extrabold",
+    "--fontweight-wordmark-found",
+    "--gap-component",
+    "--gap-logo-lg",
+    "--h3-font-family",
+    "--h4-font-family",
+    "--h4-font-size",
+    "--h5-font-family",
+    "--h5-font-size",
+    "--h5-line-height",
+    "--lineheight-2xl",
+    "--lineheight-lg",
+    "--padding-logo-lg",
+    "--padding-logo-md",
+    "--padding-logo-sm",
+    "--size-logo-mark",
+    "--size-logo-marklg",
+    "--size-logo-marksm"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <span> with role=\"img\" and aria-label, defaulting to \"Lemonade Found\".",
+      "source": "code:src/components/Logo/Logo.tsx:36 · code:src/components/Logo/Logo.tsx:37 · code:src/components/Logo/Logo.tsx:12"
+    },
+    {
+      "text": "The mark and the visible wordmark are aria-hidden=\"true\"; the SVG is also focusable=\"false\".",
+      "source": "code:src/components/Logo/Logo.tsx:42 · code:src/components/Logo/Logo.tsx:43 · code:src/components/Logo/Logo.tsx:48"
+    },
+    {
+      "text": "Give the logo the alt text “Lemonade Found” when it is the only place the name appears. Mark it decorative when the name is written beside it.",
+      "source": "figma:23:1217"
+    },
+    {
+      "text": "Link the header logo to home and give it a visible focus ring.",
+      "source": "figma:23:1220"
+    },
+    {
+      "text": "Keep text contrast at 4.5:1 or higher. Switch to Dark or White on low-contrast backgrounds.",
+      "source": "figma:23:1223"
+    },
+    {
+      "text": "Leave space equal to the width of the L stem on every side.",
+      "source": "figma:23:1226"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "Size=Small, Large: the Figma documentation page for Logo (23:946) does not say what these values are for (checked usage region 23:1138)."
+    },
+    {
+      "field": "pairs_with",
+      "detail": "Logo composes no other component: it draws its own mark (Logo.tsx:42-47) rather than rendering Logo/Symbol, and no story pairs it with a sibling component."
+    }
+  ]
+}

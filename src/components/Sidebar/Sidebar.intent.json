@@ -1,0 +1,234 @@
+{
+  "component": "Sidebar",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=163-295",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use it on the left of every Back Office screen.",
+      "source": "figma:206:1118"
+    },
+    {
+      "text": "Set Active to the section for the current screen.",
+      "source": "figma:206:1122"
+    },
+    {
+      "text": "Collapse it when the page needs more room, such as wide tables.",
+      "source": "figma:206:1126"
+    },
+    {
+      "text": "Edit the venue and role at the bottom for the signed-in staff member.",
+      "source": "figma:206:1130"
+    },
+    {
+      "text": "Keep the six sections and their order the same on every screen.",
+      "source": "figma:206:1134"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it in the Mobile App or Public Website. Use Tab Bar or Top Nav.",
+      "source": "figma:206:1140",
+      "alternative": "Tab Bar or Top Nav"
+    },
+    {
+      "text": "Do not add more than eight items.",
+      "source": "figma:206:1144"
+    },
+    {
+      "text": "Do not show two active items at once.",
+      "source": "figma:206:1148"
+    },
+    {
+      "text": "Do not change the background or text colours.",
+      "source": "figma:206:1152"
+    },
+    {
+      "text": "Do not collapse it without tooltips for the hidden labels.",
+      "source": "figma:206:1156"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Remember whether staff collapsed it, and keep it that way on the next screen.",
+      "source": "figma:206:1162"
+    },
+    {
+      "text": "Show each item’s name as a tooltip in the collapsed sidebar.",
+      "source": "figma:206:1166"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Collapsed",
+      "value": "False",
+      "intent": "",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:14"
+    },
+    {
+      "prop": "Collapsed",
+      "value": "True",
+      "intent": "Collapse it when the page needs more room, such as wide tables.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:14 · figma:206:1126"
+    },
+    {
+      "prop": "Active",
+      "value": "Dashboard",
+      "intent": "Set Active to the section for the current screen.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:15 · figma:206:1122"
+    },
+    {
+      "prop": "Active",
+      "value": "Reports",
+      "intent": "Set Active to the section for the current screen.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:15 · figma:206:1122"
+    },
+    {
+      "prop": "Active",
+      "value": "Matches",
+      "intent": "Set Active to the section for the current screen.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:15 · figma:206:1122"
+    },
+    {
+      "prop": "Active",
+      "value": "Claims",
+      "intent": "Set Active to the section for the current screen.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:15 · figma:206:1122"
+    },
+    {
+      "prop": "Active",
+      "value": "Users & Venues",
+      "intent": "Set Active to the section for the current screen.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:15 · figma:206:1122"
+    },
+    {
+      "prop": "Active",
+      "value": "Handovers",
+      "intent": "Set Active to the section for the current screen.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:15 · figma:206:1122"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Logo",
+      "how": "Header when expanded: Logo Theme Dark, Size Small",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:3 · code:src/components/Sidebar/Sidebar.tsx:94 · story:src/components/Sidebar/Sidebar.stories.tsx:CollapsedFalseDashboard"
+    },
+    {
+      "component": "Logo/Symbol",
+      "how": "Header when collapsed: Logo/Symbol Color Brand, Size Small",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:4 · code:src/components/Sidebar/Sidebar.tsx:92 · story:src/components/Sidebar/Sidebar.stories.tsx:CollapsedTrueDashboard"
+    },
+    {
+      "component": "Icon Button",
+      "how": "Header toggle: Ghost Icon Button with icon menu (expanded) or maximize (collapsed)",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:5 · code:src/components/Sidebar/Sidebar.tsx:96 · code:src/components/Sidebar/Sidebar.tsx:104"
+    },
+    {
+      "component": "Icon",
+      "how": "One Icon per item at Size md",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:6 · code:src/components/Sidebar/Sidebar.tsx:126"
+    }
+  ],
+  "required_tokens": [
+    "--body3-font-family",
+    "--body3-font-size",
+    "--body3-font-weight",
+    "--body3-letter-spacing",
+    "--body3-line-height",
+    "--border-radius-md",
+    "--border-width-1",
+    "--color-bg-brandyellow-hover",
+    "--color-bg-static-brandgreen",
+    "--color-icon-static-dark",
+    "--color-icon-static-light",
+    "--color-text-static-dark",
+    "--color-text-static-light",
+    "--density-controlpaddingx",
+    "--density-controlpaddingy",
+    "--gap-component",
+    "--gap-element",
+    "--gap-sidebar-collapsedheader",
+    "--gap-sidebar-item",
+    "--padding-container",
+    "--padding-sidebar-block",
+    "--padding-sidebar-divider-block",
+    "--padding-sidebar-divider-inline",
+    "--padding-sidebar-divider-inlinecollapsed",
+    "--padding-sidebar-itemcollapsed",
+    "--padding-sidebar-staff-block",
+    "--padding-sidebar-staff-inline",
+    "--size-sidebar-collapsedwidth",
+    "--size-sidebar-height",
+    "--size-sidebar-width",
+    "--tagline-14-font-family",
+    "--tagline-14-font-size",
+    "--tagline-14-font-weight",
+    "--tagline-14-letter-spacing",
+    "--tagline-14-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "Renders an <aside aria-label=\"Sidebar\"> containing a <nav aria-label=\"Main\"> with a <ul> of <a> items.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:83 · code:src/components/Sidebar/Sidebar.tsx:84 · code:src/components/Sidebar/Sidebar.tsx:112 · code:src/components/Sidebar/Sidebar.tsx:113 · code:src/components/Sidebar/Sidebar.tsx:118"
+    },
+    {
+      "text": "The Active item gets aria-current=\"page\".",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:121"
+    },
+    {
+      "text": "The toggle is an Icon Button labelled \"Collapse sidebar\" or \"Expand sidebar\", with aria-expanded and aria-controls pointing at the nav.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:100 · code:src/components/Sidebar/Sidebar.tsx:101 · code:src/components/Sidebar/Sidebar.tsx:102"
+    },
+    {
+      "text": "When collapsed, each item keeps its label as aria-label and the visible label is removed; no tooltip or title is rendered.",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:122 · code:src/components/Sidebar/Sidebar.tsx:127"
+    },
+    {
+      "text": "The divider and spacer are aria-hidden=\"true\".",
+      "source": "code:src/components/Sidebar/Sidebar.tsx:108 · code:src/components/Sidebar/Sidebar.tsx:135"
+    },
+    {
+      "text": "Use a nav element with aria-label=\"Back Office\", with one link per item.",
+      "source": "figma:206:1175"
+    },
+    {
+      "text": "Set aria-current=\"page\" on the active item.",
+      "source": "figma:206:1178"
+    },
+    {
+      "text": "Make the menu and maximize buttons real buttons with aria-label=\"Collapse sidebar\" and \"Expand sidebar\", and set aria-expanded.",
+      "source": "figma:206:1181"
+    },
+    {
+      "text": "Keep each item’s label as its aria-label, and show it as a tooltip on hover and focus.",
+      "source": "figma:206:1184"
+    },
+    {
+      "text": "White on the green and dark text on the yellow are both above 4.5:1.",
+      "source": "figma:206:1187"
+    }
+  ],
+  "differences": [
+    {
+      "figma": "figma:206:1175",
+      "code": "code:src/components/Sidebar/Sidebar.tsx:112 · code:src/components/Sidebar/Sidebar.tsx:84",
+      "detail": "Figma asks for the nav to be labelled aria-label=\"Back Office\". The code labels the nav \"Main\" and wraps it in an <aside aria-label=\"Sidebar\">."
+    },
+    {
+      "figma": "figma:206:1184",
+      "code": "code:src/components/Sidebar/Sidebar.tsx:122 · code:src/components/Sidebar/Sidebar.tsx:127",
+      "detail": "Figma asks for each collapsed item's label to show as a tooltip on hover and focus (also best practice 206:1166 and the Do-not rule 206:1156). The code sets aria-label only and renders no tooltip or title."
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "Collapsed=False: the Figma documentation page for Sidebar (206:886) does not say what this value is for (checked usage region 206:1108)."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Sidebar inside another component, and its own stories show it alone."
+    }
+  ]
+}

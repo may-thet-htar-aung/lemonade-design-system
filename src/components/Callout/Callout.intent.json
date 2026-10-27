@@ -1,0 +1,140 @@
+{
+  "component": "Callout",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=109-69",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use Privacy where people share ownership details, such as the claim form, to say who can see them.",
+      "source": "figma:129:364"
+    },
+    {
+      "text": "Use AI Match when the system suggests a possible match, so people know to check it.",
+      "source": "figma:129:368"
+    },
+    {
+      "text": "Write the title as one short statement, and the body as one sentence of detail.",
+      "source": "figma:129:372"
+    },
+    {
+      "text": "Set the width to Fill so it adapts to mobile and the public website.",
+      "source": "figma:129:376"
+    },
+    {
+      "text": "Place it just above the content it explains.",
+      "source": "figma:129:380"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it for form errors. Use the Input Error state.",
+      "source": "figma:129:386",
+      "alternative": "Input"
+    },
+    {
+      "text": "Do not stack more than one callout in a row.",
+      "source": "figma:129:390"
+    },
+    {
+      "text": "Do not put buttons or links inside it. Put the action next to it.",
+      "source": "figma:129:394"
+    },
+    {
+      "text": "Do not make it narrower than 288.",
+      "source": "figma:129:398"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:129:402"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep both lines short, so the callout stays one or two lines tall on mobile.",
+      "source": "figma:129:408"
+    },
+    {
+      "text": "Use the same type for the same message across screens, so people learn what each colour means.",
+      "source": "figma:129:412"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Type",
+      "value": "Privacy",
+      "intent": "Use Privacy where people share ownership details, such as the claim form, to say who can see them.",
+      "source": "code:src/components/Callout/Callout.tsx:4 · figma:129:364"
+    },
+    {
+      "prop": "Type",
+      "value": "AI Match",
+      "intent": "Use AI Match when the system suggests a possible match, so people know to check it.",
+      "source": "code:src/components/Callout/Callout.tsx:4 · figma:129:368"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Dialog Box, between the body and the actions row, Privacy by default; off with ShowCallout.",
+      "source": "story:src/components/DialogBox/DialogBox.stories.tsx:Default · code:src/components/DialogBox/DialogBox.tsx:161"
+    }
+  ],
+  "pairs_with": [
+    {
+      "component": "Icon",
+      "how": "Leading Icon at Size md: lock for Privacy, sparkle for AI Match",
+      "source": "code:src/components/Callout/Callout.tsx:2 · code:src/components/Callout/Callout.tsx:43"
+    }
+  ],
+  "required_tokens": [
+    "--body2-font-family",
+    "--body2-font-size",
+    "--body2-font-weight",
+    "--body2-letter-spacing",
+    "--body2-line-height",
+    "--border-radius-lg",
+    "--color-bg-brandyellow-light",
+    "--color-bg-positive-light",
+    "--color-icon-brandbold",
+    "--color-text-primary",
+    "--color-text-secondary",
+    "--gap-card",
+    "--gap-element",
+    "--padding-card",
+    "--size-width-minmobile",
+    "--tagline-14-font-family",
+    "--tagline-14-font-size",
+    "--tagline-14-font-weight",
+    "--tagline-14-letter-spacing",
+    "--tagline-14-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <div> with no role, not role=\"alert\"; title and body are <p> elements.",
+      "source": "code:src/components/Callout/Callout.tsx:42 · code:src/components/Callout/Callout.tsx:39 · code:src/components/Callout/Callout.tsx:45 · code:src/components/Callout/Callout.tsx:46"
+    },
+    {
+      "text": "The Icon is decorative: rendered without a Label, so it is aria-hidden.",
+      "source": "code:src/components/Callout/Callout.tsx:43 · code:src/components/Icon/Icon.tsx:75"
+    },
+    {
+      "text": "Mark the icon aria-hidden=\"true\". The title carries the meaning.",
+      "source": "figma:129:421"
+    },
+    {
+      "text": "Use plain text, not role=\"alert\". Callouts are not urgent.",
+      "source": "figma:129:424"
+    },
+    {
+      "text": "Place it before the content it explains in the reading order.",
+      "source": "figma:129:427"
+    },
+    {
+      "text": "Do not rely on colour to tell the types apart. The title says what it is about.",
+      "source": "figma:129:430"
+    },
+    {
+      "text": "Title and body text are above 4.5:1 on both backgrounds.",
+      "source": "figma:129:433"
+    }
+  ],
+  "gaps": []
+}

@@ -1,0 +1,138 @@
+{
+  "component": "Pagination",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=151-76",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Put it directly under a Table, at the same width.",
+      "source": "figma:156:272"
+    },
+    {
+      "text": "Use First on page 1 and Last on the final page, so the matching arrow is disabled.",
+      "source": "figma:156:276"
+    },
+    {
+      "text": "Use Middle for every page in between.",
+      "source": "figma:156:280"
+    },
+    {
+      "text": "Set an arrow to Hover through its nested instance to show the pointer over it.",
+      "source": "figma:156:284"
+    },
+    {
+      "text": "Update the summary range on each page, such as Showing 9–16 of 192 reports.",
+      "source": "figma:156:288"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it for lists that fit on one page.",
+      "source": "figma:156:294"
+    },
+    {
+      "text": "Do not use it on mobile. Load more items as people scroll instead.",
+      "source": "figma:156:298"
+    },
+    {
+      "text": "Do not use Pagination Arrow on its own outside Pagination.",
+      "source": "figma:156:302"
+    },
+    {
+      "text": "Do not hide the summary when people need to know how many items there are.",
+      "source": "figma:156:306"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:156:310"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep the page size the same on every page, so the range in the summary stays predictable.",
+      "source": "figma:156:316"
+    },
+    {
+      "text": "Return people to the same page when they come back from an item.",
+      "source": "figma:156:320"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Position",
+      "value": "First",
+      "intent": "Use First on page 1 and Last on the final page, so the matching arrow is disabled.",
+      "source": "code:src/components/Pagination/Pagination.tsx:5 · figma:156:276"
+    },
+    {
+      "prop": "Position",
+      "value": "Middle",
+      "intent": "Use Middle for every page in between.",
+      "source": "code:src/components/Pagination/Pagination.tsx:5 · figma:156:280"
+    },
+    {
+      "prop": "Position",
+      "value": "Last",
+      "intent": "Use First on page 1 and Last on the final page, so the matching arrow is disabled.",
+      "source": "code:src/components/Pagination/Pagination.tsx:5 · figma:156:276"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Pagination Arrow",
+      "how": "Previous then Next arrows in the pager; Previous is Disabled on First, Next is Disabled on Last",
+      "source": "code:src/components/Pagination/Pagination.tsx:2 · code:src/components/Pagination/Pagination.tsx:39 · code:src/components/Pagination/Pagination.tsx:44 · story:src/components/Pagination/Pagination.stories.tsx:Middle"
+    }
+  ],
+  "required_tokens": [
+    "--body1-font-family",
+    "--body1-font-size",
+    "--body1-font-weight",
+    "--body1-letter-spacing",
+    "--body1-line-height",
+    "--color-text-secondary",
+    "--gap-gutter",
+    "--gap-pane",
+    "--gap-section"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <nav aria-label=\"Pagination\">.",
+      "source": "code:src/components/Pagination/Pagination.tsx:31"
+    },
+    {
+      "text": "The summary is a <p> with aria-live=\"polite\".",
+      "source": "code:src/components/Pagination/Pagination.tsx:33"
+    },
+    {
+      "text": "The arrows are Pagination Arrow buttons; the one that cannot be used gets the native disabled attribute.",
+      "source": "code:src/components/Pagination/Pagination.tsx:41 · code:src/components/Pagination/Pagination.tsx:46 · code:src/components/PaginationArrow/PaginationArrow.tsx:28"
+    },
+    {
+      "text": "Wrap it in a nav element with aria-label=\"Pagination\".",
+      "source": "figma:156:329"
+    },
+    {
+      "text": "Make each arrow a button with aria-label=\"Previous page\" or \"Next page\".",
+      "source": "figma:156:332"
+    },
+    {
+      "text": "Use the disabled attribute on the arrow that cannot be used.",
+      "source": "figma:156:335"
+    },
+    {
+      "text": "Announce the new range after a page change, such as \"Showing 9–16 of 192 reports\", with aria-live=\"polite\".",
+      "source": "figma:156:338"
+    },
+    {
+      "text": "The summary is above 4.5:1. Active arrow icons are above 3:1. Disabled arrows are exempt.",
+      "source": "figma:156:341"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "placement",
+      "detail": "No story renders Pagination inside or under another component (no story pairs it with Table), and its own stories show it alone."
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "component": "Input",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=88-62",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use Single for short answers, such as an item name, a station or a date.",
+      "source": "figma:98:263"
+    },
+    {
+      "text": "Use Multi for longer answers, such as describing the item or where it was lost.",
+      "source": "figma:98:267"
+    },
+    {
+      "text": "Use Password Hidden for passwords, and Password Shown after the eye is tapped.",
+      "source": "figma:98:271"
+    },
+    {
+      "text": "Turn on Icon Right with the chevron when the field opens a list or a date picker.",
+      "source": "figma:98:275"
+    },
+    {
+      "text": "Use Error when an answer is missing or wrong, and say how to fix it in the Helper.",
+      "source": "figma:98:279"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not hide the label. The placeholder is not a label.",
+      "source": "figma:98:285"
+    },
+    {
+      "text": "Do not put instructions people need while typing in the placeholder. Use the Helper.",
+      "source": "figma:98:289"
+    },
+    {
+      "text": "Do not use Single for passwords or for text longer than one line.",
+      "source": "figma:98:293"
+    },
+    {
+      "text": "Do not show Error before the person has had a chance to answer.",
+      "source": "figma:98:297"
+    },
+    {
+      "text": "Do not recolour the field outside the bound tokens.",
+      "source": "figma:98:301"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Set the width to Fill in forms so the fields line up, and keep one field per row on mobile.",
+      "source": "figma:98:307"
+    },
+    {
+      "text": "Change the height with the density mode on the frame, not by hand.",
+      "source": "figma:98:311"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Type",
+      "value": "Single",
+      "intent": "Use Single for short answers, such as an item name, a station or a date.",
+      "source": "code:src/components/Input/Input.tsx:5 · figma:98:263"
+    },
+    {
+      "prop": "Type",
+      "value": "Multi",
+      "intent": "Use Multi for longer answers, such as describing the item or where it was lost.",
+      "source": "code:src/components/Input/Input.tsx:5 · figma:98:267"
+    },
+    {
+      "prop": "Type",
+      "value": "Password Hidden",
+      "intent": "Use Password Hidden for passwords, and Password Shown after the eye is tapped.",
+      "source": "code:src/components/Input/Input.tsx:5 · figma:98:271"
+    },
+    {
+      "prop": "Type",
+      "value": "Password Shown",
+      "intent": "Use Password Hidden for passwords, and Password Shown after the eye is tapped.",
+      "source": "code:src/components/Input/Input.tsx:5 · figma:98:271"
+    },
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/Input/Input.tsx:6"
+    },
+    {
+      "prop": "State",
+      "value": "Focused",
+      "intent": "",
+      "source": "code:src/components/Input/Input.tsx:6"
+    },
+    {
+      "prop": "State",
+      "value": "Error",
+      "intent": "Use Error when an answer is missing or wrong, and say how to fix it in the Helper.",
+      "source": "code:src/components/Input/Input.tsx:6 · figma:98:279"
+    },
+    {
+      "prop": "State",
+      "value": "Disabled",
+      "intent": "Use the disabled attribute only when the field truly cannot be used. Explain why nearby.",
+      "source": "code:src/components/Input/Input.tsx:6 · figma:98:329"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Icon",
+      "how": "Icon Right shows chevron-down at Size md, replaceable through IconRightSwap",
+      "source": "code:src/components/Input/Input.tsx:3 · code:src/components/Input/Input.tsx:91"
+    },
+    {
+      "component": "Icon",
+      "how": "Password types show eye / eye-off inside the show-password toggle button",
+      "source": "code:src/components/Input/Input.tsx:102 · story:src/components/Input/Input.stories.tsx:PasswordHiddenDefault"
+    }
+  ],
+  "required_tokens": [
+    "--body1-font-family",
+    "--body1-font-size",
+    "--body1-font-weight",
+    "--body1-letter-spacing",
+    "--body1-line-height",
+    "--body3-font-family",
+    "--body3-font-size",
+    "--body3-font-weight",
+    "--body3-letter-spacing",
+    "--body3-line-height",
+    "--border-radius-md",
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-bg-disabled",
+    "--color-border-brandgreen-strong",
+    "--color-border-disabled",
+    "--color-border-negative-strong",
+    "--color-border-primary-default",
+    "--color-icon-disabled",
+    "--color-icon-secondary",
+    "--color-text-disabled",
+    "--color-text-negative",
+    "--color-text-primary",
+    "--color-text-secondary",
+    "--color-text-tertiary",
+    "--density-controlpaddingx",
+    "--density-controlpaddingy",
+    "--gap-component",
+    "--gap-element",
+    "--size-control-md",
+    "--size-field-minheightmulti",
+    "--size-field-width",
+    "--tagline-14-font-family",
+    "--tagline-14-font-size",
+    "--tagline-14-font-weight",
+    "--tagline-14-letter-spacing",
+    "--tagline-14-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "The <label> is tied to the control with htmlFor and a generated id.",
+      "source": "code:src/components/Input/Input.tsx:80 · code:src/components/Input/Input.tsx:46"
+    },
+    {
+      "text": "Renders a native <input> (Single and password types) or <textarea> (Multi); password types switch the input type between password and text.",
+      "source": "code:src/components/Input/Input.tsx:86 · code:src/components/Input/Input.tsx:88"
+    },
+    {
+      "text": "State Error sets aria-invalid=\"true\".",
+      "source": "code:src/components/Input/Input.tsx:71"
+    },
+    {
+      "text": "The Helper is linked with aria-describedby when it is shown.",
+      "source": "code:src/components/Input/Input.tsx:72 · code:src/components/Input/Input.tsx:107"
+    },
+    {
+      "text": "State Disabled sets the native disabled attribute on the control and on the password toggle.",
+      "source": "code:src/components/Input/Input.tsx:70 · code:src/components/Input/Input.tsx:99"
+    },
+    {
+      "text": "The password toggle is a <button type=\"button\"> labelled \"Show password\" or \"Hide password\", with aria-pressed reflecting Password Shown.",
+      "source": "code:src/components/Input/Input.tsx:94 · code:src/components/Input/Input.tsx:97 · code:src/components/Input/Input.tsx:98"
+    },
+    {
+      "text": "With ShowLabel false no <label> renders and the control has no other accessible name.",
+      "source": "code:src/components/Input/Input.tsx:79"
+    },
+    {
+      "text": "Connect the label to the input with a for and id pair, or wrap the input in the label.",
+      "source": "figma:98:320"
+    },
+    {
+      "text": "Link the helper and error text with aria-describedby. On Error, set aria-invalid=\"true\" and describe the problem in words.",
+      "source": "figma:98:323"
+    },
+    {
+      "text": "Build the eye as a button labelled \"Show password\" or \"Hide password\" with aria-pressed, and switch the input type between password and text.",
+      "source": "figma:98:326"
+    },
+    {
+      "text": "Use the disabled attribute only when the field truly cannot be used. Explain why nearby.",
+      "source": "figma:98:329"
+    },
+    {
+      "text": "Placeholder and helper text are above 4.5:1. The default border is above 3:1 in Light and Dark.",
+      "source": "figma:98:332"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default, Focused: the Figma documentation page for Input (98:20) does not say what these values are for (checked usage region 98:253)."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Input inside another component, and its own stories show it alone."
+    }
+  ]
+}
