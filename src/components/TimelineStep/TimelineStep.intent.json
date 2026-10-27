@@ -1,0 +1,180 @@
+{
+  "component": "Timeline Step",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=110-34",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Stack steps top to bottom in the order they happen, with no gap between them.",
+      "source": "figma:135:295"
+    },
+    {
+      "text": "Use Done for finished steps, Current for the one step happening now, and Upcoming for the rest.",
+      "source": "figma:135:299"
+    },
+    {
+      "text": "Use Event for history logs, such as Photo added or Message sent.",
+      "source": "figma:135:303"
+    },
+    {
+      "text": "Turn off Show line on the last step.",
+      "source": "figma:135:307"
+    },
+    {
+      "text": "Use the Subtitle for the time or a short note.",
+      "source": "figma:135:311"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not mark more than one step as Current.",
+      "source": "figma:135:317"
+    },
+    {
+      "text": "Do not mix Event steps with progress steps in one timeline.",
+      "source": "figma:135:321"
+    },
+    {
+      "text": "Do not use it for menus or navigation.",
+      "source": "figma:135:325"
+    },
+    {
+      "text": "Do not put an Upcoming step before a Done one.",
+      "source": "figma:135:329"
+    },
+    {
+      "text": "Do not recolour the marker outside the bound tokens.",
+      "source": "figma:135:333"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep titles to a few words that name what happened, such as Match found.",
+      "source": "figma:135:339"
+    },
+    {
+      "text": "Show times in the same format on every step, such as Today, 09:12.",
+      "source": "figma:135:343"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "State",
+      "value": "Upcoming",
+      "intent": "Use Done for finished steps, Current for the one step happening now, and Upcoming for the rest.",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:4 · figma:135:299"
+    },
+    {
+      "prop": "State",
+      "value": "Current",
+      "intent": "Use Done for finished steps, Current for the one step happening now, and Upcoming for the rest.",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:4 · figma:135:299"
+    },
+    {
+      "prop": "State",
+      "value": "Done",
+      "intent": "Use Done for finished steps, Current for the one step happening now, and Upcoming for the rest.",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:4 · figma:135:299"
+    },
+    {
+      "prop": "State",
+      "value": "Event",
+      "intent": "Use Event for history logs, such as Photo added or Message sent.",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:4 · figma:135:303"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Inside an ordered list (<ol>); the step itself is the <li>.",
+      "source": "story:src/components/TimelineStep/TimelineStep.stories.tsx:Upcoming · code:src/components/TimelineStep/TimelineStep.tsx:19"
+    }
+  ],
+  "pairs_with": [
+    {
+      "component": "Icon",
+      "how": "check Icon at Size sm inside the Done dot",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:1 · code:src/components/TimelineStep/TimelineStep.tsx:33"
+    }
+  ],
+  "required_tokens": [
+    "--body3-font-family",
+    "--body3-font-size",
+    "--body3-font-weight",
+    "--body3-letter-spacing",
+    "--body3-line-height",
+    "--border-radius-circle",
+    "--border-width-2",
+    "--color-bg-base",
+    "--color-bg-brandgreen-idle",
+    "--color-bg-brandyellow-hover",
+    "--color-bg-static-brandgreen",
+    "--color-border-brandgreen-strong",
+    "--color-border-primary-default",
+    "--color-border-primary-subtle",
+    "--color-icon-secondary",
+    "--color-icon-static-light",
+    "--color-text-primary",
+    "--color-text-secondary",
+    "--color-text-tertiary",
+    "--gap-element",
+    "--gap-gutter",
+    "--padding-list-item",
+    "--size-timeline-dot",
+    "--size-timeline-dotevent",
+    "--size-timeline-stepminheight",
+    "--tagline-14-font-family",
+    "--tagline-14-font-size",
+    "--tagline-14-font-weight",
+    "--tagline-14-letter-spacing",
+    "--tagline-14-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "Renders an <li>; it is meant to sit inside an <ol>.",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:30 · code:src/components/TimelineStep/TimelineStep.tsx:19"
+    },
+    {
+      "text": "State Current sets aria-current=\"step\".",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:30"
+    },
+    {
+      "text": "The marker (dot, check and line) is aria-hidden=\"true\".",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:31"
+    },
+    {
+      "text": "The title is prefixed with the state in words: \"Completed\", \"Current step\" or \"Not started\"; Event has no prefix.",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:13 · code:src/components/TimelineStep/TimelineStep.tsx:14 · code:src/components/TimelineStep/TimelineStep.tsx:15 · code:src/components/TimelineStep/TimelineStep.tsx:16 · code:src/components/TimelineStep/TimelineStep.tsx:39"
+    },
+    {
+      "text": "The Subtitle renders as plain text in a <p>, with no <time> element.",
+      "source": "code:src/components/TimelineStep/TimelineStep.tsx:42"
+    },
+    {
+      "text": "Mark up the timeline as an ordered list (ol), one li per step.",
+      "source": "figma:135:352"
+    },
+    {
+      "text": "Add the state in words, such as Completed, Current step or Not started. Use aria-current=\"step\" on the Current step.",
+      "source": "figma:135:355"
+    },
+    {
+      "text": "Mark the dot, check and line aria-hidden=\"true\". They are decorative.",
+      "source": "figma:135:358"
+    },
+    {
+      "text": "Wrap each time in a time element with a machine-readable datetime.",
+      "source": "figma:135:361"
+    },
+    {
+      "text": "Title and subtitle text are above 4.5:1. The Done check is 10.6:1 on its dot in both modes.",
+      "source": "figma:135:364"
+    }
+  ],
+  "differences": [
+    {
+      "figma": "figma:135:361",
+      "code": "code:src/components/TimelineStep/TimelineStep.tsx:42",
+      "detail": "Figma asks for each time to be wrapped in a <time> element with a machine-readable datetime. The code renders Subtitle as plain text in a <p> and has no datetime prop."
+    }
+  ],
+  "gaps": []
+}

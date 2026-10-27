@@ -1,0 +1,107 @@
+{
+  "component": "Logo/Symbol",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=23-1470",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use Logo/Symbol on its own for the app icon and favicon.",
+      "source": "figma:23:1177"
+    }
+  ],
+  "dont_use_when": [],
+  "variant_intent": [
+    {
+      "prop": "Color",
+      "value": "Brand",
+      "intent": "",
+      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:3"
+    },
+    {
+      "prop": "Color",
+      "value": "Black",
+      "intent": "",
+      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:3"
+    },
+    {
+      "prop": "Color",
+      "value": "White",
+      "intent": "",
+      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:3"
+    },
+    {
+      "prop": "Size",
+      "value": "Small",
+      "intent": "",
+      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:4"
+    },
+    {
+      "prop": "Size",
+      "value": "Medium",
+      "intent": "",
+      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:4"
+    },
+    {
+      "prop": "Size",
+      "value": "Large",
+      "intent": "",
+      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:4"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Sidebar header when collapsed, Color Brand, Size Small, above the expand Icon Button.",
+      "source": "story:src/components/Sidebar/Sidebar.stories.tsx:CollapsedTrueDashboard · code:src/components/Sidebar/Sidebar.tsx:92"
+    }
+  ],
+  "pairs_with": [],
+  "required_tokens": [
+    "--color-bg-base",
+    "--color-bg-brandyellow-idle",
+    "--color-bg-inverse",
+    "--color-bg-static-brandgreen",
+    "--color-icon-inverse",
+    "--size-logosymbol-lg",
+    "--size-logosymbol-md",
+    "--size-logosymbol-sm"
+  ],
+  "a11y": [
+    {
+      "text": "By default renders a <span> with role=\"img\" and aria-label \"Lemonade Found\".",
+      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:52 · code:src/components/LogoSymbol/LogoSymbol.tsx:12"
+    },
+    {
+      "text": "When aria-hidden is passed, the span is aria-hidden=\"true\" and gets no role or label, so it is decorative.",
+      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:42 · code:src/components/LogoSymbol/LogoSymbol.tsx:51"
+    },
+    {
+      "text": "The inner SVG is aria-hidden=\"true\" and focusable=\"false\".",
+      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:54"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "dont_use_when",
+      "detail": "The Logo documentation page (23:946), which holds the Logo/Symbol set, has no \"Do not\" rule that names Logo/Symbol (checked usage region 23:1138, rules 23:1178)."
+    },
+    {
+      "field": "variant_intent",
+      "detail": "Color=Brand, Black, White: the Logo documentation page (23:946), which holds the Logo/Symbol set does not say what these values are for (checked usage region 23:1138)."
+    },
+    {
+      "field": "variant_intent",
+      "detail": "Size=Small, Medium, Large: the Logo documentation page (23:946), which holds the Logo/Symbol set does not say what these values are for (checked usage region 23:1138)."
+    },
+    {
+      "field": "pairs_with",
+      "detail": "Logo/Symbol composes no other component and no story pairs it with a sibling component."
+    },
+    {
+      "field": "a11y",
+      "detail": "The Logo documentation page has no accessibility note specific to Logo/Symbol; its notes (23:1210) are written for the full Logo. Only code facts are recorded."
+    },
+    {
+      "field": "use_when",
+      "detail": "Logo/Symbol has no documentation page of its own; its entries are the rules on the Logo documentation page (23:946), which holds the Logo/Symbol set that name Logo/Symbol or its variants. Rules written for the Logo as a whole are not copied."
+    }
+  ]
+}

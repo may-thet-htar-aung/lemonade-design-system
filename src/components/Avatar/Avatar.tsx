@@ -1,6 +1,5 @@
 import type { HTMLAttributes } from 'react';
 import { Icon } from '../Icon/Icon';
-import './Avatar.css';
 
 export type AvatarProps = Omit<HTMLAttributes<HTMLSpanElement>, 'style' | 'children'> & {
   Type?: 'Initials' | 'Image';

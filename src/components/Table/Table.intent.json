@@ -1,0 +1,119 @@
+{
+  "component": "Table",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=141-8",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use Table for every Back Office list, such as reports, users and venues, and handovers.",
+      "source": "figma:146:272"
+    },
+    {
+      "text": "Start with one Header row, then Body rows with no gap.",
+      "source": "figma:146:276"
+    },
+    {
+      "text": "Use Body Hover for the row under the pointer.",
+      "source": "figma:146:280"
+    },
+    {
+      "text": "Keep the same column widths in every row.",
+      "source": "figma:146:284"
+    },
+    {
+      "text": "Set the width to Fill so the table matches the page.",
+      "source": "figma:146:288"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not round the rows. The Table container does the rounding.",
+      "source": "figma:146:294"
+    },
+    {
+      "text": "Do not put more than one Header row in a table.",
+      "source": "figma:146:298"
+    },
+    {
+      "text": "Do not put more than one action in the Action column.",
+      "source": "figma:146:302"
+    },
+    {
+      "text": "Do not use it on mobile. Use Item Card in the List layout.",
+      "source": "figma:146:306",
+      "alternative": "Item Card"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:146:310"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Sort rows so the newest or most urgent items come first.",
+      "source": "figma:146:316"
+    },
+    {
+      "text": "Keep cell text short, and show the full value on the item page.",
+      "source": "figma:146:320"
+    }
+  ],
+  "variant_intent": [],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Table Row",
+      "how": "One Table Row of Type Header in thead, then Body rows in tbody (five by default, or the children passed)",
+      "source": "code:src/components/Table/Table.tsx:2 · code:src/components/Table/Table.tsx:40 · code:src/components/Table/Table.tsx:34 · story:src/components/Table/Table.stories.tsx:Default"
+    }
+  ],
+  "required_tokens": [
+    "--border-radius-lg",
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-border-primary-subtle"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a native <table> inside a <div>, with aria-label defaulting to \"Recent reports\".",
+      "source": "code:src/components/Table/Table.tsx:37 · code:src/components/Table/Table.tsx:38 · code:src/components/Table/Table.tsx:26"
+    },
+    {
+      "text": "The Header row is in <thead> and Body rows are in <tbody>.",
+      "source": "code:src/components/Table/Table.tsx:39 · code:src/components/Table/Table.tsx:42"
+    },
+    {
+      "text": "Has no <caption>; the name is given through aria-label.",
+      "source": "code:src/components/Table/Table.tsx:6 · code:src/components/Table/Table.tsx:38"
+    },
+    {
+      "text": "Use a table element: thead with th cells for the Header row, tbody with td cells for Body rows.",
+      "source": "figma:146:329"
+    },
+    {
+      "text": "Give th cells scope=\"col\", and give the table a caption or aria-label, such as \"Recent reports\".",
+      "source": "figma:146:332"
+    },
+    {
+      "text": "The Review Link Button should be a link or button whose name includes the item, such as \"Review LF-2041\".",
+      "source": "figma:146:335"
+    },
+    {
+      "text": "When cell text is cut off, show the full value on hover and on the item page.",
+      "source": "figma:146:338"
+    },
+    {
+      "text": "Header labels are 6.1:1 on the green header. Body text is above 4.5:1.",
+      "source": "figma:146:341"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "Table has no variant prop in code (Table.tsx:4-15, 24: \"The node has no variant properties\"), so there is nothing to describe."
+    },
+    {
+      "field": "placement",
+      "detail": "No story renders Table inside another component, and its own story shows it alone."
+    }
+  ]
+}

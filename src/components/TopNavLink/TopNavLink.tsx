@@ -1,5 +1,4 @@
 import type { AnchorHTMLAttributes } from 'react';
-import './TopNavLink.css';
 
 export type TopNavLinkProps = Omit<
   AnchorHTMLAttributes<HTMLAnchorElement>,

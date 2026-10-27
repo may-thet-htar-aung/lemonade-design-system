@@ -1,6 +1,5 @@
 import type { ButtonHTMLAttributes } from 'react';
 import { Icon } from '../Icon/Icon';
-import './PaginationArrow.css';
 
 export type PaginationArrowProps = Omit<
   ButtonHTMLAttributes<HTMLButtonElement>,

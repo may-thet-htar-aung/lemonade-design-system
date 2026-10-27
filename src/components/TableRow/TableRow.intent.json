@@ -1,0 +1,140 @@
+{
+  "component": "Table Row",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=112-32",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Start with one Header row, then Body rows with no gap.",
+      "source": "figma:146:276"
+    },
+    {
+      "text": "Use Body Hover for the row under the pointer.",
+      "source": "figma:146:280"
+    },
+    {
+      "text": "Keep the same column widths in every row.",
+      "source": "figma:146:284"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not round the rows. The Table container does the rounding.",
+      "source": "figma:146:294"
+    },
+    {
+      "text": "Do not put more than one Header row in a table.",
+      "source": "figma:146:298"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Type",
+      "value": "Header",
+      "intent": "Start with one Header row, then Body rows with no gap.",
+      "source": "code:src/components/TableRow/TableRow.tsx:6 · figma:146:276"
+    },
+    {
+      "prop": "Type",
+      "value": "Body",
+      "intent": "Start with one Header row, then Body rows with no gap.",
+      "source": "code:src/components/TableRow/TableRow.tsx:6 · figma:146:276"
+    },
+    {
+      "prop": "Type",
+      "value": "Body Hover",
+      "intent": "Use Body Hover for the row under the pointer.",
+      "source": "code:src/components/TableRow/TableRow.tsx:6 · figma:146:280"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Table: one Header row in thead, then five Body rows in tbody.",
+      "source": "story:src/components/Table/Table.stories.tsx:Default · code:src/components/Table/Table.tsx:40 · code:src/components/Table/Table.tsx:34"
+    },
+    {
+      "text": "Header rows sit in a <thead> and Body rows in a <tbody> of a <table>.",
+      "source": "story:src/components/TableRow/TableRow.stories.tsx:Header · story:src/components/TableRow/TableRow.stories.tsx:Body"
+    }
+  ],
+  "pairs_with": [
+    {
+      "component": "Status Badge",
+      "how": "Body rows: nested Status Badge in the Status column",
+      "source": "code:src/components/TableRow/TableRow.tsx:2 · code:src/components/TableRow/TableRow.tsx:89 · story:src/components/TableRow/TableRow.stories.tsx:Body"
+    },
+    {
+      "component": "Link Button",
+      "how": "Body rows: nested Link Button in the Action column, named \"<Action> <Reference>\"",
+      "source": "code:src/components/TableRow/TableRow.tsx:4 · code:src/components/TableRow/TableRow.tsx:92 · story:src/components/TableRow/TableRow.stories.tsx:Body"
+    }
+  ],
+  "required_tokens": [
+    "--body1-font-family",
+    "--body1-font-size",
+    "--body1-font-weight",
+    "--body1-letter-spacing",
+    "--body1-line-height",
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-bg-brandgreen-light",
+    "--color-bg-surfaceprimary",
+    "--color-border-brandgreen-strong",
+    "--color-border-primary-subtle",
+    "--color-text-primary",
+    "--color-text-secondary",
+    "--density-controlpaddingy",
+    "--density-rowheight",
+    "--padding-list-item",
+    "--size-table-col-item",
+    "--size-table-col-location",
+    "--size-table-col-owner",
+    "--size-table-col-reference",
+    "--size-table-col-status",
+    "--size-table-headerheight",
+    "--tagline-12-font-family",
+    "--tagline-12-font-size",
+    "--tagline-12-font-weight",
+    "--tagline-12-letter-spacing",
+    "--tagline-12-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <tr>. Header rows use <th scope=\"col\"> cells; Body rows use <td> cells.",
+      "source": "code:src/components/TableRow/TableRow.tsx:64 · code:src/components/TableRow/TableRow.tsx:66 · code:src/components/TableRow/TableRow.tsx:76"
+    },
+    {
+      "text": "Body text cells carry a title attribute with the full value.",
+      "source": "code:src/components/TableRow/TableRow.tsx:77 · code:src/components/TableRow/TableRow.tsx:80 · code:src/components/TableRow/TableRow.tsx:83 · code:src/components/TableRow/TableRow.tsx:86"
+    },
+    {
+      "text": "The Action Link Button gets aria-label \"<Action> <Reference>\", such as \"Review LF-2041\".",
+      "source": "code:src/components/TableRow/TableRow.tsx:92"
+    },
+    {
+      "text": "Use a table element: thead with th cells for the Header row, tbody with td cells for Body rows.",
+      "source": "figma:146:329"
+    },
+    {
+      "text": "Give th cells scope=\"col\", and give the table a caption or aria-label, such as \"Recent reports\".",
+      "source": "figma:146:332"
+    },
+    {
+      "text": "The Review Link Button should be a link or button whose name includes the item, such as \"Review LF-2041\".",
+      "source": "figma:146:335"
+    },
+    {
+      "text": "When cell text is cut off, show the full value on hover and on the item page.",
+      "source": "figma:146:338"
+    },
+    {
+      "text": "Header labels are 6.1:1 on the green header. Body text is above 4.5:1.",
+      "source": "figma:146:341"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "use_when",
+      "detail": "Table Row has no documentation page of its own; its entries are the rules on the Table documentation page (146:27), which holds the Table Row set that name Table Row or its variants. Rules written for the Table as a whole are not copied."
+    }
+  ]
+}

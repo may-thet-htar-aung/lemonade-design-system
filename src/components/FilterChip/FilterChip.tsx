@@ -1,5 +1,4 @@
 import type { ButtonHTMLAttributes } from 'react';
-import './FilterChip.css';
 
 export type FilterChipState = 'Default' | 'Hover' | 'Active' | 'Disabled';
 

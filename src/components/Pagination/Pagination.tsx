@@ -1,6 +1,5 @@
 import type { MouseEventHandler } from 'react';
 import { PaginationArrow } from '../PaginationArrow/PaginationArrow';
-import './Pagination.css';
 
 export type PaginationProps = {
   Position?: 'First' | 'Middle' | 'Last';

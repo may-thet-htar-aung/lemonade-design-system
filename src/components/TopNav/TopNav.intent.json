@@ -1,0 +1,160 @@
+{
+  "component": "Top Nav",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=161-415",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use it at the top of every Public Website page.",
+      "source": "figma:184:1285"
+    },
+    {
+      "text": "Set Page to the section the person is in. Use Home on the landing page.",
+      "source": "figma:184:1289"
+    },
+    {
+      "text": "Keep the links and their order the same on every page.",
+      "source": "figma:184:1293"
+    },
+    {
+      "text": "Set a link to Hover through its nested Top Nav Link.",
+      "source": "figma:184:1297"
+    },
+    {
+      "text": "Set the width to Fill so it matches the page.",
+      "source": "figma:184:1301"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it in the Mobile App or Back Office. Use Tab Bar or Sidebar.",
+      "source": "figma:184:1307",
+      "alternative": "Tab Bar or Sidebar"
+    },
+    {
+      "text": "Do not add more than four links. Put extra pages in the Footer.",
+      "source": "figma:184:1311",
+      "alternative": "Footer"
+    },
+    {
+      "text": "Do not show two active links at once.",
+      "source": "figma:184:1315"
+    },
+    {
+      "text": "Do not use Top Nav Link outside Top Nav.",
+      "source": "figma:184:1319"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:184:1323"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep link labels to two or three words, such as Track a case.",
+      "source": "figma:184:1329"
+    },
+    {
+      "text": "Keep Report an item as the main action, since it is what most visitors come to do.",
+      "source": "figma:184:1333"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Page",
+      "value": "Home",
+      "intent": "Set Page to the section the person is in. Use Home on the landing page.",
+      "source": "code:src/components/TopNav/TopNav.tsx:10 · figma:184:1289"
+    },
+    {
+      "prop": "Page",
+      "value": "Browse",
+      "intent": "Set Page to the section the person is in. Use Home on the landing page.",
+      "source": "code:src/components/TopNav/TopNav.tsx:10 · figma:184:1289"
+    },
+    {
+      "prop": "Page",
+      "value": "Report",
+      "intent": "Set Page to the section the person is in. Use Home on the landing page.",
+      "source": "code:src/components/TopNav/TopNav.tsx:10 · figma:184:1289"
+    },
+    {
+      "prop": "Page",
+      "value": "Track",
+      "intent": "Set Page to the section the person is in. Use Home on the landing page.",
+      "source": "code:src/components/TopNav/TopNav.tsx:10 · figma:184:1289"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Logo",
+      "how": "Logo Theme Light, Size Medium, inside the home link on the left",
+      "source": "code:src/components/TopNav/TopNav.tsx:2 · code:src/components/TopNav/TopNav.tsx:46 · story:src/components/TopNav/TopNav.stories.tsx:Home"
+    },
+    {
+      "component": "Top Nav Link",
+      "how": "Four Top Nav Links in the nav; the one matching Page is Active",
+      "source": "code:src/components/TopNav/TopNav.tsx:3 · code:src/components/TopNav/TopNav.tsx:52 · story:src/components/TopNav/TopNav.stories.tsx:Browse"
+    },
+    {
+      "component": "Button",
+      "how": "Actions on the right: Ghost \"Sign in\", then Primary \"Report an item\"",
+      "source": "code:src/components/TopNav/TopNav.tsx:4 · code:src/components/TopNav/TopNav.tsx:62 · code:src/components/TopNav/TopNav.tsx:63 · story:src/components/TopNav/TopNav.stories.tsx:Home"
+    }
+  ],
+  "required_tokens": [
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-border-primary-subtle",
+    "--gap-component",
+    "--gap-topnav-brand",
+    "--gap-topnav-links",
+    "--padding-topnav-block",
+    "--size-topnav-height",
+    "--spacing-4xl"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <header> with a <nav aria-label=\"Main\"> holding a <ul> of links.",
+      "source": "code:src/components/TopNav/TopNav.tsx:38 · code:src/components/TopNav/TopNav.tsx:48 · code:src/components/TopNav/TopNav.tsx:49"
+    },
+    {
+      "text": "A \"Skip to main content\" link comes first, pointing at skipLinkHref (default \"#main\").",
+      "source": "code:src/components/TopNav/TopNav.tsx:39 · code:src/components/TopNav/TopNav.tsx:31"
+    },
+    {
+      "text": "The Logo is wrapped in a home link.",
+      "source": "code:src/components/TopNav/TopNav.tsx:45 · code:src/components/TopNav/TopNav.tsx:46"
+    },
+    {
+      "text": "The link matching Page is rendered Active, which sets aria-current=\"page\"; Page Home has no active link.",
+      "source": "code:src/components/TopNav/TopNav.tsx:54 · code:src/components/TopNavLink/TopNavLink.tsx:27 · code:src/components/TopNav/TopNav.tsx:13"
+    },
+    {
+      "text": "Use a header element with a nav (aria-label=\"Main\") for the links.",
+      "source": "figma:184:1342"
+    },
+    {
+      "text": "Set aria-current=\"page\" on the Active link. The yellow bar is decorative.",
+      "source": "figma:184:1345"
+    },
+    {
+      "text": "Add a skip link before the nav so keyboard users can jump to the main content.",
+      "source": "figma:184:1348"
+    },
+    {
+      "text": "Keep a visible focus indicator on links and buttons.",
+      "source": "figma:184:1351"
+    },
+    {
+      "text": "Link and button text are above 4.5:1 on the header.",
+      "source": "figma:184:1354"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "placement",
+      "detail": "No story renders Top Nav inside another component, and its own stories show it alone."
+    }
+  ]
+}

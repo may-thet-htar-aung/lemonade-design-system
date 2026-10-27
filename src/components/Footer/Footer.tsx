@@ -1,6 +1,5 @@
 import type { HTMLAttributes } from 'react';
 import { Logo } from '../Logo/Logo';
-import './Footer.css';
 
 /* Figma node 162:69. The node is a single component with no properties, so
    the Footer takes only native footer attributes. Text is the node's text. */

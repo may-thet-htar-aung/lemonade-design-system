@@ -1,0 +1,98 @@
+{
+  "component": "Top Nav Link",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=173-59",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Set a link to Hover through its nested Top Nav Link.",
+      "source": "figma:184:1297"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use Top Nav Link outside Top Nav.",
+      "source": "figma:184:1319"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "State",
+      "value": "Default",
+      "intent": "",
+      "source": "code:src/components/TopNavLink/TopNavLink.tsx:8"
+    },
+    {
+      "prop": "State",
+      "value": "Hover",
+      "intent": "Set a link to Hover through its nested Top Nav Link.",
+      "source": "code:src/components/TopNavLink/TopNavLink.tsx:8 · figma:184:1297"
+    },
+    {
+      "prop": "State",
+      "value": "Active",
+      "intent": "Set aria-current=\"page\" on the Active link. The yellow bar is decorative.",
+      "source": "code:src/components/TopNavLink/TopNavLink.tsx:8 · figma:184:1345"
+    }
+  ],
+  "placement": [
+    {
+      "text": "Top Nav, inside the Main nav list, four links; the one matching Page is Active.",
+      "source": "story:src/components/TopNav/TopNav.stories.tsx:Browse · code:src/components/TopNav/TopNav.tsx:52 · code:src/components/TopNav/TopNav.tsx:54"
+    }
+  ],
+  "pairs_with": [],
+  "required_tokens": [
+    "--border-radius-circle",
+    "--color-bg-brandyellow-hover",
+    "--color-bg-brandyellow-light",
+    "--color-text-brandgreen",
+    "--color-text-secondary",
+    "--gap-element",
+    "--size-topnav-indicator",
+    "--tagline-14-font-family",
+    "--tagline-14-font-size",
+    "--tagline-14-font-weight",
+    "--tagline-14-letter-spacing",
+    "--tagline-14-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "Renders an <a> with href defaulting to \"#\".",
+      "source": "code:src/components/TopNavLink/TopNavLink.tsx:22 · code:src/components/TopNavLink/TopNavLink.tsx:16"
+    },
+    {
+      "text": "State Active sets aria-current=\"page\"; otherwise any aria-current passed in is kept.",
+      "source": "code:src/components/TopNavLink/TopNavLink.tsx:27"
+    },
+    {
+      "text": "The indicator bar is aria-hidden=\"true\".",
+      "source": "code:src/components/TopNavLink/TopNavLink.tsx:30"
+    },
+    {
+      "text": "Set aria-current=\"page\" on the Active link. The yellow bar is decorative.",
+      "source": "figma:184:1345"
+    },
+    {
+      "text": "Keep a visible focus indicator on links and buttons.",
+      "source": "figma:184:1351"
+    },
+    {
+      "text": "Link and button text are above 4.5:1 on the header.",
+      "source": "figma:184:1354"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "variant_intent",
+      "detail": "State=Default: the Top Nav documentation page (184:1039), which holds the Top Nav Link set does not say what this value is for (checked usage region 184:1275)."
+    },
+    {
+      "field": "pairs_with",
+      "detail": "Top Nav Link composes no other component and no story pairs it with a sibling component outside Top Nav."
+    },
+    {
+      "field": "use_when",
+      "detail": "Top Nav Link has no documentation page of its own; its entries are the rules on the Top Nav documentation page (184:1039), which holds the Top Nav Link set that name Top Nav Link or its variants. Rules written for the Top Nav as a whole are not copied."
+    }
+  ]
+}

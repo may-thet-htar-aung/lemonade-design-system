@@ -1,0 +1,162 @@
+{
+  "component": "Tab Bar",
+  "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=159-141",
+  "commit": "ff2d000",
+  "use_when": [
+    {
+      "text": "Use it at the bottom of every main screen in the Mobile App.",
+      "source": "figma:167:295"
+    },
+    {
+      "text": "Set Active to the tab for the current screen.",
+      "source": "figma:167:299"
+    },
+    {
+      "text": "Keep the five tabs and their order the same on every screen.",
+      "source": "figma:167:303"
+    },
+    {
+      "text": "Set the width to Fill so it spans the screen.",
+      "source": "figma:167:307"
+    },
+    {
+      "text": "Keep the bottom padding for the home indicator.",
+      "source": "figma:167:311"
+    }
+  ],
+  "dont_use_when": [
+    {
+      "text": "Do not use it on the Public Website or Back Office. Use Top Nav or Sidebar.",
+      "source": "figma:167:317",
+      "alternative": "Top Nav or Sidebar"
+    },
+    {
+      "text": "Do not add or remove tabs.",
+      "source": "figma:167:321"
+    },
+    {
+      "text": "Do not hide the labels.",
+      "source": "figma:167:325"
+    },
+    {
+      "text": "Do not show it inside step-by-step flows, where it can pull people out mid-task.",
+      "source": "figma:167:329"
+    },
+    {
+      "text": "Do not recolour it outside the bound tokens.",
+      "source": "figma:167:333"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep each tab label to one short word.",
+      "source": "figma:167:339"
+    },
+    {
+      "text": "Tapping the active tab again should scroll its screen back to the top.",
+      "source": "figma:167:343"
+    }
+  ],
+  "variant_intent": [
+    {
+      "prop": "Active",
+      "value": "Home",
+      "intent": "Set Active to the tab for the current screen.",
+      "source": "code:src/components/TabBar/TabBar.tsx:8 · figma:167:299"
+    },
+    {
+      "prop": "Active",
+      "value": "Search",
+      "intent": "Set Active to the tab for the current screen.",
+      "source": "code:src/components/TabBar/TabBar.tsx:8 · figma:167:299"
+    },
+    {
+      "prop": "Active",
+      "value": "Report",
+      "intent": "Set Active to the tab for the current screen.",
+      "source": "code:src/components/TabBar/TabBar.tsx:8 · figma:167:299"
+    },
+    {
+      "prop": "Active",
+      "value": "Activity",
+      "intent": "Set Active to the tab for the current screen.",
+      "source": "code:src/components/TabBar/TabBar.tsx:8 · figma:167:299"
+    },
+    {
+      "prop": "Active",
+      "value": "Profile",
+      "intent": "Set Active to the tab for the current screen.",
+      "source": "code:src/components/TabBar/TabBar.tsx:8 · figma:167:299"
+    }
+  ],
+  "placement": [],
+  "pairs_with": [
+    {
+      "component": "Icon",
+      "how": "One Icon per tab at Size lg inside the pill: home, search, plus, list, user",
+      "source": "code:src/components/TabBar/TabBar.tsx:2 · code:src/components/TabBar/TabBar.tsx:54"
+    }
+  ],
+  "required_tokens": [
+    "--border-radius-circle",
+    "--border-width-1",
+    "--color-bg-base",
+    "--color-bg-brandyellow-hover",
+    "--color-bg-static-brandgreen",
+    "--color-border-primary-subtle",
+    "--color-icon-secondary",
+    "--color-text-brandgreen",
+    "--color-text-tertiary",
+    "--gap-element",
+    "--padding-tabbar-bottom",
+    "--padding-tabbar-inline",
+    "--padding-tabbar-top",
+    "--size-tabbar-pill-height",
+    "--size-tabbar-pill-width",
+    "--tagline-12-font-family",
+    "--tagline-12-font-size",
+    "--tagline-12-font-weight",
+    "--tagline-12-letter-spacing",
+    "--tagline-12-line-height"
+  ],
+  "a11y": [
+    {
+      "text": "Renders a <nav aria-label=\"Main\"> holding a <ul> with one <a> per tab.",
+      "source": "code:src/components/TabBar/TabBar.tsx:40 · code:src/components/TabBar/TabBar.tsx:41 · code:src/components/TabBar/TabBar.tsx:46"
+    },
+    {
+      "text": "The Active tab gets aria-current=\"page\".",
+      "source": "code:src/components/TabBar/TabBar.tsx:49"
+    },
+    {
+      "text": "Tab icons have no Label, so they are aria-hidden; the visible label names the tab.",
+      "source": "code:src/components/TabBar/TabBar.tsx:53 · code:src/components/TabBar/TabBar.tsx:54 · code:src/components/Icon/Icon.tsx:75"
+    },
+    {
+      "text": "Use a nav element with aria-label=\"Main\", with one link or button per tab.",
+      "source": "figma:167:352"
+    },
+    {
+      "text": "Set aria-current=\"page\" on the active tab.",
+      "source": "figma:167:355"
+    },
+    {
+      "text": "Each tab is at least 48 px tall and 64 px wide.",
+      "source": "figma:167:358"
+    },
+    {
+      "text": "Mark the icons aria-hidden=\"true\". The label names the tab.",
+      "source": "figma:167:361"
+    },
+    {
+      "text": "Labels are above 4.5:1. The active icon is 7.5:1 on the pill in Light and 8.0:1 in Dark.",
+      "source": "figma:167:364"
+    }
+  ],
+  "gaps": [
+    {
+      "field": "placement",
+      "detail": "No story renders Tab Bar inside another component, and its own stories show it alone."
+    }
+  ]
+}

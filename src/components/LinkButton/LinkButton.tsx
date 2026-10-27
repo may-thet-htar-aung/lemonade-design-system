@@ -1,6 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Icon } from '../Icon/Icon';
-import './LinkButton.css';
 
 export type LinkButtonProps = Omit<
   ButtonHTMLAttributes<HTMLButtonElement>,

@@ -76,8 +76,11 @@ The full formula, the column owners and the open flags are in `.claude/skills/re
 | `tokens` | Export, modes, gap versus naming mistake, verifying a rebuild |
 | `security-check` | What the security gate covers and what it does not |
 | `sweep` | The PM's registry audit |
+| `component-intent` | One component's intent file, from Figma usage, then code, then stories |
+| `release-review` | The 7 gates and 6 checks, at one pinned commit, and the verdict |
+| `astro-page` | The whole docs site, generated and verified before any Astro Link |
 
-Not written yet, and each agent stops when it needs one: `deploy-gate` (DevOps), `release-review` (Release), and `component-intent` and `astro-page` (Doc-generator).
+Not written yet: `deploy-gate`. DevOps stops when it needs it.
 
 ## Environment
 

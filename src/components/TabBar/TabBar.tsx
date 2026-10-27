@@ -1,6 +1,5 @@
 import type { HTMLAttributes, MouseEvent } from 'react';
 import { Icon, type IconName } from '../Icon/Icon';
-import './TabBar.css';
 
 /* Figma node 159:141 (component set Tab Bar, property Active).
    Five tabs, each an Icon instance (Size lg, the node's size/icon/lg) in a
