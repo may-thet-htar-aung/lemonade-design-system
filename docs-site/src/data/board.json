@@ -21,7 +21,7 @@
     },
     {
       "name": "Logo/Symbol",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=23-1470",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-logosymbol--brand-small",
@@ -119,7 +119,7 @@
     },
     {
       "name": "Search Field",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=105-26",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-search-field--default",
@@ -148,7 +148,7 @@
     },
     {
       "name": "Icon Button",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=192-33",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-icon-button--primary-default",
@@ -268,7 +268,7 @@
     },
     {
       "name": "Top Nav",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=161-415",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-top-nav--home",
@@ -293,7 +293,7 @@
     },
     {
       "name": "Logo",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=23-1348",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-logo--light-medium",
@@ -322,7 +322,7 @@
     },
     {
       "name": "Table",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=141-8",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-table--default",
@@ -367,7 +367,7 @@
     },
     {
       "name": "Status Badge",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=66-22",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-status-badge--lost",
@@ -412,7 +412,7 @@
     },
     {
       "name": "Tab Bar",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=159-141",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-tab-bar--home",
@@ -420,7 +420,7 @@
     },
     {
       "name": "Pagination Arrow",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=155-30",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-pagination-arrow--previous-default",
@@ -428,7 +428,7 @@
     },
     {
       "name": "Sidebar",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=163-295",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-sidebar--collapsed-false-dashboard",
@@ -485,7 +485,7 @@
     },
     {
       "name": "Top Nav Link",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=173-59",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-top-nav-link--default",
@@ -493,7 +493,7 @@
     },
     {
       "name": "Filter Chip",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=73-60",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-filter-chip--default",
@@ -518,7 +518,7 @@
     },
     {
       "name": "Footer",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=162-69",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-footer--default",
@@ -531,7 +531,7 @@
     },
     {
       "name": "Stat Card",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=111-16",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-stat-card--show-delta-on",
