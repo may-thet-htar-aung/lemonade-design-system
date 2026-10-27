@@ -351,7 +351,9 @@ const componentPage = (c) => {
     notices.push(`${c.name} Code: tokens (no required_tokens)`);
   }
   L.push('### Storybook props table', '');
-  if (c.docsEntry) L.push(`<iframe class="lds-story lds-story--docs" src="${SB}/iframe.html?id=${c.docsEntry.id}&viewMode=docs" title="${esc(c.name)} props" loading="lazy"></iframe>`, '');
+  // Storybook's docs view renders blank when its iframe loads inside a hidden tab panel, so the
+  // iframe carries data-src and the head script in astro.config.mjs sets src once it is visible.
+  if (c.docsEntry) L.push(`<iframe class="lds-story lds-story--docs" data-src="${SB}/iframe.html?id=${c.docsEntry.id}&viewMode=docs" title="${esc(c.name)} props"></iframe>`, '', `[Open the ${esc(c.name)} docs page in Storybook](${SB}/?path=/docs/${c.docsEntry.id})`, '');
   else {
     L.push(caution('No Storybook docs page', `The production Storybook's \`index.json\` has no docs entry for ${esc(c.name)}, so there is no props table to embed.`));
     notices.push(`${c.name} Code (Storybook has no docs page)`);

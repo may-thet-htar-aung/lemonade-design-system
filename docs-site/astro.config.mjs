@@ -33,6 +33,13 @@ export default defineConfig({
 					content:
 						"(()=>{const r=document.documentElement;const s=()=>{if(r.dataset.theme==='dark')r.setAttribute('data-semantic','dark');else r.removeAttribute('data-semantic');};s();new MutationObserver(s).observe(r,{attributes:true,attributeFilter:['data-theme']});})();",
 				},
+				{
+					// Load a Storybook docs embed only once it is visible: Storybook's docs view
+					// renders blank when its iframe loads inside a hidden tab panel.
+					tag: 'script',
+					content:
+						"document.addEventListener('DOMContentLoaded',()=>{const fs=document.querySelectorAll('iframe[data-src]');if(!fs.length)return;const io=new IntersectionObserver((es)=>{for(const e of es){if(e.isIntersecting){e.target.src=e.target.dataset.src;e.target.removeAttribute('data-src');io.unobserve(e.target);}}});fs.forEach((f)=>io.observe(f));});",
+				},
 			],
 			sidebar: [
 				{
