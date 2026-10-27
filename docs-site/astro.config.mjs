@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://lemonade-design-system-docs.vercel.app',
 	integrations: [
 		starlight({
 			title: 'Lemonade Design System',
