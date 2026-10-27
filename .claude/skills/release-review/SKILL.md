@@ -27,7 +27,7 @@ A gate is pass or fail. Any failed gate blocks.
 |---|---|---|---|---|
 | 1 | **Intent written** | `src/components/<Name>/<Name>.intent.json` exists at the commit, and every empty field is listed in its `gaps` | the intent file | Doc-generator, or the Designer when the gap is missing Figma usage |
 | 2 | **Development status is `Completed`** | `Components.Development` reads `Completed` when you start and when you write the verdict | the registry, by plain list | whoever owns the evidence the formula is missing (see the `registry` skill) |
-| 3 | **Tokens clean** | `<Name>.css` has no raw values (the grep in the `build` skill, stage 3, returns nothing), every `var(--…)` is a semantic token, and `node scripts/verify-tokens.mjs` ends `RESULT: PASS` | `<Name>.css`, `build/css/tokens.css` | Engineer; token-runner for a verify failure |
+| 3 | **Tokens clean** | `<Name>.css` has no raw values (the grep in the `build` skill, stage 3, returns nothing, where a `font-family:` whose whole value is a `var(--…)` token is not a hit), every `var(--…)` is a semantic token, and `node scripts/verify-tokens.mjs` ends `RESULT: PASS` | `<Name>.css`, `build/css/tokens.css` | Engineer; token-runner for a verify failure |
 | 4 | **Public surface decided** | The component and its prop types are exported from `src/index.ts`, and nothing else from its folder is | `src/index.ts` | Engineer |
 | 5 | **Names final** | The component name matches its Figma component set, every prop name matches its Figma property character for character, and no name carries `New`, `Temp`, `WIP`, `v2` or similar | the `.tsx`, the Figma node | Engineer for code names, Designer for Figma names |
 | 6 | **States complete** | Every variant-matrix row has a story, every row has a linked Staging Testing row reading `Passed`, and none reads `Failed` or `Fixed (To re-test)` | the stories, `Staging Testing` | Engineer to fix, QA to re-test |
@@ -43,10 +43,10 @@ Checks look inside the intent file. They run even when a gate failed, so the rep
 |---|---|---|---|
 | 1 | **Fields present** | All seven fields (`use_when`, `dont_use_when`, `variant_intent`, `placement`, `pairs_with`, `required_tokens`, `a11y`) exist, with the types the `component-intent` skill gives | blocks |
 | 2 | **Every `dont_use_when` names an alternative** | Each entry has an `alternative` that is a component in the registry | **warning, never a blocker** |
-| 3 | **`a11y` is specific, not generic** | Each entry states an element, role, attribute, key or hidden state, and cites a `code:` line. "Accessible", "WCAG compliant", "screen reader friendly" or any entry with no line fails | blocks |
+| 3 | **`a11y` is specific, not generic** | Each entry states an element, role, attribute, key or hidden state, and cites its source: a `code:` line, or a `figma:` node for a note the Figma documentation states. "Accessible", "WCAG compliant", "screen reader friendly", or any entry with no source, fails | blocks |
 | 4 | **`required_tokens` resolve in the built output** | Every name is defined in `build/css/tokens.css` at the commit | blocks |
 | 5 | **All variants covered** | `variant_intent` has an entry for every value of every variant prop in the `.tsx`, and every entry's `intent` is filled or listed in `gaps` | blocks |
-| 6 | **No two components claiming the same job** | No other component's `use_when` describes the same job. Compare this file with every other intent file at the commit; name both components when two overlap | blocks, and the owner is the Designer |
+| 6 | **No two components claiming the same job** | No other component's `use_when` describes the same job. Compare this file with every other intent file at the commit; name both components when two overlap. A parent and its own sub-component (one renders the other, or the sub-component's set lives on the parent's Figma page) repeating the same Figma sentence is not an overlap | blocks, and the owner is the Designer |
 
 A check that cannot run (no intent file, unreadable JSON) is a fail with that reason, not a skip.
 
