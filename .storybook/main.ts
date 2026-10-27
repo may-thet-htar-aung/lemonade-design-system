@@ -3,6 +3,7 @@ import type { StorybookConfig } from '@storybook/react-vite';
 const config: StorybookConfig = {
   stories: ['../src/components/**/*.stories.tsx'],
   framework: '@storybook/react-vite',
+  addons: ['@storybook/addon-docs'],
   viteFinal: async (config) => {
     config.optimizeDeps = {
       ...config.optimizeDeps,
