@@ -1,32 +1,33 @@
 # Release review: Avatar
 
-Reviewed commit: 162af96 (full SHA in the footer)
+Reviewed commit: 8d005aa (full SHA in the footer)
 Date: 27/10/2026
 Verdict: **Blocked**
 
 Production Storybook opened and seen to render: yes (`Avatar` root element rendered, no error display).
 Figma node: 192:54.
+Rules: `.claude/skills/release-review/SKILL.md` at 8d005aa, including the three clarifications from #91 (check 3 figma: sources, check 6 parent and sub-component, gate 3 font-family tokens).
 
 ## Gates
 | # | Gate | Result | Evidence | Owner |
 |---|---|---|---|---|
-| 1 | Intent written | ✓ | src/components/Avatar/Avatar.intent.json exists at 162af96; 2 listed gaps; empty fields placement are listed in gaps |  |
+| 1 | Intent written | ✓ | src/components/Avatar/Avatar.intent.json exists at 8d005aa; 2 listed gap(s); empty fields placement are listed in gaps |  |
 | 2 | Development status is Completed | ✓ | Components.Development reads Completed (read 27/10/2026 at start and again before the write) |  |
-| 3 | Tokens clean | ✗ | stage-3 grep returns 3 line(s): Avatar.css:36 font-family: var(--fontfamily-label);; Avatar.css:42 font-family: var(--fontfamily-label);; Avatar.css:48 font-family: var(--fontfamily-heading);; base tokens used: --fontweight-semibold, --fontfamily-label, --fontsize-xs, --lineheight-xs, --letterspacing-widest, --fontsize-sm, --lineheight-sm, --fontfamily-heading, --fontsize-md, --lineheight-md, --letterspacing-normal (each is referenced by another token through var(--…) in build/css/tokens.css); node scripts/verify-tokens.mjs at the pinned tree: RESULT: PASS (8 checks) | Engineer |
-| 4 | Public surface decided | ✓ | src/index.ts exports Avatar, AvatarProps |  |
-| 5 | Names final | ✓ | Figma node 192:54 is named "Avatar"; component set name matches. Every prop name and variant value matches its Figma property character for character; no New/Temp/WIP/v2 names. |  |
+| 3 | Tokens clean | ✗ | stage-3 grep returns nothing (font-family: var(--token) lines excluded per the skill); base tokens used: --fontweight-semibold, --fontfamily-label, --fontsize-xs, --lineheight-xs, --letterspacing-widest, --fontsize-sm, --lineheight-sm, --fontfamily-heading, --fontsize-md, --lineheight-md, --letterspacing-normal (each is referenced by another token through var(--…) in build/css/tokens.css); node scripts/verify-tokens.mjs at the pinned tree: RESULT: PASS (8 checks) | Engineer |
+| 4 | Public surface decided | ✓ | src/index.ts exports Avatar, AvatarProps and nothing else from Avatar/ |  |
+| 5 | Names final | ✓ | Figma node 192:54 is named "Avatar"; component set name matches. Every prop that mirrors a Figma property matches it character for character; variant values all match; no New/Temp/WIP/v2 names. |  |
 | 6 | States complete | ✓ | 12 stories in Avatar.stories.tsx (one per matrix row); 12 linked Staging Testing rows, 12 Passed; none Failed or Fixed (To re-test) |  |
-| 7 | Version meaning known | ✓ | No v* tag exists and the package was never published (npm view: 404), so 6 commit(s) from the start of history to 162af96 were read. All are classified "added", none breaking. There is no prior public API to change. |  |
+| 7 | Version meaning known | ✓ | No v* tag exists and the package was never published (npm view: E404), so 6 commit(s) from the start of history to 8d005aa were read. All are classified "added", none breaking. There is no prior public API to change. |  |
 
 ## Checks
 | # | Check | Result | Evidence | Owner |
 |---|---|---|---|---|
 | 1 | Fields present | ✓ | all seven fields present as arrays |  |
 | 2 | Every dont_use_when names an alternative | ⚠ | 5 entries without an alternative (warning) | Designer (Figma names none), warning only |
-| 3 | a11y is specific, not generic | ✗ | 5 of 8 entries cite no code: line (Figma-sourced guidance, not a fact tied to a line): a11y[3] (figma:206:345), a11y[4] (figma:206:348), a11y[5] (figma:206:351), a11y[6] (figma:206:354), a11y[7] (figma:206:357) | Doc-generator |
-| 4 | required_tokens resolve in the built output | ✓ | all listed names are defined in build/css/tokens.css at 162af96, and the list equals the var(--…) set in Avatar.css |  |
+| 3 | a11y is specific, not generic | ✓ | 8 entries; each names an element, role, attribute, key or hidden state and cites a code: line or a figma: node. Every figma: source was read in Figma and its text matches the entry word for word. No generic entry |  |
+| 4 | required_tokens resolve in the built output | ✓ | all listed names are defined in build/css/tokens.css at 8d005aa, and the list equals the var(--…) set in Avatar.css |  |
 | 5 | All variants covered | ✓ | variant props in Avatar.tsx: Type (2), Size (3), State (2); every value has a variant_intent entry, and each empty intent is listed in gaps |  |
-| 6 | No two components claiming the same job | ✓ | no other intent file at the commit has a use_when describing the same job |  |
+| 6 | No two components claiming the same job | ✓ | use_when compared with the other 24 intent files at 8d005aa; no other component claims the same job |  |
 
 ## Warnings
 - dont_use_when[0] names no alternative.
@@ -43,4 +44,4 @@ Figma node: 192:54.
 - 533a72b Avatar: bind width and height to size-avatar tokens (node 192:54)
 - 6b56842 Avatar: build from node 192:54, one story per Type x Size
 
-Full SHA: 162af966d1987a75a841c1d2695587000be9ec84
+Full SHA: 8d005aaeffa9d3a15f8eed36edb28bba24bec5f1
