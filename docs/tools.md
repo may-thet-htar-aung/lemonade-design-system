@@ -71,7 +71,9 @@ Node 24 and npm 11.
 
 ## Vercel
 
-One project, `lemonade-design-system`, built from the GitHub repo on every push.
+Two projects, both built from the GitHub repo on every push.
+
+**`lemonade-design-system`**: Storybook.
 
 | Environment | Branch | URL |
 |---|---|---|
@@ -81,7 +83,19 @@ One project, `lemonade-design-system`, built from the GitHub repo on every push.
 - Settings live in `vercel.json` in the repo: build `npm run build-storybook`, output `storybook-static`. The file overrides the dashboard's Framework Preset.
 - A deploy takes about a minute after the push. A branch deploy is ready when its `/index.json` lists the new stories.
 - Deployment Protection is **off** for this project, so both URLs are public. Turning it on makes every URL redirect to Vercel login, and agents cannot open them. Change it on the project (Settings → Deployment Protection), not in the team's default for new projects, which does not touch existing projects.
-- The Vercel MCP connection currently has no access to this account's scope (it answers 403). Check a deploy by opening its URL, not through the MCP, until a human reconnects it.
+- The Vercel MCP connection reads and writes both projects. If it answers 403 for the team scope, it needs team access re-approved: the MCP returns a one-time link for a human to open.
+
+**`lemonade-design-system-docs`**: the docs site.
+
+| Environment | Branch | URL |
+|---|---|---|
+| Production | `astro` | `lemonade-design-system-docs.vercel.app` |
+
+- Folder: `docs-site/`, its own npm package (Astro + Starlight) with its own lockfile, only on the `astro` branch. It is the project's root directory.
+- Settings live in `docs-site/vercel.json`: framework `astro`, install `npm install` (a lockfile written on another OS can leave out packages Linux needs, and `npm ci` refuses it), build `npm run build`, output `dist`.
+- Every other branch carries `docs-site/vercel.json` = `{"git": {"deploymentEnabled": false}}`, so it never builds this project. Without it, every push to a branch with no `docs-site/` fails and leaves a red check on PRs.
+- Production branch is `astro` (Settings → Environments → Production → Branch Tracking). The MCP cannot set it.
+- Deployment Protection is off. The address is the one Vercel assigned; confirm it serves our site before linking it, because an obvious name can belong to someone else.
 
 ## Browser
 
