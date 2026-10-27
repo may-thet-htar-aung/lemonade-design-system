@@ -30,9 +30,9 @@ Every column has exactly one owner. The owner is an agent, a human role, or Airt
 | Designer | Human | Components: `Category`, `Figma`, `Design` |
 | Engineer | Agent | Components: `Staging Storybook`, `Commit`. Staging Testing: the shared transition only |
 | QA | Agent | Staging Testing: every column. Components: `[Staging] Test Records`, only through `Composed In` |
-| DevOps | Agent | Components: `Production Storybook`, `Astro Link` (on hold: no status wakes this job) |
+| DevOps | Agent | Components: `Production Storybook` |
 | Release | Agent | Components: `Release Review`, `Release Verdict` |
-| Doc-generator | Agent | Nothing in the registry |
+| Doc-generator | Agent | Components: `Astro Link`, only after fetching the live page (`astro-page` skill) |
 | PM | Agent | Nothing in the registry. It audits read-only |
 | Submitter | Human | DS Feedback: everything but `Status` |
 | Airtable | System | Every formula, rollup, count, last-modified, inverse-link and AI-text column |
@@ -48,7 +48,7 @@ Every column has exactly one owner. The owner is an agent, a human role, or Airt
 | Components | Staging Storybook | url | Engineer | Written only after the staging page is opened and seen to render. Feeds step 8 |
 | Components | Commit | url | Engineer | The commit that carries the registered work |
 | Components | Production Storybook | url | DevOps | Written only after production is opened and seen to render. Feeds step 6 |
-| Components | Astro Link | url | DevOps | On hold: no status wakes this job. Feeds step 5 |
+| Components | Astro Link | url | Doc-generator | The component's live docs page, written only after it is fetched and verified, then read back. Feeds step 5 |
 | Components | Release Review | url | Release | The report at the commit it reviewed, never a branch. Written with Release Verdict or not at all. Feeds step 5. Flags 3, 4 |
 | Components | Release Verdict | single select: Cleared, Blocked | Release | Cleared is not permission to publish. Feeds step 5. Flags 3, 20 |
 | Components | Development | formula | **Nobody** | The status. See "The Development formula" |
@@ -116,7 +116,7 @@ The **first match wins**, in this order. This is the order of the live formula. 
 | 9 | `Figma` set **and** `Design` = `Done` | **To-do** | Engineer |
 | 10 | Otherwise | *(blank)* | — |
 
-"Test summary" is `Staging Testing Results Summary`, the rollup of `Testing Results` across the component's linked test rows. The checks are case-sensitive substring matches. `re-test` matches the value `Fixed (To re-test)`. Two other statuses depend on columns beyond `Development`: the Doc-generator wakes on `Completed` with `Release Verdict` = `Cleared` and `Astro Link` empty, and the PM runs on a schedule rather than on any status.
+"Test summary" is `Staging Testing Results Summary`, the rollup of `Testing Results` across the component's linked test rows. The checks are case-sensitive substring matches. `re-test` matches the value `Fixed (To re-test)`. Two other statuses depend on columns beyond `Development`: the Doc-generator is invoked by Release mid-run or by a person, not by a status, and the PM runs on a schedule rather than on any status.
 
 ### Two consequences that will surprise you
 

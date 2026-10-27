@@ -49,7 +49,7 @@ The registry status is the message. Each agent is woken by a status and hands of
 | `Ready for Testing`, `Fixed` | QA | `.claude/agents/qa.md` |
 | `To be deployed` | DevOps | `.claude/agents/devops.md` |
 | `Completed`, no Release Verdict | Release | `.claude/agents/release.md` |
-| `Completed` + `Cleared`, no Astro Link | Doc-generator | `.claude/agents/doc-generator.md` |
+| Release, mid-run, or a human asking (not a status) | Doc-generator, which writes `Astro Link` | `.claude/agents/doc-generator.md` |
 | A schedule, or a human asking | PM (read-only audit) | `.claude/agents/pm.md` |
 | "I have re-exported tokens from Figma" | token-runner | `.claude/agents/token-runner.md` |
 
