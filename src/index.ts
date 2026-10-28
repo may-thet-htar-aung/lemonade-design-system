@@ -3,6 +3,7 @@
 // until it clears. Add a line here, and its CSS to src/styles.css, when it does.
 export { FilterChip, type FilterChipProps, type FilterChipState } from './components/FilterChip/FilterChip';
 export { Footer, type FooterProps } from './components/Footer/Footer';
+export { Icon, type IconName, type IconProps } from './components/Icon/Icon';
 export { IconButton, type IconButtonProps } from './components/IconButton/IconButton';
 export { Logo, type LogoProps, type LogoSize, type LogoTheme } from './components/Logo/Logo';
 export { LogoSymbol, type LogoSymbolColor, type LogoSymbolProps, type LogoSymbolSize } from './components/LogoSymbol/LogoSymbol';
