@@ -5,6 +5,7 @@ import { StatusBadge } from './StatusBadge';
 const meta = {
   title: 'Components/Status Badge',
   component: StatusBadge,
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof StatusBadge>;
 
 export default meta;
