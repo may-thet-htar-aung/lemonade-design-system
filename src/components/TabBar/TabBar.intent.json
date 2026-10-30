@@ -89,7 +89,12 @@
       "source": "code:src/components/TabBar/TabBar.tsx:8 · figma:167:299"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Bottom of a screen, below the screen content.",
+      "source": "story:src/components/TabBar/TabBar.stories.tsx:ExampleBottomOfScreen"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Icon",
@@ -153,10 +158,5 @@
       "source": "figma:167:364"
     }
   ],
-  "gaps": [
-    {
-      "field": "placement",
-      "detail": "No story renders Tab Bar inside another component, and its own stories show it alone."
-    }
-  ]
+  "gaps": []
 }

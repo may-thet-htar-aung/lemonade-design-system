@@ -58,7 +58,12 @@
     }
   ],
   "variant_intent": [],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Bottom of a page, below Top Nav.",
+      "source": "story:src/components/Footer/Footer.stories.tsx:ExampleBottomOfPage"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Logo",
@@ -133,10 +138,6 @@
     {
       "field": "variant_intent",
       "detail": "Footer has no variant prop in code (Footer.tsx:4-7: a single component with no properties), so there is nothing to describe."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Footer inside another component, and its own story shows it alone."
     }
   ]
 }

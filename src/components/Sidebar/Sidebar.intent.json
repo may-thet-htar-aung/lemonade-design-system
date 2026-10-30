@@ -107,7 +107,12 @@
       "source": "code:src/components/Sidebar/Sidebar.tsx:15 · figma:206:1122"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Left of a Back Office screen, Collapsed True, beside the content area.",
+      "source": "story:src/components/Sidebar/Sidebar.stories.tsx:ExampleBackOfficeScreen"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Logo",
@@ -225,10 +230,6 @@
     {
       "field": "variant_intent",
       "detail": "Collapsed=False: the Figma documentation page for Sidebar (206:886) does not say what this value is for (checked usage region 206:1108)."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Sidebar inside another component, and its own stories show it alone."
     }
   ]
 }
