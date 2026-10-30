@@ -5,6 +5,7 @@ import { PaginationArrow } from './PaginationArrow';
 const meta = {
   title: 'Components/Pagination Arrow',
   component: PaginationArrow,
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof PaginationArrow>;
 
 export default meta;

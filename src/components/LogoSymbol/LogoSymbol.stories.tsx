@@ -5,6 +5,7 @@ import { LogoSymbol } from './LogoSymbol';
 const meta = {
   title: 'Components/LogoSymbol',
   component: LogoSymbol,
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof LogoSymbol>;
 
 export default meta;
