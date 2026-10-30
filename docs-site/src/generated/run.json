@@ -1,5 +1,5 @@
 {
-  "commit": "88530147e5b5a317f2058c5c13940a1e9b61c609",
+  "commit": "ed522542d03ca36ecc1a23f01fea57082fbb1a7a",
   "storybookIndex": "https://lemonade-design-system.vercel.app/index.json (381 entries)",
   "pages": [
     "src/content/docs/components/logo-symbol.mdx",
@@ -32,10 +32,5 @@
     "src/styles/logo-symbol.css",
     "src/styles/tokens.css"
   ],
-  "notices": [
-    "Logo/Symbol Usage: when not to use (empty in the intent file)",
-    "Logo/Symbol Usage: best practice (empty in the intent file)",
-    "Pagination Arrow Usage: best practice (empty in the intent file)",
-    "Top Nav Link Usage: best practice (empty in the intent file)"
-  ]
+  "notices": []
 }
