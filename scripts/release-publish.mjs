@@ -166,7 +166,8 @@ if (dryRun) {
 }
 
 // --- tag, then verify the registry copy ---
-const tag = run('git', ['tag', '-a', `v${version}`, '-m', `Release ${version}`]);
+// No shell here: on Windows it would split the message at the space.
+const tag = run('git', ['tag', '-a', `v${version}`, '-m', `Release ${version}`], { shell: false });
 if (tag.status !== 0) console.error(`published, but tagging failed: ${tag.stderr}. Tag by hand: git tag -a v${version}`);
 else console.log(`tagged v${version} (not pushed: git push origin v${version})`);
 
