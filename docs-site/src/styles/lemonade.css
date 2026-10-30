@@ -2,7 +2,10 @@
    token from tokens.css (copied from build/css/tokens.css at the documented
    commit). No hex and no base token. Dark mode: Starlight's data-theme="dark"
    is mirrored onto data-semantic="dark" by a head script in astro.config.mjs,
-   so the token values flip by themselves and one mapping serves both themes. */
+   so the token values flip by themselves and one mapping serves both themes.
+
+   Brand yellow appears on the Home primary button and the logo tile, and
+   nowhere else: it is not mapped to any --sl-color-* accent. */
 
 :root,
 :root[data-theme='light'],
@@ -10,8 +13,8 @@
   --sl-font: var(--body2-font-family);
   --sl-font-system: var(--body2-font-family);
 
-  --sl-color-accent-low: var(--color-bg-brandyellow-light);
-  --sl-color-accent: var(--color-text-brandgreen);
+  --sl-color-accent-low: var(--color-bg-brandgreen-light);
+  --sl-color-accent: var(--color-icon-brand);
   --sl-color-accent-high: var(--color-text-brandbold);
 
   --sl-color-white: var(--color-text-primary);
@@ -31,7 +34,7 @@
   --sl-color-bg-nav: var(--color-bg-base);
   --sl-color-bg-sidebar: var(--color-bg-base);
   --sl-color-bg-inline-code: var(--color-bg-surfaceprimary);
-  --sl-color-bg-accent: var(--color-bg-brandyellow-idle);
+  --sl-color-bg-accent: var(--color-bg-static-brandgreen);
   --sl-color-hairline-light: var(--color-border-primary-subtle);
   --sl-color-hairline: var(--color-border-primary-subtle);
   --sl-color-hairline-shade: var(--color-border-primary-default);
@@ -51,17 +54,249 @@
   --sl-color-purple-low: var(--color-bg-update-light);
   --sl-color-purple: var(--color-text-update);
   --sl-color-purple-high: var(--color-text-update);
+
+  /* The hero's two circles, one step either side of the brand green in each theme. */
+  --lds-hero-circle-dark: var(--color-text-brandgreen);
+  --lds-hero-circle-light: var(--color-bg-brandgreen-hover);
+}
+
+:root[data-theme='dark'] {
+  --lds-hero-circle-dark: var(--color-bg-brandgreen-light);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--h2-font-family);
 }
 
-.lds-strip {
+/* Header */
+.lds-header {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-section);
+  height: 100%;
+}
+
+.lds-title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-element);
+  color: var(--color-text-primary);
+  font-family: var(--h2-font-family);
+  font-weight: var(--h2-font-weight);
+  font-size: var(--sl-text-h4);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.lds-nav {
+  align-items: center;
+  gap: var(--gap-card);
+}
+
+.lds-nav a {
+  color: var(--color-text-secondary);
+  font-weight: var(--button-medium-font-weight);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.lds-nav a:hover,
+.lds-nav a[aria-current] {
+  color: var(--color-text-brandbold);
+}
+
+.lds-search {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.lds-right {
+  align-items: center;
+  gap: var(--gap-component);
+}
+
+/* Sidebar */
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover,
+.sidebar-content a[aria-current='page']:focus {
+  background-color: var(--color-bg-static-brandgreen);
+  color: var(--color-text-static-light);
+  border-radius: var(--border-radius-sm);
+}
+
+/* Home */
+.hero {
+  position: relative;
+  grid-template-columns: 100%;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--border-radius-xl);
+  background: var(--color-bg-static-brandgreen);
+  padding: var(--padding-dialog);
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  z-index: var(--z-index-base);
+  border-radius: var(--border-radius-circle);
+}
+
+.hero::before {
+  width: var(--size-field-width);
+  height: var(--size-field-width);
+  inset-block-start: calc(var(--size-field-width) / -3);
+  inset-inline-end: calc(var(--size-field-width) / -4);
+  background: var(--lds-hero-circle-light);
+}
+
+.hero::after {
+  width: var(--size-footer-brand);
+  height: var(--size-footer-brand);
+  inset-block-end: calc(var(--size-footer-brand) / -2);
+  inset-inline-end: calc(var(--size-field-width) / 3);
+  background: var(--lds-hero-circle-dark);
+}
+
+:root[data-theme='dark'] .hero::before {
+  opacity: var(--opacity-40);
+}
+
+.hero > .stack {
+  position: relative;
+  z-index: var(--z-index-dropdown);
+}
+
+.hero h1,
+.hero .tagline {
+  color: var(--color-text-static-light);
+}
+
+.hero .sl-link-button {
+  border-radius: var(--border-radius-circle);
+  font-weight: var(--button-medium-font-weight);
+}
+
+.hero .sl-link-button.primary {
+  background: var(--color-bg-brandyellow-idle);
+  border-color: var(--color-bg-brandyellow-idle);
+  color: var(--color-text-static-dark);
+}
+
+.hero .sl-link-button.primary:hover {
+  background: var(--color-bg-brandyellow-hover);
+  border-color: var(--color-bg-brandyellow-hover);
+}
+
+.hero .sl-link-button.secondary {
+  background: transparent;
+  border-color: var(--color-text-static-light);
+  color: var(--color-text-static-light);
+}
+
+.lds-release {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-element) var(--gap-component);
+  border-radius: var(--border-radius-circle);
+  background: var(--color-bg-surfaceprimary);
+  padding: var(--padding-list-item) var(--padding-card);
+}
+
+.lds-release code {
+  background: none;
+  overflow-wrap: anywhere;
+}
+
+.lds-release__label {
+  color: var(--color-text-secondary);
+  font-weight: var(--button-medium-font-weight);
+}
+
+.lds-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size-sidebar-width)), 1fr));
+  gap: var(--gap-card);
+}
+
+.lds-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-element);
   border: var(--border-width-1) solid var(--color-border-primary-subtle);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-lg);
+  background: var(--color-bg-base);
+  padding: var(--padding-card);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.lds-card:hover {
+  border-color: var(--color-border-brandgreen-default);
+}
+
+.lds-card strong {
+  color: var(--color-text-primary);
+}
+
+.lds-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-control-sm);
+  height: var(--size-control-sm);
+  border-radius: var(--border-radius-sm);
+  background: var(--color-bg-brandgreen-light);
+  color: var(--color-icon-brand);
+}
+
+/* Pills */
+.lds-pill {
+  display: inline-flex;
+  align-items: center;
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-circle);
+  background: var(--color-bg-base);
+  padding: var(--padding-sidebar-divider-inlinecollapsed) var(--padding-card);
+  color: var(--color-text-primary);
+  font-weight: var(--button-medium-font-weight);
+  line-height: var(--button-medium-line-height);
+}
+
+.lds-pill--status {
+  border-color: var(--color-bg-static-brandgreen);
+  background: var(--color-bg-static-brandgreen);
+  color: var(--color-text-static-light);
+}
+
+/* A component page */
+.lds-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-element) var(--gap-component);
+}
+
+.lds-strip__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-element) var(--gap-component);
+  margin-inline-start: auto;
+}
+
+.lds-preview {
+  margin-block-start: var(--gap-card);
+  border-radius: var(--border-radius-lg);
   background: var(--color-bg-surfaceprimary);
   padding: var(--padding-card);
+}
+
+.lds-preview .lds-story {
+  display: block;
+  border: 0;
+  background: transparent;
 }
 
 .lds-story,
@@ -77,4 +312,89 @@ h1, h2, h3, h4, h5, h6 {
   min-height: var(--size-topnav-height);
   height: auto;
   aspect-ratio: 16 / 7;
+}
+
+starlight-tabs [role='tablist'] {
+  flex-wrap: wrap;
+  gap: var(--gap-element);
+  border-bottom: 0;
+}
+
+starlight-tabs .tab > [role='tab'] {
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-circle);
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-weight: var(--button-medium-font-weight);
+}
+
+starlight-tabs .tab > [role='tab'][aria-selected='true'] {
+  border-color: var(--color-bg-static-brandgreen);
+  background: var(--color-bg-static-brandgreen);
+  color: var(--color-text-static-light);
+}
+
+/* Foundations */
+.lds-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--size-sidebar-width)), 1fr));
+  gap: var(--gap-component);
+}
+
+.lds-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-element);
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-md);
+  padding: var(--padding-list-item);
+  min-width: 0;
+}
+
+.lds-swatch code {
+  background: none;
+  padding: 0;
+  overflow-wrap: anywhere;
+}
+
+.lds-swatch small {
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.lds-swatch__chip {
+  height: var(--size-control-md);
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-sm);
+}
+
+.lds-type {
+  margin-block: var(--gap-element);
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+}
+
+.lds-bar {
+  display: inline-block;
+  height: var(--size-icon-sm);
+  max-width: 100%;
+  border-radius: var(--border-radius-xs);
+  background: var(--color-bg-brandgreen-idle);
+  vertical-align: middle;
+}
+
+.lds-radius {
+  display: inline-block;
+  width: var(--size-control-sm);
+  height: var(--size-control-sm);
+  border: var(--border-width-2) solid var(--color-border-brandgreen-default);
+  vertical-align: middle;
+}
+
+.lds-rule {
+  display: inline-block;
+  width: var(--size-control-md);
+  border-top-style: solid;
+  border-top-color: var(--color-border-brandgreen-default);
+  vertical-align: middle;
 }

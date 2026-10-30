@@ -1,7 +1,7 @@
 {
-  "readAt": "2026-10-27",
+  "readAt": "2026-10-30",
   "file": "q0faf7S1uuzwQo4UOe7bJq",
-  "method": "Figma MCP: get_metadata on each node, and a read-only Plugin API pass listing every fill, stroke, radius, padding, gap, stroke weight, fixed size and text property with no bound variable (other components nested as instances are excluded; they are read on their own node). Re-read for the 5a7e2b4 staging run: node, type, variant list and documentation text of all 14 nodes read again over the Figma MCP and identical; the unbound lists were spot-checked against live boundVariables (per-side stroke weights, vector layers scaled inside a bound frame, Wordmark letterSpacing, Sidebar divider) and stand.",
+  "method": "Figma MCP: get_metadata on each node, and a read-only Plugin API pass listing every fill, stroke, radius, padding, gap, stroke weight, fixed size and text property with no bound variable (other components nested as instances are excluded; they are read on their own node). Re-read for the 5a7e2b4 staging run: node, type, variant list and documentation text of all 14 nodes read again over the Figma MCP and identical; the unbound lists were spot-checked against live boundVariables (per-side stroke weights, vector layers scaled inside a bound frame, Wordmark letterSpacing, Sidebar divider) and stand. Re-read for the cf362ff run: type and variant list of all 14 nodes read again over the Plugin API and identical. Icon added: component set 76:12 in the Lemonade Icons file, 198 variants read live; its widths and heights are bound to size tokens except the six shield widths listed; the hidden Label text layer is not rendered and is left out.",
   "components": {
     "Filter Chip": {
       "node": "73:60",
@@ -660,6 +660,1406 @@
         }
       ],
       "unbound": []
+    },
+    "Icon": {
+      "node": "76:12",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Name=home, Size=sm",
+          "values": [
+            "home",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=home, Size=md",
+          "values": [
+            "home",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=home, Size=lg",
+          "values": [
+            "home",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=home, Size=xl",
+          "values": [
+            "home",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=home, Size=2xl",
+          "values": [
+            "home",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=home, Size=3xl",
+          "values": [
+            "home",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=search, Size=sm",
+          "values": [
+            "search",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=search, Size=md",
+          "values": [
+            "search",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=search, Size=lg",
+          "values": [
+            "search",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=search, Size=xl",
+          "values": [
+            "search",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=search, Size=2xl",
+          "values": [
+            "search",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=search, Size=3xl",
+          "values": [
+            "search",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=plus, Size=sm",
+          "values": [
+            "plus",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=plus, Size=md",
+          "values": [
+            "plus",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=plus, Size=lg",
+          "values": [
+            "plus",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=plus, Size=xl",
+          "values": [
+            "plus",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=plus, Size=2xl",
+          "values": [
+            "plus",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=plus, Size=3xl",
+          "values": [
+            "plus",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=x, Size=sm",
+          "values": [
+            "x",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=x, Size=md",
+          "values": [
+            "x",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=x, Size=lg",
+          "values": [
+            "x",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=x, Size=xl",
+          "values": [
+            "x",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=x, Size=2xl",
+          "values": [
+            "x",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=x, Size=3xl",
+          "values": [
+            "x",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=check, Size=sm",
+          "values": [
+            "check",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=check, Size=md",
+          "values": [
+            "check",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=check, Size=lg",
+          "values": [
+            "check",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=check, Size=xl",
+          "values": [
+            "check",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=check, Size=2xl",
+          "values": [
+            "check",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=check, Size=3xl",
+          "values": [
+            "check",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=filter, Size=sm",
+          "values": [
+            "filter",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=filter, Size=md",
+          "values": [
+            "filter",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=filter, Size=lg",
+          "values": [
+            "filter",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=filter, Size=xl",
+          "values": [
+            "filter",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=filter, Size=2xl",
+          "values": [
+            "filter",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=filter, Size=3xl",
+          "values": [
+            "filter",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=list, Size=sm",
+          "values": [
+            "list",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=list, Size=md",
+          "values": [
+            "list",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=list, Size=lg",
+          "values": [
+            "list",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=list, Size=xl",
+          "values": [
+            "list",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=list, Size=2xl",
+          "values": [
+            "list",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=list, Size=3xl",
+          "values": [
+            "list",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=menu, Size=sm",
+          "values": [
+            "menu",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=menu, Size=md",
+          "values": [
+            "menu",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=menu, Size=lg",
+          "values": [
+            "menu",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=menu, Size=xl",
+          "values": [
+            "menu",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=menu, Size=2xl",
+          "values": [
+            "menu",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=menu, Size=3xl",
+          "values": [
+            "menu",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=collapse, Size=sm",
+          "values": [
+            "collapse",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=collapse, Size=md",
+          "values": [
+            "collapse",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=collapse, Size=lg",
+          "values": [
+            "collapse",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=collapse, Size=xl",
+          "values": [
+            "collapse",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=collapse, Size=2xl",
+          "values": [
+            "collapse",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=collapse, Size=3xl",
+          "values": [
+            "collapse",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=expand, Size=sm",
+          "values": [
+            "expand",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=expand, Size=md",
+          "values": [
+            "expand",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=expand, Size=lg",
+          "values": [
+            "expand",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=expand, Size=xl",
+          "values": [
+            "expand",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=expand, Size=2xl",
+          "values": [
+            "expand",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=expand, Size=3xl",
+          "values": [
+            "expand",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=maximize, Size=sm",
+          "values": [
+            "maximize",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=maximize, Size=md",
+          "values": [
+            "maximize",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=maximize, Size=lg",
+          "values": [
+            "maximize",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=maximize, Size=xl",
+          "values": [
+            "maximize",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=maximize, Size=2xl",
+          "values": [
+            "maximize",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=maximize, Size=3xl",
+          "values": [
+            "maximize",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=dashboard, Size=sm",
+          "values": [
+            "dashboard",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=dashboard, Size=md",
+          "values": [
+            "dashboard",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=dashboard, Size=lg",
+          "values": [
+            "dashboard",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=dashboard, Size=xl",
+          "values": [
+            "dashboard",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=dashboard, Size=2xl",
+          "values": [
+            "dashboard",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=dashboard, Size=3xl",
+          "values": [
+            "dashboard",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=sparkle, Size=sm",
+          "values": [
+            "sparkle",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=sparkle, Size=md",
+          "values": [
+            "sparkle",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=sparkle, Size=lg",
+          "values": [
+            "sparkle",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=sparkle, Size=xl",
+          "values": [
+            "sparkle",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=sparkle, Size=2xl",
+          "values": [
+            "sparkle",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=sparkle, Size=3xl",
+          "values": [
+            "sparkle",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=flag, Size=sm",
+          "values": [
+            "flag",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=flag, Size=md",
+          "values": [
+            "flag",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=flag, Size=lg",
+          "values": [
+            "flag",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=flag, Size=xl",
+          "values": [
+            "flag",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=flag, Size=2xl",
+          "values": [
+            "flag",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=flag, Size=3xl",
+          "values": [
+            "flag",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=arrow-right, Size=sm",
+          "values": [
+            "arrow-right",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=arrow-right, Size=md",
+          "values": [
+            "arrow-right",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=arrow-right, Size=lg",
+          "values": [
+            "arrow-right",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=arrow-right, Size=xl",
+          "values": [
+            "arrow-right",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=arrow-right, Size=2xl",
+          "values": [
+            "arrow-right",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=arrow-right, Size=3xl",
+          "values": [
+            "arrow-right",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=chevron-left, Size=sm",
+          "values": [
+            "chevron-left",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=chevron-left, Size=md",
+          "values": [
+            "chevron-left",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=chevron-left, Size=lg",
+          "values": [
+            "chevron-left",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=chevron-left, Size=xl",
+          "values": [
+            "chevron-left",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=chevron-left, Size=2xl",
+          "values": [
+            "chevron-left",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=chevron-left, Size=3xl",
+          "values": [
+            "chevron-left",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=chevron-right, Size=sm",
+          "values": [
+            "chevron-right",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=chevron-right, Size=md",
+          "values": [
+            "chevron-right",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=chevron-right, Size=lg",
+          "values": [
+            "chevron-right",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=chevron-right, Size=xl",
+          "values": [
+            "chevron-right",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=chevron-right, Size=2xl",
+          "values": [
+            "chevron-right",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=chevron-right, Size=3xl",
+          "values": [
+            "chevron-right",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=chevron-down, Size=sm",
+          "values": [
+            "chevron-down",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=chevron-down, Size=md",
+          "values": [
+            "chevron-down",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=chevron-down, Size=lg",
+          "values": [
+            "chevron-down",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=chevron-down, Size=xl",
+          "values": [
+            "chevron-down",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=chevron-down, Size=2xl",
+          "values": [
+            "chevron-down",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=chevron-down, Size=3xl",
+          "values": [
+            "chevron-down",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=handover, Size=sm",
+          "values": [
+            "handover",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=handover, Size=md",
+          "values": [
+            "handover",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=handover, Size=lg",
+          "values": [
+            "handover",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=handover, Size=xl",
+          "values": [
+            "handover",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=handover, Size=2xl",
+          "values": [
+            "handover",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=handover, Size=3xl",
+          "values": [
+            "handover",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=bell, Size=sm",
+          "values": [
+            "bell",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=bell, Size=md",
+          "values": [
+            "bell",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=bell, Size=lg",
+          "values": [
+            "bell",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=bell, Size=xl",
+          "values": [
+            "bell",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=bell, Size=2xl",
+          "values": [
+            "bell",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=bell, Size=3xl",
+          "values": [
+            "bell",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=user, Size=sm",
+          "values": [
+            "user",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=user, Size=md",
+          "values": [
+            "user",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=user, Size=lg",
+          "values": [
+            "user",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=user, Size=xl",
+          "values": [
+            "user",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=user, Size=2xl",
+          "values": [
+            "user",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=user, Size=3xl",
+          "values": [
+            "user",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=users, Size=sm",
+          "values": [
+            "users",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=users, Size=md",
+          "values": [
+            "users",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=users, Size=lg",
+          "values": [
+            "users",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=users, Size=xl",
+          "values": [
+            "users",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=users, Size=2xl",
+          "values": [
+            "users",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=users, Size=3xl",
+          "values": [
+            "users",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=file, Size=sm",
+          "values": [
+            "file",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=file, Size=md",
+          "values": [
+            "file",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=file, Size=lg",
+          "values": [
+            "file",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=file, Size=xl",
+          "values": [
+            "file",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=file, Size=2xl",
+          "values": [
+            "file",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=file, Size=3xl",
+          "values": [
+            "file",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=box, Size=sm",
+          "values": [
+            "box",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=box, Size=md",
+          "values": [
+            "box",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=box, Size=lg",
+          "values": [
+            "box",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=box, Size=xl",
+          "values": [
+            "box",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=box, Size=2xl",
+          "values": [
+            "box",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=box, Size=3xl",
+          "values": [
+            "box",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=shield, Size=sm",
+          "values": [
+            "shield",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=shield, Size=md",
+          "values": [
+            "shield",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=shield, Size=lg",
+          "values": [
+            "shield",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=shield, Size=xl",
+          "values": [
+            "shield",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=shield, Size=2xl",
+          "values": [
+            "shield",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=shield, Size=3xl",
+          "values": [
+            "shield",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=lock, Size=sm",
+          "values": [
+            "lock",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=lock, Size=md",
+          "values": [
+            "lock",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=lock, Size=lg",
+          "values": [
+            "lock",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=lock, Size=xl",
+          "values": [
+            "lock",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=lock, Size=2xl",
+          "values": [
+            "lock",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=lock, Size=3xl",
+          "values": [
+            "lock",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=key, Size=sm",
+          "values": [
+            "key",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=key, Size=md",
+          "values": [
+            "key",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=key, Size=lg",
+          "values": [
+            "key",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=key, Size=xl",
+          "values": [
+            "key",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=key, Size=2xl",
+          "values": [
+            "key",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=key, Size=3xl",
+          "values": [
+            "key",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=eye, Size=sm",
+          "values": [
+            "eye",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=eye, Size=md",
+          "values": [
+            "eye",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=eye, Size=lg",
+          "values": [
+            "eye",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=eye, Size=xl",
+          "values": [
+            "eye",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=eye, Size=2xl",
+          "values": [
+            "eye",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=eye, Size=3xl",
+          "values": [
+            "eye",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=eye-off, Size=sm",
+          "values": [
+            "eye-off",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=eye-off, Size=md",
+          "values": [
+            "eye-off",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=eye-off, Size=lg",
+          "values": [
+            "eye-off",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=eye-off, Size=xl",
+          "values": [
+            "eye-off",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=eye-off, Size=2xl",
+          "values": [
+            "eye-off",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=eye-off, Size=3xl",
+          "values": [
+            "eye-off",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=pin, Size=sm",
+          "values": [
+            "pin",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=pin, Size=md",
+          "values": [
+            "pin",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=pin, Size=lg",
+          "values": [
+            "pin",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=pin, Size=xl",
+          "values": [
+            "pin",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=pin, Size=2xl",
+          "values": [
+            "pin",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=pin, Size=3xl",
+          "values": [
+            "pin",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=building, Size=sm",
+          "values": [
+            "building",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=building, Size=md",
+          "values": [
+            "building",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=building, Size=lg",
+          "values": [
+            "building",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=building, Size=xl",
+          "values": [
+            "building",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=building, Size=2xl",
+          "values": [
+            "building",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=building, Size=3xl",
+          "values": [
+            "building",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=clock, Size=sm",
+          "values": [
+            "clock",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=clock, Size=md",
+          "values": [
+            "clock",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=clock, Size=lg",
+          "values": [
+            "clock",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=clock, Size=xl",
+          "values": [
+            "clock",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=clock, Size=2xl",
+          "values": [
+            "clock",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=clock, Size=3xl",
+          "values": [
+            "clock",
+            "3xl"
+          ]
+        },
+        {
+          "name": "Name=camera, Size=sm",
+          "values": [
+            "camera",
+            "sm"
+          ]
+        },
+        {
+          "name": "Name=camera, Size=md",
+          "values": [
+            "camera",
+            "md"
+          ]
+        },
+        {
+          "name": "Name=camera, Size=lg",
+          "values": [
+            "camera",
+            "lg"
+          ]
+        },
+        {
+          "name": "Name=camera, Size=xl",
+          "values": [
+            "camera",
+            "xl"
+          ]
+        },
+        {
+          "name": "Name=camera, Size=2xl",
+          "values": [
+            "camera",
+            "2xl"
+          ]
+        },
+        {
+          "name": "Name=camera, Size=3xl",
+          "values": [
+            "camera",
+            "3xl"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 16 on \"Name=shield, Size=sm\"",
+        "width 18 on \"Name=shield, Size=md\"",
+        "width 24 on \"Name=shield, Size=lg\"",
+        "width 32 on \"Name=shield, Size=xl\"",
+        "width 40 on \"Name=shield, Size=2xl\"",
+        "width 48 on \"Name=shield, Size=3xl\""
+      ]
     }
   }
 }

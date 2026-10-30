@@ -1,9 +1,10 @@
 {
-  "readAt": "2026-10-27",
-  "source": "Airtable Components table (Components, Development, Release Verdict, Figma, Production Storybook) and Staging Testing rows whose Suggestion for Improvement records a design gap, read live by Doc-generator. Focus-ring items are left out: the Designer ruled them out of scope.",
+  "readAt": "2026-10-30",
+  "source": "Airtable Components table (Components, Category, Development, Release Verdict, Figma, Production Storybook) and Staging Testing rows whose Suggestion for Improvement records a design gap, read live by Doc-generator. Focus-ring items are left out: the Designer ruled them out of scope.",
   "components": [
     {
       "name": "Callout",
+      "category": "MOLECULES",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=109-69",
@@ -21,6 +22,7 @@
     },
     {
       "name": "Logo/Symbol",
+      "category": "ATOMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=23-1470",
@@ -29,6 +31,7 @@
     },
     {
       "name": "Input",
+      "category": "MOLECULES",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=88-62",
@@ -102,6 +105,7 @@
     },
     {
       "name": "Dialog Box",
+      "category": "ORGANISMS",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=160-307",
@@ -119,6 +123,7 @@
     },
     {
       "name": "Search Field",
+      "category": "MOLECULES",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=105-26",
@@ -148,6 +153,7 @@
     },
     {
       "name": "Icon Button",
+      "category": "ATOMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=192-33",
@@ -193,6 +199,7 @@
     },
     {
       "name": "Item Card",
+      "category": "MOLECULES",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=108-39",
@@ -226,6 +233,7 @@
     },
     {
       "name": "Pagination",
+      "category": "MOLECULES",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=151-76",
@@ -247,6 +255,7 @@
     },
     {
       "name": "Timeline Step",
+      "category": "MOLECULES",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=110-34",
@@ -268,6 +277,7 @@
     },
     {
       "name": "Top Nav",
+      "category": "ORGANISMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=161-415",
@@ -293,6 +303,7 @@
     },
     {
       "name": "Logo",
+      "category": "ATOMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=23-1348",
@@ -314,6 +325,7 @@
     },
     {
       "name": "Button",
+      "category": "ATOMS",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=165-1639",
@@ -322,6 +334,7 @@
     },
     {
       "name": "Table",
+      "category": "MOLECULES",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=141-8",
@@ -330,14 +343,16 @@
     },
     {
       "name": "Icon",
+      "category": "ICONS",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/AVDd45Hg9VOvZFgkykg9X3/Lemonade-Icons?node-id=76-12",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-icon--home",
       "designGaps": []
     },
     {
       "name": "Table Row",
+      "category": "MOLECULES",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=112-32",
@@ -359,6 +374,7 @@
     },
     {
       "name": "Link Button",
+      "category": "ATOMS",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=147-183",
@@ -367,6 +383,7 @@
     },
     {
       "name": "Status Badge",
+      "category": "ATOMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=66-22",
@@ -404,6 +421,7 @@
     },
     {
       "name": "Avatar",
+      "category": "ATOMS",
       "development": "Completed",
       "releaseVerdict": "Blocked",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=192-54",
@@ -412,6 +430,7 @@
     },
     {
       "name": "Tab Bar",
+      "category": "ORGANISMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=159-141",
@@ -420,6 +439,7 @@
     },
     {
       "name": "Pagination Arrow",
+      "category": "MOLECULES",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=155-30",
@@ -428,6 +448,7 @@
     },
     {
       "name": "Sidebar",
+      "category": "ORGANISMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=163-295",
@@ -485,6 +506,7 @@
     },
     {
       "name": "Top Nav Link",
+      "category": "ORGANISMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=173-59",
@@ -493,6 +515,7 @@
     },
     {
       "name": "Filter Chip",
+      "category": "ATOMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=73-60",
@@ -518,6 +541,7 @@
     },
     {
       "name": "Footer",
+      "category": "ORGANISMS",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=162-69",
@@ -531,6 +555,7 @@
     },
     {
       "name": "Stat Card",
+      "category": "MOLECULES",
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=111-16",

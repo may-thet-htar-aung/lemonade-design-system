@@ -32,6 +32,7 @@ const SHORT = SHA.slice(0, 7);
 const show = (path) => {
   try { return git('show', `${SHA}:${path}`); } catch { return null; }
 };
+const show2 = (ref) => { try { return git('show', ref); } catch { return null; } };
 const tree = git('ls-tree', '-r', '--name-only', SHA).split('\n').filter(Boolean);
 const tags = git('tag', '-l', 'v*', '--sort=creatordate').split('\n').filter(Boolean)
   .filter((t) => { try { git('merge-base', '--is-ancestor', t, SHA); return true; } catch { return false; } });
@@ -164,16 +165,28 @@ const storyThemes = (c, s) => [
   '*Dark*', '', `<iframe class="lds-story" data-src="${storyIframe(s.id)}&globals=semantic:dark" title="${esc(c.name)}: ${esc(s.name)}, dark"></iframe>`, '',
 ];
 const storyPage = (id) => `${SB}/?path=/story/${id}`;
-const matchRow = (row, st) => {
+// Storybook writes a digit-letter size as two words (2xl becomes 2-xl), and a story for a prop's
+// default value may leave that value out of its name (Icon's lg stories carry the bare icon name).
+const matchRow = (row, st, defaults = []) => {
   const vals = row.values.map((v) => norm(v === 'true' ? 'on' : v === 'false' ? 'off' : v)).join('-');
   const alt = row.values.map(norm).join('-');
-  return st.find((s) => { const tail = s.id.split('--')[1]; return tail === vals || tail.endsWith('-' + vals) || tail === alt || tail.endsWith('-' + alt); })
+  const split = alt.replace(/(\d)([a-z])/g, '$1-$2');
+  const bare = row.values.filter((v) => !defaults.includes(v)).map(norm).join('-');
+  const tailOf = (s) => s.id.split('--')[1];
+  return st.find((s) => { const tail = tailOf(s); return [vals, alt, split].some((x) => tail === x || tail.endsWith('-' + x)); })
+    || st.find((s) => bare !== alt && tailOf(s) === bare)
     || (row.values.length === 1 && row.values[0] === 'default' && st.length === 1 ? st[0] : null);
 };
+const defaultStory = (c) => {
+  const id = c.productionStorybook?.match(/path=\/story\/([^&]+)/)?.[1];
+  return c.stories.find((s) => s.id === id) || c.stories[0] || null;
+};
 
+// The version a component shipped in: the earliest tag whose package entry exports it. A component
+// can sit in the repo at a tag without shipping (Icon was in the tree at v0.1.0, not exported).
 const versionOfComponent = (c) => {
-  const first = git('log', '--reverse', '--format=%H', SHA, '--', `:(top)src/components/${c.dir}`).split('\n').filter(Boolean)[0];
-  return first ? (firstTagContaining(first) || 'unreleased') : 'unreleased';
+  const line = `./components/${c.dir}/${c.dir}'`;
+  return tags.find((t) => (show2(`${t}:src/index.ts`) ?? '').includes(line)) || 'unreleased';
 };
 
 // Props from the .tsx: the <Name>Props object type, its doc comments and the destructured defaults.
@@ -207,6 +220,10 @@ const parseUnions = (c) => {
     if (m[1].endsWith('Props')) continue;
     out.push({ name: m[1], values: m[2].replace(/\s+/g, ' ').replace(/^\|\s*/, '').trim() });
   }
+  for (const m of (c.tsx || '').matchAll(/export type (\w+)\s*=\s*\(typeof (\w+)\)\[number\];/g)) {
+    const arr = (c.tsx || '').match(new RegExp(`const ${m[2]}\\s*=\\s*\\[([\\s\\S]*?)\\]`));
+    if (arr) out.push({ name: m[1], values: arr[1].split(',').map((v) => v.trim()).filter(Boolean).join(' | ') });
+  }
   return out;
 };
 const exportsOf = (c) => {
@@ -227,22 +244,29 @@ const componentPage = (c) => {
   const it = c.intent;
   const version = versionOfComponent(c);
   const figmaUrl = c.figma;
+  const { defaults: propDefaults } = parseProps(c);
+  const rowDefaults = Object.values(propDefaults).map((v) => v.replace(/'/g, ''));
   const L = [];
   L.push('---', `title: ${yaml(c.name)}`, `description: ${yaml(`${c.name}: usage, examples, code, design and changelog, generated from ${SHORT}.`)}`, '---', '', GEN, '');
   L.push("import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';", '');
   // header strip
-  L.push('<div class="lds-strip">', '');
-  L.push(`**Status** ${esc(c.development)} · **Release Verdict** ${esc(c.releaseVerdict)} · **Version** ${esc(version)}`, '');
   const links = [];
-  if (c.productionStorybook) links.push(`[Storybook](${c.productionStorybook})`);
-  if (figmaUrl && f) links.push(`[Figma node ${f.node}](${figmaNodeUrl(figmaUrl, f.node)})`);
-  else if (figmaUrl) links.push(`[Figma](${figmaUrl})`);
-  links.push(`[Source on GitHub at ${SHORT}](${GH}/tree/${SHA}/src/components/${c.dir})`);
-  L.push(links.join(' · '), '', '</div>', '');
+  if (c.productionStorybook) links.push(`<a href="${c.productionStorybook}">Storybook</a>`);
+  if (figmaUrl && f) links.push(`<a href="${figmaNodeUrl(figmaUrl, f.node)}">Figma node ${f.node}</a>`);
+  else if (figmaUrl) links.push(`<a href="${figmaUrl}">Figma</a>`);
+  links.push(`<a href="${GH}/tree/${SHA}/src/components/${c.dir}">Source at ${SHORT}</a>`);
+  L.push('<div class="lds-strip not-content">', `<span class="lds-pill lds-pill--status">${esc(c.development)}</span>`, `<span class="lds-pill">${esc(version)}</span>`, `<span class="lds-strip__links">${links.join('')}</span>`, '</div>', '');
+  // live preview: data-src, like every embed, and data-themed so it follows the site's theme
+  const preview = defaultStory(c);
+  if (preview) L.push('<div class="lds-preview not-content">', `<iframe class="lds-story" data-src="${storyIframe(preview.id)}" data-themed title="${esc(c.name)}: ${esc(preview.name)}, live preview"></iframe>`, '</div>', '');
+  else {
+    L.push(caution('No story to preview', `The production Storybook's \`index.json\` has no story for ${esc(c.name)}.`));
+    notices.push(`${c.name} preview (no story)`);
+  }
   L.push('<Tabs syncKey="component">');
 
   // Usage
-  L.push('<TabItem label="Usage">', '');
+  L.push('<TabItem label="Usage" icon="open-book">', '');
   if (!it) {
     L.push(caution('No intent file', `\`src/components/${c.dir}/${c.dir}.intent.json\` does not exist at ${SHORT}.`));
     notices.push(`${c.name} Usage (no intent file)`);
@@ -290,11 +314,11 @@ const componentPage = (c) => {
   if (version === 'unreleased') {
     L.push(caution('Not in a published version yet', `No \`v*\` tag contains this component at ${SHORT}, so no published version makes a promise about it yet. The changelog lists it under Unreleased.`));
     notices.push(`${c.name} Usage: version promise (unreleased)`);
-  } else L.push(`First shipped in ${code(version)}. See the [Changelog](/get-started/changelog/).`, '');
+  } else L.push(`First shipped in ${code(version)}. See the [Changelog](/updates/changelog/).`, '');
   L.push('</TabItem>');
 
   // Examples
-  L.push('<TabItem label="Examples">', '');
+  L.push('<TabItem label="Examples" icon="puzzle">', '');
   L.push('### From the README', '');
   const readmeBlocks = [...readme.matchAll(/```tsx\n([\s\S]*?)```/g)].map((m) => m[1]).filter((b) => new RegExp(`<${c.dir}[\\s/>]`).test(b));
   if (readmeBlocks.length) for (const b of readmeBlocks) L.push('```tsx', b.trimEnd(), '```', '');
@@ -304,7 +328,7 @@ const componentPage = (c) => {
     notices.push(`${c.name} Examples: README example (none for this component)`);
   }
   L.push('### Stories', '');
-  const matrixIds = new Set((f?.matrix || []).map((r) => matchRow(r, c.stories)?.id).filter(Boolean));
+  const matrixIds = new Set((f?.matrix || []).map((r) => matchRow(r, c.stories, rowDefaults)?.id).filter(Boolean));
   const extra = c.stories.filter((s) => !matrixIds.has(s.id));
   if (sbIndexError) {
     L.push(caution('Storybook index unavailable', `Could not read \`${SB}/index.json\`: ${esc(sbIndexError)}.`));
@@ -323,7 +347,7 @@ const componentPage = (c) => {
   L.push('</TabItem>');
 
   // Code
-  L.push('<TabItem label="Code">', '');
+  L.push('<TabItem label="Code" icon="forward-slash">', '');
   L.push('### Import', '', '```tsx', `import { ${c.dir} } from '${pkg.name}';`, `import '${pkg.name}/tokens.css';`, `import '${pkg.name}/styles.css';`, '```', '');
   const { props, defaults } = parseProps(c);
   let aliasM;
@@ -367,23 +391,23 @@ const componentPage = (c) => {
   L.push('</TabItem>');
 
   // Design
-  L.push('<TabItem label="Design">', '');
+  L.push('<TabItem label="Design" icon="pencil">', '');
   if (!f) {
     L.push(caution('No Figma read', `\`src/data/figma.json\` has no entry for ${esc(c.name)}.`));
     notices.push(`${c.name} Design (no Figma read)`);
   } else {
     const nodeUrl = figmaNodeUrl(figmaUrl, f.node);
-    L.push('### Figma node', '', `<iframe class="lds-figma" src="https://www.figma.com/embed?embed_host=lemonade-docs&url=${encodeURIComponent(nodeUrl)}" title="${esc(c.name)} in Figma" loading="lazy" allowfullscreen></iframe>`, '');
+    L.push('### Figma node', '', `<iframe class="lds-figma" data-src="https://www.figma.com/embed?embed_host=lemonade-docs&url=${encodeURIComponent(nodeUrl)}" title="${esc(c.name)} in Figma" allowfullscreen></iframe>`, '');
     L.push(`[Open node ${f.node} in Figma](${nodeUrl})`, '');
     L.push('### Variant matrix', '');
     L.push('| Figma variant | Story |', '|---|---|');
     for (const r of f.matrix) {
-      const s = matchRow(r, c.stories);
+      const s = matchRow(r, c.stories, rowDefaults);
       L.push(`| ${cell(r.name)} | ${s ? `[${esc(s.name)}](${storyPage(s.id)})` : '*no matching story*'} |`);
     }
     L.push('');
     L.push('### Both themes', '');
-    const first = c.stories[0];
+    const first = preview;
     if (first) L.push(`Story: [${esc(first.name)}](${storyPage(first.id)}).`, '', ...storyThemes(c, first));
     else {
       L.push(caution('No story', `The production Storybook's \`index.json\` has no story for ${esc(c.name)}, so neither theme can be embedded.`));
@@ -402,7 +426,7 @@ const componentPage = (c) => {
   L.push('</TabItem>');
 
   // Changelog
-  L.push('<TabItem label="Changelog">', '');
+  L.push('<TabItem label="Changelog" icon="list-format">', '');
   const dirs = [c.dir, ...c.renders];
   const log = logFor(dirs);
   L.push(`Commits touching \`src/components/${c.dir}\`${c.renders.length ? ` and the components it renders (${c.renders.map(code).join(', ')})` : ''}, newest first, up to ${SHORT}.`, '');
@@ -416,15 +440,24 @@ const componentPage = (c) => {
 rmSync(join(SITE, 'src/content/docs/components'), { recursive: true, force: true });
 
 for (const c of pages) write(`src/content/docs/components/${c.slug}.mdx`, componentPage(c));
-write('src/generated/components-sidebar.json', JSON.stringify(pages.map((c) => ({ label: c.name, slug: `components/${c.slug}` })), null, 2) + '\n');
+// One sub-group per Category the board holds, in registry order inside each. Never pick a category:
+// an empty one goes under Uncategorised and the run reports it.
+const categoryLabel = (v) => !v ? 'Uncategorised' : v.length <= 2 ? v : v[0] + v.slice(1).toLowerCase();
+const groupOrder = ['Atoms', 'Molecules', 'Organisms'];
+const groupRank = (g) => g === 'Uncategorised' ? 99 : groupOrder.includes(g) ? groupOrder.indexOf(g) : 50;
+const grouped = {};
+for (const c of pages) (grouped[categoryLabel(c.category)] ||= []).push(c);
+const groupNames = Object.keys(grouped).sort((a, b) => groupRank(a) - groupRank(b) || a.localeCompare(b));
+const uncategorised = comps.filter((c) => !c.category).map((c) => c.name);
+write('src/generated/components-sidebar.json', JSON.stringify(groupNames.map((g) => ({ label: g, items: grouped[g].map((c) => ({ label: c.name, slug: `components/${c.slug}` })) })), null, 2) + '\n');
 
 // All components
 {
   const L = ['---', 'title: All components', `description: ${yaml(`Every component on the board and its status, generated from ${SHORT}.`)}`, '---', '', GEN, ''];
   L.push("import { Aside } from '@astrojs/starlight/components';", '');
   L.push(`Each component with a page is \`Completed\` or \`Released\` on the board with a \`Cleared\` release verdict. The others are listed with their status and have no page yet.`, '');
-  L.push('| Component | Development | Release Verdict | Page |', '|---|---|---|---|');
-  for (const c of comps) L.push(`| ${esc(c.name)} | ${esc(c.development)} | ${esc(c.releaseVerdict || '—')} | ${pageSlugs.has(c.slug) ? `[${esc(c.name)}](/components/${c.slug}/)` : 'No page'} |`);
+  L.push('| Component | Category | Development | Release Verdict | Page |', '|---|---|---|---|---|');
+  for (const c of comps) L.push(`| ${esc(c.name)} | ${esc(categoryLabel(c.category))} | ${esc(c.development)} | ${esc(c.releaseVerdict || '—')} | ${pageSlugs.has(c.slug) ? `[${esc(c.name)}](/components/${c.slug}/)` : 'No page'} |`);
   L.push('');
   write('src/content/docs/components/index.mdx', L.join('\n'));
 }
@@ -448,7 +481,87 @@ write('src/generated/components-sidebar.json', JSON.stringify(pages.map((c) => (
   L.push('## Base tokens', '', 'Never used in components.', '', '| Token | Value |', '|---|---|');
   for (const n of base) L.push(`| ${codeCell(n)} | ${codeCell(root[n] ?? Object.values(blocks).find((b) => n in b)?.[n] ?? '')} |`);
   L.push('');
-  write('src/content/docs/tokens.mdx', L.join('\n'));
+  write('src/content/docs/foundations/tokens.mdx', L.join('\n'));
+}
+
+// Foundations: Colour, Type, Spacing, Modes, each from tokens.css
+const semantic = [...allNames].filter((n) => !isBase(n)).sort();
+const head = (title, desc) => ['---', `title: ${title}`, `description: ${yaml(desc)}`, '---', '', GEN, ''];
+const changes = (n) => [...modesChanging(n)].map(modeLabel).map(code).join(', ') || '—';
+const css = (o) => `{{${Object.entries(o).map(([k, v]) => `${k}: '${v}'`).join(', ')}}}`;
+const comments = {};
+for (const m of tokensCss.matchAll(/(--[\w-]+)\s*:[^;]+;\s*\/\*\*\s*(.*?)\s*\*\//g)) comments[m[1]] = m[2];
+{
+  const L = head('Colour', `Every semantic colour token in build/css/tokens.css at ${SHORT}.`);
+  const colours = semantic.filter((n) => n.startsWith('--color-'));
+  const roles = { bg: 'Backgrounds', text: 'Text', border: 'Borders', icon: 'Icons', status: 'Status' };
+  const by = {};
+  for (const n of colours) (by[n.split('-')[3]] ||= []).push(n);
+  L.push(`Every semantic colour token at ${SHORT}. Each chip wears the token itself, so it changes with this site's light and dark theme. Components use these tokens only; the palettes they point at are listed as base tokens on [Tokens](/foundations/tokens/).`, '');
+  for (const [k, names] of Object.entries(by).sort(([a], [b]) => (Object.keys(roles).indexOf(a) + 1 || 99) - (Object.keys(roles).indexOf(b) + 1 || 99))) {
+    L.push(`## ${roles[k] || k[0].toUpperCase() + k.slice(1)}`, '', '<div class="lds-swatches not-content">');
+    for (const n of names) L.push(`<div class="lds-swatch"><span class="lds-swatch__chip" style=${css({ background: `var(${n})` })}></span><code>${n}</code><small>Light ${esc(lightOf(n))} · Dark ${esc(darkOf(n))}</small></div>`);
+    L.push('</div>', '');
+  }
+  write('src/content/docs/foundations/colour.mdx', L.join('\n'));
+}
+{
+  const L = head('Type', `Every text style in build/css/tokens.css at ${SHORT}.`);
+  const styles = [...new Set(semantic.filter((n) => n.endsWith('-font-size')).map((n) => n.replace(/-font-size$/, '')))];
+  const groupOf = (s) => /^--h\d/.test(s) ? 'Headings' : /^--body/.test(s) ? 'Body' : /^--caption/.test(s) ? 'Captions' : /^--button/.test(s) ? 'Buttons' : 'Other';
+  L.push(`Every text style at ${SHORT}, set in its own tokens. \`data-typography="burmese"\` swaps the font family and changes line heights and letter spacing: see [Modes](/foundations/modes/).`, '');
+  for (const g of ['Headings', 'Body', 'Captions', 'Buttons', 'Other']) {
+    const list = styles.filter((s) => groupOf(s) === g);
+    if (!list.length) continue;
+    L.push(`## ${g}`, '');
+    for (const s of list) {
+      const label = s.replace(/^--/, '');
+      const note = comments[`${s}-font-size`];
+      L.push(`<p class="lds-type" style=${css({ fontFamily: `var(${s}-font-family)`, fontWeight: `var(${s}-font-weight)`, fontSize: `var(${s}-font-size)`, lineHeight: `var(${s}-line-height)`, letterSpacing: `var(${s}-letter-spacing)` })}>${esc(note ? note.split(' — ')[0] : label)}</p>`, '');
+      if (note) L.push(esc(note), '');
+      L.push('| Token | Value | Changes with |', '|---|---|---|');
+      for (const p of ['font-family', 'font-weight', 'font-size', 'line-height', 'letter-spacing']) L.push(`| ${codeCell(`${s}-${p}`)} | ${codeCell(lightOf(`${s}-${p}`) ?? '')} | ${changes(`${s}-${p}`)} |`);
+      L.push('');
+    }
+  }
+  write('src/content/docs/foundations/type.mdx', L.join('\n'));
+}
+{
+  const L = head('Spacing', `Margin, gap, padding, density, radius and border tokens in build/css/tokens.css at ${SHORT}.`);
+  L.push(`The semantic spacing tokens at ${SHORT}, drawn at their value in this page's modes. Base steps of the scale are listed on [Tokens](/foundations/tokens/).`, '');
+  const table = (title, names, preview) => {
+    if (!names.length) return;
+    L.push(`## ${title}`, '', '| Token | Value | Changes with | Size |', '|---|---|---|---|');
+    for (const n of names) L.push(`| ${codeCell(n)} | ${codeCell(lightOf(n) ?? '')} | ${changes(n)} | ${preview(n)} |`);
+    L.push('');
+  };
+  const bar = (n) => `<span class="lds-bar" style=${css({ width: `var(${n})` })}></span>`;
+  const of = (p) => semantic.filter((n) => n.startsWith(p));
+  table('Margin', of('--margin-'), bar);
+  table('Gap', of('--gap-'), bar);
+  table('Padding', of('--padding-'), bar);
+  table('Density', of('--density-'), bar);
+  table('Radius', of('--border-radius-'), (n) => `<span class="lds-radius" style=${css({ borderRadius: `var(${n})` })}></span>`);
+  table('Border width', of('--border-width-'), (n) => `<span class="lds-rule" style=${css({ borderTopWidth: `var(${n})` })}></span>`);
+  write('src/content/docs/foundations/spacing.mdx', L.join('\n'));
+}
+{
+  const L = head('Modes', `What each mode attribute changes in build/css/tokens.css at ${SHORT}.`);
+  const attrs = {};
+  for (const s of MODES) (attrs[s.match(/data-([a-z]+)/)[1]] ||= []).push(s);
+  L.push(`Modes switch with attributes on an ancestor element. Each section lists the tokens a mode sets directly, beside their \`:root\` value; tokens pointing at them follow. See [Theming](/guides/theming/) for how to use them.`, '');
+  L.push('```html', '<div data-semantic="dark" data-density="back-office">...</div>', '```', '');
+  for (const [attr, sels] of Object.entries(attrs)) {
+    L.push(`## data-${attr}`, '');
+    for (const s of sels) {
+      const value = s.match(/="([^"]+)"/)[1];
+      const names = Object.keys(blocks[s]);
+      L.push(`### ${value}`, '', `\`data-${attr}="${value}"\` sets ${names.length} tokens.`, '', '| Token | Kind | Default | This mode |', '|---|---|---|---|');
+      for (const n of names) L.push(`| ${codeCell(n)} | ${isBase(n) ? 'Base' : 'Semantic'} | ${codeCell(root[n] ?? '')} | ${codeCell(blocks[s][n])} |`);
+      L.push('');
+    }
+  }
+  write('src/content/docs/foundations/modes.mdx', L.join('\n'));
 }
 
 // Changelog, News
@@ -481,16 +594,16 @@ const section = (L, entries) => {
     section(L, rangeLog(tags[i - 1], tags[i]));
   }
   if (!tags.length) L.push(caution('Nothing published yet', `No \`v*\` tag exists at ${SHORT}, so every commit is Unreleased.`));
-  write('src/content/docs/get-started/changelog.mdx', L.join('\n'));
+  write('src/content/docs/updates/changelog.mdx', L.join('\n'));
 
   const N = ['---', 'title: News', `description: ${yaml('One entry per published version.')}`, '---', '', GEN, ''];
   N.push("import { Aside } from '@astrojs/starlight/components';", '');
   if (!tags.length) N.push(caution('No published version yet', `No \`v*\` tag exists at ${SHORT}. An entry appears here for each published version.`));
   for (let i = tags.length - 1; i >= 0; i--) {
     const date = git('log', '-1', '--format=%ad', '--date=short', tags[i]).trim();
-    N.push(`## ${tags[i]}`, '', `${pkg.name}@${tags[i].replace(/^v/, '')}, tagged commit dated ${date}. ${rangeLog(tags[i - 1], tags[i]).length} commits. See the [Changelog](/get-started/changelog/#${tags[i].replace(/\./g, '')}).`, '');
+    N.push(`## ${tags[i]}`, '', `${pkg.name}@${tags[i].replace(/^v/, '')}, tagged commit dated ${date}. ${rangeLog(tags[i - 1], tags[i]).length} commits. See the [Changelog](/updates/changelog/#${tags[i].replace(/\./g, '')}).`, '');
   }
-  write('src/content/docs/get-started/news.mdx', N.join('\n'));
+  write('src/content/docs/updates/news.mdx', N.join('\n'));
 }
 
 // Roadmap
@@ -500,7 +613,7 @@ const section = (L, entries) => {
   L.push('Components on the board that are not yet `Completed`, with their Development status from the board. No date, owner or priority is shown unless the board states one.', '');
   if (notDone.length) { L.push('| Component | Development |', '|---|---|'); for (const c of notDone) L.push(`| ${esc(c.name)} | ${esc(c.development)} |`); L.push(''); }
   else L.push(`Every one of the ${comps.length} components on the board reads \`Completed\` or \`Released\` (board read ${board.readAt}).`, '');
-  write('src/content/docs/get-started/roadmap.mdx', L.join('\n'));
+  write('src/content/docs/updates/roadmap.mdx', L.join('\n'));
 }
 
 // Home
@@ -508,20 +621,31 @@ const section = (L, entries) => {
   const firstPara = readme.split(/\r?\n\r?\n/).map((p) => p.trim()).find((p) => p && !p.startsWith('#')) || '';
   const latest = tags[tags.length - 1];
   const L = ['---', 'title: Lemonade Design System', `description: ${yaml(firstPara.slice(0, 160))}`, 'template: splash', 'hero:', `  tagline: ${yaml(firstPara)}`, '  actions:',
-    '    - text: Start designing', '      link: /designing/introduction/', '      icon: right-arrow',
-    '    - text: Start coding', '      link: /developing/introduction/', '      icon: right-arrow', '      variant: secondary'];
-  if (SB) L.push('    - text: Open Storybook', `      link: ${SB}`, '      icon: external', '      variant: minimal');
-  L.push('---', '', GEN, '', "import { Aside, Card, CardGrid, LinkCard } from '@astrojs/starlight/components';", '');
-  L.push('## Latest release', '');
-  if (latest) L.push(`${code(latest)}`, '', '```bash', `npm install ${pkg.name}@${latest.replace(/^v/, '')}`, '```', '');
+    '    - text: Start designing', '      link: /guides/designing/', '      icon: right-arrow',
+    '    - text: Start coding', '      link: /guides/react/', '      icon: right-arrow', '      variant: secondary'];
+  if (SB) L.push('    - text: Open Storybook', `      link: ${SB}`, '      icon: external', '      variant: secondary');
+  L.push('---', '', GEN, '', "import { Aside, Icon } from '@astrojs/starlight/components';", '');
+  if (latest) L.push('<div class="lds-release not-content">', '<span class="lds-release__label">Latest release</span>', `<span class="lds-pill lds-pill--status">${latest}</span>`, `<code>npm install ${pkg.name}@${latest.replace(/^v/, '')}</code>`, '</div>', '');
   else L.push(caution('Nothing published yet', `No \`v*\` tag exists at ${SHORT}. The install command appears here once a version is published.`));
-  L.push('<CardGrid>',
-    '<LinkCard title="Designing" href="/designing/introduction/" description="How the design in Figma becomes tokens and components." />',
-    '<LinkCard title="Developing" href="/developing/introduction/" description="Install the package and use the components." />',
-    '<LinkCard title="Components" href="/components/" description="Every component and its status." />',
-    '<LinkCard title="Tokens" href="/tokens/" description="Every token, light and dark." />',
-    '</CardGrid>', '');
+  const card = (title, href, icon, text) => `<a class="lds-card" href="${href}"><span class="lds-card__icon"><Icon name="${icon}" /></span><strong>${title}</strong><span>${text}</span></a>`;
+  L.push('<div class="lds-cards not-content">',
+    card('Foundations', '/foundations/colour/', 'open-book', 'Colour, type, spacing and modes, from the tokens.'),
+    card('Components', '/components/', 'puzzle', 'Every component and its status.'),
+    card('Developing', '/guides/react/', 'laptop', 'Using the components in a React app.'),
+    card('Tokens', '/foundations/tokens/', 'list-format', 'Every token, light and dark.'),
+    '</div>', '');
   write('src/content/docs/index.mdx', L.join('\n'));
+}
+
+// The header's Logo/Symbol, artwork and CSS from the pinned commit.
+{
+  const tsx = show('src/components/LogoSymbol/LogoSymbol.tsx') ?? '';
+  const tile = tsx.match(/TILE_PATH =\s*'([^']+)'/)?.[1];
+  const monogram = tsx.match(/MONOGRAM_PATH =\s*'([^']+)'/)?.[1];
+  if (!tile || !monogram) throw new Error('Logo/Symbol artwork not found at ' + SHA);
+  write('src/generated/logo-symbol.json', JSON.stringify({ tile, monogram }, null, 2) + '\n');
+  writeFileSync(join(SITE, 'src/styles/logo-symbol.css'), `/* Copied by docs-site/scripts/generate.mjs from src/components/LogoSymbol/LogoSymbol.css at ${SHORT}. Do not edit by hand. */\n` + show('src/components/LogoSymbol/LogoSymbol.css'));
+  written.push('src/styles/logo-symbol.css');
 }
 
 // Tokens stylesheet for the site
@@ -532,3 +656,5 @@ written.push('src/styles/tokens.css');
 writeFileSync(join(SITE, 'src/generated/run.json'), JSON.stringify({ commit: SHA, storybookIndex: sbIndexError ? `error: ${sbIndexError}` : `${SB}/index.json (${stories.length} entries)`, pages: written, notices }, null, 2) + '\n');
 console.log(`generated from ${SHORT}: ${written.length} files, ${pages.length} component pages, ${notices.length} notices`);
 console.log('component pages: ' + pages.map((c) => c.slug).join(', '));
+console.log('sidebar groups: ' + groupNames.map((g) => `${g} ${grouped[g].length}`).join(', '));
+console.log('empty Category: ' + (uncategorised.join(', ') || 'none'));

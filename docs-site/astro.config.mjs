@@ -1,11 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import componentPages from './src/generated/components-sidebar.json' with { type: 'json' };
+import componentGroups from './src/generated/components-sidebar.json' with { type: 'json' };
 
 // Every sidebar entry is an explicit slug, so a missing page fails the build
 // instead of dropping out of the navigation. Never use autogenerate.
-// The per-component entries are written by scripts/generate.mjs.
+// The per-component entries are written by scripts/generate.mjs, one sub-group per Category.
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,6 +14,10 @@ export default defineConfig({
 		starlight({
 			title: 'Lemonade Design System',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/may-thet-htar-aung/lemonade-design-system' }],
+			components: {
+				Header: './src/components/Header.astro',
+				SiteTitle: './src/components/SiteTitle.astro',
+			},
 			customCss: [
 				'@fontsource/manrope/400.css',
 				'@fontsource/manrope/500.css',
@@ -24,6 +28,7 @@ export default defineConfig({
 				'@fontsource/noto-sans-myanmar/600.css',
 				'@fontsource/noto-sans-myanmar/700.css',
 				'./src/styles/tokens.css',
+				'./src/styles/logo-symbol.css',
 				'./src/styles/lemonade.css',
 			],
 			head: [
@@ -34,45 +39,56 @@ export default defineConfig({
 						"(()=>{const r=document.documentElement;const s=()=>{if(r.dataset.theme==='dark')r.setAttribute('data-semantic','dark');else r.removeAttribute('data-semantic');};s();new MutationObserver(s).observe(r,{attributes:true,attributeFilter:['data-theme']});})();",
 				},
 				{
-					// Load a Storybook docs embed only once it is visible: Storybook's docs view
-					// renders blank when its iframe loads inside a hidden tab panel.
+					// Load a Storybook embed only once it is visible: Storybook renders blank when
+					// its iframe loads inside a hidden tab panel. An iframe marked data-themed (the
+					// live preview) follows the site's theme and reloads when it changes.
 					tag: 'script',
 					content:
-						"document.addEventListener('DOMContentLoaded',()=>{const fs=document.querySelectorAll('iframe[data-src]');if(!fs.length)return;const io=new IntersectionObserver((es)=>{for(const e of es){if(e.isIntersecting){e.target.src=e.target.dataset.src;e.target.removeAttribute('data-src');io.unobserve(e.target);}}});fs.forEach((f)=>io.observe(f));});",
+						"document.addEventListener('DOMContentLoaded',()=>{const fs=document.querySelectorAll('iframe[data-src]');if(!fs.length)return;const r=document.documentElement;const url=(f)=>f.dataset.src+(f.hasAttribute('data-themed')&&r.dataset.theme==='dark'?'&globals=semantic:dark':'');const io=new IntersectionObserver((es)=>{for(const e of es){if(e.isIntersecting){e.target.src=url(e.target);io.unobserve(e.target);}}});fs.forEach((f)=>io.observe(f));new MutationObserver(()=>document.querySelectorAll('iframe[data-themed][src]').forEach((f)=>{f.src=url(f);})).observe(r,{attributes:true,attributeFilter:['data-theme']});});",
 				},
 			],
 			sidebar: [
 				{
-					label: 'Get Started',
+					label: 'Get started',
 					items: [
-						{ label: 'Changelog', slug: 'get-started/changelog' },
-						{ label: 'Roadmap', slug: 'get-started/roadmap' },
-						{ label: 'News', slug: 'get-started/news' },
+						{ label: 'Install', slug: 'get-started/install' },
+						{ label: 'Using it', slug: 'get-started/using-it' },
 						{ label: 'Versioning', slug: 'get-started/versioning' },
 						{ label: 'Upgrading', slug: 'get-started/upgrading' },
 					],
 				},
-				{ label: 'Designing', items: [{ label: 'Introduction', slug: 'designing/introduction' }] },
 				{
-					label: 'Developing',
+					label: 'Foundations',
 					items: [
-						{ label: 'Introduction', slug: 'developing/introduction' },
-						{ label: 'React', slug: 'developing/react' },
-						{ label: 'React Router', slug: 'developing/react-router' },
+						{ label: 'Colour', slug: 'foundations/colour' },
+						{ label: 'Type', slug: 'foundations/type' },
+						{ label: 'Spacing', slug: 'foundations/spacing' },
+						{ label: 'Modes', slug: 'foundations/modes' },
+						{ label: 'Tokens', slug: 'foundations/tokens' },
 					],
 				},
-				{ label: 'Skills', items: [{ label: 'Knowledge skill', slug: 'skills/knowledge-skill' }] },
 				{
-					label: 'Core',
+					label: 'Components',
+					items: [{ label: 'All components', slug: 'components' }, ...componentGroups],
+				},
+				{
+					label: 'Guides',
 					items: [
-						{
-							label: 'Components',
-							items: [{ label: 'All components', slug: 'components' }, ...componentPages],
-						},
-						{ label: 'Tokens', slug: 'tokens' },
+						{ label: 'Designing', slug: 'guides/designing' },
+						{ label: 'React', slug: 'guides/react' },
+						{ label: 'React Router', slug: 'guides/react-router' },
+						{ label: 'Theming', slug: 'guides/theming' },
+						{ label: 'Knowledge skill', slug: 'guides/knowledge-skill' },
 					],
 				},
-				{ label: 'Styling', items: [{ label: 'Theming', slug: 'styling/theming' }] },
+				{
+					label: 'Updates',
+					items: [
+						{ label: 'Changelog', slug: 'updates/changelog' },
+						{ label: 'Roadmap', slug: 'updates/roadmap' },
+						{ label: 'News', slug: 'updates/news' },
+					],
+				},
 				{
 					label: 'Help',
 					items: [

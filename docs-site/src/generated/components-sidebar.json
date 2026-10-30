@@ -1,58 +1,82 @@
 [
   {
-    "label": "Logo/Symbol",
-    "slug": "components/logo-symbol"
+    "label": "Atoms",
+    "items": [
+      {
+        "label": "Logo/Symbol",
+        "slug": "components/logo-symbol"
+      },
+      {
+        "label": "Icon Button",
+        "slug": "components/icon-button"
+      },
+      {
+        "label": "Logo",
+        "slug": "components/logo"
+      },
+      {
+        "label": "Status Badge",
+        "slug": "components/status-badge"
+      },
+      {
+        "label": "Filter Chip",
+        "slug": "components/filter-chip"
+      }
+    ]
   },
   {
-    "label": "Search Field",
-    "slug": "components/search-field"
+    "label": "Molecules",
+    "items": [
+      {
+        "label": "Search Field",
+        "slug": "components/search-field"
+      },
+      {
+        "label": "Table",
+        "slug": "components/table"
+      },
+      {
+        "label": "Pagination Arrow",
+        "slug": "components/pagination-arrow"
+      },
+      {
+        "label": "Stat Card",
+        "slug": "components/stat-card"
+      }
+    ]
   },
   {
-    "label": "Icon Button",
-    "slug": "components/icon-button"
+    "label": "Organisms",
+    "items": [
+      {
+        "label": "Top Nav",
+        "slug": "components/top-nav"
+      },
+      {
+        "label": "Tab Bar",
+        "slug": "components/tab-bar"
+      },
+      {
+        "label": "Sidebar",
+        "slug": "components/sidebar"
+      },
+      {
+        "label": "Top Nav Link",
+        "slug": "components/top-nav-link"
+      },
+      {
+        "label": "Footer",
+        "slug": "components/footer"
+      }
+    ]
   },
   {
-    "label": "Top Nav",
-    "slug": "components/top-nav"
-  },
-  {
-    "label": "Logo",
-    "slug": "components/logo"
-  },
-  {
-    "label": "Table",
-    "slug": "components/table"
-  },
-  {
-    "label": "Status Badge",
-    "slug": "components/status-badge"
-  },
-  {
-    "label": "Tab Bar",
-    "slug": "components/tab-bar"
-  },
-  {
-    "label": "Pagination Arrow",
-    "slug": "components/pagination-arrow"
-  },
-  {
-    "label": "Sidebar",
-    "slug": "components/sidebar"
-  },
-  {
-    "label": "Top Nav Link",
-    "slug": "components/top-nav-link"
-  },
-  {
-    "label": "Filter Chip",
-    "slug": "components/filter-chip"
-  },
-  {
-    "label": "Footer",
-    "slug": "components/footer"
-  },
-  {
-    "label": "Stat Card",
-    "slug": "components/stat-card"
+    "label": "Icons",
+    "items": [
+      {
+        "label": "Icon",
+        "slug": "components/icon"
+      }
+    ]
   }
 ]

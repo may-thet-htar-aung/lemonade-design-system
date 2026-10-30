@@ -1,0 +1,18 @@
+---
+// The header's brand: the Logo/Symbol component (Color=Brand, Size=Small) beside the word
+// "Lemonade". Never the full Logo, whose wordmark adds "Found". The artwork and its CSS come
+// from the pinned commit through scripts/generate.mjs. The word names the brand, so the
+// symbol is decorative here, as LogoSymbol's aria-hidden case.
+import logo from '../generated/logo-symbol.json';
+const { siteTitleHref } = Astro.locals.starlightRoute;
+---
+
+<a href={siteTitleHref} class="lds-title">
+	<span class="logo-symbol" data-logo-symbol-color="Brand" data-logo-symbol-size="Small" aria-hidden="true">
+		<svg class="logo-symbol__svg" viewBox="0 0 64 64" focusable="false" aria-hidden="true">
+			<path class="logo-symbol__tile" d={logo.tile}></path>
+			<path class="logo-symbol__monogram" d={logo.monogram}></path>
+		</svg>
+	</span>
+	<span translate="no">Lemonade</span>
+</a>

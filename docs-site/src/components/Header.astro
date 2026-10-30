@@ -1,0 +1,32 @@
+---
+// Starlight's header with the four section links between the brand and the search.
+import config from 'virtual:starlight/user-config';
+import Search from 'virtual:starlight/components/Search';
+import SiteTitle from 'virtual:starlight/components/SiteTitle';
+import SocialIcons from 'virtual:starlight/components/SocialIcons';
+import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
+
+const links = [
+	{ label: 'Foundations', href: '/foundations/colour/', section: '/foundations/' },
+	{ label: 'Components', href: '/components/', section: '/components/' },
+	{ label: 'Guides', href: '/guides/designing/', section: '/guides/' },
+	{ label: 'Updates', href: '/updates/changelog/', section: '/updates/' },
+];
+const path = Astro.url.pathname;
+const shouldRenderSearch =
+	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+---
+
+<div class="header lds-header">
+	<SiteTitle />
+	<nav class="lds-nav sl-hidden md:sl-flex print:hidden" aria-label="Sections">
+		{links.map((l) => (
+			<a href={l.href} aria-current={path.startsWith(l.section) ? 'true' : undefined}>{l.label}</a>
+		))}
+	</nav>
+	<div class="lds-search sl-flex print:hidden">{shouldRenderSearch && <Search />}</div>
+	<div class="sl-hidden md:sl-flex print:hidden lds-right">
+		<SocialIcons />
+		<ThemeSelect />
+	</div>
+</div>
