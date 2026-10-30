@@ -39,9 +39,124 @@ import { StatusBadge } from '@may_thet_htar_aung/lemonade-design-system';
 <StatusBadge Status="Found" />
 ```
 
-The package exports only components whose release review is Cleared (14 in 0.1.0). The rest are in Storybook and join a later release once they clear.
+The package exports only components whose release review is Cleared (15 in 0.2.0). The rest are in Storybook and join a later release once they clear.
 
 Prop names match the Figma property names exactly (`Style`, `State`, `Size`, `Type`, ...).
+
+### Examples
+
+**Filter Chip**
+
+```tsx
+import { FilterChip } from '@may_thet_htar_aung/lemonade-design-system';
+
+<FilterChip Label="Lost" State="Active" />
+<FilterChip Label="Found" />
+```
+
+**Footer**
+
+```tsx
+import { Footer } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Footer />
+```
+
+**Icon**
+
+```tsx
+import { Icon } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Icon Name="search" Size="md" Label="Search" />
+```
+
+**Icon Button**
+
+```tsx
+import { IconButton } from '@may_thet_htar_aung/lemonade-design-system';
+
+<IconButton Style="Ghost" aria-label="Notifications" />
+```
+
+**Logo**
+
+```tsx
+import { Logo } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Logo Theme="Light" Size="Medium" />
+```
+
+**Logo/Symbol**
+
+```tsx
+import { LogoSymbol } from '@may_thet_htar_aung/lemonade-design-system';
+
+<LogoSymbol Color="Brand" Size="Large" />
+```
+
+**Pagination Arrow**
+
+```tsx
+import { PaginationArrow } from '@may_thet_htar_aung/lemonade-design-system';
+
+<PaginationArrow Direction="Next" />
+```
+
+**Search Field**
+
+```tsx
+import { SearchField } from '@may_thet_htar_aung/lemonade-design-system';
+
+<SearchField State="Default" />
+```
+
+**Sidebar**
+
+```tsx
+import { Sidebar } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Sidebar Active="Dashboard" Collapsed="False" />
+```
+
+**Stat Card**
+
+```tsx
+import { StatCard } from '@may_thet_htar_aung/lemonade-design-system';
+
+<StatCard Label="Open reports" Value="128" Delta="+12 since yesterday" />
+```
+
+**Tab Bar**
+
+```tsx
+import { TabBar } from '@may_thet_htar_aung/lemonade-design-system';
+
+<TabBar Active="Home" />
+```
+
+**Table**
+
+```tsx
+import { Table } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Table aria-label="Reports" />
+```
+
+**Top Nav**
+
+```tsx
+import { TopNav } from '@may_thet_htar_aung/lemonade-design-system';
+
+<TopNav Page="Home" />
+```
+
+**Top Nav Link**
+
+```tsx
+import { TopNavLink } from '@may_thet_htar_aung/lemonade-design-system';
+
+<TopNavLink Label="Browse" State="Active" />
+```
 
 ### Modes
 

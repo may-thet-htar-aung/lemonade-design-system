@@ -16,3 +16,14 @@ export const PreviousDisabled: Story = { args: { Direction: 'Previous', State: '
 export const NextDefault: Story = { args: { Direction: 'Next', State: 'Default' } };
 export const NextHover: Story = { args: { Direction: 'Next', State: 'Hover' } };
 export const NextDisabled: Story = { args: { Direction: 'Next', State: 'Disabled' } };
+
+// Example: the pair as Pagination uses it, not a matrix row.
+export const ExamplePreviousAndNext: Story = {
+  name: 'Example: previous and next',
+  render: () => (
+    <div style={{ display: 'flex', gap: 'var(--gap-element)' }}>
+      <PaginationArrow Direction="Previous" State="Disabled" />
+      <PaginationArrow Direction="Next" />
+    </div>
+  ),
+};

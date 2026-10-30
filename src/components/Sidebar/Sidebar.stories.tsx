@@ -1,5 +1,6 @@
 // Figma node: https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=163-295
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { StatCard } from '../StatCard/StatCard';
 import { Sidebar } from './Sidebar';
 
 /* Variant matrix from the node: Collapsed = False | True ×
@@ -61,4 +62,17 @@ export const CollapsedTrueUsersVenues: Story = {
 export const CollapsedTrueHandovers: Story = {
   name: 'Collapsed=True, Active=Handovers',
   args: { Collapsed: 'True', Active: 'Handovers' },
+};
+
+// Example: Figma usage note "Use it on the left of every Back Office screen", not a matrix row.
+export const ExampleBackOfficeScreen: Story = {
+  name: 'Example: left of a Back Office screen',
+  render: () => (
+    <div style={{ display: 'flex', gap: 'var(--gap-gutter)' }}>
+      <Sidebar Collapsed="True" />
+      <div style={{ flex: 1, padding: 'var(--gap-gutter)' }}>
+        <StatCard Label="Open reports" Value="128" Delta="+12 since yesterday" />
+      </div>
+    </div>
+  ),
 };

@@ -20,3 +20,20 @@ export const OutlineDisabled: Story = { args: { Style: 'Outline', State: 'Disabl
 export const GhostDefault: Story = { args: { Style: 'Ghost', State: 'Default' } };
 export const GhostHover: Story = { args: { Style: 'Ghost', State: 'Hover' } };
 export const GhostDisabled: Story = { args: { Style: 'Ghost', State: 'Disabled' } };
+
+// Examples: Figma usage notes on Ghost in toolbars and Show badge, not matrix rows.
+export const ExampleToolbar: Story = {
+  name: 'Example: in a toolbar',
+  args: { 'aria-label': 'Notifications' },
+  render: () => (
+    <div style={{ display: 'flex', gap: 'var(--gap-element)' }}>
+      <IconButton Style="Ghost" aria-label="Notifications" />
+      <IconButton Style="Ghost" aria-label="Messages" />
+    </div>
+  ),
+};
+
+export const ExampleNewNotifications: Story = {
+  name: 'Example: something new',
+  args: { Style: 'Outline', 'Show badge': true, 'aria-label': 'Notifications, 3 unread' },
+};

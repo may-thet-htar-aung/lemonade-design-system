@@ -22,3 +22,13 @@ export const LightLarge: Story = { args: { Theme: 'Light', Size: 'Large' } };
 export const DarkLarge: Story = { args: { Theme: 'Dark', Size: 'Large' } };
 export const BlackLarge: Story = { args: { Theme: 'Black', Size: 'Large' } };
 export const WhiteLarge: Story = { args: { Theme: 'White', Size: 'Large' } };
+
+// Example: Figma usage note "Use Dark on brand-green or photo backgrounds", not a matrix row.
+export const ExampleOnBrandGreen: Story = {
+  name: 'Example: on brand green',
+  render: () => (
+    <div style={{ background: 'var(--color-bg-static-brandgreen)', padding: 'var(--gap-gutter)' }}>
+      <Logo Theme="Dark" Size="Medium" />
+    </div>
+  ),
+};
