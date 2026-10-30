@@ -1,6 +1,6 @@
 {
   "commit": "cf362ff20d78d269af7c67867acaaadd4f735ec7",
-  "storybookIndex": "https://lemonade-design-system.vercel.app/index.json (363 entries)",
+  "storybookIndex": "https://lemonade-design-system.vercel.app/index.json (367 entries)",
   "pages": [
     "src/content/docs/components/logo-symbol.mdx",
     "src/content/docs/components/search-field.mdx",
@@ -39,7 +39,6 @@
     "Logo/Symbol Examples (every story is a matrix row)",
     "Search Field Usage: placement (empty in the intent file)",
     "Search Field Examples: README example (none for this component)",
-    "Search Field Examples (every story is a matrix row)",
     "Icon Button Examples: README example (none for this component)",
     "Icon Button Examples (every story is a matrix row)",
     "Top Nav Usage: placement (empty in the intent file)",
@@ -52,7 +51,6 @@
     "Table Examples (every story is a matrix row)",
     "Icon Examples: README example (none for this component)",
     "Icon Examples (every story is a matrix row)",
-    "Status Badge Examples (every story is a matrix row)",
     "Tab Bar Usage: placement (empty in the intent file)",
     "Tab Bar Examples: README example (none for this component)",
     "Tab Bar Examples (every story is a matrix row)",
@@ -67,7 +65,6 @@
     "Top Nav Link Examples (every story is a matrix row)",
     "Filter Chip Usage: placement (empty in the intent file)",
     "Filter Chip Examples: README example (none for this component)",
-    "Filter Chip Examples (every story is a matrix row)",
     "Footer Usage: placement (empty in the intent file)",
     "Footer Examples: README example (none for this component)",
     "Footer Examples (every story is a matrix row)",
