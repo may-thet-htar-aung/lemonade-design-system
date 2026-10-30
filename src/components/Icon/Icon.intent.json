@@ -12,7 +12,7 @@
       "source": "figma:81:381"
     },
     {
-      "text": "Use one of the documented sizes. 24 px is the default.",
+      "text": "Pick the size with the Size property. lg (24) is the default.",
       "source": "figma:81:385"
     },
     {
@@ -34,7 +34,7 @@
       "source": "figma:81:397"
     },
     {
-      "text": "Do not use sizes outside 16 to 48 px.",
+      "text": "Do not resize an instance by hand. Switch Size instead.",
       "source": "figma:81:401"
     },
     {
@@ -270,7 +270,7 @@
     {
       "prop": "Size",
       "value": "lg",
-      "intent": "Use one of the documented sizes. 24 px is the default.",
+      "intent": "Pick the size with the Size property. lg (24) is the default.",
       "source": "code:src/components/Icon/Icon.tsx:62 · code:src/components/Icon/Icon.tsx:68 · figma:81:385"
     },
     {
@@ -365,11 +365,11 @@
       "source": "code:src/components/Icon/Icon.tsx:71"
     },
     {
-      "text": "When a text label sits next to the icon, hide the icon from screen readers with aria-hidden=\"true\".",
+      "text": "When a text label sits next to the icon, leave Label empty and hide the icon from screen readers with aria-hidden=\"true\".",
       "source": "figma:79:639"
     },
     {
-      "text": "An icon on its own needs an accessible name on its control, such as aria-label=\"Search\".",
+      "text": "An icon on its own needs an accessible name. Set the Label property; code uses it as aria-label, such as \"Search\".",
       "source": "figma:79:642"
     },
     {
