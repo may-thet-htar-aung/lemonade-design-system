@@ -6,6 +6,7 @@ import { SearchField } from './SearchField';
 const meta = {
   title: 'Components/Search Field',
   component: SearchField,
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof SearchField>;
 
 export default meta;

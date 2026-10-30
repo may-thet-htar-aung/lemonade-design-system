@@ -5,6 +5,7 @@ import { FilterChip } from './FilterChip';
 const meta = {
   title: 'Components/Filter Chip',
   component: FilterChip,
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof FilterChip>;
 
 export default meta;

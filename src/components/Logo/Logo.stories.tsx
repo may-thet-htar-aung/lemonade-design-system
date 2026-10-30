@@ -5,6 +5,7 @@ import { Logo } from './Logo';
 const meta = {
   title: 'Components/Logo',
   component: Logo,
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof Logo>;
 
 export default meta;

@@ -5,6 +5,7 @@ import { IconButton } from './IconButton';
 const meta = {
   title: 'Components/Icon Button',
   component: IconButton,
+  parameters: { layout: 'centered' },
   args: { 'aria-label': 'Notifications' },
 } satisfies Meta<typeof IconButton>;
 

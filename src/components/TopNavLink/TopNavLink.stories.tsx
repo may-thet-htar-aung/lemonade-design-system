@@ -5,6 +5,7 @@ import { TopNavLink } from './TopNavLink';
 const meta = {
   title: 'Components/Top Nav Link',
   component: TopNavLink,
+  parameters: { layout: 'centered' },
 } satisfies Meta<typeof TopNavLink>;
 
 export default meta;
