@@ -57,7 +57,16 @@
     }
   ],
   "variant_intent": [],
-  "placement": [],
+  "placement": [
+    {
+      "text": "In a row of three Stat Cards of equal width.",
+      "source": "story:src/components/StatCard/StatCard.stories.tsx:ExampleDashboardRow"
+    },
+    {
+      "text": "In the content area beside Sidebar.",
+      "source": "story:src/components/Sidebar/Sidebar.stories.tsx:ExampleBackOfficeScreen"
+    }
+  ],
   "pairs_with": [],
   "required_tokens": [
     "--body3-font-family",
@@ -129,10 +138,6 @@
     {
       "field": "variant_intent",
       "detail": "Stat Card has no union-typed variant prop in code (StatCard.tsx:3-12: Label, Value, Delta, boolean \"Show delta\"), so there is nothing to describe."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Stat Card inside another component, and its own stories show it alone."
     },
     {
       "field": "pairs_with",

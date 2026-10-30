@@ -58,7 +58,12 @@
     }
   ],
   "variant_intent": [],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Below Search Field.",
+      "source": "story:src/components/Table/Table.stories.tsx:ExampleWithSearch"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Table Row",
@@ -110,10 +115,6 @@
     {
       "field": "variant_intent",
       "detail": "Table has no variant prop in code (Table.tsx:4-15, 24: \"The node has no variant properties\"), so there is nothing to describe."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Table inside another component, and its own story shows it alone."
     }
   ]
 }

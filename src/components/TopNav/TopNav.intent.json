@@ -84,7 +84,16 @@
       "source": "code:src/components/TopNav/TopNav.tsx:10 · figma:184:1289"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Top of a page, above the page content.",
+      "source": "story:src/components/TopNav/TopNav.stories.tsx:ExampleTopOfPage"
+    },
+    {
+      "text": "Above Footer.",
+      "source": "story:src/components/Footer/Footer.stories.tsx:ExampleBottomOfPage"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Logo",
@@ -151,10 +160,5 @@
       "source": "figma:184:1354"
     }
   ],
-  "gaps": [
-    {
-      "field": "placement",
-      "detail": "No story renders Top Nav inside another component, and its own stories show it alone."
-    }
-  ]
+  "gaps": []
 }
