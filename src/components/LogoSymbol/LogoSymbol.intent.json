@@ -8,7 +8,27 @@
       "source": "figma:23:1177"
     }
   ],
-  "dont_use_when": [],
+  "dont_use_when": [
+    {
+      "text": "Do not use Logo/Symbol where the full name fits. Use Logo.",
+      "alternative": "Logo",
+      "source": "figma:543:81"
+    },
+    {
+      "text": "Do not recolour the symbol. Use the Brand, Black or White Color values.",
+      "source": "figma:543:101"
+    }
+  ],
+  "best_practice": [
+    {
+      "text": "Keep the symbol square and never stretch it.",
+      "source": "figma:543:67"
+    },
+    {
+      "text": "Use one Size per surface. Do not mix sizes side by side.",
+      "source": "figma:543:75"
+    }
+  ],
   "variant_intent": [
     {
       "prop": "Color",
@@ -79,10 +99,6 @@
     }
   ],
   "gaps": [
-    {
-      "field": "dont_use_when",
-      "detail": "The Logo documentation page (23:946), which holds the Logo/Symbol set, has no \"Do not\" rule that names Logo/Symbol (checked usage region 23:1138, rules 23:1178)."
-    },
     {
       "field": "variant_intent",
       "detail": "Color=Brand, Black, White: the Logo documentation page (23:946), which holds the Logo/Symbol set does not say what these values are for (checked usage region 23:1138)."

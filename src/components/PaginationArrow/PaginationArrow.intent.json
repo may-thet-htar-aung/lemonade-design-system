@@ -14,6 +14,16 @@
       "source": "figma:156:302"
     }
   ],
+  "best_practice": [
+    {
+      "text": "Set Previous to Disabled on the first page and Next to Disabled on the last page.",
+      "source": "figma:543:161"
+    },
+    {
+      "text": "Keep both arrows visible so the control does not shift.",
+      "source": "figma:543:169"
+    }
+  ],
   "variant_intent": [
     {
       "prop": "Direction",
