@@ -17,3 +17,14 @@ export const ClaimPending: Story = { args: { Status: 'Claim Pending' } };
 export const Verified: Story = { args: { Status: 'Verified' } };
 export const Returned: Story = { args: { Status: 'Returned' } };
 export const Rejected: Story = { args: { Status: 'Rejected' } };
+
+// Example: Figma usage note "Put it next to the item name", not a matrix row.
+export const ExampleNextToItemName: Story = {
+  name: 'Example: next to an item name',
+  render: () => (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--gap-component)' }}>
+      <span>Black wallet</span>
+      <StatusBadge Status="Found" />
+    </div>
+  ),
+};

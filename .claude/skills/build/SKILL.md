@@ -87,13 +87,14 @@ Create `src/components/<Name>/<Name>.tsx` and `<Name>.css`.
 Write `src/components/<Name>/<Name>.stories.tsx`:
 - **Put the Figma node URL at the top of the file.** QA tests against the node and starts from this URL.
 - Write **one story per matrix row.** Do not merge rows into one story with controls, and do not skip rows.
+- A component may also have **example stories**: the export name starts with `Example`, the story name with `Example:`. Each one shows real use taken from a Figma usage note, not a new variant. They are not matrix rows, QA does not test them as cases, and the docs site embeds them on the Examples tab.
 
 Run Storybook locally and look at it. For each story, compare the rendered component with the node's screenshot and metadata: width and height, padding, gap, radius, fill, stroke, type and effects. Read the numbers from the browser's computed style, not by eye. Then drive each state: Tab, hover, click the disabled one, and watch the loading one.
 
 This is your self-check, not QA. QA tests the deployed build independently. Nothing here is a hand-off.
 
 **Check (must be green):**
-- [ ] The number of stories equals the number of matrix rows.
+- [ ] The number of stories, not counting `Example` stories, equals the number of matrix rows.
 - [ ] The Figma node URL is at the top of the story file.
 - [ ] Every story renders, and the browser console shows no errors or warnings.
 - [ ] Every story matches its node on every measured property, or the difference is a listed gap.
