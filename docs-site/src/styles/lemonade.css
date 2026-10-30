@@ -398,3 +398,9 @@ starlight-tabs .tab > [role='tab'][aria-selected='true'] {
   border-top-color: var(--color-border-brandgreen-default);
   vertical-align: middle;
 }
+
+/* Short frames for small components, which Storybook centres. */
+.lds-story.lds-story--compact,
+.lds-preview .lds-story.lds-story--compact {
+  height: var(--size-button-minwidth);
+}

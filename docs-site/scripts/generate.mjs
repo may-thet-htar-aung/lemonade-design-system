@@ -160,9 +160,12 @@ const storyIframe = (id) => `${SB}/iframe.html?id=${id}&viewMode=story`;
 // globals=semantic:dark. Story iframes carry data-src, like the docs embed, because Storybook
 // renders blank when its iframe loads inside a hidden tab panel; the head script in
 // astro.config.mjs sets src once the iframe is visible.
+// Small components render centred in Storybook (#122), so their frames can be short.
+const COMPACT = new Set(['FilterChip', 'StatusBadge', 'Icon', 'IconButton', 'Logo', 'LogoSymbol', 'PaginationArrow', 'SearchField', 'TopNavLink']);
+const storyClass = (c) => (COMPACT.has(c.dir) ? 'lds-story lds-story--compact' : 'lds-story');
 const storyThemes = (c, s) => [
-  '*Light*', '', `<iframe class="lds-story" data-src="${storyIframe(s.id)}" title="${esc(c.name)}: ${esc(s.name)}, light"></iframe>`, '',
-  '*Dark*', '', `<iframe class="lds-story" data-src="${storyIframe(s.id)}&globals=semantic:dark" title="${esc(c.name)}: ${esc(s.name)}, dark"></iframe>`, '',
+  '*Light*', '', `<iframe class="${storyClass(c)}" data-src="${storyIframe(s.id)}" title="${esc(c.name)}: ${esc(s.name)}, light"></iframe>`, '',
+  '*Dark*', '', `<iframe class="${storyClass(c)}" data-src="${storyIframe(s.id)}&globals=semantic:dark" title="${esc(c.name)}: ${esc(s.name)}, dark"></iframe>`, '',
 ];
 const storyPage = (id) => `${SB}/?path=/story/${id}`;
 // Storybook writes a digit-letter size as two words (2xl becomes 2-xl), and a story for a prop's
@@ -258,7 +261,7 @@ const componentPage = (c) => {
   L.push('<div class="lds-strip not-content">', `<span class="lds-pill lds-pill--status">${esc(c.development)}</span>`, `<span class="lds-pill">${esc(version)}</span>`, `<span class="lds-strip__links">${links.join('')}</span>`, '</div>', '');
   // live preview: data-src, like every embed, and data-themed so it follows the site's theme
   const preview = defaultStory(c);
-  if (preview) L.push('<div class="lds-preview not-content">', `<iframe class="lds-story" data-src="${storyIframe(preview.id)}" data-themed title="${esc(c.name)}: ${esc(preview.name)}, live preview"></iframe>`, '</div>', '');
+  if (preview) L.push('<div class="lds-preview not-content">', `<iframe class="${storyClass(c)}" data-src="${storyIframe(preview.id)}" data-themed title="${esc(c.name)}: ${esc(preview.name)}, live preview"></iframe>`, '</div>', '');
   else {
     L.push(caution('No story to preview', `The production Storybook's \`index.json\` has no story for ${esc(c.name)}.`));
     notices.push(`${c.name} preview (no story)`);
