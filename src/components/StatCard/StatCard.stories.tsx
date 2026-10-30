@@ -17,3 +17,15 @@ type Story = StoryObj<typeof meta>;
 
 export const ShowDeltaOn: Story = { args: { 'Show delta': true } };
 export const ShowDeltaOff: Story = { args: { 'Show delta': false } };
+
+// Example: Figma usage note "Put three or four cards in a row with the same width", not a matrix row.
+export const ExampleDashboardRow: Story = {
+  name: 'Example: a dashboard row',
+  render: () => (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--gap-component)' }}>
+      <StatCard Label="Open reports" Value="128" Delta="+12 since yesterday" />
+      <StatCard Label="Potential matches" Value="34" Delta="+5 since yesterday" />
+      <StatCard Label="Returned items" Value="56" {...{ 'Show delta': false }} />
+    </div>
+  ),
+};

@@ -222,3 +222,20 @@ export const Sparkle3xl: Story = { args: { Name: "sparkle", Size: "3xl" } };
 export const User3xl: Story = { args: { Name: "user", Size: "3xl" } };
 export const Users3xl: Story = { args: { Name: "users", Size: "3xl" } };
 export const X3xl: Story = { args: { Name: "x", Size: "3xl" } };
+
+// Examples: Figma usage notes on text labels and accessible names, not matrix rows.
+export const ExampleWithTextLabel: Story = {
+  name: "Example: with a text label",
+  args: { Name: "pin" },
+  render: () => (
+    <span style={{ display: "inline-flex", alignItems: "center", gap: "var(--gap-element)" }}>
+      <Icon Name="pin" Size="md" />
+      Drop-off point
+    </span>
+  ),
+};
+
+export const ExampleWithAccessibleName: Story = {
+  name: "Example: on its own, with Label",
+  args: { Name: "search", Label: "Search" },
+};

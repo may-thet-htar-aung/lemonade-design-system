@@ -17,3 +17,14 @@ export const Home: Story = { args: { Page: 'Home' } };
 export const Browse: Story = { args: { Page: 'Browse' } };
 export const Report: Story = { args: { Page: 'Report' } };
 export const Track: Story = { args: { Page: 'Track' } };
+
+// Example: Figma usage note "Set Page to the section the person is in", not a matrix row.
+export const ExampleTopOfPage: Story = {
+  name: 'Example: top of a page',
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-section)' }}>
+      <TopNav Page="Browse" />
+      <p>Page content</p>
+    </div>
+  ),
+};
