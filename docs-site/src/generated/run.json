@@ -1,5 +1,5 @@
 {
-  "commit": "b6932dedd65271031385b4c2af1242c2822a3676",
+  "commit": "f70d82289e99e8839697358fd00862e97c66f0ed",
   "storybookIndex": "https://lemonade-design-system.vercel.app/index.json (381 entries)",
   "pages": [
     "src/content/docs/components/logo-symbol.mdx",
@@ -35,15 +35,7 @@
   "notices": [
     "Logo/Symbol Usage: when not to use (empty in the intent file)",
     "Logo/Symbol Usage: best practice (empty in the intent file)",
-    "Search Field Usage: placement (empty in the intent file)",
-    "Top Nav Usage: placement (empty in the intent file)",
-    "Table Usage: placement (empty in the intent file)",
-    "Tab Bar Usage: placement (empty in the intent file)",
     "Pagination Arrow Usage: best practice (empty in the intent file)",
-    "Sidebar Usage: placement (empty in the intent file)",
-    "Top Nav Link Usage: best practice (empty in the intent file)",
-    "Filter Chip Usage: placement (empty in the intent file)",
-    "Footer Usage: placement (empty in the intent file)",
-    "Stat Card Usage: placement (empty in the intent file)"
+    "Top Nav Link Usage: best practice (empty in the intent file)"
   ]
 }
