@@ -14,6 +14,16 @@
       "source": "figma:184:1319"
     }
   ],
+  "best_practice": [
+    {
+      "text": "Use Active for the section the person is in, on one link only.",
+      "source": "figma:543:347"
+    },
+    {
+      "text": "Keep link labels to two or three words, such as Track a case.",
+      "source": "figma:543:355"
+    }
+  ],
   "variant_intent": [
     {
       "prop": "State",
