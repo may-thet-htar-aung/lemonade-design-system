@@ -89,7 +89,16 @@
       "source": "code:src/components/SearchField/SearchField.tsx:4 · figma:117:271"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Above a row of Filter Chips.",
+      "source": "story:src/components/SearchField/SearchField.stories.tsx:ExampleWithFilterChips"
+    },
+    {
+      "text": "Above Table.",
+      "source": "story:src/components/Table/Table.stories.tsx:ExampleWithSearch"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Icon",
@@ -169,10 +178,6 @@
     {
       "field": "variant_intent",
       "detail": "State=Default, Disabled: the Figma documentation page for Search Field (117:20) does not say what these values are for (checked usage region 117:253)."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Search Field inside another component, and its own stories show it alone."
     }
   ]
 }

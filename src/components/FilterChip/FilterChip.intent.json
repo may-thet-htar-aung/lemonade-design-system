@@ -84,7 +84,16 @@
       "source": "code:src/components/FilterChip/FilterChip.tsx:3"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Below Search Field, in a row of three Filter Chips, the first Active.",
+      "source": "story:src/components/SearchField/SearchField.stories.tsx:ExampleWithFilterChips"
+    },
+    {
+      "text": "In a row of Filter Chips, the first Active.",
+      "source": "story:src/components/FilterChip/FilterChip.stories.tsx:ExampleFilterAList · story:src/components/FilterChip/FilterChip.stories.tsx:ExampleReportType"
+    }
+  ],
   "pairs_with": [],
   "required_tokens": [
     "--border-radius-circle",
@@ -146,10 +155,6 @@
     {
       "field": "variant_intent",
       "detail": "State=Default, Hover, Disabled: the Figma documentation page for Filter Chip (84:53) does not say what these values are for (checked usage region 84:354)."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Filter Chip inside another component, and its own stories show it alone."
     },
     {
       "field": "pairs_with",
