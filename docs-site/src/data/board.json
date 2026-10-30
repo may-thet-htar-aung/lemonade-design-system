@@ -344,7 +344,7 @@
     {
       "name": "Icon",
       "category": "ICONS",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/AVDd45Hg9VOvZFgkykg9X3/Lemonade-Icons?node-id=76-12",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-icon--home",
