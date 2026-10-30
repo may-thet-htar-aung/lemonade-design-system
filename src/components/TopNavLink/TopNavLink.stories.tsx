@@ -13,3 +13,16 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = { args: { State: 'Default' } };
 export const Hover: Story = { args: { State: 'Hover' } };
 export const Active: Story = { args: { State: 'Active' } };
+
+// Example: the links as Top Nav uses them, not a matrix row.
+export const ExampleLinkRow: Story = {
+  name: 'Example: a row of links',
+  render: () => (
+    <div style={{ display: 'flex', gap: 'var(--gap-gutter)' }}>
+      <TopNavLink Label="Home" />
+      <TopNavLink Label="Browse" State="Active" />
+      <TopNavLink Label="Report" />
+      <TopNavLink Label="Track" />
+    </div>
+  ),
+};

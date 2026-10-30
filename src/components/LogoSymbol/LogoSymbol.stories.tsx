@@ -19,3 +19,9 @@ export const BlackLarge: Story = { args: { Color: 'Black', Size: 'Large' } };
 export const WhiteSmall: Story = { args: { Color: 'White', Size: 'Small' } };
 export const WhiteMedium: Story = { args: { Color: 'White', Size: 'Medium' } };
 export const WhiteLarge: Story = { args: { Color: 'White', Size: 'Large' } };
+
+// Example: Figma usage note "Use Logo/Symbol on its own for the app icon", not a matrix row.
+export const ExampleAppIcon: Story = {
+  name: 'Example: as an app icon',
+  args: { Color: 'Brand', Size: 'Large' },
+};

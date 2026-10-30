@@ -18,3 +18,14 @@ export const Search: Story = { args: { Active: 'Search' } };
 export const Report: Story = { args: { Active: 'Report' } };
 export const Activity: Story = { args: { Active: 'Activity' } };
 export const Profile: Story = { args: { Active: 'Profile' } };
+
+// Example: Figma usage note "Use it at the bottom of every main screen", not a matrix row.
+export const ExampleBottomOfScreen: Story = {
+  name: 'Example: bottom of a screen',
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-section)' }}>
+      <p>Screen content</p>
+      <TabBar Active="Search" />
+    </div>
+  ),
+};
