@@ -299,8 +299,8 @@ To-do ──Engineer──▶ Ready for Testing ──QA──▶ To be deployed
 | Engineer | Builds one Figma component set into one component, deploys it to staging, registers the links |
 | QA | Tests every variant on staging against Figma, with real input, and records each case |
 | DevOps | Checks the gate and security, confirms the production deploy, records the production link |
-| Release | Reviews a completed component (its skill is not written yet) |
-| Doc-generator | Writes the component docs (its skills are not written yet) |
+| Release | Reviews completed components, then publishes the package |
+| Doc-generator | Writes the intent files and builds the docs site |
 | token-runner | Syncs tokens after the designer re-exports from Figma |
 | PM | Audits the registry on request |
 
