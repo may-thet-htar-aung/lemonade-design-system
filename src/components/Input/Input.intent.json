@@ -110,7 +110,7 @@
   "pairs_with": [
     {
       "component": "Icon",
-      "how": "Icon Right shows chevron-down at Size md, replaceable through IconRightSwap",
+      "how": "Icon Right shows chevron-down at Size md, replaceable through Icon Right swap",
       "source": "code:src/components/Input/Input.tsx:3 · code:src/components/Input/Input.tsx:91"
     },
     {
@@ -184,7 +184,7 @@
       "source": "code:src/components/Input/Input.tsx:94 · code:src/components/Input/Input.tsx:97 · code:src/components/Input/Input.tsx:98"
     },
     {
-      "text": "With ShowLabel false no <label> renders and the control has no other accessible name.",
+      "text": "With Show label false no <label> renders and the control has no other accessible name.",
       "source": "code:src/components/Input/Input.tsx:79"
     },
     {

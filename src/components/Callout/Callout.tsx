@@ -6,7 +6,7 @@ export type CalloutType = 'Privacy' | 'AI Match';
 export type CalloutProps = Omit<HTMLAttributes<HTMLDivElement>, 'style' | 'children' | 'title'> & {
   Type?: CalloutType;
   /** Figma property "Show body". Hides the body line when false. */
-  ShowBody?: boolean;
+  'Show body'?: boolean;
   /** Title text. One short statement. */
   Title?: string;
   /** Body text. One sentence of detail. */
@@ -26,7 +26,7 @@ const DEFAULT_TEXT: Record<CalloutType, { Title: string; Body: string }> = {
 
 export function Callout({
   Type = 'Privacy',
-  ShowBody = true,
+  'Show body': showBody = true,
   Title,
   Body,
   className,
@@ -43,7 +43,7 @@ export function Callout({
       <Icon Name={Type === 'Privacy' ? 'lock' : 'sparkle'} Size="md" className="callout__icon" />
       <div className="callout__text">
         <p className="callout__title">{title}</p>
-        {ShowBody ? <p className="callout__body">{body}</p> : null}
+        {showBody ? <p className="callout__body">{body}</p> : null}
       </div>
     </div>
   );

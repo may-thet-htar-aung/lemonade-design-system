@@ -80,7 +80,7 @@
     },
     {
       "component": "Callout",
-      "how": "Nested Callout between body and actions, Privacy by default, off with ShowCallout",
+      "how": "Nested Callout between body and actions, Privacy by default, off with Show callout",
       "source": "code:src/components/DialogBox/DialogBox.tsx:5 · code:src/components/DialogBox/DialogBox.tsx:161 · story:src/components/DialogBox/DialogBox.stories.tsx:Default"
     },
     {

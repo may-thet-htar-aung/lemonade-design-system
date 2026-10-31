@@ -4,7 +4,7 @@ import { PaginationArrow } from '../PaginationArrow/PaginationArrow';
 export type PaginationProps = {
   Position?: 'First' | 'Middle' | 'Last';
   /** Figma "Show summary". Hide the range text when it is not needed. */
-  ShowSummary?: boolean;
+  'Show summary'?: boolean;
   /** The range text, such as "Showing 9–16 of 192 reports". Update it on every page change. */
   Summary?: string;
   onPrevious?: MouseEventHandler<HTMLButtonElement>;
@@ -20,7 +20,7 @@ const DEFAULT_SUMMARY: Record<NonNullable<PaginationProps['Position']>, string> 
 
 export function Pagination({
   Position = 'First',
-  ShowSummary = true,
+  'Show summary': showSummary = true,
   Summary,
   onPrevious,
   onNext,
@@ -29,7 +29,7 @@ export function Pagination({
   const classes = ['pagination', className].filter(Boolean).join(' ');
   return (
     <nav className={classes} aria-label="Pagination" data-position={Position}>
-      {ShowSummary && (
+      {showSummary && (
         <p className="pagination__summary" aria-live="polite">
           {Summary ?? DEFAULT_SUMMARY[Position]}
         </p>

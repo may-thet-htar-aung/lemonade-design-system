@@ -73,7 +73,7 @@
   ],
   "placement": [
     {
-      "text": "Dialog Box, between the body and the actions row, Privacy by default; off with ShowCallout.",
+      "text": "Dialog Box, between the body and the actions row, Privacy by default; off with Show callout.",
       "source": "story:src/components/DialogBox/DialogBox.stories.tsx:Default · code:src/components/DialogBox/DialogBox.tsx:161"
     }
   ],
