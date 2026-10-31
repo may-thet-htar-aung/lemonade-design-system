@@ -8,20 +8,20 @@ export type ButtonProps = Omit<
   /** Hover pins the hover look for display. Real pointer hover works in Default. Disabled sets the native disabled attribute. */
   State?: 'Default' | 'Hover' | 'Disabled';
   Label?: string;
-  IconLeft?: boolean;
-  IconLeftSwap?: ReactNode;
-  IconRight?: boolean;
-  IconRightSwap?: ReactNode;
+  'Icon Left'?: boolean;
+  'Icon Left swap'?: ReactNode;
+  'Icon Right'?: boolean;
+  'Icon Right swap'?: ReactNode;
 };
 
 export function Button({
   Style = 'Primary',
   State = 'Default',
   Label = 'Button',
-  IconLeft = false,
-  IconLeftSwap = null,
-  IconRight = false,
-  IconRightSwap = null,
+  'Icon Left': iconLeft = false,
+  'Icon Left swap': iconLeftSwap = null,
+  'Icon Right': iconRight = false,
+  'Icon Right swap': iconRightSwap = null,
   className,
   type = 'button',
   ...rest
@@ -38,15 +38,15 @@ export function Button({
       data-state={State}
       disabled={State === 'Disabled' || rest.disabled}
     >
-      {IconLeft && IconLeftSwap ? (
+      {iconLeft && iconLeftSwap ? (
         <span className="button__icon" aria-hidden="true">
-          {IconLeftSwap}
+          {iconLeftSwap}
         </span>
       ) : null}
       <span className="button__label">{Label}</span>
-      {IconRight && IconRightSwap ? (
+      {iconRight && iconRightSwap ? (
         <span className="button__icon" aria-hidden="true">
-          {IconRightSwap}
+          {iconRightSwap}
         </span>
       ) : null}
     </button>
