@@ -3,6 +3,7 @@
 // until it clears. Add a line here, and its CSS to src/styles.css, when it does.
 export { Callout, type CalloutProps, type CalloutType } from './components/Callout/Callout';
 export { DialogBox, type DialogBoxProps, type DialogBoxType } from './components/DialogBox/DialogBox';
+export { Avatar, type AvatarProps } from './components/Avatar/Avatar';
 export { FilterChip, type FilterChipProps, type FilterChipState } from './components/FilterChip/FilterChip';
 export { Footer, type FooterProps } from './components/Footer/Footer';
 export { Icon, type IconName, type IconProps } from './components/Icon/Icon';
