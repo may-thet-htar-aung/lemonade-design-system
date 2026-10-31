@@ -6,6 +6,7 @@ import { Button } from './Button';
 const meta = {
   title: 'Components/Button',
   component: Button,
+  argTypes: { 'Icon Left swap': { control: false }, 'Icon Right swap': { control: false } },
 } satisfies Meta<typeof Button>;
 
 export default meta;

@@ -76,7 +76,7 @@ export function DialogBox({
   const confirmLabel = ConfirmLabel ?? text.ConfirmLabel;
 
   /* Open: remember the trigger, move focus to Cancel (the safe choice, first
-     in the reading order), and keep focus inside while open.
+     in the reading order), and keep focus inside while open, unless another open dialog takes it.
      Close or unmount: return focus to the trigger. */
   useEffect(() => {
     if (!open) return undefined;
@@ -87,7 +87,7 @@ export function DialogBox({
 
     const keepFocusInside = (event: FocusEvent) => {
       const panel = panelRef.current;
-      if (panel && event.target instanceof Node && !panel.contains(event.target)) {
+      if (panel && event.target instanceof Element && !panel.contains(event.target) && !event.target.closest('.dialog-box__scrim')) {
         focusCancel();
       }
     };
@@ -125,7 +125,7 @@ export function DialogBox({
     }
   };
 
-  if (!open) return null;
+  if (!open || typeof document === 'undefined') return null;
 
   const classes = ['dialog-box', className].filter(Boolean).join(' ');
 
