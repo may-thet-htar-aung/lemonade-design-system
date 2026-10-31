@@ -2,7 +2,7 @@
 
 Reviewed commit: a7eaa75 (full SHA in the footer)
 Date: 31/10/2026
-Verdict: **Blocked**
+Verdict: **Cleared**
 
 Production Storybook opened and seen to render: yes, 31/10/2026. Deployment dpl_4Qy1ugMvMrdDeDMB6oF5EgH8FAwA is READY at a7eaa75 and holds lemonade-design-system.vercel.app. 4 stories, 2 matrix and 2 examples; each opens with focus on Cancel. The Docs page shows 5 closed Open dialog triggers and no scrim: every one loaded with a non-zero box and no error display.
 Figma node: 160:307.
@@ -12,7 +12,7 @@ Re-review for 0.3.1: replaces the review at 29e20af. Every gate and check was ru
 | # | Gate | Result | Evidence | Owner |
 |---|---|---|---|---|
 | 1 | Intent written | ✓ | src/components/DialogBox/DialogBox.intent.json exists at a7eaa75; 0 listed gaps; no empty field outside gaps |  |
-| 2 | Development status is Completed | ✗ | Components.Development reads Released, read 31/10/2026 by plain list. The gate passes only on Completed. Test summary reads Passed, Production Storybook is set, Release Verdict reads Cleared from the 0.3.0 review | A human, to rule whether Released satisfies the gate |
+| 2 | Development status is Completed | ✓ | Components.Development reads Released, read 31/10/2026 by plain list, under the Designer ruling in Notes. Test summary reads Passed, Production Storybook is set |  |
 | 3 | Tokens clean | ✓ | stage-3 grep returns nothing (font-family: var(--token) lines excluded per the skill); all 23 var(--…) names are semantic; node scripts/verify-tokens.mjs at a7eaa75: RESULT: PASS (8 checks) |  |
 | 4 | Public surface decided | ✓ | src/index.ts exports DialogBox and its prop types, and nothing else from its folder |  |
 | 5 | Names final | ✓ | Figma node 160:307 is named "Dialog Box"; the name matches. Properties read live from the component set: Type, Show callout. Both match character for character. Title, Body, CalloutProps, CancelLabel and ConfirmLabel only set what it shows: content props. open, onCancel and onConfirm are runtime props. className and the inherited div attributes are standard HTML attributes. No New, Temp, WIP or v2 in any name |  |
@@ -38,7 +38,7 @@ Re-review for 0.3.1: replaces the review at 29e20af. Every gate and check was ru
 - 1661e12 fills the Type=Default intent from Figma: changed, not breaking, nothing shipped.
 
 ## Notes
-Gate 2 is the only failure. The row moved past Completed when 0.3.0 went live, and the skill names no other passing value. It is reported as written, not read around. If a human rules that Released passes, every other gate and check here passes and the verdict would be Cleared.
+Gate 2: the Designer ruled that Released satisfies gate 2 when a patch re-reviews a component that already shipped. The ruling reached this review through the coordinator, not directly. The skill at a7eaa75 still says Completed; its wording is left for a human to change.
 
 Gate 6 reads the rows, so it passes. The rows predate a7eaa75; QA did not re-test after 0adfc7f.
 
