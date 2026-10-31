@@ -61,8 +61,8 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/SearchField/SearchField.tsx:4"
+      "intent": "Use Default for a field at rest.",
+      "source": "figma:582:1239 · code:src/components/SearchField/SearchField.tsx:4"
     },
     {
       "prop": "State",
@@ -79,8 +79,8 @@
     {
       "prop": "State",
       "value": "Disabled",
-      "intent": "",
-      "source": "code:src/components/SearchField/SearchField.tsx:4"
+      "intent": "Use Disabled when search is not available.",
+      "source": "figma:582:1243 · code:src/components/SearchField/SearchField.tsx:4"
     },
     {
       "prop": "State",
@@ -174,10 +174,5 @@
       "source": "figma:117:332"
     }
   ],
-  "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default, Disabled: the Figma documentation page for Search Field (117:20) does not say what these values are for (checked usage region 117:253)."
-    }
-  ]
+  "gaps": []
 }

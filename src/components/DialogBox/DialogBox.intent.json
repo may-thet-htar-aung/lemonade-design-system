@@ -61,8 +61,8 @@
     {
       "prop": "Type",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/DialogBox/DialogBox.tsx:8"
+      "intent": "Use Default for actions that change a record without removing or rejecting it.",
+      "source": "figma:582:1191 · code:src/components/DialogBox/DialogBox.tsx:8"
     },
     {
       "prop": "Type",
@@ -173,10 +173,5 @@
       "source": "figma:184:531"
     }
   ],
-  "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "Type=Default: the Figma documentation page for Dialog Box (184:109) does not say what this value is for (checked usage region 184:452)."
-    }
-  ]
+  "gaps": []
 }

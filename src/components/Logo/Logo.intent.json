@@ -85,8 +85,8 @@
     {
       "prop": "Size",
       "value": "Small",
-      "intent": "",
-      "source": "code:src/components/Logo/Logo.tsx:4"
+      "intent": "Use Small where space is tight, such as a mobile header.",
+      "source": "figma:582:1251 · code:src/components/Logo/Logo.tsx:4"
     },
     {
       "prop": "Size",
@@ -97,8 +97,8 @@
     {
       "prop": "Size",
       "value": "Large",
-      "intent": "",
-      "source": "code:src/components/Logo/Logo.tsx:4"
+      "intent": "Use Large on hero areas and cover pages.",
+      "source": "figma:582:1255 · code:src/components/Logo/Logo.tsx:4"
     }
   ],
   "placement": [
@@ -176,10 +176,6 @@
     }
   ],
   "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "Size=Small, Large: the Figma documentation page for Logo (23:946) does not say what these values are for (checked usage region 23:1138)."
-    },
     {
       "field": "pairs_with",
       "detail": "Logo composes no other component: it draws its own mark (Logo.tsx:42-47) rather than rendering Logo/Symbol, and no story pairs it with a sibling component."

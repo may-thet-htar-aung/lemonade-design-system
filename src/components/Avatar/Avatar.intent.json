@@ -90,14 +90,14 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/Avatar/Avatar.tsx:8"
+      "intent": "Use Default at rest.",
+      "source": "figma:582:1171 · code:src/components/Avatar/Avatar.tsx:8"
     },
     {
       "prop": "State",
       "value": "Hover",
-      "intent": "",
-      "source": "code:src/components/Avatar/Avatar.tsx:8"
+      "intent": "Use Hover when the pointer is over it.",
+      "source": "figma:582:1175 · code:src/components/Avatar/Avatar.tsx:8"
     }
   ],
   "placement": [
@@ -179,10 +179,5 @@
       "source": "figma:206:357"
     }
   ],
-  "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default, Hover: the Figma documentation page for Avatar (206:39) does not say what these values are for (checked usage region 206:278)."
-    }
-  ]
+  "gaps": []
 }

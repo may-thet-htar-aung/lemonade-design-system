@@ -5,6 +5,7 @@ import { Input } from './Input';
 const meta = {
   title: 'Components/Input',
   component: Input,
+  argTypes: { 'Icon Right swap': { control: false } },
 } satisfies Meta<typeof Input>;
 
 export default meta;

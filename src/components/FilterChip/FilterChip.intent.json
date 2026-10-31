@@ -62,14 +62,14 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/FilterChip/FilterChip.tsx:3"
+      "intent": "Use Default for a filter that is off.",
+      "source": "figma:582:1195 · code:src/components/FilterChip/FilterChip.tsx:3"
     },
     {
       "prop": "State",
       "value": "Hover",
-      "intent": "",
-      "source": "code:src/components/FilterChip/FilterChip.tsx:3"
+      "intent": "Use Hover when the pointer is over it.",
+      "source": "figma:582:1199 · code:src/components/FilterChip/FilterChip.tsx:3"
     },
     {
       "prop": "State",
@@ -80,8 +80,8 @@
     {
       "prop": "State",
       "value": "Disabled",
-      "intent": "",
-      "source": "code:src/components/FilterChip/FilterChip.tsx:3"
+      "intent": "Use Disabled when the filter is not available.",
+      "source": "figma:582:1203 · code:src/components/FilterChip/FilterChip.tsx:3"
     }
   ],
   "placement": [
@@ -152,10 +152,6 @@
     }
   ],
   "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default, Hover, Disabled: the Figma documentation page for Filter Chip (84:53) does not say what these values are for (checked usage region 84:354)."
-    },
     {
       "field": "pairs_with",
       "detail": "Filter Chip composes no other component and no story pairs it with a sibling component."

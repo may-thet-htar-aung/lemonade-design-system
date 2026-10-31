@@ -9,10 +9,11 @@ import type { DialogBoxProps } from './DialogBox';
    Type = Danger (160:285). "Show callout" is a boolean property, not a
    variant, and is a control on both stories.
 
-   Each story opens with the dialog showing. Cancel, Confirm and Escape close
-   it and return focus to the trigger; "Open dialog" opens it again. */
-function DialogDemo(args: DialogBoxProps) {
-  const [open, setOpen] = useState(true);
+   Each story opens with the dialog showing, except on the Docs page, where
+   every story renders at once. Cancel, Confirm and Escape close it and return
+   focus to the trigger; "Open dialog" opens it again. */
+function DialogDemo({ startOpen, ...args }: DialogBoxProps & { startOpen: boolean }) {
+  const [open, setOpen] = useState(startOpen);
   return (
     <>
       <Button Style="Outline" Label="Open dialog" onClick={() => setOpen(true)} />
@@ -36,7 +37,7 @@ const meta = {
   title: 'Components/Dialog Box',
   component: DialogBox,
   args: { 'Show callout': true },
-  render: (args) => <DialogDemo {...args} />,
+  render: (args, { viewMode }) => <DialogDemo {...args} startOpen={viewMode !== 'docs'} />,
 } satisfies Meta<typeof DialogBox>;
 
 export default meta;

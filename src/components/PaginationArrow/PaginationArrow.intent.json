@@ -40,8 +40,8 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/PaginationArrow/PaginationArrow.tsx:10"
+      "intent": "Use Default for an arrow that can be used.",
+      "source": "figma:582:1261 · code:src/components/PaginationArrow/PaginationArrow.tsx:10"
     },
     {
       "prop": "State",
@@ -113,10 +113,6 @@
     }
   ],
   "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default: the Pagination documentation page (156:27), which holds the Pagination Arrow set does not say what this value is for (checked usage region 156:262)."
-    },
     {
       "field": "use_when",
       "detail": "Pagination Arrow has no documentation page of its own; its entries are the rules on the Pagination documentation page (156:27), which holds the Pagination Arrow set that name Pagination Arrow or its variants. Rules written for the Pagination as a whole are not copied."
