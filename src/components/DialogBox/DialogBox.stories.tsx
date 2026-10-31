@@ -35,7 +35,7 @@ function DialogDemo(args: DialogBoxProps) {
 const meta = {
   title: 'Components/Dialog Box',
   component: DialogBox,
-  args: { ShowCallout: true },
+  args: { 'Show callout': true },
   render: (args) => <DialogDemo {...args} />,
 } satisfies Meta<typeof DialogBox>;
 
