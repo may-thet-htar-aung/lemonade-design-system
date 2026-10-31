@@ -11,7 +11,7 @@ export type DialogBoxProps = Omit<HTMLAttributes<HTMLDivElement>, 'style' | 'chi
   /** Figma property "Type". Danger renders role="alertdialog" and the negative confirm fill. */
   Type?: DialogBoxType;
   /** Figma property "Show callout". Hides the nested Callout when false. */
-  ShowCallout?: boolean;
+  'Show callout'?: boolean;
   /** Title text. A question that names the action. */
   Title?: string;
   /** Body text. One or two sentences on what happens next. */
@@ -52,7 +52,7 @@ function focusables(root: HTMLElement): HTMLElement[] {
 
 export function DialogBox({
   Type = 'Default',
-  ShowCallout = true,
+  'Show callout': showCallout = true,
   Title,
   Body,
   CalloutProps,
@@ -158,7 +158,7 @@ export function DialogBox({
         <p id={bodyId} className="dialog-box__body">
           {body}
         </p>
-        {ShowCallout ? <Callout {...CalloutProps} className="dialog-box__callout" /> : null}
+        {showCallout ? <Callout {...CalloutProps} className="dialog-box__callout" /> : null}
         <div className="dialog-box__actions">
           <Button Style="Outline" Label={CancelLabel} onClick={onCancel} className="dialog-box__cancel" />
           <Button Style="Primary" Label={confirmLabel} onClick={onConfirm} className="dialog-box__confirm" />

@@ -9,13 +9,13 @@ export type InputProps = {
   Type?: InputType;
   State?: InputState;
   /** Figma property "Show label". Do not hide the label in real forms. */
-  ShowLabel?: boolean;
+  'Show label'?: boolean;
   /** Figma property "Show helper". Turn off when there is no hint and no error. */
-  ShowHelper?: boolean;
+  'Show helper'?: boolean;
   /** Figma property "Icon Right". Shows the right icon, chevron-down by default. */
-  IconRight?: boolean;
+  'Icon Right'?: boolean;
   /** Figma slot "Icon Right swap". Replaces the default chevron-down. */
-  IconRightSwap?: ReactNode;
+  'Icon Right swap'?: ReactNode;
   Label?: string;
   Placeholder?: string;
   /** Hint text. On Error it carries the message that says how to fix the answer. */
@@ -31,10 +31,10 @@ export type InputProps = {
 export function Input({
   Type = 'Single',
   State = 'Default',
-  ShowLabel = true,
-  ShowHelper = true,
-  IconRight = false,
-  IconRightSwap = null,
+  'Show label': showLabel = true,
+  'Show helper': showHelper = true,
+  'Icon Right': iconRight = false,
+  'Icon Right swap': iconRightSwap = null,
   Label = 'Label',
   Placeholder = 'Placeholder',
   Helper = 'Helper text',
@@ -53,7 +53,7 @@ export function Input({
   const isShown = type === 'Password Shown';
   const isDisabled = State === 'Disabled';
   const isError = State === 'Error';
-  const hasHelper = ShowHelper && Helper !== '';
+  const hasHelper = showHelper && Helper !== '';
 
   const toggle = () => {
     const next = isShown ? 'Password Hidden' : 'Password Shown';
@@ -76,7 +76,7 @@ export function Input({
 
   return (
     <div className={classes} data-type={type} data-state={State}>
-      {ShowLabel ? (
+      {showLabel ? (
         <label className="input__label" htmlFor={id}>
           {Label}
         </label>
@@ -87,8 +87,8 @@ export function Input({
         ) : (
           <input {...common} type={isPassword && !isShown ? 'password' : 'text'} />
         )}
-        {IconRight
-          ? (IconRightSwap ?? <Icon Name="chevron-down" Size="md" className="input__icon" />)
+        {iconRight
+          ? (iconRightSwap ?? <Icon Name="chevron-down" Size="md" className="input__icon" />)
           : null}
         {isPassword ? (
           <button
