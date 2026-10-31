@@ -1,44 +1,47 @@
 # Release review: Link Button
 
-Reviewed commit: 29e20af (full SHA in the footer)
+Reviewed commit: a7eaa75 (full SHA in the footer)
 Date: 31/10/2026
-Verdict: **Cleared**
+Verdict: **Blocked**
 
-Production Storybook opened and seen to render: yes, 31/10/2026. Production deployment READY at 29e20af; all 3 stories loaded with a non-zero box and no error display.
+Production Storybook opened and seen to render: yes, 31/10/2026. Deployment dpl_4Qy1ugMvMrdDeDMB6oF5EgH8FAwA is READY at a7eaa75 and holds lemonade-design-system.vercel.app. 5 stories, 3 matrix and 2 examples: every one loaded with a non-zero box and no error display.
 Figma node: 147:183.
-Rules: `.claude/skills/release-review/SKILL.md` and `.claude/skills/build/SKILL.md` at 29e20af, including the gate 5 runtime-prop rule from #137.
-Re-review: replaces the review at 13e049a. `git diff 13e049a 29e20af -- src build tokens` is empty, so the code, intent, stories and tokens reviewed are the same files. Run again at 29e20af: gates 1 to 6, checks 1 to 5, verify-tokens, the Figma properties and every figma: source, the registry and test rows, and the production render. Reused from 13e049a: the gate 7 classification, the check 6 comparison and the diff read in Notes.
+Re-review for 0.3.1: replaces the review at 29e20af. Every gate and check was run again at a7eaa75.
 
 ## Gates
 | # | Gate | Result | Evidence | Owner |
 |---|---|---|---|---|
-| 1 | Intent written | ✓ | src/components/LinkButton/LinkButton.intent.json exists at 29e20af; 1 listed gap(s); no empty field |  |
-| 2 | Development status is Completed | ✓ | Components.Development reads Completed (read 31/10/2026 at start and again before the write); test summary reads Passed |  |
-| 3 | Tokens clean | ✓ | stage-3 grep returns nothing (font-family: var(--token) lines excluded per the skill); all 11 var(--…) names are semantic; node scripts/verify-tokens.mjs at 29e20af: RESULT: PASS (8 checks) |  |
+| 1 | Intent written | ✓ | src/components/LinkButton/LinkButton.intent.json exists at a7eaa75; 0 listed gaps; no empty field outside gaps |  |
+| 2 | Development status is Completed | ✗ | Components.Development reads Released, read 31/10/2026 by plain list. The gate passes only on Completed. Test summary reads Passed, Production Storybook is set, Release Verdict reads Cleared from the 0.3.0 review | A human, to rule whether Released satisfies the gate |
+| 3 | Tokens clean | ✓ | stage-3 grep returns nothing (font-family: var(--token) lines excluded per the skill); all 11 var(--…) names are semantic; node scripts/verify-tokens.mjs at a7eaa75: RESULT: PASS (8 checks) |  |
 | 4 | Public surface decided | ✓ | src/index.ts exports LinkButton and its prop types, and nothing else from its folder |  |
-| 5 | Names final | ✓ | Figma node 147:183 is named "Link Button"; the name matches. Properties read live from the component set: State, Label, Icon Right, Icon Right swap. All match character for character. Event handlers are runtime props. Inherited DOM attributes are not design properties, see Notes. No New, Temp, WIP or v2 in any name |  |
-| 6 | States complete | ✓ | 3 variants in the Figma set, 3 stories, 3 linked Staging Testing rows, 3 Passed; none Failed or Fixed (To re-test). The rows predate the prop rename in c49a3f1: not re-tested by QA, see Notes |  |
-| 7 | Version meaning known | ✓ | git log v0.2.0..29e20af -- src/components/LinkButton: 1 commit: changed, not breaking. Forces no breaking bump |  |
+| 5 | Names final | ✓ | Figma node 147:183 is named "Link Button"; the name matches. Properties read live from the component set: State, Label, Icon Right, Icon Right swap. All match character for character. className, type and the inherited button attributes are standard HTML attributes. No New, Temp, WIP or v2 in any name |  |
+| 6 | States complete | ✓ | 3 variants in the Figma set, 3 matrix stories, 3 linked Staging Testing rows, 3 Passed; none Failed or Fixed (To re-test). See Notes on re-testing |  |
+| 7 | Version meaning known | ✓ | git log v0.3.0..a7eaa75 -- src/components/LinkButton: 3 commits, none breaking. No shipped change. LinkButton.tsx and LinkButton.css are unchanged since v0.3.0 |  |
 
 ## Checks
 | # | Check | Result | Evidence | Owner |
 |---|---|---|---|---|
 | 1 | Fields present | ✓ | all seven fields present as arrays |  |
 | 2 | Every dont_use_when names an alternative | ⚠ | 4 entries without an alternative (warning) | Designer (Figma names none), warning only |
-| 3 | a11y is specific, not generic | ✓ | each entry names an element, role, attribute, key or hidden state and cites its source; every code: line read at 29e20af; all 18 figma: sources in this file read live and match word for word |  |
-| 4 | required_tokens resolve in the built output | ✓ | all 11 names are defined in build/css/tokens.css at 29e20af, and the list equals the var(--…) set in LinkButton.css |  |
-| 5 | All variants covered | ✓ | variant props in LinkButton.tsx: State (3); every value has a variant_intent entry; State=Default, Disabled listed in gaps |  |
-| 6 | No two components claiming the same job | ✓ | Previous Button and Link Button overlap resolved: Button use_when[2] no longer claims cards and table rows (Figma 64:423 read live). Link Button use_when[0] and [1] are the only claim on those jobs; evidence reused from 13e049a, intent files unchanged at 29e20af |  |
+| 3 | a11y is specific, not generic | ✓ | all 8 entries name an element, role, attribute, key or hidden state and cite a source; a11y is unchanged since v0.3.0; 20 figma: citations, 19 distinct nodes in this file read live from Figma on 31/10/2026 |  |
+| 4 | required_tokens resolve in the built output | ✓ | all 11 names are defined in build/css/tokens.css at a7eaa75, and the list equals the var(--…) set in the CSS |  |
+| 5 | All variants covered | ✓ | variant props in the .tsx: State (3); every value has a filled variant_intent entry |  |
+| 6 | No two components claiming the same job | ✓ | use_when compared with all 25 intent files at a7eaa75; no shared sentence with this component; use_when is unchanged since v0.3.0 |  |
 
 ## Warnings
 - 4 dont_use_when entries name no alternative.
 
 ## Gate 7 commits
-- c49a3f1 renames the icon props: changed, not breaking. A pure prop rename to the Figma name; the component was never exported in v0.1.0 or v0.2.0, so no public API moved.
+- a1f7f67 adds two example stories: added, not breaking, nothing shipped.
+- 0adfc7f sets control: false on the swap prop in the stories: changed, not breaking, nothing shipped.
+- 1661e12 fills the State intent from Figma: changed, not breaking, nothing shipped.
 
 ## Notes
-Gate 5: the build skill defines content props and runtime props. DOM attributes (className, name, href and inherited HTML attributes) are neither by its words. They are passed through to the element and set no design choice, so they are read as outside the gate, as in the review at 13e049a. A human can write that into the skill.
+Gate 2 is the only failure. The row moved past Completed when 0.3.0 went live, and the skill names no other passing value. It is reported as written, not read around. If a human rules that Released passes, every other gate and check here passes and the verdict would be Cleared.
 
-Gate 6 reads the rows, so it passes. QA did not re-test after the prop rename in c49a3f1. The diff since v0.2.0 was read and changes nothing else, and every story renders in production at 29e20af, but that is a render check, not a test against the node.
+Gate 6 reads the rows, so it passes. The rows predate a7eaa75; QA did not re-test after 0adfc7f.
 
-Full SHA: 29e20afb1a8bdd6efd96a4b127fdb7df057db3e6
+Swap controls: Icon Right swap shows no control in production, and Example: opens another page renders with no error display.
+
+Full SHA: a7eaa75d2d362fb35c46e75efb44f00f4bfeb8f2
