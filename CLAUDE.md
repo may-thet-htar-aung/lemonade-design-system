@@ -58,7 +58,7 @@ The full formula, the column owners and the open flags are in `.claude/skills/re
 ## Component conventions
 
 - One Figma component set becomes one component. Its variant matrix sets the props, the stories and QA's test cases. See `.claude/skills/build/SKILL.md`.
-- Prop names match the Figma property names exactly. A content prop has no Figma property to match; `build` defines one.
+- Prop names match the Figma property names exactly. A content prop or a runtime prop has no Figma property to match; `build` defines both.
 - Every CSS value is `var(--token)`. No hex, `px` or font family appears in a component.
 - Use semantic tokens only. If another token points at a token through `var(--…)`, that token is base, and a component never uses it.
 - A property the design leaves unbound is a design gap. Report it. Never pick a value for it.
