@@ -39,7 +39,7 @@ import { StatusBadge } from '@may_thet_htar_aung/lemonade-design-system';
 <StatusBadge Status="Found" />
 ```
 
-The package exports only components whose release review is Cleared (15 in 0.2.0). The rest are in Storybook and join a later release once they clear.
+The package exports only components whose release review is Cleared (25 in 0.3.0).
 
 Prop names match the Figma property names exactly (`Style`, `State`, `Size`, `Type`, ...).
 
