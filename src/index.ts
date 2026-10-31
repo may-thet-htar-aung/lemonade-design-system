@@ -14,5 +14,6 @@ export { StatCard, type StatCardProps } from './components/StatCard/StatCard';
 export { StatusBadge, type StatusBadgeProps, type StatusBadgeStatus } from './components/StatusBadge/StatusBadge';
 export { TabBar, type TabBarActive, type TabBarProps } from './components/TabBar/TabBar';
 export { Table, type TableProps } from './components/Table/Table';
+export { TimelineStep, type TimelineStepProps } from './components/TimelineStep/TimelineStep';
 export { TopNav, type TopNavPage, type TopNavProps } from './components/TopNav/TopNav';
 export { TopNavLink, type TopNavLinkProps } from './components/TopNavLink/TopNavLink';

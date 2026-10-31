@@ -2,8 +2,8 @@ import { Icon } from '../Icon/Icon';
 
 export type TimelineStepProps = {
   State?: 'Upcoming' | 'Current' | 'Done' | 'Event';
-  /** Figma "Show line". Turn it off on the last step. */
-  ShowLine?: boolean;
+  /** Turn it off on the last step. */
+  'Show line'?: boolean;
   Title?: string;
   Subtitle?: string;
   className?: string;
@@ -19,7 +19,7 @@ const STATE_WORDS: Record<NonNullable<TimelineStepProps['State']>, string | null
 /** One step in a timeline. Render it inside an <ol>: it is the <li>. */
 export function TimelineStep({
   State = 'Upcoming',
-  ShowLine = true,
+  'Show line': showLine = true,
   Title = 'Report received',
   Subtitle = 'Today, 09:12',
   className,
@@ -32,7 +32,7 @@ export function TimelineStep({
         <span className="timeline-step__dot">
           {State === 'Done' && <Icon Name="check" Size="sm" />}
         </span>
-        {ShowLine && <span className="timeline-step__line" />}
+        {showLine && <span className="timeline-step__line" />}
       </div>
       <div className="timeline-step__text">
         <p className="timeline-step__title">
