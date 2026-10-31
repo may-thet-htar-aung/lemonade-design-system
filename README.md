@@ -45,6 +45,38 @@ Prop names match the Figma property names exactly (`Style`, `State`, `Size`, `Ty
 
 ### Examples
 
+**Avatar**
+
+```tsx
+import { Avatar } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Avatar Size="Medium" Initials="AC" aria-label="Aye Chan" />
+```
+
+**Button**
+
+```tsx
+import { Button } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Button Style="Primary" Label="Report lost item" />
+```
+
+**Callout**
+
+```tsx
+import { Callout } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Callout Type="Privacy" />
+```
+
+**Dialog Box**
+
+```tsx
+import { DialogBox } from '@may_thet_htar_aung/lemonade-design-system';
+
+<DialogBox Type="Default" open={open} Title="Approve this claim?" ConfirmLabel="Approve claim" onCancel={close} onConfirm={approve} />
+```
+
 **Filter Chip**
 
 ```tsx
@@ -78,6 +110,30 @@ import { IconButton } from '@may_thet_htar_aung/lemonade-design-system';
 <IconButton Style="Ghost" aria-label="Notifications" />
 ```
 
+**Input**
+
+```tsx
+import { Input } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Input Label="Item name" Placeholder="Black leather wallet" />
+```
+
+**Item Card**
+
+```tsx
+import { ItemCard } from '@may_thet_htar_aung/lemonade-design-system';
+
+<ItemCard Layout="Grid" Title="Black leather wallet" Meta="Central Station · 2h ago" href="/items/2041" />
+```
+
+**Link Button**
+
+```tsx
+import { LinkButton } from '@may_thet_htar_aung/lemonade-design-system';
+
+<LinkButton Label="Review" />
+```
+
 **Logo**
 
 ```tsx
@@ -92,6 +148,14 @@ import { Logo } from '@may_thet_htar_aung/lemonade-design-system';
 import { LogoSymbol } from '@may_thet_htar_aung/lemonade-design-system';
 
 <LogoSymbol Color="Brand" Size="Large" />
+```
+
+**Pagination**
+
+```tsx
+import { Pagination } from '@may_thet_htar_aung/lemonade-design-system';
+
+<Pagination Position="Middle" Summary="Showing 89–96 of 192 reports" />
 ```
 
 **Pagination Arrow**
@@ -140,6 +204,22 @@ import { TabBar } from '@may_thet_htar_aung/lemonade-design-system';
 import { Table } from '@may_thet_htar_aung/lemonade-design-system';
 
 <Table aria-label="Reports" />
+```
+
+**Table Row**
+
+```tsx
+import { TableRow } from '@may_thet_htar_aung/lemonade-design-system';
+
+<TableRow Type="Body" Reference="LF-2041" Item="Black leather wallet" />
+```
+
+**Timeline Step**
+
+```tsx
+import { TimelineStep } from '@may_thet_htar_aung/lemonade-design-system';
+
+<TimelineStep State="Done" Title="Match found" Subtitle="Today, 10:40" />
 ```
 
 **Top Nav**

@@ -76,7 +76,12 @@
       "source": "code:src/components/Pagination/Pagination.tsx:5 · figma:156:276"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Directly under a Table, at the same width.",
+      "source": "figma:156:272 · story:src/components/Pagination/Pagination.stories.tsx:ExampleUnderATable"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Pagination Arrow",
@@ -129,10 +134,5 @@
       "source": "figma:156:341"
     }
   ],
-  "gaps": [
-    {
-      "field": "placement",
-      "detail": "No story renders Pagination inside or under another component (no story pairs it with Table), and its own stories show it alone."
-    }
-  ]
+  "gaps": []
 }

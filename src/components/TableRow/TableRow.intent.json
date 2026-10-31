@@ -26,6 +26,16 @@
       "source": "figma:146:298"
     }
   ],
+  "best_practice": [
+    {
+      "text": "Sort rows so the newest or most urgent items come first.",
+      "source": "figma:146:316"
+    },
+    {
+      "text": "Keep cell text short, and show the full value on the item page.",
+      "source": "figma:146:320"
+    }
+  ],
   "variant_intent": [
     {
       "prop": "Type",
