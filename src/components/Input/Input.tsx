@@ -88,7 +88,7 @@ export function Input({
           <input {...common} type={isPassword && !isShown ? 'password' : 'text'} />
         )}
         {iconRight
-          ? (iconRightSwap ?? <Icon Name="chevron-down" Size="md" className="input__icon" />)
+          ? (iconRightSwap != null ? <span className="input__icon" aria-hidden="true">{iconRightSwap}</span> : <Icon Name="chevron-down" Size="md" className="input__icon" />)
           : null}
         {isPassword ? (
           <button

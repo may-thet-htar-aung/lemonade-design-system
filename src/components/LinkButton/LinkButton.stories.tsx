@@ -6,6 +6,7 @@ import { LinkButton } from './LinkButton';
 const meta = {
   title: 'Components/Link Button',
   component: LinkButton,
+  argTypes: { 'Icon Right swap': { control: false } },
 } satisfies Meta<typeof LinkButton>;
 
 export default meta;
