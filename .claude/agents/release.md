@@ -26,7 +26,7 @@ Skills: `.claude/skills/release-review/SKILL.md` for the gates and checks. Deleg
 - npm auth resolves: `npm whoami` returns a user, and `npm token list` shows a **granular** token, not a Publish token. If it shows a Publish token, halt and tell the person: publishing will fail with E403, and the error will blame permissions, which is not the problem.
 
 ### Workflow
-1. List the components where `Development` reads `Completed`.
+1. List the components where `Development` reads `Completed`. For a patch, also list each `Released` component whose shipped code changed since the last `v*` tag.
 2. Confirm each is exported from `src/index.ts`.
 3. Check each has an intent file. For any missing, invoke `doc-generator` to write them, then continue.
 4. If `doc-generator` reports a gap it could not source from Figma, halt. Name the component and the field. Do not review around it.
