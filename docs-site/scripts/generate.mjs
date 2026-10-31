@@ -44,6 +44,9 @@ const firstTagContaining = (c) => {
 // ---------- sources ----------
 const readJson = (p) => JSON.parse(readFileSync(join(SITE, p), 'utf8'));
 const board = readJson('src/data/board.json');
+// Each embed's size, measured in a real browser by scripts/measure-frames.mjs: rows and columns of
+// --size-icon-sm, because the site cannot reach inside a cross-origin iframe at runtime.
+const frames = existsSync(join(SITE, 'src/data/story-frames.json')) ? readJson('src/data/story-frames.json') : { stories: {}, docs: {} };
 const figma = readJson('src/data/figma.json');
 const pkg = JSON.parse(show('package.json'));
 const readme = show('README.md') ?? '';
@@ -160,12 +163,19 @@ const storyIframe = (id) => `${SB}/iframe.html?id=${id}&viewMode=story`;
 // globals=semantic:dark. Story iframes carry data-src, like the docs embed, because Storybook
 // renders blank when its iframe loads inside a hidden tab panel; the head script in
 // astro.config.mjs sets src once the iframe is visible.
-// Small components render centred in Storybook (#122), so their frames can be short.
-const COMPACT = new Set(['FilterChip', 'StatusBadge', 'Icon', 'IconButton', 'Logo', 'LogoSymbol', 'PaginationArrow', 'SearchField', 'TopNavLink']);
-const storyClass = (c) => (COMPACT.has(c.dir) ? 'lds-story lds-story--compact' : 'lds-story');
+// Each iframe sits in a frame sized to what it shows, from story-frames.json. A story wider than its
+// column lays out at its own width and the head script scales it down, so nothing scrolls inside.
+const frame = (size, id, iframe) => {
+  if (!size) { unmeasured.push(id); size = { rows: 20 }; }
+  const vars = `'--lds-rows': '${size.rows}'${size.cols ? `, '--lds-cols': '${size.cols}'` : ''}${size.skip ? `, '--lds-skip': '${size.skip}'` : ''}`;
+  const data = size.narrow ? ` data-rows="${size.rows}" data-narrow="${size.narrow}"` : '';
+  return `<div class="lds-frame not-content"${data} style={{${vars}}}>${iframe}</div>`;
+};
+const unmeasured = [];
+const storyFrame = (id, attrs) => frame(frames.stories[id], id, `<iframe class="lds-story" ${attrs}></iframe>`);
 const storyThemes = (c, s) => [
-  '*Light*', '', `<iframe class="${storyClass(c)}" data-src="${storyIframe(s.id)}" title="${esc(c.name)}: ${esc(s.name)}, light"></iframe>`, '',
-  '*Dark*', '', `<iframe class="${storyClass(c)}" data-src="${storyIframe(s.id)}&globals=semantic:dark" title="${esc(c.name)}: ${esc(s.name)}, dark"></iframe>`, '',
+  '*Light*', '', storyFrame(s.id, `data-src="${storyIframe(s.id)}" title="${esc(c.name)}: ${esc(s.name)}, light"`), '',
+  '*Dark*', '', storyFrame(s.id, `data-src="${storyIframe(s.id)}&globals=semantic:dark" title="${esc(c.name)}: ${esc(s.name)}, dark"`), '',
 ];
 const storyPage = (id) => `${SB}/?path=/story/${id}`;
 // Storybook writes a digit-letter size as two words (2xl becomes 2-xl), and a story for a prop's
@@ -244,6 +254,7 @@ const logFor = (dirs) => {
 
 // ---------- component page ----------
 const notices = [];
+const emptyIntents = [];
 const componentPage = (c) => {
   const f = c.figma_;
   const it = c.intent;
@@ -263,7 +274,7 @@ const componentPage = (c) => {
   L.push('<div class="lds-strip not-content">', `<span class="lds-pill lds-pill--status">${esc(c.development)}</span>`, `<span class="lds-pill">${esc(version)}</span>`, `<span class="lds-strip__links">${links.join('')}</span>`, '</div>', '');
   // live preview: data-src, like every embed, and data-themed so it follows the site's theme
   const preview = defaultStory(c);
-  if (preview) L.push('<div class="lds-preview not-content">', `<iframe class="${storyClass(c)}" data-src="${storyIframe(preview.id)}" data-themed title="${esc(c.name)}: ${esc(preview.name)}, live preview"></iframe>`, '</div>', '');
+  if (preview) L.push('<div class="lds-preview not-content">', storyFrame(preview.id, `data-src="${storyIframe(preview.id)}" data-themed title="${esc(c.name)}: ${esc(preview.name)}, live preview"`), '</div>', '');
   else {
     L.push(caution('No story to preview', `The production Storybook's \`index.json\` has no story for ${esc(c.name)}.`));
     notices.push(`${c.name} preview (no story)`);
@@ -295,20 +306,28 @@ const componentPage = (c) => {
       L.push(caution('No placement recorded', gap ? esc(gap.detail) : `The intent file's placement field is empty at ${SHORT}.`));
       notices.push(`${c.name} Usage: placement (empty in the intent file)`);
     }
-    list('When not to use', it.dont_use_when, (e) => `- ${esc(e.text)}${e.alternative ? ` **Use instead:** ${esc(e.alternative)}.` : ' *(The source names no alternative.)*'} <small>(${sourceLinks(e.source, figmaUrl)})</small>`);
+    list('When not to use', it.dont_use_when, (e) => `- ${esc(e.text)}${e.alternative ? ` **Use instead:** ${esc(e.alternative)}.` : ''} <small>(${sourceLinks(e.source, figmaUrl)})</small>`);
     list('Best practice', it.best_practice, (e) => `- ${esc(e.text)} <small>(${sourceLinks(e.source, figmaUrl)})</small>`);
     L.push('### What each variant is for', '');
     if (it.variant_intent?.length) {
       L.push('| Prop | Value | Intent | Source |', '|---|---|---|---|');
-      for (const v of it.variant_intent) L.push(`| ${codeCell(v.prop)} | ${codeCell(v.value)} | ${v.intent ? cell(v.intent) : '*Not stated in the source; listed as a gap.*'} | ${sourceLinks(v.source, figmaUrl).replace(/\|/g, '\\|')} |`);
+      // Icon's Name picks the artwork: its values have no intent of their own and need none, so they
+      // share one row, using the sentence the intent file gives for the property. Any other empty
+      // intent is not hidden: it shows as a notice and the run reports it.
+      const nameOnly = (v) => c.dir === 'Icon' && v.prop === 'Name' && !v.intent;
+      const names = it.variant_intent.filter(nameOnly);
+      if (names.length) {
+        const say = it.use_when.find((e) => /Name property/.test(e.text));
+        if (!say) throw new Error('Icon: no use_when sentence names the Name property at ' + SHA);
+        L.push(`| ${codeCell('Name')} | ${names.length} values: ${names.map((v) => codeCell(v.value)).join(', ')} | ${cell(say.text)} | ${sourceLinks(say.source, figmaUrl).replace(/\|/g, '\\|')} |`);
+      }
+      for (const v of it.variant_intent.filter((x) => !nameOnly(x))) {
+        if (!v.intent) { emptyIntents.push(`${c.name} ${v.prop}=${v.value}`); notices.push(`${c.name} Usage: ${v.prop}=${v.value} (empty intent)`); }
+        L.push(`| ${codeCell(v.prop)} | ${codeCell(v.value)} | ${v.intent ? cell(v.intent) : '*No intent in the source.*'} | ${sourceLinks(v.source, figmaUrl).replace(/\|/g, '\\|')} |`);
+      }
       L.push('');
     } else L.push(c.figma_?.type === 'COMPONENT' ? `${esc(c.name)} has no variant properties in Figma and no variant props in code.\n` : caution('No variant intent', `The intent file's variant_intent field is empty at ${SHORT}.`));
     list('Accessibility', it.a11y, (e) => `- ${esc(e.text)} <small>(${sourceLinks(e.source, figmaUrl)})</small>`);
-    if (it.gaps?.length) {
-      L.push('#### Gaps listed in the intent file', '');
-      for (const g of it.gaps) L.push(`- **${esc(g.field)}**: ${esc(g.detail)}`);
-      L.push('');
-    }
     // Where the code and the Figma documentation disagree: both stand, the difference is flagged.
     if (it.differences?.length) {
       L.push('#### Where Figma and the code differ', '');
@@ -317,8 +336,9 @@ const componentPage = (c) => {
     }
   }
   L.push('### Composition', '');
-  L.push(`**Renders:** ${c.renders.length ? c.renders.map(compLink).join(', ') : 'no other component.'}`, '');
-  L.push(`**Rendered by:** ${c.renderedBy.length ? c.renderedBy.map(compLink).join(', ') : 'no other component.'}`, '');
+  if (c.renders.length) L.push(`**Renders:** ${c.renders.map(compLink).join(', ')}.`, '');
+  if (c.renderedBy.length) L.push(`**Rendered by:** ${c.renderedBy.map(compLink).join(', ')}.`, '');
+  if (!c.renders.length && !c.renderedBy.length) L.push(`${esc(c.name)} stands alone: it renders no other component, and no other component renders it.`, '');
   L.push('### What this version promises', '');
   const ex = exportsOf(c);
   L.push(`Exported from the package entry (\`src/index.ts\`) at ${SHORT}: ${ex.map(code).join(', ') || 'nothing'}.`, '');
@@ -365,8 +385,9 @@ const componentPage = (c) => {
   L.push('### Props', '');
   if (props.length) {
     if (props.base) L.push(`Also accepts ${code(props.base)}.`, '');
-    L.push('| Prop | Type | Default | Notes |', '|---|---|---|---|');
-    for (const p of props) L.push(`| ${codeCell(p.name)}${p.optional ? '' : ' (required)'} | ${codeCell(p.type)} | ${defaults[p.name] ? codeCell(defaults[p.name]) : ''} | ${cell(p.doc)} |`);
+    // The doc comment sits under the prop's name, so a prop without one leaves no empty cell.
+    L.push('| Prop | Type | Default |', '|---|---|---|');
+    for (const p of props) L.push(`| ${codeCell(p.name)}${p.optional ? '' : ' (required)'}${p.doc ? `<br/><small>${cell(p.doc)}</small>` : ''} | ${codeCell(p.type)} | ${defaults[p.name] ? codeCell(defaults[p.name]) : 'None'} |`);
     L.push('');
   } else if ((aliasM = (c.tsx || '').match(new RegExp(`export type ${c.dir}Props\\s*=\\s*([^;{]+);`)))) {
     L.push(`\`${c.dir}Props\` is ${code(aliasM[1].replace(/\s+/g, ' ').trim())}: the component has no props of its own.`, '');
@@ -384,7 +405,7 @@ const componentPage = (c) => {
     L.push('| Token | Light | Dark | Changes with |', '|---|---|---|---|');
     for (const t of req) {
       const lv = lightOf(t); const dv = darkOf(t);
-      L.push(`| ${codeCell(t)} | ${lv ? codeCell(lv) : '*not defined*'} | ${dv ? codeCell(dv) : '*not defined*'} | ${[...modesChanging(t)].map(modeLabel).map(code).join(', ') || '—'} |`);
+      L.push(`| ${codeCell(t)} | ${lv ? codeCell(lv) : '*not defined*'} | ${dv ? codeCell(dv) : '*not defined*'} | ${[...modesChanging(t)].map(modeLabel).map(code).join(', ') || 'No mode'} |`);
     }
     L.push('');
   } else {
@@ -394,7 +415,10 @@ const componentPage = (c) => {
   L.push('### Storybook props table', '');
   // Storybook's docs view renders blank when its iframe loads inside a hidden tab panel, so the
   // iframe carries data-src and the head script in astro.config.mjs sets src once it is visible.
-  if (c.docsEntry) L.push(`<iframe class="lds-story lds-story--docs" data-src="${SB}/iframe.html?id=${c.docsEntry.id}&viewMode=docs" title="${esc(c.name)} props"></iframe>`, '', `[Open the ${esc(c.name)} docs page in Storybook](${SB}/?path=/docs/${c.docsEntry.id})`, '');
+  // The frame shows only the docs page's props table, so it does not scroll. A component with no
+  // props of its own has no table there: the sentence says so, and there is no frame to leave blank.
+  if (c.docsEntry && frames.docs[c.docsEntry.id]?.table === false) L.push(`Storybook's docs page for ${esc(c.name)} has no props table, because the component has no props of its own.`, '', `[Open the ${esc(c.name)} docs page in Storybook](${SB}/?path=/docs/${c.docsEntry.id})`, '');
+  else if (c.docsEntry) L.push(frame(frames.docs[c.docsEntry.id], c.docsEntry.id, `<iframe class="lds-story lds-story--docs" scrolling="no" data-src="${SB}/iframe.html?id=${c.docsEntry.id}&viewMode=docs" title="${esc(c.name)} props"></iframe>`), '', `[Open the ${esc(c.name)} docs page in Storybook](${SB}/?path=/docs/${c.docsEntry.id})`, '');
   else {
     L.push(caution('No Storybook docs page', `The production Storybook's \`index.json\` has no docs entry for ${esc(c.name)}, so there is no props table to embed.`));
     notices.push(`${c.name} Code (Storybook has no docs page)`);
@@ -486,7 +510,7 @@ write('src/generated/components-sidebar.json', JSON.stringify(groupNames.map((g)
   L.push('## Semantic tokens', '');
   for (const [g, names] of Object.entries(groups).sort()) {
     L.push(`### ${g}`, '', '| Token | Light | Dark | Changes with |', '|---|---|---|---|');
-    for (const n of names) L.push(`| ${codeCell(n)} | ${codeCell(lightOf(n) ?? '')} | ${codeCell(darkOf(n) ?? '')} | ${[...modesChanging(n)].map(modeLabel).map(code).join(', ') || '—'} |`);
+    for (const n of names) L.push(`| ${codeCell(n)} | ${codeCell(lightOf(n) ?? '')} | ${codeCell(darkOf(n) ?? '')} | ${[...modesChanging(n)].map(modeLabel).map(code).join(', ') || 'No mode'} |`);
     L.push('');
   }
   L.push('## Base tokens', '', 'Never used in components.', '', '| Token | Value |', '|---|---|');
@@ -498,7 +522,7 @@ write('src/generated/components-sidebar.json', JSON.stringify(groupNames.map((g)
 // Foundations: Colour, Type, Spacing, Modes, each from tokens.css
 const semantic = [...allNames].filter((n) => !isBase(n)).sort();
 const head = (title, desc) => ['---', `title: ${title}`, `description: ${yaml(desc)}`, '---', '', GEN, ''];
-const changes = (n) => [...modesChanging(n)].map(modeLabel).map(code).join(', ') || '—';
+const changes = (n) => [...modesChanging(n)].map(modeLabel).map(code).join(', ') || 'No mode';
 const css = (o) => `{{${Object.entries(o).map(([k, v]) => `${k}: '${v}'`).join(', ')}}}`;
 const comments = {};
 for (const m of tokensCss.matchAll(/(--[\w-]+)\s*:[^;]+;\s*\/\*\*\s*(.*?)\s*\*\//g)) comments[m[1]] = m[2];
@@ -664,8 +688,10 @@ mkdirSync(join(SITE, 'src/styles'), { recursive: true });
 writeFileSync(join(SITE, 'src/styles/tokens.css'), `/* Copied by docs-site/scripts/generate.mjs from build/css/tokens.css at ${SHORT}. Do not edit by hand. */\n` + tokensCss);
 written.push('src/styles/tokens.css');
 
-writeFileSync(join(SITE, 'src/generated/run.json'), JSON.stringify({ commit: SHA, storybookIndex: sbIndexError ? `error: ${sbIndexError}` : `${SB}/index.json (${stories.length} entries)`, pages: written, notices }, null, 2) + '\n');
+writeFileSync(join(SITE, 'src/generated/run.json'), JSON.stringify({ commit: SHA, storybookIndex: sbIndexError ? `error: ${sbIndexError}` : `${SB}/index.json (${stories.length} entries)`, pages: written, notices, emptyIntents, unmeasured }, null, 2) + '\n');
 console.log(`generated from ${SHORT}: ${written.length} files, ${pages.length} component pages, ${notices.length} notices`);
 console.log('component pages: ' + pages.map((c) => c.slug).join(', '));
 console.log('sidebar groups: ' + groupNames.map((g) => `${g} ${grouped[g].length}`).join(', '));
+console.log('unmeasured embeds: ' + (unmeasured.join(', ') || 'none'));
+console.log('empty intents: ' + (emptyIntents.join(', ') || 'none'));
 console.log('empty Category: ' + (uncategorised.join(', ') || 'none'));

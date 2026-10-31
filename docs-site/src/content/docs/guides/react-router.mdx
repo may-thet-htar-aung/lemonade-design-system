@@ -1,10 +1,46 @@
 ---
 title: React Router
-description: Using the components with React Router.
+description: What the components offer a client-side router, read from the code.
 ---
 
-import { Aside } from '@astrojs/starlight/components';
+No component imports React Router, and the package does not depend on it, so there is no router integration to set up. The components render plain `<a>` and `<button>` elements. This page lists what each one accepts.
 
-<Aside type="caution" title="No source for this page">
-The repository says nothing about React Router at this commit: no component imports it, the package does not depend on it, and no story or guide uses it. Looked in: `package.json`, `src/`, `README.md` and `docs/`.
-</Aside>
+## Components that take a link
+
+| Component | What it accepts | What it renders |
+|---|---|---|
+| [Item Card](/components/item-card/) | `href`, plus the other anchor attributes such as `onClick` | One `<a>` around the whole card |
+| [Top Nav Link](/components/top-nav-link/) | `href`, plus the other anchor attributes such as `onClick` | One `<a>` |
+| [Tab Bar](/components/tab-bar/) | `hrefs`, one path per tab, and `onTabSelect` | One `<a>` per tab |
+
+```tsx
+import { ItemCard, TabBar } from '@may_thet_htar_aung/lemonade-design-system';
+
+<ItemCard Title="Black leather wallet" href="/items/wallet" />
+
+<TabBar
+  Active="Search"
+  hrefs={{ Home: '/', Search: '/search' }}
+  onTabSelect={(tab, event) => {
+    // Receives the tab's name and the click event.
+  }}
+/>
+```
+
+A tab with no entry in `hrefs` links to an in-page hash of its own name, such as `#profile`.
+
+## Components that take handlers
+
+| Component | Handlers | What it renders |
+|---|---|---|
+| [Sidebar](/components/sidebar/) | `onActiveChange`, `onCollapsedChange` | One `<a>` per item, with fixed in-page hashes |
+| [Pagination](/components/pagination/) | `onPrevious`, `onNext` | Two buttons |
+| [Button](/components/button/), [Link Button](/components/link-button/), [Icon Button](/components/icon-button/) | `onClick` and the other button attributes | One `<button>` |
+
+## Links with no prop
+
+These links are fixed in the code at this version, and no prop changes them:
+
+- [Top Nav](/components/top-nav/): the logo link, and the four Top Nav Links it renders. Its `Page` prop marks the active link, and `skipLinkHref` sets the skip link's target.
+- [Footer](/components/footer/): every link is `href="#"`.
+- [Sidebar](/components/sidebar/): its six items link to in-page hashes such as `#dashboard`.

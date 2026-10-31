@@ -41,10 +41,12 @@ export default defineConfig({
 				{
 					// Load a Storybook embed only once it is visible: Storybook renders blank when
 					// its iframe loads inside a hidden tab panel. An iframe marked data-themed (the
-					// live preview) follows the site's theme and reloads when it changes.
+					// live preview) follows the site's theme and reloads when it changes. A frame narrower
+					// than its iframe scales the iframe down, and one under 600 wide uses its narrow rows when
+					// it has them (measure-frames.mjs holds the same number), so nothing scrolls inside it.
 					tag: 'script',
 					content:
-						"document.addEventListener('DOMContentLoaded',()=>{const fs=document.querySelectorAll('iframe[data-src]');if(!fs.length)return;const r=document.documentElement;const url=(f)=>f.dataset.src+(f.hasAttribute('data-themed')&&r.dataset.theme==='dark'?'&globals=semantic:dark':'');const io=new IntersectionObserver((es)=>{for(const e of es){if(e.isIntersecting){e.target.src=url(e.target);io.unobserve(e.target);}}});fs.forEach((f)=>io.observe(f));new MutationObserver(()=>document.querySelectorAll('iframe[data-themed][src]').forEach((f)=>{f.src=url(f);})).observe(r,{attributes:true,attributeFilter:['data-theme']});});",
+						"document.addEventListener('DOMContentLoaded',()=>{const fs=document.querySelectorAll('iframe[data-src]');if(!fs.length)return;const r=document.documentElement;const url=(f)=>f.dataset.src+(f.hasAttribute('data-themed')&&r.dataset.theme==='dark'?'&globals=semantic:dark':'');const io=new IntersectionObserver((es)=>{for(const e of es){if(e.isIntersecting){e.target.src=url(e.target);io.unobserve(e.target);}}});fs.forEach((f)=>io.observe(f));new MutationObserver(()=>document.querySelectorAll('iframe[data-themed][src]').forEach((f)=>{f.src=url(f);})).observe(r,{attributes:true,attributeFilter:['data-theme']});const fit=(w)=>{const f=w.querySelector('iframe');if(!w.clientWidth||!f)return;if(w.dataset.narrow)w.style.setProperty('--lds-rows',w.clientWidth<600?w.dataset.narrow:w.dataset.rows);w.style.setProperty('--lds-scale',Math.min(1,w.clientWidth/f.offsetWidth));};const ro=new ResizeObserver((es)=>es.forEach((e)=>fit(e.target)));document.querySelectorAll('.lds-frame').forEach((w)=>ro.observe(w));});",
 				},
 			],
 			sidebar: [

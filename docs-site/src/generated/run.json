@@ -1,5 +1,5 @@
 {
-  "commit": "87d1da597f08a7a16c45bbc9738adeee92c7f775",
+  "commit": "f655fda5bdb06e6b03ad5f481db10c1853c3b2f9",
   "storybookIndex": "https://lemonade-design-system.vercel.app/index.json (397 entries)",
   "pages": [
     "src/content/docs/components/callout.mdx",
@@ -42,5 +42,7 @@
     "src/styles/logo-symbol.css",
     "src/styles/tokens.css"
   ],
-  "notices": []
+  "notices": [],
+  "emptyIntents": [],
+  "unmeasured": []
 }

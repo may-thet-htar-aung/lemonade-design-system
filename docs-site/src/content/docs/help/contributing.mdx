@@ -3,7 +3,7 @@ title: Contributing
 description: How work lands in the repository.
 ---
 
-- **Never push or merge to `main`.** Work lands by pull request into `staging`; a human merges `staging` into `main`.
+- **Never push or merge to `main`.** Work lands by pull request into `staging`, except `tokens/sync-*`, which targets `main`; a human merges `staging` into `main`.
 - Branches: `component/<name>`, `docs/<name>`, `release-review/<name>` and `tokens/sync-<description>`. Branch from an up-to-date `staging`.
 - **Never hand-edit `tokens/` or `build/`.** Both are generated. Fix a token in Figma and export it again, then run `npm run build:tokens` and `node scripts/verify-tokens.mjs`, which must end `RESULT: PASS`.
 - Each component lives in `src/components/<Name>/` as `<Name>.tsx`, `<Name>.css` and `<Name>.stories.tsx`. The story file starts with its Figma node URL, and there is one story per Figma variant.

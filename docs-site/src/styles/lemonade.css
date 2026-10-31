@@ -293,25 +293,42 @@ h1, h2, h3, h4, h5, h6 {
   padding: var(--padding-card);
 }
 
-.lds-preview .lds-story {
-  display: block;
-  border: 0;
-  background: transparent;
-}
-
-.lds-story,
-.lds-figma {
-  width: 100%;
-  min-height: var(--size-sidebar-height);
+/* A frame is exactly as tall as what it embeds, in rows of --size-icon-sm from story-frames.json.
+   An iframe with --lds-cols keeps that width, and the head script scales it to fit the frame. */
+.lds-frame {
+  overflow: hidden;
+  height: calc(var(--size-icon-sm) * var(--lds-rows) * var(--lds-scale, 1));
+  box-sizing: content-box;
   border: var(--border-width-1) solid var(--color-border-primary-subtle);
   border-radius: var(--border-radius-md);
   background: var(--color-bg-base);
 }
 
+.lds-preview .lds-frame {
+  border: 0;
+}
+
 .lds-story {
-  min-height: var(--size-topnav-height);
-  height: auto;
-  aspect-ratio: 16 / 7;
+  display: block;
+  width: max(100%, calc(var(--size-icon-sm) * var(--lds-cols, 0)));
+  height: calc(var(--size-icon-sm) * var(--lds-rows));
+  border: 0;
+  transform: scale(var(--lds-scale, 1));
+  transform-origin: 0 0;
+}
+
+/* A docs embed starts at its props table: --lds-skip rows of the page sit above the frame. */
+.lds-story--docs {
+  height: calc(var(--size-icon-sm) * (var(--lds-rows) + var(--lds-skip, 0)));
+  margin-block-start: calc(var(--size-icon-sm) * var(--lds-skip, 0) * var(--lds-scale, 1) * -1);
+}
+
+.lds-figma {
+  width: 100%;
+  height: var(--size-sidebar-height);
+  border: var(--border-width-1) solid var(--color-border-primary-subtle);
+  border-radius: var(--border-radius-md);
+  background: var(--color-bg-base);
 }
 
 starlight-tabs [role='tablist'] {
@@ -397,10 +414,4 @@ starlight-tabs .tab > [role='tab'][aria-selected='true'] {
   border-top-style: solid;
   border-top-color: var(--color-border-brandgreen-default);
   vertical-align: middle;
-}
-
-/* Short frames for small components, which Storybook centres. */
-.lds-story.lds-story--compact,
-.lds-preview .lds-story.lds-story--compact {
-  height: var(--size-button-minwidth);
 }

@@ -1,0 +1,376 @@
+{
+  "storybook": "https://lemonade-design-system.vercel.app",
+  "unit": "--size-icon-sm",
+  "stories": {
+    "components-avatar--example-back-office-header": {
+      "rows": 5
+    },
+    "components-avatar--example-in-a-list": {
+      "rows": 7
+    },
+    "components-avatar--initials-small-hover": {
+      "rows": 4
+    },
+    "components-button--example-primary-with-outline": {
+      "rows": 5,
+      "cols": 24
+    },
+    "components-button--example-toolbar": {
+      "rows": 5,
+      "cols": 24
+    },
+    "components-button--example-with-icon": {
+      "rows": 5
+    },
+    "components-button--primary-default": {
+      "rows": 5
+    },
+    "components-callout--example-above-a-form": {
+      "rows": 13,
+      "narrow": 15
+    },
+    "components-callout--privacy": {
+      "rows": 7,
+      "narrow": 8
+    },
+    "components-dialog-box--default": {
+      "rows": 20
+    },
+    "components-dialog-box--example-approve-a-claim": {
+      "rows": 20
+    },
+    "components-dialog-box--example-reject-a-claim": {
+      "rows": 15
+    },
+    "components-filter-chip--default": {
+      "rows": 5
+    },
+    "components-filter-chip--example-filter-a-list": {
+      "rows": 5,
+      "cols": 24
+    },
+    "components-filter-chip--example-report-type": {
+      "rows": 5
+    },
+    "components-footer--default": {
+      "rows": 18,
+      "cols": 47
+    },
+    "components-footer--example-bottom-of-page": {
+      "rows": 22,
+      "cols": 71
+    },
+    "components-icon--example-with-accessible-name": {
+      "rows": 4
+    },
+    "components-icon--example-with-text-label": {
+      "rows": 4
+    },
+    "components-icon--home": {
+      "rows": 4
+    },
+    "components-icon-button--example-new-notifications": {
+      "rows": 5
+    },
+    "components-icon-button--example-toolbar": {
+      "rows": 5
+    },
+    "components-icon-button--primary-default": {
+      "rows": 5
+    },
+    "components-input--example-in-a-form": {
+      "rows": 24
+    },
+    "components-input--single-default": {
+      "rows": 8
+    },
+    "components-item-card--example-search-results": {
+      "rows": 15
+    },
+    "components-item-card--example-two-column-list": {
+      "rows": 10,
+      "narrow": 13
+    },
+    "components-item-card--grid-default": {
+      "rows": 10
+    },
+    "components-link-button--default": {
+      "rows": 4
+    },
+    "components-link-button--example-in-a-card": {
+      "rows": 12
+    },
+    "components-link-button--example-opens-another-page": {
+      "rows": 4
+    },
+    "components-logo--example-on-brand-green": {
+      "rows": 8
+    },
+    "components-logo--light-medium": {
+      "rows": 5
+    },
+    "components-logosymbol--brand-small": {
+      "rows": 5
+    },
+    "components-logosymbol--example-app-icon": {
+      "rows": 7
+    },
+    "components-pagination--example-under-a-table": {
+      "rows": 26,
+      "cols": 65
+    },
+    "components-pagination--first": {
+      "rows": 5
+    },
+    "components-pagination-arrow--example-previous-and-next": {
+      "rows": 5
+    },
+    "components-pagination-arrow--previous-default": {
+      "rows": 5
+    },
+    "components-search-field--default": {
+      "rows": 5,
+      "cols": 22
+    },
+    "components-search-field--example-with-filter-chips": {
+      "rows": 8,
+      "cols": 22
+    },
+    "components-sidebar--collapsed-false-dashboard": {
+      "rows": 57
+    },
+    "components-sidebar--example-back-office-screen": {
+      "rows": 57
+    },
+    "components-stat-card--example-dashboard-row": {
+      "rows": 11,
+      "narrow": 13,
+      "cols": 25
+    },
+    "components-stat-card--show-delta-on": {
+      "rows": 11
+    },
+    "components-status-badge--example-next-to-item-name": {
+      "rows": 4
+    },
+    "components-status-badge--lost": {
+      "rows": 4
+    },
+    "components-tab-bar--example-bottom-of-screen": {
+      "rows": 11
+    },
+    "components-tab-bar--home": {
+      "rows": 6
+    },
+    "components-table--default": {
+      "rows": 23,
+      "cols": 65
+    },
+    "components-table--example-with-search": {
+      "rows": 27,
+      "cols": 65
+    },
+    "components-table-row--example-header-and-body-rows": {
+      "rows": 12,
+      "cols": 65
+    },
+    "components-table-row--header": {
+      "rows": 5,
+      "cols": 62
+    },
+    "components-timeline-step--event": {
+      "rows": 6
+    },
+    "components-timeline-step--example-case-timeline": {
+      "rows": 16
+    },
+    "components-top-nav--example-top-of-page": {
+      "rows": 10,
+      "cols": 71
+    },
+    "components-top-nav--home": {
+      "rows": 5,
+      "cols": 71
+    },
+    "components-top-nav-link--default": {
+      "rows": 4
+    },
+    "components-top-nav-link--example-link-row": {
+      "rows": 4
+    }
+  },
+  "docs": {
+    "components-avatar--docs": {
+      "skip": 21,
+      "rows": 38,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-button--docs": {
+      "skip": 22,
+      "rows": 38,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-callout--docs": {
+      "skip": 24,
+      "rows": 26,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-dialog-box--docs": {
+      "skip": 22,
+      "rows": 12,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-filter-chip--docs": {
+      "skip": 21,
+      "rows": 23,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-footer--docs": {
+      "table": false,
+      "dialogs": 0
+    },
+    "components-icon--docs": {
+      "skip": 20,
+      "rows": 29,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-icon-button--docs": {
+      "skip": 22,
+      "rows": 41,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-input--docs": {
+      "skip": 25,
+      "rows": 81,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-item-card--docs": {
+      "skip": 27,
+      "rows": 65,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-link-button--docs": {
+      "skip": 20,
+      "rows": 29,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-logo--docs": {
+      "skip": 21,
+      "rows": 22,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-logosymbol--docs": {
+      "skip": 28,
+      "rows": 20,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-pagination--docs": {
+      "skip": 21,
+      "rows": 35,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-pagination-arrow--docs": {
+      "skip": 21,
+      "rows": 21,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-search-field--docs": {
+      "skip": 22,
+      "rows": 46,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-sidebar--docs": {
+      "skip": 70,
+      "rows": 29,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-stat-card--docs": {
+      "skip": 31,
+      "rows": 32,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-status-badge--docs": {
+      "skip": 20,
+      "rows": 14,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-tab-bar--docs": {
+      "skip": 19,
+      "rows": 31,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-table--docs": {
+      "skip": 45,
+      "rows": 27,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-table-row--docs": {
+      "skip": 22,
+      "rows": 40,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-timeline-step--docs": {
+      "skip": 30,
+      "rows": 27,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-top-nav--docs": {
+      "skip": 18,
+      "rows": 20,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    },
+    "components-top-nav-link--docs": {
+      "skip": 21,
+      "rows": 20,
+      "cols": 44,
+      "dialogs": 0,
+      "overflow": false
+    }
+  }
+}
