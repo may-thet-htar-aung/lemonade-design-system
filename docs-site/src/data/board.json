@@ -5,7 +5,7 @@
     {
       "name": "Callout",
       "category": "MOLECULES",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=109-69",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-callout--privacy",
@@ -31,7 +31,7 @@
     {
       "name": "Input",
       "category": "MOLECULES",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=88-62",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-input--single-default",
@@ -105,7 +105,7 @@
     {
       "name": "Dialog Box",
       "category": "ORGANISMS",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=160-307",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-dialog-box--default",
@@ -199,7 +199,7 @@
     {
       "name": "Item Card",
       "category": "MOLECULES",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=108-39",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-item-card--grid-default",
@@ -233,7 +233,7 @@
     {
       "name": "Pagination",
       "category": "MOLECULES",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=151-76",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-pagination--first",
@@ -255,7 +255,7 @@
     {
       "name": "Timeline Step",
       "category": "MOLECULES",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=110-34",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-timeline-step--event"
@@ -311,7 +311,7 @@
     {
       "name": "Button",
       "category": "ATOMS",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=165-1639",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-button--primary-default"
@@ -335,7 +335,7 @@
     {
       "name": "Table Row",
       "category": "MOLECULES",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=112-32",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-table-row--header",
@@ -357,7 +357,7 @@
     {
       "name": "Link Button",
       "category": "ATOMS",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=147-183",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-link-button--default"
@@ -403,7 +403,7 @@
     {
       "name": "Avatar",
       "category": "ATOMS",
-      "development": "Completed",
+      "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=192-54",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-avatar--initials-small-hover"

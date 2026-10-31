@@ -1,6 +1,6 @@
 {
-  "commit": "27290ad04aee594dd3d0ff45f1e6f0829b46a9ac",
-  "storybookIndex": "https://lemonade-design-system.vercel.app/index.json (381 entries)",
+  "commit": "87d1da597f08a7a16c45bbc9738adeee92c7f775",
+  "storybookIndex": "https://lemonade-design-system.vercel.app/index.json (397 entries)",
   "pages": [
     "src/content/docs/components/callout.mdx",
     "src/content/docs/components/logo-symbol.mdx",
@@ -42,32 +42,5 @@
     "src/styles/logo-symbol.css",
     "src/styles/tokens.css"
   ],
-  "notices": [
-    "Callout Examples: README example (none for this component)",
-    "Callout Examples (every story is a matrix row)",
-    "Input Usage: placement (empty in the intent file)",
-    "Input Examples: README example (none for this component)",
-    "Input Examples (every story is a matrix row)",
-    "Dialog Box Usage: placement (empty in the intent file)",
-    "Dialog Box Examples: README example (none for this component)",
-    "Dialog Box Examples (every story is a matrix row)",
-    "Item Card Usage: placement (empty in the intent file)",
-    "Item Card Examples: README example (none for this component)",
-    "Item Card Examples (every story is a matrix row)",
-    "Pagination Usage: placement (empty in the intent file)",
-    "Pagination Examples: README example (none for this component)",
-    "Pagination Examples (every story is a matrix row)",
-    "Timeline Step Examples: README example (none for this component)",
-    "Timeline Step Examples (every story is a matrix row)",
-    "Button Examples: README example (none for this component)",
-    "Button Examples (every story is a matrix row)",
-    "Table Row Usage: best practice (empty in the intent file)",
-    "Table Row Examples: README example (none for this component)",
-    "Table Row Examples (every story is a matrix row)",
-    "Link Button Examples: README example (none for this component)",
-    "Link Button Examples (every story is a matrix row)",
-    "Avatar Usage: placement (empty in the intent file)",
-    "Avatar Examples: README example (none for this component)",
-    "Avatar Examples (every story is a matrix row)"
-  ]
+  "notices": []
 }
