@@ -90,7 +90,7 @@
   "pairs_with": [
     {
       "component": "Icon",
-      "how": "Icon Right slot, arrow-right at Size sm by default, replaceable through IconRightSwap",
+      "how": "Icon Right slot, arrow-right at Size sm by default, replaceable through Icon Right swap",
       "source": "code:src/components/LinkButton/LinkButton.tsx:2 · code:src/components/LinkButton/LinkButton.tsx:38"
     }
   ],
