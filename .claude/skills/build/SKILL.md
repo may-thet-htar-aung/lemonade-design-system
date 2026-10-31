@@ -60,6 +60,7 @@ For each bound property, find the semantic token that matches the Figma variable
 Create `src/components/<Name>/<Name>.tsx` and `<Name>.css`.
 
 - **Props mirror the design.** Prop names match the Figma property names character for character, and prop values match the variant values.
+- **A content prop needs no Figma property.** A content prop only sets the text, image, alt text or data a component shows, or passes a value to a nested component. It never changes how the component itself looks or behaves. Anything that does is a design property, and it must exist in Figma.
 - **Every CSS value is a token.** Use `var(--semantic-token)` for every colour, spacing, radius, size, type and effect value. No hex, no `rgb()`, no `px`, no font family written out.
 - **Layout is translated, not eyeballed.** Auto-layout becomes flex or grid with the same direction, alignment, gap and padding, each from its token.
 - **Gaps stay visibly unbuilt.** Leave a gap property unset, and record it in a comment naming the gap. Never hide it behind a fallback value.
@@ -78,7 +79,7 @@ Create `src/components/<Name>/<Name>.tsx` and `<Name>.css`.
 - [ ] `npx tsc --noEmit` exits 0.
 - [ ] `grep -nE '#[0-9a-fA-F]{3,8}\b|rgba?\(|[0-9]+px|font-family:' src/components/<Name>/<Name>.css` returns nothing.
 - [ ] Every `var(--…)` in `<Name>.css` names a semantic token (see the stage 2 check).
-- [ ] Every prop name matches its Figma property name exactly.
+- [ ] Every prop name matches its Figma property name exactly, except content props, which have none.
 - [ ] Every state in the matrix is implemented as behaviour, per the table, and a test click, Tab or hover in the browser proves it.
 - [ ] Every gap is unset in the CSS and named in a comment. None has a fallback value.
 

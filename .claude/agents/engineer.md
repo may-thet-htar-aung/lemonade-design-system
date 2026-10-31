@@ -86,7 +86,7 @@ Run every box before stage 5. Run the last three again before writing to the reg
 - [ ] `npx tsc --noEmit` exits 0.
 - [ ] Every story renders in Storybook, and the browser console shows no errors or warnings.
 - [ ] Every state clicks through in the rendered story, including `disabled` and `loading`.
-- [ ] Every prop name matches its design property name character for character.
+- [ ] Every prop name matches its design property name character for character, except content props, which have none.
 - [ ] `grep -nE '#[0-9a-fA-F]{3,8}|[0-9]+px'` over `src/components/<Name>/` returns nothing.
 - [ ] The story count equals the variant-matrix row count from the design node.
 - [ ] The design node URL is at the top of the story file.
