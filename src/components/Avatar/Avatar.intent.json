@@ -100,7 +100,16 @@
       "source": "code:src/components/Avatar/Avatar.tsx:8"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Back Office header, next to the notifications Icon Button, at Size Medium.",
+      "source": "figma:206:288 · story:src/components/Avatar/Avatar.stories.tsx:ExampleBackOfficeHeader"
+    },
+    {
+      "text": "Lists and table rows at Size Small, and profile pages at Size Large.",
+      "source": "figma:206:292 · story:src/components/Avatar/Avatar.stories.tsx:ExampleInAList"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Icon",
@@ -174,10 +183,6 @@
     {
       "field": "variant_intent",
       "detail": "State=Default, Hover: the Figma documentation page for Avatar (206:39) does not say what these values are for (checked usage region 206:278)."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Avatar inside another component, and its own stories show it alone."
     }
   ]
 }

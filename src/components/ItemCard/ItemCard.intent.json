@@ -88,7 +88,20 @@
       "source": "code:src/components/ItemCard/ItemCard.tsx:8 · figma:123:326"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "Two-column item lists on mobile, in Grid.",
+      "source": "figma:123:314 · story:src/components/ItemCard/ItemCard.stories.tsx:ExampleTwoColumnList"
+    },
+    {
+      "text": "Search results and dense lists, in List.",
+      "source": "figma:123:318 · story:src/components/ItemCard/ItemCard.stories.tsx:ExampleSearchResults"
+    },
+    {
+      "text": "Featured items and the item detail preview, in Grid Large.",
+      "source": "figma:123:322 · story:src/components/ItemCard/ItemCard.stories.tsx:GridLargeDefault"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Status Badge",
@@ -163,10 +176,6 @@
     {
       "field": "variant_intent",
       "detail": "State=Default: the Figma documentation page for Item Card (123:40) does not say what this value is for (checked usage region 123:304)."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Item Card inside another component, and its own stories show it alone."
     }
   ]
 }

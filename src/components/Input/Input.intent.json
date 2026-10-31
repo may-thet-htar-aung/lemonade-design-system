@@ -106,7 +106,12 @@
       "source": "code:src/components/Input/Input.tsx:6 · figma:98:329"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "In forms at Fill width, with one field per row on mobile.",
+      "source": "figma:98:307 · story:src/components/Input/Input.stories.tsx:ExampleInAForm"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Icon",
@@ -212,10 +217,6 @@
     {
       "field": "variant_intent",
       "detail": "State=Default, Focused: the Figma documentation page for Input (98:20) does not say what these values are for (checked usage region 98:253)."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Input inside another component, and its own stories show it alone."
     }
   ]
 }

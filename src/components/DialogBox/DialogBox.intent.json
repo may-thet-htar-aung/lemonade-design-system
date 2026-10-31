@@ -71,7 +71,12 @@
       "source": "code:src/components/DialogBox/DialogBox.tsx:8 · figma:184:466"
     }
   ],
-  "placement": [],
+  "placement": [
+    {
+      "text": "In the Back Office, over a dimmed page.",
+      "source": "figma:184:462 · figma:184:478 · story:src/components/DialogBox/DialogBox.stories.tsx:ExampleApproveAClaim"
+    }
+  ],
   "pairs_with": [
     {
       "component": "Button",
@@ -172,10 +177,6 @@
     {
       "field": "variant_intent",
       "detail": "Type=Default: the Figma documentation page for Dialog Box (184:109) does not say what this value is for (checked usage region 184:452)."
-    },
-    {
-      "field": "placement",
-      "detail": "No story renders Dialog Box inside another component; its stories show it over the page, opened by an Outline \"Open dialog\" Button."
     }
   ]
 }
