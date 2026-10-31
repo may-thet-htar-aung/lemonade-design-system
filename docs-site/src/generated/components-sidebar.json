@@ -15,8 +15,20 @@
         "slug": "components/logo"
       },
       {
+        "label": "Button",
+        "slug": "components/button"
+      },
+      {
+        "label": "Link Button",
+        "slug": "components/link-button"
+      },
+      {
         "label": "Status Badge",
         "slug": "components/status-badge"
+      },
+      {
+        "label": "Avatar",
+        "slug": "components/avatar"
       },
       {
         "label": "Filter Chip",
@@ -28,12 +40,36 @@
     "label": "Molecules",
     "items": [
       {
+        "label": "Callout",
+        "slug": "components/callout"
+      },
+      {
+        "label": "Input",
+        "slug": "components/input"
+      },
+      {
         "label": "Search Field",
         "slug": "components/search-field"
       },
       {
+        "label": "Item Card",
+        "slug": "components/item-card"
+      },
+      {
+        "label": "Pagination",
+        "slug": "components/pagination"
+      },
+      {
+        "label": "Timeline Step",
+        "slug": "components/timeline-step"
+      },
+      {
         "label": "Table",
         "slug": "components/table"
+      },
+      {
+        "label": "Table Row",
+        "slug": "components/table-row"
       },
       {
         "label": "Pagination Arrow",
@@ -48,6 +84,10 @@
   {
     "label": "Organisms",
     "items": [
+      {
+        "label": "Dialog Box",
+        "slug": "components/dialog-box"
+      },
       {
         "label": "Top Nav",
         "slug": "components/top-nav"

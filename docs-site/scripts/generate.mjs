@@ -178,6 +178,8 @@ const matchRow = (row, st, defaults = []) => {
   const tailOf = (s) => s.id.split('--')[1];
   return st.find((s) => { const tail = tailOf(s); return [vals, alt, split].some((x) => tail === x || tail.endsWith('-' + x)); })
     || st.find((s) => bare !== alt && tailOf(s) === bare)
+    // Avatar's Default-state stories leave only the word Default out of their names.
+    || st.find((s) => row.values.includes('Default') && tailOf(s) === row.values.filter((v) => v !== 'Default').map(norm).join('-'))
     || (row.values.length === 1 && row.values[0] === 'default' && st.length === 1 ? st[0] : null);
 };
 const defaultStory = (c) => {
@@ -305,6 +307,12 @@ const componentPage = (c) => {
     if (it.gaps?.length) {
       L.push('#### Gaps listed in the intent file', '');
       for (const g of it.gaps) L.push(`- **${esc(g.field)}**: ${esc(g.detail)}`);
+      L.push('');
+    }
+    // Where the code and the Figma documentation disagree: both stand, the difference is flagged.
+    if (it.differences?.length) {
+      L.push('#### Where Figma and the code differ', '');
+      for (const d of it.differences) L.push(`- ${esc(d.detail)} <small>(${sourceLinks(`${d.figma} · ${d.code}`, figmaUrl)})</small>`);
       L.push('');
     }
   }

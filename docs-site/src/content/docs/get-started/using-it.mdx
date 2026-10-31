@@ -13,7 +13,7 @@ import { StatusBadge } from '@may_thet_htar_aung/lemonade-design-system';
 <StatusBadge Status="Found" />
 ```
 
-Prop names match the Figma property names exactly. The package exports only components whose release review is Cleared; the rest are in Storybook and join a later release once they clear. Components do not import their own CSS: a Cleared component's styles, and those of anything it renders, ship in `styles.css`.
+Prop names match the Figma property names exactly. `src/index.ts` names what the package exports: only components whose release review is Cleared. [All components](/components/) shows each verdict. Components do not import their own CSS: a Cleared component's styles, and those of anything it renders, ship in `styles.css`.
 
 ## Modes
 

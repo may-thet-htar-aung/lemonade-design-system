@@ -1,12 +1,12 @@
 {
-  "readAt": "2026-10-30",
+  "readAt": "2026-10-31",
   "source": "Airtable Components table (Components, Category, Development, Release Verdict, Figma, Production Storybook) and Staging Testing rows whose Suggestion for Improvement records a design gap, read live by Doc-generator. Focus-ring items are left out: the Designer ruled them out of scope.",
   "components": [
     {
       "name": "Callout",
       "category": "MOLECULES",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=109-69",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-callout--privacy",
       "designGaps": [
@@ -26,14 +26,13 @@
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=23-1470",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-logosymbol--brand-small",
-      "designGaps": []
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-logosymbol--brand-small"
     },
     {
       "name": "Input",
       "category": "MOLECULES",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=88-62",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-input--single-default",
       "designGaps": [
@@ -107,17 +106,17 @@
       "name": "Dialog Box",
       "category": "ORGANISMS",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=160-307",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-dialog-box--default",
       "designGaps": [
         {
           "case": "Dialog Box · Danger · null · idle",
-          "text": "Open for the Designer (Type: design gap): Danger confirm hover fill unspecified (code keeps --color-bg-negative-idle; --color-bg-negative-hover exists); plus the same gaps as Default: button width 199 and 24 between buttons unbound, base spacing/lg section gap, click-outside, scroll lock, placement, stacking, focus style and small-screen width unspecified. Full detail in reports/DialogBox.md."
+          "text": "Open for the Designer (Type: design gap): Danger confirm hover fill unspecified (code keeps --color-bg-negative-idle; --color-bg-negative-hover exists); plus the same gaps as Default: button width 199 and 24 between buttons unbound, base spacing/lg section gap, click-outside, scroll lock, placement, stacking and small-screen width unspecified. Full detail in reports/DialogBox.md."
         },
         {
           "case": "Dialog Box · Default · null · idle",
-          "text": "Open for the Designer (Type: design gap): button width 199 unbound (code hugs, 172 each); 24 between buttons unbound and the node's space-between leaves 18 (code leaves 70); section gap binds base spacing/lg (code --gap-gutter is 24 under data-layout medium/expanded); click-outside, scroll lock, placement, stacking, focus style and small-screen width unspecified. Full detail in reports/DialogBox.md."
+          "text": "Open for the Designer (Type: design gap): button width 199 unbound (code hugs, 172 each); 24 between buttons unbound and the node's space-between leaves 18 (code leaves 70); section gap binds base spacing/lg (code --gap-gutter is 24 under data-layout medium/expanded); click-outside, scroll lock, placement, stacking and small-screen width unspecified. Full detail in reports/DialogBox.md."
         }
       ]
     },
@@ -201,33 +200,33 @@
       "name": "Item Card",
       "category": "MOLECULES",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=108-39",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-item-card--grid-default",
       "designGaps": [
         {
           "case": "Item Card · Layout=Grid Large, State=Default · null · idle",
-          "text": "Type: design gap, for the Designer. Unbound in node 108:39: card width 320 and photo height 180 are raw (get_design_context). Card fills its container (768 x 126 against 320 x 274 in the node) and the photo hugs its icon (32 high), so on staging Grid Large renders identically to Grid. Body padding is spacing/md in the node; component uses --gap-card, Designer to confirm. No focus style in the node. Nested Status Badge padding-inline is the known Status Badge gap. See reports/ItemCard.md."
+          "text": "Type: design gap, for the Designer. Unbound in node 108:39: card width 320 and photo height 180 are raw (get_design_context). Card fills its container (768 x 126 against 320 x 274 in the node) and the photo hugs its icon (32 high), so on staging Grid Large renders identically to Grid. Body padding is spacing/md in the node; component uses --gap-card, Designer to confirm. Nested Status Badge padding-inline is the known Status Badge gap. See reports/ItemCard.md."
         },
         {
           "case": "Item Card · Layout=Grid Large, State=Hover · null · hovered",
-          "text": "Type: design gap, for the Designer. Same gaps as Layout=Grid Large, State=Default: card width 320 and photo height 180 unbound (card 768 x 126, photo 32 high, identical to Grid Hover), body padding spacing/md versus --gap-card, no focus style in the node, Status Badge padding-inline. See reports/ItemCard.md."
+          "text": "Type: design gap, for the Designer. Same gaps as Layout=Grid Large, State=Default: card width 320 and photo height 180 unbound (card 768 x 126, photo 32 high, identical to Grid Hover), body padding spacing/md versus --gap-card, Status Badge padding-inline. See reports/ItemCard.md."
         },
         {
           "case": "Item Card · Layout=Grid, State=Default · null · idle",
-          "text": "Type: design gap, for the Designer. Unbound in node 108:39: card width 170 and photo height 112 are raw (get_design_context), so no token to expect. Card fills its container (768 x 126 at an 800 px viewport against 170 x 206 in the node) and the photo hugs its icon (32 high). Body padding is spacing/md in the node; component uses --gap-card (12 default, 16 under data-layout medium/expanded), Designer to confirm the binding. No focus style in the node (browser default ring shown). Nested Status Badge padding-inline is the known Status Badge gap. See reports/ItemCard.md."
+          "text": "Type: design gap, for the Designer. Unbound in node 108:39: card width 170 and photo height 112 are raw (get_design_context), so no token to expect. Card fills its container (768 x 126 at an 800 px viewport against 170 x 206 in the node) and the photo hugs its icon (32 high). Body padding is spacing/md in the node; component uses --gap-card (12 default, 16 under data-layout medium/expanded), Designer to confirm the binding. Nested Status Badge padding-inline is the known Status Badge gap. See reports/ItemCard.md."
         },
         {
           "case": "Item Card · Layout=Grid, State=Hover · null · hovered",
-          "text": "Type: design gap, for the Designer. Same gaps as Layout=Grid, State=Default: card width 170 and photo height 112 unbound (card 768 x 126, photo 32 high), body padding spacing/md versus --gap-card, no focus style in the node, Status Badge padding-inline. See reports/ItemCard.md."
+          "text": "Type: design gap, for the Designer. Same gaps as Layout=Grid, State=Default: card width 170 and photo height 112 unbound (card 768 x 126, photo 32 high), body padding spacing/md versus --gap-card, Status Badge padding-inline. See reports/ItemCard.md."
         },
         {
           "case": "Item Card · Layout=List, State=Default · null · idle",
-          "text": "Type: design gap, for the Designer. Unbound in node 108:39: card width 358 and photo width 88 are raw (get_design_context). Card fills its container (768 x 94; height equals the node's 94) and the photo is 32 wide (node 88). Body padding is spacing/md in the node; component uses --gap-card (12 default, 16 under data-layout medium/expanded), Designer to confirm. No focus style in the node (browser default ring shown). Nested Status Badge padding-inline is the known Status Badge gap. See reports/ItemCard.md."
+          "text": "Type: design gap, for the Designer. Unbound in node 108:39: card width 358 and photo width 88 are raw (get_design_context). Card fills its container (768 x 94; height equals the node's 94) and the photo is 32 wide (node 88). Body padding is spacing/md in the node; component uses --gap-card (12 default, 16 under data-layout medium/expanded), Designer to confirm. Nested Status Badge padding-inline is the known Status Badge gap. See reports/ItemCard.md."
         },
         {
           "case": "Item Card · Layout=List, State=Hover · null · hovered",
-          "text": "Type: design gap, for the Designer. Same gaps as Layout=List, State=Default: card width 358 and photo width 88 unbound (card 768 x 94, photo 32 wide), body padding spacing/md versus --gap-card, no focus style in the node, Status Badge padding-inline. See reports/ItemCard.md."
+          "text": "Type: design gap, for the Designer. Same gaps as Layout=List, State=Default: card width 358 and photo width 88 unbound (card 768 x 94, photo 32 wide), body padding spacing/md versus --gap-card, Status Badge padding-inline. See reports/ItemCard.md."
         }
       ]
     },
@@ -235,21 +234,21 @@
       "name": "Pagination",
       "category": "MOLECULES",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=151-76",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-pagination--first",
       "designGaps": [
         {
           "case": "Pagination · First · null · idle",
-          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): (1) Frame width 1116 and height 40 are raw in node 151:10 with no variable bound, so the component fills its container (spec says set to Fill) and hugs 36px (--size-control-sm). (2) The description asks for a visible focus indicator on :focus-visible but binds no token. Tab shows the browser default outline. (3) The node binds primitive spacing/lg for the Pager gap and spacing/xl for Controls, while the code uses semantic --gap-gutter and --gap-pane, which change under data-layout medium/expanded (Pager gap 24px there). The Designer must decide whether these gaps should follow layout mode."
+          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): (1) Frame width 1116 and height 40 are raw in node 151:10 with no variable bound, so the component fills its container (spec says set to Fill) and hugs 36px (--size-control-sm). (2) The node binds primitive spacing/lg for the Pager gap and spacing/xl for Controls, while the code uses semantic --gap-gutter and --gap-pane, which change under data-layout medium/expanded (Pager gap 24px there). The Designer must decide whether these gaps should follow layout mode."
         },
         {
           "case": "Pagination · Last · null · idle",
-          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): (1) Frame width 1116 and height 40 are raw in node 151:54 with no variable bound; the component fills its container and hugs 36px (--size-control-sm). (2) No focus token is bound; Tab shows the browser default outline. (3) Pager and Controls gaps bind primitive spacing/lg and spacing/xl in the node while the code uses mode-aware --gap-gutter and --gap-pane (Pager gap 24px under data-layout medium/expanded). The Designer must decide whether these follow layout mode."
+          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): (1) Frame width 1116 and height 40 are raw in node 151:54 with no variable bound; the component fills its container and hugs 36px (--size-control-sm). (2) Pager and Controls gaps bind primitive spacing/lg and spacing/xl in the node while the code uses mode-aware --gap-gutter and --gap-pane (Pager gap 24px under data-layout medium/expanded). The Designer must decide whether these follow layout mode."
         },
         {
           "case": "Pagination · Middle · null · idle",
-          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): (1) Frame width 1116 and height 40 are raw in node 151:32 with no variable bound; the component fills its container and hugs 36px (--size-control-sm). (2) No focus token is bound; Tab shows the browser default outline. (3) The node binds spacing/2xl for the Middle Controls gap but spacing/xl for First and Last, yet Controls holds only the Pager so the gap has no visible effect: possible Designer inconsistency. Semantic --gap-section and --gap-gutter also change under data-layout (Controls 40px medium, 48px expanded); the Designer must decide whether that is intended."
+          "text": "Design gap (Type: design gap, for the Designer, not the Engineer): (1) Frame width 1116 and height 40 are raw in node 151:32 with no variable bound; the component fills its container and hugs 36px (--size-control-sm). (2) The node binds spacing/2xl for the Middle Controls gap but spacing/xl for First and Last, yet Controls holds only the Pager so the gap has no visible effect: possible Designer inconsistency. Semantic --gap-section and --gap-gutter also change under data-layout (Controls 40px medium, 48px expanded); the Designer must decide whether that is intended."
         }
       ]
     },
@@ -257,23 +256,9 @@
       "name": "Timeline Step",
       "category": "MOLECULES",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=110-34",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-timeline-step--event",
-      "designGaps": [
-        {
-          "case": "Timeline Step · Current",
-          "text": "None. The round 1 design gap is closed: node 110:20 now binds size/timeline/dot, size/timeline/stepminheight, border/width/2 (line) and spacing/lg (text padding), and staging measures each. Full matrix: reports/TimelineStep.md"
-        },
-        {
-          "case": "Timeline Step · Done",
-          "text": "None. The round 1 design gap is closed: node 110:11 now binds size/timeline/dot, size/timeline/stepminheight, border/width/2 (line) and spacing/lg (text padding), and staging measures each. Full matrix: reports/TimelineStep.md"
-        },
-        {
-          "case": "Timeline Step · Upcoming",
-          "text": "None. The round 1 design gap is closed: node 110:27 now binds size/timeline/dot, size/timeline/stepminheight, border/width/2 (line) and spacing/lg (text padding), and staging measures each. Full matrix: reports/TimelineStep.md"
-        }
-      ]
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-timeline-step--event"
     },
     {
       "name": "Top Nav",
@@ -327,10 +312,9 @@
       "name": "Button",
       "category": "ATOMS",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=165-1639",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-button--primary-default",
-      "designGaps": []
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-button--primary-default"
     },
     {
       "name": "Table",
@@ -338,8 +322,7 @@
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=141-8",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-table--default",
-      "designGaps": []
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-table--default"
     },
     {
       "name": "Icon",
@@ -347,14 +330,13 @@
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/AVDd45Hg9VOvZFgkykg9X3/Lemonade-Icons?node-id=76-12",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-icon--home",
-      "designGaps": []
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-icon--home"
     },
     {
       "name": "Table Row",
       "category": "MOLECULES",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=112-32",
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-table-row--header",
       "designGaps": [
@@ -376,10 +358,9 @@
       "name": "Link Button",
       "category": "ATOMS",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=147-183",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-link-button--default",
-      "designGaps": []
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-link-button--default"
     },
     {
       "name": "Status Badge",
@@ -423,10 +404,9 @@
       "name": "Avatar",
       "category": "ATOMS",
       "development": "Completed",
-      "releaseVerdict": "Blocked",
+      "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=192-54",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-avatar--initials-small-hover",
-      "designGaps": []
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-avatar--initials-small-hover"
     },
     {
       "name": "Tab Bar",
@@ -434,8 +414,7 @@
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=159-141",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-tab-bar--home",
-      "designGaps": []
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-tab-bar--home"
     },
     {
       "name": "Pagination Arrow",
@@ -443,8 +422,7 @@
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=155-30",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-pagination-arrow--previous-default",
-      "designGaps": []
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-pagination-arrow--previous-default"
     },
     {
       "name": "Sidebar",
@@ -510,8 +488,7 @@
       "development": "Released",
       "releaseVerdict": "Cleared",
       "figma": "https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=173-59",
-      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-top-nav-link--default",
-      "designGaps": []
+      "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-top-nav-link--default"
     },
     {
       "name": "Filter Chip",

@@ -1,7 +1,7 @@
 {
-  "readAt": "2026-10-30",
+  "readAt": "2026-10-31",
   "file": "q0faf7S1uuzwQo4UOe7bJq",
-  "method": "Figma MCP: get_metadata on each node, and a read-only Plugin API pass listing every fill, stroke, radius, padding, gap, stroke weight, fixed size and text property with no bound variable (other components nested as instances are excluded; they are read on their own node). Re-read for the 5a7e2b4 staging run: node, type, variant list and documentation text of all 14 nodes read again over the Figma MCP and identical; the unbound lists were spot-checked against live boundVariables (per-side stroke weights, vector layers scaled inside a bound frame, Wordmark letterSpacing, Sidebar divider) and stand. Re-read for the cf362ff run: type and variant list of all 14 nodes read again over the Plugin API and identical. Icon added: component set 76:12 in the Lemonade Icons file, 198 variants read live; its widths and heights are bound to size tokens except the six shield widths listed; the hidden Label text layer is not rendered and is left out.",
+  "method": "Figma MCP: get_metadata on each node, and a read-only Plugin API pass listing every fill, stroke, radius, padding, gap, stroke weight, fixed size and text property with no bound variable (other components nested as instances are excluded; they are read on their own node). Re-read for the 5a7e2b4 staging run: node, type, variant list and documentation text of all 14 nodes read again over the Figma MCP and identical; the unbound lists were spot-checked against live boundVariables (per-side stroke weights, vector layers scaled inside a bound frame, Wordmark letterSpacing, Sidebar divider) and stand. Re-read for the cf362ff run: type and variant list of all 14 nodes read again over the Plugin API and identical. Icon added: component set 76:12 in the Lemonade Icons file, 198 variants read live; its widths and heights are bound to size tokens except the six shield widths listed; the hidden Label text layer is not rendered and is left out. Re-read for the 13e049a run: type and variant list of the 14 nodes and Icon read again over the Plugin API and identical. Avatar, Button, Callout, Input, Item Card, Link Button, Pagination, Table Row and Timeline Step added: read live over the Plugin API with the same pass (visible layers only; nested instances, and vector layers' own sizes, excluded). Re-read again for this staging run at 13e049a: type and variant list of all 24 nodes read live over the Plugin API and identical. Re-read for the 29e20af staging run: type and variant list of all 24 nodes read live over the Plugin API and identical. Dialog Box added: component set 160:307 read live over the Plugin API with the same pass (visible layers only; nested instances excluded). Re-read for the 27290ad run: type and variant list of all 25 nodes read live over the Plugin API and identical.",
   "components": {
     "Filter Chip": {
       "node": "73:60",
@@ -2059,6 +2059,503 @@
         "width 32 on \"Name=shield, Size=xl\"",
         "width 40 on \"Name=shield, Size=2xl\"",
         "width 48 on \"Name=shield, Size=3xl\""
+      ]
+    },
+    "Avatar": {
+      "node": "192:54",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Type=Initials, Size=Small, State=Default",
+          "values": [
+            "Initials",
+            "Small",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Initials, Size=Medium, State=Default",
+          "values": [
+            "Initials",
+            "Medium",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Initials, Size=Large, State=Default",
+          "values": [
+            "Initials",
+            "Large",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Image, Size=Small, State=Default",
+          "values": [
+            "Image",
+            "Small",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Image, Size=Medium, State=Default",
+          "values": [
+            "Image",
+            "Medium",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Image, Size=Large, State=Default",
+          "values": [
+            "Image",
+            "Large",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Initials, Size=Small, State=Hover",
+          "values": [
+            "Initials",
+            "Small",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Type=Initials, Size=Medium, State=Hover",
+          "values": [
+            "Initials",
+            "Medium",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Type=Initials, Size=Large, State=Hover",
+          "values": [
+            "Initials",
+            "Large",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Type=Image, Size=Small, State=Hover",
+          "values": [
+            "Image",
+            "Small",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Type=Image, Size=Medium, State=Hover",
+          "values": [
+            "Image",
+            "Medium",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Type=Image, Size=Large, State=Hover",
+          "values": [
+            "Image",
+            "Large",
+            "Hover"
+          ]
+        }
+      ],
+      "unbound": []
+    },
+    "Button": {
+      "node": "165:1639",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Style=Primary, State=Default",
+          "values": [
+            "Primary",
+            "Default"
+          ]
+        },
+        {
+          "name": "Style=Primary, State=Hover",
+          "values": [
+            "Primary",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Style=Primary, State=Disabled",
+          "values": [
+            "Primary",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "Style=Outline, State=Default",
+          "values": [
+            "Outline",
+            "Default"
+          ]
+        },
+        {
+          "name": "Style=Outline, State=Hover",
+          "values": [
+            "Outline",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Style=Outline, State=Disabled",
+          "values": [
+            "Outline",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "Style=Ghost, State=Default",
+          "values": [
+            "Ghost",
+            "Default"
+          ]
+        },
+        {
+          "name": "Style=Ghost, State=Hover",
+          "values": [
+            "Ghost",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Style=Ghost, State=Disabled",
+          "values": [
+            "Ghost",
+            "Disabled"
+          ]
+        }
+      ],
+      "unbound": []
+    },
+    "Callout": {
+      "node": "109:69",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Type=Privacy",
+          "values": [
+            "Privacy"
+          ]
+        },
+        {
+          "name": "Type=AI Match",
+          "values": [
+            "AI Match"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 358 on every variant (Type=Privacy, AI Match)"
+      ]
+    },
+    "Input": {
+      "node": "88:62",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Type=Single, State=Default",
+          "values": [
+            "Single",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Single, State=Focused",
+          "values": [
+            "Single",
+            "Focused"
+          ]
+        },
+        {
+          "name": "Type=Single, State=Error",
+          "values": [
+            "Single",
+            "Error"
+          ]
+        },
+        {
+          "name": "Type=Single, State=Disabled",
+          "values": [
+            "Single",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "Type=Multi, State=Default",
+          "values": [
+            "Multi",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Multi, State=Focused",
+          "values": [
+            "Multi",
+            "Focused"
+          ]
+        },
+        {
+          "name": "Type=Multi, State=Error",
+          "values": [
+            "Multi",
+            "Error"
+          ]
+        },
+        {
+          "name": "Type=Multi, State=Disabled",
+          "values": [
+            "Multi",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "Type=Password Hidden, State=Default",
+          "values": [
+            "Password Hidden",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Password Hidden, State=Focused",
+          "values": [
+            "Password Hidden",
+            "Focused"
+          ]
+        },
+        {
+          "name": "Type=Password Hidden, State=Error",
+          "values": [
+            "Password Hidden",
+            "Error"
+          ]
+        },
+        {
+          "name": "Type=Password Hidden, State=Disabled",
+          "values": [
+            "Password Hidden",
+            "Disabled"
+          ]
+        },
+        {
+          "name": "Type=Password Shown, State=Default",
+          "values": [
+            "Password Shown",
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Password Shown, State=Focused",
+          "values": [
+            "Password Shown",
+            "Focused"
+          ]
+        },
+        {
+          "name": "Type=Password Shown, State=Error",
+          "values": [
+            "Password Shown",
+            "Error"
+          ]
+        },
+        {
+          "name": "Type=Password Shown, State=Disabled",
+          "values": [
+            "Password Shown",
+            "Disabled"
+          ]
+        }
+      ],
+      "unbound": []
+    },
+    "Item Card": {
+      "node": "108:39",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Layout=Grid, State=Default",
+          "values": [
+            "Grid",
+            "Default"
+          ]
+        },
+        {
+          "name": "Layout=List, State=Default",
+          "values": [
+            "List",
+            "Default"
+          ]
+        },
+        {
+          "name": "Layout=Grid Large, State=Default",
+          "values": [
+            "Grid Large",
+            "Default"
+          ]
+        },
+        {
+          "name": "Layout=Grid, State=Hover",
+          "values": [
+            "Grid",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Layout=List, State=Hover",
+          "values": [
+            "List",
+            "Hover"
+          ]
+        },
+        {
+          "name": "Layout=Grid Large, State=Hover",
+          "values": [
+            "Grid Large",
+            "Hover"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 170 and \"Photo\" height 112 on Layout=Grid (Default, Hover)",
+        "width 358 and \"Photo\" width 88 on Layout=List (Default, Hover)",
+        "width 320 and \"Photo\" height 180 on Layout=Grid Large (Default, Hover)"
+      ]
+    },
+    "Link Button": {
+      "node": "147:183",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "State=Default",
+          "values": [
+            "Default"
+          ]
+        },
+        {
+          "name": "State=Hover",
+          "values": [
+            "Hover"
+          ]
+        },
+        {
+          "name": "State=Disabled",
+          "values": [
+            "Disabled"
+          ]
+        }
+      ],
+      "unbound": [
+        "height 1 on \"Underline\" (State=Hover)"
+      ]
+    },
+    "Pagination": {
+      "node": "151:76",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Position=First",
+          "values": [
+            "First"
+          ]
+        },
+        {
+          "name": "Position=Middle",
+          "values": [
+            "Middle"
+          ]
+        },
+        {
+          "name": "Position=Last",
+          "values": [
+            "Last"
+          ]
+        }
+      ],
+      "unbound": [
+        "width 1116 and height 40 on every variant (Position=First, Middle, Last)"
+      ]
+    },
+    "Table Row": {
+      "node": "112:32",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Type=Header",
+          "values": [
+            "Header"
+          ]
+        },
+        {
+          "name": "Type=Body",
+          "values": [
+            "Body"
+          ]
+        },
+        {
+          "name": "Type=Body Hover",
+          "values": [
+            "Body Hover"
+          ]
+        }
+      ],
+      "unbound": []
+    },
+    "Timeline Step": {
+      "node": "110:34",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "State=Upcoming",
+          "values": [
+            "Upcoming"
+          ]
+        },
+        {
+          "name": "State=Done",
+          "values": [
+            "Done"
+          ]
+        },
+        {
+          "name": "State=Current",
+          "values": [
+            "Current"
+          ]
+        },
+        {
+          "name": "State=Event",
+          "values": [
+            "Event"
+          ]
+        }
+      ],
+      "unbound": []
+    },
+    "Dialog Box": {
+      "node": "160:307",
+      "type": "COMPONENT_SET",
+      "matrix": [
+        {
+          "name": "Type=Default",
+          "values": [
+            "Default"
+          ]
+        },
+        {
+          "name": "Type=Danger",
+          "values": [
+            "Danger"
+          ]
+        }
+      ],
+      "unbound": [
+        "gap 24 between the action buttons (Actions item spacing) on every variant (Type=Default, Danger)"
       ]
     }
   }
