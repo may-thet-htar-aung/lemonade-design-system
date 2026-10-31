@@ -7,7 +7,7 @@ description: Review one component for release at one pinned commit — 7 gates, 
 
 A release review decides whether one component is fit to ship under the design system's name. It runs **7 gates** and **6 checks** against the repo at **one pinned commit**, writes a report, and gives a verdict: `Cleared` or `Blocked`.
 
-Use this for each component the Release agent lists as `Completed`. Every component in one release is reviewed at the same commit. Do not use it to review a page, a token change or a whole release's packaging; Track A in `.claude/agents/release.md` covers the package.
+Use this for each component the Release agent lists. Every component in one release is reviewed at the same commit. Do not use it to review a page, a token change or a whole release's packaging; Track A in `.claude/agents/release.md` covers the package.
 
 ## The rule about findings
 
@@ -26,7 +26,7 @@ A gate is pass or fail. Any failed gate blocks.
 | # | Gate | Passes when | Read | Owner of a fail |
 |---|---|---|---|---|
 | 1 | **Intent written** | `src/components/<Name>/<Name>.intent.json` exists at the commit, and every empty field is listed in its `gaps` | the intent file | Doc-generator, or the Designer when the gap is missing Figma usage |
-| 2 | **Development status is `Completed`** | `Components.Development` reads `Completed` when you start and when you write the verdict | the registry, by plain list | whoever owns the evidence the formula is missing (see the `registry` skill) |
+| 2 | **Development status is `Completed`** | `Components.Development` reads `Completed` when you start and when you write the verdict, or `Released` when a patch re-reviews a component that already shipped | the registry, by plain list | whoever owns the evidence the formula is missing (see the `registry` skill) |
 | 3 | **Tokens clean** | `<Name>.css` has no raw values (the grep in the `build` skill, stage 3, returns nothing, where a `font-family:` whose whole value is a `var(--…)` token is not a hit), every `var(--…)` is a semantic token, and `node scripts/verify-tokens.mjs` ends `RESULT: PASS` | `<Name>.css`, `build/css/tokens.css` | Engineer; token-runner for a verify failure |
 | 4 | **Public surface decided** | The component and its prop types are exported from `src/index.ts`, and nothing else from its folder is | `src/index.ts` | Engineer |
 | 5 | **Names final** | The component name matches its Figma component set, every prop name matches its Figma property character for character (a content prop, a runtime prop or a standard HTML attribute, as the `build` skill defines them, has no Figma property and passes), and no name carries `New`, `Temp`, `WIP`, `v2` or similar | the `.tsx`, the Figma node | Engineer for code names, Designer for Figma names |
@@ -90,7 +90,7 @@ One row for every gate and every check, passed or not, each with the evidence yo
 - [ ] One SHA was pinned before the first gate, and every file was read at it.
 - [ ] Every gate and every check has a row with evidence, including the ones that passed.
 - [ ] Every failure names the agent who owns the fix.
-- [ ] Development still reads `Completed`.
+- [ ] Development still reads `Completed`, or `Released` for a patch re-review.
 - [ ] The report is committed and pushed, and the permalink you are writing contains that commit's SHA.
 - [ ] You changed no file but the report.
 
