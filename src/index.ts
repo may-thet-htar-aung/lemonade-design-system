@@ -4,12 +4,14 @@
 export { Callout, type CalloutProps, type CalloutType } from './components/Callout/Callout';
 export { DialogBox, type DialogBoxProps, type DialogBoxType } from './components/DialogBox/DialogBox';
 export { Avatar, type AvatarProps } from './components/Avatar/Avatar';
+export { Button, type ButtonProps } from './components/Button/Button';
 export { FilterChip, type FilterChipProps, type FilterChipState } from './components/FilterChip/FilterChip';
 export { Footer, type FooterProps } from './components/Footer/Footer';
 export { Icon, type IconName, type IconProps } from './components/Icon/Icon';
 export { IconButton, type IconButtonProps } from './components/IconButton/IconButton';
 export { Input, type InputProps, type InputState, type InputType } from './components/Input/Input';
 export { ItemCard, type ItemCardLayout, type ItemCardProps, type ItemCardState } from './components/ItemCard/ItemCard';
+export { LinkButton, type LinkButtonProps } from './components/LinkButton/LinkButton';
 export { Logo, type LogoProps, type LogoSize, type LogoTheme } from './components/Logo/Logo';
 export { LogoSymbol, type LogoSymbolColor, type LogoSymbolProps, type LogoSymbolSize } from './components/LogoSymbol/LogoSymbol';
 export { Pagination, type PaginationProps } from './components/Pagination/Pagination';
