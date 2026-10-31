@@ -28,8 +28,8 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/TopNavLink/TopNavLink.tsx:8"
+      "intent": "Use Default for a link to another section.",
+      "source": "figma:582:1283 · code:src/components/TopNavLink/TopNavLink.tsx:8"
     },
     {
       "prop": "State",
@@ -92,10 +92,6 @@
     }
   ],
   "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default: the Top Nav documentation page (184:1039), which holds the Top Nav Link set does not say what this value is for (checked usage region 184:1275)."
-    },
     {
       "field": "pairs_with",
       "detail": "Top Nav Link composes no other component and no story pairs it with a sibling component outside Top Nav."

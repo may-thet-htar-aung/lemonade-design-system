@@ -258,14 +258,14 @@
     {
       "prop": "Size",
       "value": "sm",
-      "intent": "",
-      "source": "code:src/components/Icon/Icon.tsx:62"
+      "intent": "Use sm beside small text.",
+      "source": "figma:147:192 · code:src/components/Icon/Icon.tsx:62"
     },
     {
       "prop": "Size",
       "value": "md",
-      "intent": "",
-      "source": "code:src/components/Icon/Icon.tsx:62"
+      "intent": "Use md beside body text.",
+      "source": "figma:147:196 · code:src/components/Icon/Icon.tsx:62"
     },
     {
       "prop": "Size",
@@ -276,20 +276,20 @@
     {
       "prop": "Size",
       "value": "xl",
-      "intent": "",
-      "source": "code:src/components/Icon/Icon.tsx:62"
+      "intent": "Use xl for empty states.",
+      "source": "figma:147:200 · code:src/components/Icon/Icon.tsx:62"
     },
     {
       "prop": "Size",
       "value": "2xl",
-      "intent": "",
-      "source": "code:src/components/Icon/Icon.tsx:62"
+      "intent": "Use 2xl for feature highlights.",
+      "source": "figma:147:204 · code:src/components/Icon/Icon.tsx:62"
     },
     {
       "prop": "Size",
       "value": "3xl",
-      "intent": "",
-      "source": "code:src/components/Icon/Icon.tsx:62"
+      "intent": "Use 3xl for large illustrations.",
+      "source": "figma:147:208 · code:src/components/Icon/Icon.tsx:62"
     }
   ],
   "placement": [
@@ -389,10 +389,6 @@
     {
       "field": "variant_intent",
       "detail": "Name=arrow-right, bell, box, building, camera, check, chevron-down, chevron-left, chevron-right, clock, collapse, dashboard, expand, eye, eye-off, file, filter, flag, handover, home, key, list, lock, maximize, menu, pin, plus, search, shield, sparkle, user, users, x: the Figma documentation page for Icon (79:210) does not say what these values are for (checked usage region 79:572)."
-    },
-    {
-      "field": "variant_intent",
-      "detail": "Size=sm, md, xl, 2xl, 3xl: the Figma documentation page for Icon (79:210) does not say what these values are for (checked usage region 79:572)."
     },
     {
       "field": "pairs_with",

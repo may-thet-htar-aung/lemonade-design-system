@@ -33,38 +33,38 @@
     {
       "prop": "Color",
       "value": "Brand",
-      "intent": "",
-      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:3"
+      "intent": "Use Brand on white or cream surfaces.",
+      "source": "figma:582:1305 · code:src/components/LogoSymbol/LogoSymbol.tsx:3"
     },
     {
       "prop": "Color",
       "value": "Black",
-      "intent": "",
-      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:3"
+      "intent": "Use Black for one-colour print.",
+      "source": "figma:582:1333 · code:src/components/LogoSymbol/LogoSymbol.tsx:3"
     },
     {
       "prop": "Color",
       "value": "White",
-      "intent": "",
-      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:3"
+      "intent": "Use White on dark surfaces.",
+      "source": "figma:582:1337 · code:src/components/LogoSymbol/LogoSymbol.tsx:3"
     },
     {
       "prop": "Size",
       "value": "Small",
-      "intent": "",
-      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:4"
+      "intent": "Use Small for favicons.",
+      "source": "figma:582:1341 · code:src/components/LogoSymbol/LogoSymbol.tsx:4"
     },
     {
       "prop": "Size",
       "value": "Medium",
-      "intent": "",
-      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:4"
+      "intent": "Use Medium for navigation.",
+      "source": "figma:582:1345 · code:src/components/LogoSymbol/LogoSymbol.tsx:4"
     },
     {
       "prop": "Size",
       "value": "Large",
-      "intent": "",
-      "source": "code:src/components/LogoSymbol/LogoSymbol.tsx:4"
+      "intent": "Use Large for app icons.",
+      "source": "figma:582:1349 · code:src/components/LogoSymbol/LogoSymbol.tsx:4"
     }
   ],
   "placement": [
@@ -99,14 +99,6 @@
     }
   ],
   "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "Color=Brand, Black, White: the Logo documentation page (23:946), which holds the Logo/Symbol set does not say what these values are for (checked usage region 23:1138)."
-    },
-    {
-      "field": "variant_intent",
-      "detail": "Size=Small, Medium, Large: the Logo documentation page (23:946), which holds the Logo/Symbol set does not say what these values are for (checked usage region 23:1138)."
-    },
     {
       "field": "pairs_with",
       "detail": "Logo/Symbol composes no other component and no story pairs it with a sibling component."

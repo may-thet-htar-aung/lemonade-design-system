@@ -61,8 +61,8 @@
     {
       "prop": "Collapsed",
       "value": "False",
-      "intent": "",
-      "source": "code:src/components/Sidebar/Sidebar.tsx:14"
+      "intent": "Keep Collapsed False by default, so section names stay visible.",
+      "source": "figma:582:1247 · code:src/components/Sidebar/Sidebar.tsx:14"
     },
     {
       "prop": "Collapsed",
@@ -226,10 +226,5 @@
       "detail": "Figma asks for each collapsed item's label to show as a tooltip on hover and focus (also best practice 206:1166 and the Do-not rule 206:1156). The code sets aria-label only and renders no tooltip or title."
     }
   ],
-  "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "Collapsed=False: the Figma documentation page for Sidebar (206:886) does not say what this value is for (checked usage region 206:1108)."
-    }
-  ]
+  "gaps": []
 }

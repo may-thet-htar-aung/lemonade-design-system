@@ -78,8 +78,8 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/ItemCard/ItemCard.tsx:8"
+      "intent": "Use Default at rest.",
+      "source": "figma:582:1227 · code:src/components/ItemCard/ItemCard.tsx:8"
     },
     {
       "prop": "State",
@@ -172,10 +172,5 @@
       "source": "figma:123:383"
     }
   ],
-  "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default: the Figma documentation page for Item Card (123:40) does not say what this value is for (checked usage region 123:304)."
-    }
-  ]
+  "gaps": []
 }
