@@ -44,3 +44,25 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = { args: { Type: 'Default' } };
 export const Danger: Story = { args: { Type: 'Danger' } };
+
+// Examples: Figma usage notes on approving a claim and on Danger, not matrix rows.
+export const ExampleApproveAClaim: Story = {
+  name: 'Example: approve a claim',
+  args: {
+    Type: 'Default',
+    Title: 'Approve this claim?',
+    Body: 'The owner will be told to collect the item.',
+    ConfirmLabel: 'Approve claim',
+  },
+};
+
+export const ExampleRejectAClaim: Story = {
+  name: 'Example: reject a claim',
+  args: {
+    Type: 'Danger',
+    'Show callout': false,
+    Title: 'Reject this claim?',
+    Body: 'The owner will be told it was rejected.',
+    ConfirmLabel: 'Reject claim',
+  },
+};

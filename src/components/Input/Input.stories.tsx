@@ -29,3 +29,15 @@ export const PasswordShownDefault: Story = { args: { Type: 'Password Shown', Sta
 export const PasswordShownFocused: Story = { args: { Type: 'Password Shown', State: 'Focused', defaultValue: 'lemonade2026' } };
 export const PasswordShownError: Story = { args: { Type: 'Password Shown', State: 'Error', defaultValue: 'lemonade2026' } };
 export const PasswordShownDisabled: Story = { args: { Type: 'Password Shown', State: 'Disabled', defaultValue: 'lemonade2026' } };
+
+// Example: Figma usage note "Set the width to Fill in forms", not a matrix row.
+export const ExampleInAForm: Story = {
+  name: 'Example: in a form',
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-component)' }}>
+      <Input Label="Item name" Placeholder="Black leather wallet" />
+      <Input Type="Multi" Label="Describe the item" Placeholder="Where you lost it, and anything that stands out" />
+      <Input State="Error" Label="Station" Helper="Enter the station where you lost it." />
+    </div>
+  ),
+};
