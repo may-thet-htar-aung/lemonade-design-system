@@ -84,14 +84,14 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/Input/Input.tsx:6"
+      "intent": "Use Default for a field at rest.",
+      "source": "figma:582:1219 · code:src/components/Input/Input.tsx:6"
     },
     {
       "prop": "State",
       "value": "Focused",
-      "intent": "",
-      "source": "code:src/components/Input/Input.tsx:6"
+      "intent": "Use Focused while the person is typing in the field.",
+      "source": "figma:582:1223 · code:src/components/Input/Input.tsx:6"
     },
     {
       "prop": "State",
@@ -213,10 +213,5 @@
       "source": "figma:98:332"
     }
   ],
-  "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default, Focused: the Figma documentation page for Input (98:20) does not say what these values are for (checked usage region 98:253)."
-    }
-  ]
+  "gaps": []
 }

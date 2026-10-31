@@ -79,20 +79,20 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/IconButton/IconButton.tsx:10"
+      "intent": "Use Default at rest.",
+      "source": "figma:582:1207 · code:src/components/IconButton/IconButton.tsx:10"
     },
     {
       "prop": "State",
       "value": "Hover",
-      "intent": "",
-      "source": "code:src/components/IconButton/IconButton.tsx:10"
+      "intent": "Use Hover when the pointer is over it.",
+      "source": "figma:582:1211 · code:src/components/IconButton/IconButton.tsx:10"
     },
     {
       "prop": "State",
       "value": "Disabled",
-      "intent": "",
-      "source": "code:src/components/IconButton/IconButton.tsx:10"
+      "intent": "Use Disabled when the action is not available yet.",
+      "source": "figma:582:1215 · code:src/components/IconButton/IconButton.tsx:10"
     }
   ],
   "placement": [
@@ -165,10 +165,5 @@
       "source": "figma:205:531"
     }
   ],
-  "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default, Hover, Disabled: the Figma documentation page for Icon Button (205:109) does not say what these values are for (checked usage region 205:452)."
-    }
-  ]
+  "gaps": []
 }

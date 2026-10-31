@@ -78,20 +78,20 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/Button/Button.tsx:9"
+      "intent": "Use Default at rest.",
+      "source": "figma:582:1179 · code:src/components/Button/Button.tsx:9"
     },
     {
       "prop": "State",
       "value": "Hover",
-      "intent": "",
-      "source": "code:src/components/Button/Button.tsx:9"
+      "intent": "Use Hover when the pointer is over it.",
+      "source": "figma:582:1183 · code:src/components/Button/Button.tsx:9"
     },
     {
       "prop": "State",
       "value": "Disabled",
-      "intent": "",
-      "source": "code:src/components/Button/Button.tsx:9"
+      "intent": "Use Disabled when the action is not available yet.",
+      "source": "figma:582:1187 · code:src/components/Button/Button.tsx:9"
     }
   ],
   "placement": [
@@ -167,10 +167,6 @@
     }
   ],
   "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default, Hover, Disabled: the Figma documentation page for Button (64:68) does not say what these values are for (checked usage region 64:405)."
-    },
     {
       "field": "pairs_with",
       "detail": "Button imports no other component; Icon Left swap and Icon Right swap take any ReactNode (Button.tsx:12, 15) and no story fills them, so no paired component is shown."

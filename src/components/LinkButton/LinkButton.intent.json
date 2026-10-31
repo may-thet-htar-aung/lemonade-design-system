@@ -61,8 +61,8 @@
     {
       "prop": "State",
       "value": "Default",
-      "intent": "",
-      "source": "code:src/components/LinkButton/LinkButton.tsx:9"
+      "intent": "Use Default at rest.",
+      "source": "figma:582:1231 · code:src/components/LinkButton/LinkButton.tsx:9"
     },
     {
       "prop": "State",
@@ -73,8 +73,8 @@
     {
       "prop": "State",
       "value": "Disabled",
-      "intent": "",
-      "source": "code:src/components/LinkButton/LinkButton.tsx:9"
+      "intent": "Use Disabled when the action is not available yet.",
+      "source": "figma:582:1235 · code:src/components/LinkButton/LinkButton.tsx:9"
     }
   ],
   "placement": [
@@ -148,10 +148,5 @@
       "detail": "Figma says to use an a element when the link button opens another page (and 232:559 pairs Icon Right with opening another page). The code always renders a <button> and its props are button attributes only, so it cannot render a link."
     }
   ],
-  "gaps": [
-    {
-      "field": "variant_intent",
-      "detail": "State=Default, Disabled: the Figma documentation page for Link Button (232:306) does not say what these values are for (checked usage region 232:537)."
-    }
-  ]
+  "gaps": []
 }
