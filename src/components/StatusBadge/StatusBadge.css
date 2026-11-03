@@ -3,6 +3,8 @@
 .status-badge {
   display: inline-flex;
   align-items: center;
+  /* Hug the label. An auto width lets a column flex or grid parent stretch the badge. */
+  width: fit-content;
   box-sizing: border-box;
   gap: var(--gap-element);
   height: var(--size-badge-height);
