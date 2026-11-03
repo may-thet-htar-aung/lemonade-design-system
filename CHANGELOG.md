@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.3.3
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- Nothing in the component API. Props, exports, `styles.css` and `tokens.css` are unchanged since 0.3.2.
+
+### Fixed
+
+- Status Badge: adds 8px of inline padding so the badge matches the Figma node (Status=Lost now renders 45 x 24).
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
 ## 0.3.1
 
 ### Added
