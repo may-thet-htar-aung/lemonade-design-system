@@ -15,8 +15,12 @@
 }
 
 /* GAP: padding-inline is bound to spacing/sm in the node, but spacing/sm is
-   a base token (--gap-component points at it) and no semantic padding token
-   resolves to it. Left unset. Designer to bind a semantic token. */
+   a base token and no semantic padding token resolves to it. --gap-component
+   is used as a stand-in so the badge matches the node. Designer to bind a
+   semantic padding token, then swap it in. */
+.status-badge {
+  padding-inline: var(--gap-component);
+}
 
 .status-badge__label {
   font: var(--tagline-12-font-weight) var(--tagline-12-font-size) / var(--tagline-12-line-height) var(--tagline-12-font-family);
