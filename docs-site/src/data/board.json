@@ -371,32 +371,32 @@
       "productionStorybook": "https://lemonade-design-system.vercel.app/?path=/story/components-status-badge--lost",
       "designGaps": [
         {
-          "case": "Status Badge · Claim Pending · null · idle",
-          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:13, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 90.3px against 106px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+          "case": "Status Badge · Lost · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline binds spacing/sm in node 66:4, a base token with no semantic padding token. StatusBadge.css uses --gap-component as a stand-in (computed 8px, matches the node). Designer to bind a semantic padding token. Not a failure."
         },
         {
           "case": "Status Badge · Found · null · idle",
-          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:7, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 39.8px against 56px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
-        },
-        {
-          "case": "Status Badge · Lost · null · idle",
-          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:4, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 28.6px against 45px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline binds spacing/sm in node 66:7, a base token with no semantic padding token. StatusBadge.css uses --gap-component as a stand-in (computed 8px, matches the node). Designer to bind a semantic padding token. Not a failure."
         },
         {
           "case": "Status Badge · Potential Match · null · idle",
-          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:10, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 100.1px against 116px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline binds spacing/sm in node 66:10, a base token with no semantic padding token. StatusBadge.css uses --gap-component as a stand-in (computed 8px, matches the node). Designer to bind a semantic padding token. Not a failure."
         },
         {
-          "case": "Status Badge · Rejected · null · idle",
-          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 68:4, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 57.5px against 73px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
-        },
-        {
-          "case": "Status Badge · Returned · null · idle",
-          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:19, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 59.8px against 76px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+          "case": "Status Badge · Claim Pending · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline binds spacing/sm in node 66:13, a base token with no semantic padding token. StatusBadge.css uses --gap-component as a stand-in (computed 8px, matches the node). Designer to bind a semantic padding token. Not a failure."
         },
         {
           "case": "Status Badge · Verified · null · idle",
-          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline is bound to spacing/sm in node 66:16, which has no semantic token, so StatusBadge.css leaves it unset. Measured padding-inline 0px, width 50.1px against 66px in the node (16px short = 2 x spacing/sm). Every other bound property passed."
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline binds spacing/sm in node 66:16, a base token with no semantic padding token. StatusBadge.css uses --gap-component as a stand-in (computed 8px, matches the node). Designer to bind a semantic padding token. Not a failure."
+        },
+        {
+          "case": "Status Badge · Returned · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline binds spacing/sm in node 66:19, a base token with no semantic padding token. StatusBadge.css uses --gap-component as a stand-in (computed 8px, matches the node). Designer to bind a semantic padding token. Not a failure."
+        },
+        {
+          "case": "Status Badge · Rejected · null · idle",
+          "text": "Type: design gap (for the Designer, not the Engineer). padding-inline binds spacing/sm in node 68:4, a base token with no semantic padding token. StatusBadge.css uses --gap-component as a stand-in (computed 8px, matches the node). Designer to bind a semantic padding token. Not a failure."
         }
       ]
     },
