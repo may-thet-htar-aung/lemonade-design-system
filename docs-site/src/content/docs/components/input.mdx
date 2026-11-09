@@ -234,24 +234,26 @@ Story: [Single Default](https://lemonade-design-system.vercel.app/?path=/story/c
 
 Every fill, stroke, radius, padding, gap, stroke weight, fixed size and text property read on node 88:62 is bound to a variable.
 
-### Design gaps recorded
+### Known design gaps
 
-- **Input · Type=Multi, State=Default · null · idle**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Multi, State=Disabled · null · disabled**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Multi, State=Error · null · error**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Multi, State=Focused · null · focus**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Password Hidden, State=Default · null · idle**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Password Hidden, State=Disabled · null · disabled**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Password Hidden, State=Error · null · error**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Password Hidden, State=Focused · null · focus**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Password Shown, State=Default · null · idle**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Password Shown, State=Disabled · null · disabled**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Password Shown, State=Error · null · error**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Password Shown, State=Focused · null · focus**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Single, State=Default · null · idle**: Type: design gap (for the Designer, not the Engineer). Node 88:62 binds field padding to spacing/lg (sides) and spacing/md (top, bottom), but its description says control height follows density (48 Mobile, 44 Web, 36 Back Office) and --density-controlpaddingx/y exist. The node does not bind them, so the field padding in Web and Back Office density has no design expectation. The component uses --density-controlpaddingy/x, which equal 12/16 in default density. The Designer must confirm the binding.
-- **Input · Type=Single, State=Disabled · null · disabled**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Single, State=Error · null · error**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
-- **Input · Type=Single, State=Focused · null · focus**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y (binds spacing/lg, spacing/md). Designer to confirm.
+Questions the design has not answered yet. The component leaves each one unbuilt rather than guess, and the design team will confirm them.
+
+- **Input · Type=Multi, State=Default · idle**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Multi, State=Disabled · disabled**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Multi, State=Error · error**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Multi, State=Focused · focus**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Password Hidden, State=Default · idle**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Password Hidden, State=Disabled · disabled**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Password Hidden, State=Error · error**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Password Hidden, State=Focused · focus**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Password Shown, State=Default · idle**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Password Shown, State=Disabled · disabled**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Password Shown, State=Error · error**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Password Shown, State=Focused · focus**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Single, State=Default · idle**: Type: design gap (for the Designer, not the Engineer). Node 88:62 binds field padding to spacing/lg (sides) and spacing/md (top, bottom), but its description says control height follows density (48 Mobile, 44 Web, 36 Back Office) and --density-controlpaddingx/y exist. The node does not bind them, so the field padding in Web and Back Office density has no design expectation. The component uses --density-controlpaddingy/x, which equal 12/16 in default density. The Designer must confirm the binding.
+- **Input · Type=Single, State=Disabled · disabled**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Single, State=Error · error**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y. Designer to confirm.
+- **Input · Type=Single, State=Focused · focus**: Type: design gap, same note as the Single Default row: node 88:62 does not bind --density-controlpaddingx/y (binds spacing/lg, spacing/md). Designer to confirm.
 
 </TabItem>
 <TabItem label="Changelog" icon="list-format">

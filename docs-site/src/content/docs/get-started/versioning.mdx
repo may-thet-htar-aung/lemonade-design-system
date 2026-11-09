@@ -7,8 +7,8 @@ The package is `@may_thet_htar_aung/lemonade-design-system` on npm. Its version 
 
 ## How a version is chosen
 
-- Every commit that touches a component since the last `v*` tag is classified as added, changed, fixed, deprecated or removed, and as breaking or not. This is gate 7 of the release review (`.claude/skills/release-review/SKILL.md`).
-- The Release agent proposes a version from those classifications, naming the change that forces it. It never decides the version: a human approves it.
+- Every commit that touches a component since the last `v*` tag is classified as added, changed, fixed, deprecated or removed, and as breaking or not. This is the last check of the release review.
+- The release review proposes a version from those classifications, naming the change that forces it. A person approves the version before it is published.
 - `package.json` must carry the version on `main` before publishing.
 
 ## How it is published

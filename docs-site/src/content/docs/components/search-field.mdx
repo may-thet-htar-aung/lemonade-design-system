@@ -200,13 +200,15 @@ Story: [Default](https://lemonade-design-system.vercel.app/?path=/story/componen
 - width 24 on "Clear button"
 - height 24 on "Clear button"
 
-### Design gaps recorded
+### Known design gaps
 
-- **Search Field · State=Clear Hover · null · hovered**: Type: design gap, for the Designer, not the Engineer. The Clear button is 24 x 24 in node 105:26 (Clear button 115:14) but no variable binds that size, so there is no token to expect. It renders at its icon size --size-icon-md (18 x 18), so the --color-bg-surfaceprimary circle is 18 not 24. Designer must bind a size token (or confirm 18). Also the padding note: node binds spacing/lg and spacing/md, not --density-controlpaddingx/y.
-- **Search Field · State=Default · null · idle**: Type: design gap, for the Designer. Node 105:26 binds padding to spacing/lg and spacing/md (base tokens), not --density-controlpaddingx/y. Same in default density (16/12); Web and Back Office density have no design expectation. Designer to confirm.
-- **Search Field · State=Disabled · null · disabled**: Type: design gap, for the Designer. Same padding note as the Default row: node 105:26 binds spacing/lg and spacing/md, not --density-controlpaddingx/y. Designer to confirm.
-- **Search Field · State=Filled · null · filled**: Type: design gap, for the Designer, not the Engineer. The Clear button is 24 x 24 in node 105:26 (Clear button 115:10) but no variable binds that size, so there is no token to expect. It renders at its icon size --size-icon-md (18 x 18), so the hover circle and hit area are 18 not 24. Designer must bind a size token (or confirm 18). Also the padding note: node binds spacing/lg and spacing/md, not --density-controlpaddingx/y.
-- **Search Field · State=Focused · null · focus**: Type: design gap, for the Designer. Same padding note as the Default row: node 105:26 binds spacing/lg and spacing/md, not --density-controlpaddingx/y. Designer to confirm.
+Questions the design has not answered yet. The component leaves each one unbuilt rather than guess, and the design team will confirm them.
+
+- **Search Field · State=Clear Hover · hovered**: Type: design gap, for the Designer, not the Engineer. The Clear button is 24 x 24 in node 105:26 (Clear button 115:14) but no variable binds that size, so there is no token to expect. It renders at its icon size --size-icon-md (18 x 18), so the --color-bg-surfaceprimary circle is 18 not 24. Designer must bind a size token (or confirm 18). Also the padding note: node binds spacing/lg and spacing/md, not --density-controlpaddingx/y.
+- **Search Field · State=Default · idle**: Type: design gap, for the Designer. Node 105:26 binds padding to spacing/lg and spacing/md (base tokens), not --density-controlpaddingx/y. Same in default density (16/12); Web and Back Office density have no design expectation. Designer to confirm.
+- **Search Field · State=Disabled · disabled**: Type: design gap, for the Designer. Same padding note as the Default row: node 105:26 binds spacing/lg and spacing/md, not --density-controlpaddingx/y. Designer to confirm.
+- **Search Field · State=Filled · filled**: Type: design gap, for the Designer, not the Engineer. The Clear button is 24 x 24 in node 105:26 (Clear button 115:10) but no variable binds that size, so there is no token to expect. It renders at its icon size --size-icon-md (18 x 18), so the hover circle and hit area are 18 not 24. Designer must bind a size token (or confirm 18). Also the padding note: node binds spacing/lg and spacing/md, not --density-controlpaddingx/y.
+- **Search Field · State=Focused · focus**: Type: design gap, for the Designer. Same padding note as the Default row: node 105:26 binds spacing/lg and spacing/md, not --density-controlpaddingx/y. Designer to confirm.
 
 </TabItem>
 <TabItem label="Changelog" icon="list-format">

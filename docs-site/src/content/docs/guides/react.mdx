@@ -16,3 +16,4 @@ import { StatusBadge } from '@may_thet_htar_aung/lemonade-design-system';
 - Import the two stylesheets once, at the root of the app.
 - Every component whose release review is Cleared, and its prop types, are named exports of the package entry. Each component page lists them on its Usage tab, and its props on its Code tab.
 - Props mirror the Figma property names, including their capital letters, such as `Style`, `State` and `Size`.
+- No component imports a router. Links render as plain `<a>` elements and take `href` and `onClick`, so the components work with any client-side router. Buttons take `onClick`.

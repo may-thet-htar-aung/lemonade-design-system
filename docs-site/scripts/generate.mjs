@@ -452,11 +452,17 @@ const componentPage = (c) => {
     const unbound = (f.unbound || []).filter((u) => !/2A313A/i.test(u));
     if (unbound.length) { for (const u of unbound) L.push(`- ${esc(u)}`); L.push(''); }
     else L.push(`Every fill, stroke, radius, padding, gap, stroke weight, fixed size and text property read on node ${f.node} is bound to a variable.`, '');
-    L.push('### Design gaps recorded', '');
+    L.push('### Known design gaps', '');
     if (c.designGaps?.length) {
-      for (const g of c.designGaps) L.push(`- **${esc(g.case)}**: ${esc(g.text)}`);
+      L.push('Questions the design has not answered yet. The component leaves each one unbuilt rather than guess, and the design team will confirm them.', '');
+      for (const g of c.designGaps) {
+        const label = g.case.replace(/ · null/g, '');
+        const stripped = g.text.replace(/^(?:Still open for the Designer|Open for the Designer|Design gap) \(Type: design gap[^)]*\):\s*/i, '');
+        const text = stripped.charAt(0).toUpperCase() + stripped.slice(1);
+        L.push(`- **${esc(label)}**: ${esc(text)}`);
+      }
       L.push('');
-    } else L.push('No Staging Testing row for this component records a design gap.', '');
+    } else L.push('No design gaps are known for this component.', '');
   }
   L.push('</TabItem>');
 

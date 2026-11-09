@@ -78,7 +78,6 @@ export default defineConfig({
 					items: [
 						{ label: 'Designing', slug: 'guides/designing' },
 						{ label: 'React', slug: 'guides/react' },
-						{ label: 'React Router', slug: 'guides/react-router' },
 						{ label: 'Theming', slug: 'guides/theming' },
 						{ label: 'Knowledge skill', slug: 'guides/knowledge-skill' },
 					],

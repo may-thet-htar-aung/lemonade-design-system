@@ -195,11 +195,13 @@ Story: [Header](https://lemonade-design-system.vercel.app/?path=/story/component
 
 Every fill, stroke, radius, padding, gap, stroke weight, fixed size and text property read on node 112:32 is bound to a variable.
 
-### Design gaps recorded
+### Known design gaps
 
-- **Table Row · Body · null · idle**: Open for the Designer (Type: design gap): row padding against density (node binds static spacing/md; code follows --density-controlpaddingy, so back-office now measures 40 = --density-rowheight); Action column has no minimum width.
-- **Table Row · Body Hover · null · hovered**: Open for the Designer (Type: design gap): same as Body, row padding under back-office density, and no minimum width on the Action column.
-- **Table Row · Header · null · idle**: Open for the Designer (Type: design gap): Action column has no minimum width in the node.
+Questions the design has not answered yet. The component leaves each one unbuilt rather than guess, and the design team will confirm them.
+
+- **Table Row · Body · idle**: Row padding against density (node binds static spacing/md; code follows --density-controlpaddingy, so back-office now measures 40 = --density-rowheight); Action column has no minimum width.
+- **Table Row · Body Hover · hovered**: Same as Body, row padding under back-office density, and no minimum width on the Action column.
+- **Table Row · Header · idle**: Action column has no minimum width in the node.
 
 </TabItem>
 <TabItem label="Changelog" icon="list-format">

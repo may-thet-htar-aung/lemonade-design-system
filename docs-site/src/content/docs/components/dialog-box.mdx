@@ -209,10 +209,12 @@ Story: [Default](https://lemonade-design-system.vercel.app/?path=/story/componen
 
 - gap 24 between the action buttons (Actions item spacing) on every variant (Type=Default, Danger)
 
-### Design gaps recorded
+### Known design gaps
 
-- **Dialog Box · Danger · null · idle**: Open for the Designer (Type: design gap): Danger confirm hover fill unspecified (code keeps --color-bg-negative-idle; --color-bg-negative-hover exists); plus the same gaps as Default: button width 199 and 24 between buttons unbound, base spacing/lg section gap, click-outside, scroll lock, placement, stacking and small-screen width unspecified. Full detail in reports/DialogBox.md.
-- **Dialog Box · Default · null · idle**: Open for the Designer (Type: design gap): button width 199 unbound (code hugs, 172 each); 24 between buttons unbound and the node's space-between leaves 18 (code leaves 70); section gap binds base spacing/lg (code --gap-gutter is 24 under data-layout medium/expanded); click-outside, scroll lock, placement, stacking and small-screen width unspecified. Full detail in reports/DialogBox.md.
+Questions the design has not answered yet. The component leaves each one unbuilt rather than guess, and the design team will confirm them.
+
+- **Dialog Box · Danger · idle**: Danger confirm hover fill unspecified (code keeps --color-bg-negative-idle; --color-bg-negative-hover exists); plus the same gaps as Default: button width 199 and 24 between buttons unbound, base spacing/lg section gap, click-outside, scroll lock, placement, stacking and small-screen width unspecified. Full detail in reports/DialogBox.md.
+- **Dialog Box · Default · idle**: Button width 199 unbound (code hugs, 172 each); 24 between buttons unbound and the node's space-between leaves 18 (code leaves 70); section gap binds base spacing/lg (code --gap-gutter is 24 under data-layout medium/expanded); click-outside, scroll lock, placement, stacking and small-screen width unspecified. Full detail in reports/DialogBox.md.
 
 </TabItem>
 <TabItem label="Changelog" icon="list-format">

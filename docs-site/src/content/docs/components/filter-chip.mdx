@@ -199,12 +199,14 @@ Story: [Default](https://lemonade-design-system.vercel.app/?path=/story/componen
 
 Every fill, stroke, radius, padding, gap, stroke weight, fixed size and text property read on node 73:60 is bound to a variable.
 
-### Design gaps recorded
+### Known design gaps
 
-- **Filter Chip · Active · null · selected**: Type: design gap (for the Designer, not the Engineer). padding-top and padding-bottom are bound to spacing/sm in node 73:54, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px, height held at 36px by --size-control-sm only. The design also does not say what an Active chip looks like under hover. Every other bound property passed.
-- **Filter Chip · Default · null · idle**: Type: design gap (for the Designer, not the Engineer). Three gaps. (1) padding-top and padding-bottom are bound to spacing/sm in node 73:48, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px (the border), the 36px height comes only from --size-control-sm min-height, so a two-line label will not reach the 56px the design gives it. (3) The 48px Mobile hit area in the component description has no size token, so it is not extended. Every bound property passed.
-- **Filter Chip · Disabled · null · disabled**: Type: design gap (for the Designer, not the Engineer). padding-top and padding-bottom are bound to spacing/sm in node 73:52, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px, height held at 36px by --size-control-sm only. Every other bound property passed.
-- **Filter Chip · Hover · null · hovered**: Type: design gap (for the Designer, not the Engineer). padding-top and padding-bottom are bound to spacing/sm in node 73:50, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px, height held at 36px by --size-control-sm only. Every other bound property passed.
+Questions the design has not answered yet. The component leaves each one unbuilt rather than guess, and the design team will confirm them.
+
+- **Filter Chip · Active · selected**: Type: design gap (for the Designer, not the Engineer). padding-top and padding-bottom are bound to spacing/sm in node 73:54, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px, height held at 36px by --size-control-sm only. The design also does not say what an Active chip looks like under hover. Every other bound property passed.
+- **Filter Chip · Default · idle**: Type: design gap (for the Designer, not the Engineer). Three gaps. (1) padding-top and padding-bottom are bound to spacing/sm in node 73:48, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px (the border), the 36px height comes only from --size-control-sm min-height, so a two-line label will not reach the 56px the design gives it. (3) The 48px Mobile hit area in the component description has no size token, so it is not extended. Every bound property passed.
+- **Filter Chip · Disabled · disabled**: Type: design gap (for the Designer, not the Engineer). padding-top and padding-bottom are bound to spacing/sm in node 73:52, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px, height held at 36px by --size-control-sm only. Every other bound property passed.
+- **Filter Chip · Hover · hovered**: Type: design gap (for the Designer, not the Engineer). padding-top and padding-bottom are bound to spacing/sm in node 73:50, a base token with no semantic padding token, so FilterChip.css leaves them unset; measured padding-block 1px, height held at 36px by --size-control-sm only. Every other bound property passed.
 
 </TabItem>
 <TabItem label="Changelog" icon="list-format">
