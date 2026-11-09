@@ -76,6 +76,10 @@ import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 - Figma asks for the nav to be labelled aria-label="Back Office". The code labels the nav "Main" and wraps it in an &lt;aside aria-label="Sidebar"&gt;. <small>([Figma 206:1175](https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=206-1175) · [Sidebar.tsx:112](https://github.com/may-thet-htar-aung/lemonade-design-system/blob/3a4c7c59669f695b9dfc44789803feaa7009fc2e/src/components/Sidebar/Sidebar.tsx#L112) · [Sidebar.tsx:84](https://github.com/may-thet-htar-aung/lemonade-design-system/blob/3a4c7c59669f695b9dfc44789803feaa7009fc2e/src/components/Sidebar/Sidebar.tsx#L84))</small>
 - Figma asks for each collapsed item's label to show as a tooltip on hover and focus (also best practice 206:1166 and the Do-not rule 206:1156). The code sets aria-label only and renders no tooltip or title. <small>([Figma 206:1184](https://www.figma.com/design/q0faf7S1uuzwQo4UOe7bJq/Lemonade-Components?node-id=206-1184) · [Sidebar.tsx:122](https://github.com/may-thet-htar-aung/lemonade-design-system/blob/3a4c7c59669f695b9dfc44789803feaa7009fc2e/src/components/Sidebar/Sidebar.tsx#L122) · [Sidebar.tsx:127](https://github.com/may-thet-htar-aung/lemonade-design-system/blob/3a4c7c59669f695b9dfc44789803feaa7009fc2e/src/components/Sidebar/Sidebar.tsx#L127))</small>
 
+<Aside type="caution" title="Placeholder links">
+Each item links to a fixed in-page hash such as `#dashboard`. Use `onActiveChange` to react to a click.
+</Aside>
+
 ### Composition
 
 **Renders:** [Logo](/components/logo/), [Logo/Symbol](/components/logo-symbol/), [Icon Button](/components/icon-button/), [Icon](/components/icon/).

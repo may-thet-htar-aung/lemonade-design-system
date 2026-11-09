@@ -335,6 +335,12 @@ const componentPage = (c) => {
       L.push('');
     }
   }
+  const PLACEHOLDER_LINKS = {
+    Footer: 'Every link in the footer points to `#`, and no prop sets a destination.',
+    TopNav: 'The logo link points to `#`. The four navigation links and the two buttons have no destination, and only `Page` and `skipLinkHref` can be set.',
+    Sidebar: 'Each item links to a fixed in-page hash such as `#dashboard`. Use `onActiveChange` to react to a click.',
+  };
+  if (PLACEHOLDER_LINKS[c.dir]) L.push(caution('Placeholder links', PLACEHOLDER_LINKS[c.dir]));
   L.push('### Composition', '');
   if (c.renders.length) L.push(`**Renders:** ${c.renders.map(compLink).join(', ')}.`, '');
   if (c.renderedBy.length) L.push(`**Rendered by:** ${c.renderedBy.map(compLink).join(', ')}.`, '');
